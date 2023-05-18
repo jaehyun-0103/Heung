@@ -6,53 +6,62 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tv_place_name"
+    <ImageView
+        android:id="@+id/music_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="14dp"
-        android:text="제목"
-        android:textSize="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:src="@drawable/music_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_place_location"
+        android:id="@+id/post_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="14dp"
+        android:text="제목"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/post_date"
+        app:layout_constraintStart_toEndOf="@+id/music_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/post_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="닉네임"
-        android:textSize="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_place_name" />
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/post_line"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/post_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="|날짜|"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/post_favorite"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/post_nickname"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/post_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="300dp"
+        android:text="좋아요"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/post_line"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <View
-        android:id="@+id/view_line"
+        android:id="@+id/post_line"
         android:layout_width="0dp"
         android:layout_height="0.5dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="16dp"
         android:background="#808080"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_place_location" />
-
-    <TextView
-        android:id="@+id/view_already"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="좋아요"
-        app:layout_constraintStart_toEndOf="@+id/tv_place_name"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
