@@ -8,6 +8,10 @@
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\layout\\activity_postwrite.xml"
     },
     {
+        "merged": "com.example.heung.app-merged_res-32:/layout_activity_postwrite.xml.flat",
+        "source": "com.example.heung.app-main-34:/layout/activity_postwrite.xml"
+    },
+    {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-32:\\layout_activity_cal.xml.flat",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\layout\\activity_cal.xml"
     },
@@ -104,6 +108,10 @@
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "com.example.heung.app-merged_res-32:/layout_activity_postlist.xml.flat",
+        "source": "com.example.heung.app-main-34:/layout/activity_postlist.xml"
+    },
+    {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-32:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
@@ -130,10 +138,6 @@
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-32:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\xml\\data_extraction_rules.xml"
-    },
-    {
-        "merged": "com.example.heung.app-merged_res-32:/layout_activity_main.xml.flat",
-        "source": "com.example.heung.app-main-34:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-32:\\drawable_btn_join.png.flat",

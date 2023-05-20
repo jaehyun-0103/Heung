@@ -28,6 +28,7 @@ id line3
 id logo
 id music_icon
 id or
+id post
 id post_Recycler
 id post_cont
 id post_create
@@ -38,7 +39,6 @@ id post_nickname
 id post_popular
 id post_save
 id post_title
-id title
 id zone_features
 layout activity_cal
 layout activity_login

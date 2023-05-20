@@ -26,6 +26,9 @@ public final class ActivityPostwriteBinding implements ViewBinding {
   public final ImageView btnBack;
 
   @NonNull
+  public final TextView post;
+
+  @NonNull
   public final EditText postCont;
 
   @NonNull
@@ -37,19 +40,16 @@ public final class ActivityPostwriteBinding implements ViewBinding {
   @NonNull
   public final EditText postTitle;
 
-  @NonNull
-  public final TextView title;
-
   private ActivityPostwriteBinding(@NonNull LinearLayout rootView, @NonNull ImageView btnBack,
-      @NonNull EditText postCont, @NonNull View postLine, @NonNull Button postSave,
-      @NonNull EditText postTitle, @NonNull TextView title) {
+      @NonNull TextView post, @NonNull EditText postCont, @NonNull View postLine,
+      @NonNull Button postSave, @NonNull EditText postTitle) {
     this.rootView = rootView;
     this.btnBack = btnBack;
+    this.post = post;
     this.postCont = postCont;
     this.postLine = postLine;
     this.postSave = postSave;
     this.postTitle = postTitle;
-    this.title = title;
   }
 
   @Override
@@ -85,6 +85,12 @@ public final class ActivityPostwriteBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.post;
+      TextView post = ViewBindings.findChildViewById(rootView, id);
+      if (post == null) {
+        break missingId;
+      }
+
       id = R.id.post_cont;
       EditText postCont = ViewBindings.findChildViewById(rootView, id);
       if (postCont == null) {
@@ -109,14 +115,8 @@ public final class ActivityPostwriteBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.title;
-      TextView title = ViewBindings.findChildViewById(rootView, id);
-      if (title == null) {
-        break missingId;
-      }
-
-      return new ActivityPostwriteBinding((LinearLayout) rootView, btnBack, postCont, postLine,
-          postSave, postTitle, title);
+      return new ActivityPostwriteBinding((LinearLayout) rootView, btnBack, post, postCont,
+          postLine, postSave, postTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
