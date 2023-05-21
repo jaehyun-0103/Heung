@@ -27,15 +27,13 @@ class PostListActivity : AppCompatActivity() {
         postListAdapter = PostListAdapter(postList)
         recyclerViewPosts.adapter = postListAdapter
 
-        // Firebase 데이터베이스 참조 초기화
-        firestore = FirebaseFirestore.getInstance()
+        firestore = FirebaseFirestore.getInstance() // Firebase 데이터베이스 참조 초기화
 
         // 게시글 목록 데이터 가져오기
         firestore.collection("Posts")
             .orderBy("post_date", Query.Direction.DESCENDING)
             .addSnapshotListener { querySnapshot, exception ->
-                if (exception != null) {
-                    // 에러 처리
+                if (exception != null) { // 에러 처리
                     return@addSnapshotListener
                 }
 
@@ -51,8 +49,19 @@ class PostListActivity : AppCompatActivity() {
                 }
             }
 
-        val post_create = findViewById<Button>(R.id.post_create)
-        post_create.setOnClickListener {
+        // 게시글 목록 클릭 이벤트 처리
+        postListAdapter.setOnItemClickListener { position ->
+            val clickedPost = postList[position]
+
+            // 인텐트 생성 및 데이터 전달
+            val intent = Intent(this, PostContActivity::class.java)
+            intent.putExtra("postId", clickedPost.post_id)
+            startActivity(intent)
+        }
+
+        // 게시글 작성 버튼 클릭 이벤트 처리
+        val postCreate = findViewById<Button>(R.id.post_create)
+        postCreate.setOnClickListener {
             val intent = Intent(this, PostWriteActivity::class.java)
             startActivity(intent)
         }
