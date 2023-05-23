@@ -11,9 +11,11 @@ MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\rhfuv\.gradl
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\rhfuv\.gradle\caches\transforms-3\f98aa23de29ad430ace45a5aa43cded7\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\c08af56029f8f38413c36e6136c40c61\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:2:1-21:12
+MERGED from [com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:2:1-21:12
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\f23f4ba78121993881b873595dd2c1dc\transformed\firebase-analytics-ktx-20.0.0\AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\dd0bc59d6cebac23c57ee9f8518f9575\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:2:1-21:12
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta06] C:\Users\rhfuv\.gradle\caches\transforms-3\ef11d8c2113d9b32ebc9cfc40847a20a\transformed\firebase-appcheck-interop-16.0.0-beta06\AndroidManifest.xml:15:1-26:12
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\rhfuv\.gradle\caches\transforms-3\c0a7d92f899a2ee0635e385b7d0be5e3\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-analytics:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\d6baa01b35147e567aa23049628f7f62\transformed\firebase-analytics-20.0.0\AndroidManifest.xml:2:1-9:12
@@ -94,6 +96,8 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:4:5-66
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:14:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:26:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:22:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\5ffc57cdec1f00ac39b804e187414780\transformed\firebase-installations-17.0.0\AndroidManifest.xml:11:5-67
@@ -114,12 +118,16 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\rhfuv\.g
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\rhfuv\.gradle\caches\transforms-3\cc749da094ee92def6c00d2a563953a4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:11:5-19:19
+MERGED from [com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:11:5-19:19
+MERGED from [com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\f23f4ba78121993881b873595dd2c1dc\transformed\firebase-analytics-ktx-20.0.0\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\f23f4ba78121993881b873595dd2c1dc\transformed\firebase-analytics-ktx-20.0.0\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\dd0bc59d6cebac23c57ee9f8518f9575\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\dd0bc59d6cebac23c57ee9f8518f9575\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta06] C:\Users\rhfuv\.gradle\caches\transforms-3\ef11d8c2113d9b32ebc9cfc40847a20a\transformed\firebase-appcheck-interop-16.0.0-beta06\AndroidManifest.xml:24:5-20
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta06] C:\Users\rhfuv\.gradle\caches\transforms-3\ef11d8c2113d9b32ebc9cfc40847a20a\transformed\firebase-appcheck-interop-16.0.0-beta06\AndroidManifest.xml:24:5-20
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\rhfuv\.gradle\caches\transforms-3\c0a7d92f899a2ee0635e385b7d0be5e3\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:7:5-8:19
@@ -280,12 +288,16 @@ MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\rhfuv\.gradle\caches
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\c08af56029f8f38413c36e6136c40c61\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\f23f4ba78121993881b873595dd2c1dc\transformed\firebase-analytics-ktx-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\f23f4ba78121993881b873595dd2c1dc\transformed\firebase-analytics-ktx-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\dd0bc59d6cebac23c57ee9f8518f9575\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\dd0bc59d6cebac23c57ee9f8518f9575\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta06] C:\Users\rhfuv\.gradle\caches\transforms-3\ef11d8c2113d9b32ebc9cfc40847a20a\transformed\firebase-appcheck-interop-16.0.0-beta06\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta06] C:\Users\rhfuv\.gradle\caches\transforms-3\ef11d8c2113d9b32ebc9cfc40847a20a\transformed\firebase-appcheck-interop-16.0.0-beta06\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\rhfuv\.gradle\caches\transforms-3\c0a7d92f899a2ee0635e385b7d0be5e3\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:5:5-44
@@ -412,12 +424,16 @@ INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xm
 		INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:12:9-18:19
+MERGED from [com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:12:9-18:19
+MERGED from [com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\f23f4ba78121993881b873595dd2c1dc\transformed\firebase-analytics-ktx-20.0.0\AndroidManifest.xml:8:9-14:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\f23f4ba78121993881b873595dd2c1dc\transformed\firebase-analytics-ktx-20.0.0\AndroidManifest.xml:8:9-14:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\dd0bc59d6cebac23c57ee9f8518f9575\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\dd0bc59d6cebac23c57ee9f8518f9575\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:17:9-23:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:27:9-33:19
 MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:27:9-33:19
 MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\5ffc57cdec1f00ac39b804e187414780\transformed\firebase-installations-17.0.0\AndroidManifest.xml:15:9-21:19
@@ -438,6 +454,12 @@ ADDED from [com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\rhfuv\.g
 		ADDED from [com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:17:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:16:17-126
+meta-data#com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseKtxRegistrar
+ADDED from [com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:15:13-17:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:17:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:16:17-124
 meta-data#com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar
 ADDED from [com.google.firebase:firebase-analytics-ktx:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\f23f4ba78121993881b873595dd2c1dc\transformed\firebase-analytics-ktx-20.0.0\AndroidManifest.xml:11:13-13:85
 	android:value
@@ -452,6 +474,8 @@ ADDED from [com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\rhfuv\.grad
 		ADDED from [com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\dd0bc59d6cebac23c57ee9f8518f9575\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:16:17-113
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:25:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\5ffc57cdec1f00ac39b804e187414780\transformed\firebase-installations-17.0.0\AndroidManifest.xml:10:5-79
@@ -472,6 +496,12 @@ ADDED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\rhfuv\.gradl
 		ADDED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:22:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:21:17-111
+meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
+ADDED from [com.google.firebase:firebase-database:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:33:17-109
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:24:5-68
 MERGED from [com.google.android.gms:play-services-measurement:20.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:25:5-68

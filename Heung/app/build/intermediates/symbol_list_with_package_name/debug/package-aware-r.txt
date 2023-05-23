@@ -2719,11 +2719,14 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
-drawable basic_picture
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
 drawable btn_checkbox_unchecked_to_checked_mtrl_animation
+drawable btn_google
+drawable btn_join
+drawable btn_kakao
+drawable btn_naver
 drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
@@ -2752,6 +2755,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable edittext_round
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_arrow_back_black_24
@@ -2826,6 +2830,7 @@ drawable mtrl_switch_thumb_unchecked_pressed
 drawable mtrl_switch_track
 drawable mtrl_switch_track_decoration
 drawable mtrl_tabs_default_indicator
+drawable music_icon
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -2839,6 +2844,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable star
+drawable star_border
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -2846,6 +2853,7 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id ConstraintLayout_already
 id FUNCTION
 id META
 id NO_DEBUG
@@ -2942,6 +2950,12 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btn_back
+id btn_google
+id btn_join
+id btn_kakao
+id btn_naver
+id btn_postlist
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3084,6 +3098,7 @@ id line3
 id linear
 id listMode
 id list_item
+id logo
 id m3_side_sheet
 id marquee
 id masked
@@ -3144,6 +3159,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id music_icon
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3165,6 +3181,7 @@ id notification_main_column_container
 id off
 id on
 id onInterceptTouchReturnSwipe
+id or
 id outline
 id outward
 id overshoot
@@ -3181,7 +3198,18 @@ id peekHeight
 id percent
 id pin
 id position
+id post
 id postLayout
+id post_Recycler
+id post_cont
+id post_create
+id post_date
+id post_likes
+id post_line
+id post_nickname
+id post_popular
+id post_save
+id post_title
 id pressed
 id progress_circular
 id progress_horizontal
@@ -3340,6 +3368,7 @@ id wrap_content
 id wrap_content_constrained
 id x_left
 id x_right
+id zone_features
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
@@ -3475,6 +3504,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout item_postlist
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3711,6 +3741,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string postwrite
 string project_id
 string search_menu_title
 string searchbar_scrolling_view_behavior
@@ -3719,6 +3750,8 @@ string searchview_navigation_content_description
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string title
+string upload
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
