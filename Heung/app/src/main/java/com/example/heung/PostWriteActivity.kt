@@ -1,36 +1,43 @@
 package com.example.heung
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import com.google.firebase.firestore.FirebaseFirestore
+import java.text.SimpleDateFormat
+import java.util.Date
 
 class PostWriteActivity : AppCompatActivity() {
     private val firestore = FirebaseFirestore.getInstance()
+    @SuppressLint("SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_postwrite)
 
-        var post_save = findViewById<Button>(R.id.post_save)
-        var post_title = findViewById<EditText>(R.id.post_title)
-        var post_cont = findViewById<EditText>(R.id.post_cont)
+        var postSave = findViewById<Button>(R.id.post_save)
+        var postTitle = findViewById<EditText>(R.id.post_title)
+        var postCont = findViewById<EditText>(R.id.post_cont)
 
-        post_save.setOnClickListener {
+        // 저장 버튼 클릭 이벤트 처리
+        postSave.setOnClickListener {
+            val inputTitle = postTitle.text.toString()
+            val inputCont = postCont.text.toString()
             val collectionName = "Posts"
             val userId = "user_id"
-            val postTitle = "게시글 제목"
-            val postContent = "게시글 내용"
-            val postDate = "게시글 작성일"
+            val postDate = Date()
+            val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm")
 
-            // 데이터 추가
+            // 추가할 데이터
             val post = hashMapOf(
                 "user_id" to userId,
-                "post_title" to postTitle,
-                "post_content" to postContent,
-                "post_date" to postDate
+                "post_title" to inputTitle,
+                "post_content" to inputCont,
+                "post_date" to dateFormat.format(postDate)
             )
 
+            // 데이터베이스에 데이터 추가
             firestore.collection(collectionName)
                 .add(post)
                 .addOnSuccessListener {
@@ -41,8 +48,8 @@ class PostWriteActivity : AppCompatActivity() {
                 }
 
             // 게시글 저장 후 입력 필드 초기화
-            post_title.text.clear()
-            post_cont.text.clear()
+            postTitle.text.clear()
+            postCont.text.clear()
         }
     }
 }
