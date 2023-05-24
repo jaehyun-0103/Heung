@@ -97,8 +97,8 @@ class PostListActivity : AppCompatActivity() {
     private fun loadPopularPosts(userId: String) {
         firestore.collection("Likes")
             .whereEqualTo("user_id", userId)
-            .orderBy("like_id") // Order by like_id field
-            .startAt("5") // Filter by like_id >= 3
+            .orderBy("like_id")
+            .startAt("5")
             .addSnapshotListener { likesSnapshot, likesException ->
                 if (likesException != null) {
                     return@addSnapshotListener
