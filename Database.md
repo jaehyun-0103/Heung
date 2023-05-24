@@ -2,7 +2,7 @@
 
 | Column Name   | Data Type    | Description               |
 |---------------|--------------|---------------------------|
-| user_id (PK)  | 문자열      | 사용자 식별자             |
+| user_id (PK)  | 문자열       | 사용자 식별자             |
 | user_name     | 문자열       | 사용자 이름                |
 | user_nickname | 문자열       | 사용자 닉네임              |
 | user_email    | 문자열       | 사용자 이메일              |
@@ -16,7 +16,7 @@
 | user_id (FK)| 식별자     | 게시글 작성자의 사용자 식별자 |
 | post_title  | 문자열     | 게시글 제목                |
 | post_content| 문자열     | 게시글 내용                |
-| post_date   | 문자열 | 게시글 작성 일시           |
+| post_date   | 문자열     | 게시글 작성 일시           |
 
 테이블명: Recruits
 
@@ -26,7 +26,7 @@
 | user_id (FK)   | 문자열     | 모집글 작성자의 사용자 식별자 |
 | recruit_title  | 문자열     | 모집글 제목                |
 | recruit_content| 문자열     | 모집글 내용                |
-| recruit_date   | 문자열 | 모집글 작성 일시           |
+| recruit_date   | 문자열     | 모집글 작성 일시           |
 
 테이블명: Comments
 
@@ -36,7 +36,7 @@
 | post_id (FK)   | 문자열     | 댓글이 속한 게시글의 식별자  |
 | user_id (FK)   | 문자열     | 댓글 작성자의 사용자 식별자 |
 | comment        | 문자열     | 댓글 내용                |
-| comment_date   | 날짜/시간 | 댓글 작성 일시           |
+| comment_date   | 문자열     | 댓글 작성 일시           |
 
 테이블명: Likes
 
@@ -59,9 +59,9 @@
 
 | Column Name   | Data Type  | Description                |
 |---------------|------------|----------------------------|
-| user_id (PK, FK)| 문자열    | 사용자 식별자                |
+| user_id (PK)  | 문자열     | 사용자 식별자                |
 | user_nickname (FK)| 문자열    | 사용자 닉네임               |
 | post_id (FK)  | 문자열     | 게시글 식별자                |
 | post_title    | 문자열     | 게시글 제목                 |
 | post_content  | 문자열     | 게시글 내용                 |
-| post_date     | 문자열 | 게시글 작성 일시            |
+| post_date     | 문자열     | 게시글 작성 일시            |
