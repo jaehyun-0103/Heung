@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -23,7 +23,7 @@ public final class ActivityPostwriteBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final ImageView btnBack;
+  public final ImageButton btnBack;
 
   @NonNull
   public final TextView post;
@@ -40,7 +40,7 @@ public final class ActivityPostwriteBinding implements ViewBinding {
   @NonNull
   public final EditText postTitle;
 
-  private ActivityPostwriteBinding(@NonNull LinearLayout rootView, @NonNull ImageView btnBack,
+  private ActivityPostwriteBinding(@NonNull LinearLayout rootView, @NonNull ImageButton btnBack,
       @NonNull TextView post, @NonNull EditText postCont, @NonNull View postLine,
       @NonNull Button postSave, @NonNull EditText postTitle) {
     this.rootView = rootView;
@@ -80,7 +80,7 @@ public final class ActivityPostwriteBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btn_back;
-      ImageView btnBack = ViewBindings.findChildViewById(rootView, id);
+      ImageButton btnBack = ViewBindings.findChildViewById(rootView, id);
       if (btnBack == null) {
         break missingId;
       }

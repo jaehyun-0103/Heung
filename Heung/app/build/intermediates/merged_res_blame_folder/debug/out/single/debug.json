@@ -36,8 +36,16 @@
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
+        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-32:\\drawable_comment.xml.flat",
+        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\drawable\\comment.xml"
+    },
+    {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-32:\\layout_activity_recrulist.xml.flat",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\layout\\activity_recrulist.xml"
+    },
+    {
+        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-32:\\drawable_arrow_back.xml.flat",
+        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\drawable\\arrow_back.xml"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-32:\\layout_activity_recrucont.xml.flat",
@@ -106,10 +114,6 @@
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-32:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.example.heung.app-merged_res-32:/layout_activity_postlist.xml.flat",
-        "source": "com.example.heung.app-main-34:/layout/activity_postlist.xml"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-32:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
