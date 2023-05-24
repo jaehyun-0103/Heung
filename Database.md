@@ -13,7 +13,7 @@
 | Column Name | Data Type  | Description               |
 |-------------|------------|---------------------------|
 | post_id (PK)| 문자열     | 게시글 식별자             |
-| user_id (FK)| 식별자     | 게시글 작성자의 사용자 식별자 |
+| user_id (FK)| 문자열     | 게시글 작성자의 사용자 식별자 |
 | post_title  | 문자열     | 게시글 제목                |
 | post_content| 문자열     | 게시글 내용                |
 | post_date   | 문자열     | 게시글 작성 일시           |
