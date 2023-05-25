@@ -1,58 +1,54 @@
 [
     {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-31:\\layout\\activity_selfprof.xml",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\layout\\activity_selfprof.xml"
+        "merged": "com.example.heung.app-mergeDebugResources-31:/layout/activity_login.xml",
+        "source": "com.example.heung.app-main-34:/layout/activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-31:\\layout\\activity_recrutwrite.xml",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\layout\\activity_recrutwrite.xml"
+        "merged": "com.example.heung.app-mergeDebugResources-31:/layout/activity_cal.xml",
+        "source": "com.example.heung.app-main-34:/layout/activity_cal.xml"
     },
     {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-31:\\layout\\activity_recrucont.xml",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\layout\\activity_recrucont.xml"
+        "merged": "com.example.heung.app-mergeDebugResources-31:/layout/activity_postlist.xml",
+        "source": "com.example.heung.app-main-34:/layout/activity_postlist.xml"
     },
     {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-31:\\layout\\activity_postwrite.xml",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\layout\\activity_postwrite.xml"
+        "merged": "com.example.heung.app-mergeDebugResources-31:/layout/activity_recrutwrite.xml",
+        "source": "com.example.heung.app-main-34:/layout/activity_recrutwrite.xml"
     },
     {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-31:\\layout\\activity_postlist.xml",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\layout\\activity_postlist.xml"
+        "merged": "com.example.heung.app-mergeDebugResources-31:/layout/activity_recrulist.xml",
+        "source": "com.example.heung.app-main-34:/layout/activity_recrulist.xml"
     },
     {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-31:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\layout\\activity_main.xml"
+        "merged": "com.example.heung.app-mergeDebugResources-31:/layout/activity_main.xml",
+        "source": "com.example.heung.app-main-34:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-31:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\layout\\activity_login.xml"
+        "merged": "com.example.heung.app-mergeDebugResources-31:/layout/activity_recrucont.xml",
+        "source": "com.example.heung.app-main-34:/layout/activity_recrucont.xml"
     },
     {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-31:\\layout\\item_postlist.xml",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\layout\\item_postlist.xml"
+        "merged": "com.example.heung.app-mergeDebugResources-31:/layout/activity_selfprof.xml",
+        "source": "com.example.heung.app-main-34:/layout/activity_selfprof.xml"
     },
     {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-31:\\layout\\activity_cal.xml",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\layout\\activity_cal.xml"
+        "merged": "com.example.heung.app-mergeDebugResources-31:/layout/activity_otherprof.xml",
+        "source": "com.example.heung.app-main-34:/layout/activity_otherprof.xml"
     },
     {
         "merged": "com.example.heung.app-mergeDebugResources-31:/layout/activity_postwrite.xml",
         "source": "com.example.heung.app-main-34:/layout/activity_postwrite.xml"
     },
     {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-31:\\layout\\activity_rent.xml",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\layout\\activity_rent.xml"
+        "merged": "com.example.heung.app-mergeDebugResources-31:/layout/activity_postcont.xml",
+        "source": "com.example.heung.app-main-34:/layout/activity_postcont.xml"
     },
     {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-31:\\layout\\activity_recrulist.xml",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\layout\\activity_recrulist.xml"
+        "merged": "com.example.heung.app-mergeDebugResources-31:/layout/item_postlist.xml",
+        "source": "com.example.heung.app-main-34:/layout/item_postlist.xml"
     },
     {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-31:\\layout\\activity_postcont.xml",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\layout\\activity_postcont.xml"
-    },
-    {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-31:\\layout\\activity_otherprof.xml",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-34:\\layout\\activity_otherprof.xml"
+        "merged": "com.example.heung.app-mergeDebugResources-31:/layout/activity_rent.xml",
+        "source": "com.example.heung.app-main-34:/layout/activity_rent.xml"
     }
 ]

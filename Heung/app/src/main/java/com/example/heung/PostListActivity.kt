@@ -52,7 +52,7 @@ class PostListActivity : AppCompatActivity() {
         }
 
         ////////////////
-        val user_Id = "jaehyun"
+        val userId = "jaehyun"
 
         // 인기 게시글 보기 버튼 클릭 이벤트 처리
         val postPopular = findViewById<Button>(R.id.post_popular)
@@ -60,7 +60,7 @@ class PostListActivity : AppCompatActivity() {
             showPopularPosts = !showPopularPosts // showPopularPosts 변수 값을 토글
             if (showPopularPosts) {
                 // like_id가 5개 이상인 게시글 가져오기
-                loadPopularPosts(user_Id)
+                loadPopularPosts()
             } else {
                 // 전체 게시글 가져오기
                 loadPosts()
@@ -94,11 +94,10 @@ class PostListActivity : AppCompatActivity() {
     }
 
     // 인기 게시글 가져오기
-    private fun loadPopularPosts(userId: String) {
+    private fun loadPopularPosts() {
         firestore.collection("Likes")
-            .whereEqualTo("user_id", userId)
             .orderBy("like_id")
-            .startAt("5")
+            .startAt(5)
             .addSnapshotListener { likesSnapshot, likesException ->
                 if (likesException != null) {
                     return@addSnapshotListener
@@ -139,4 +138,5 @@ class PostListActivity : AppCompatActivity() {
                     }
             }
     }
+
 }
