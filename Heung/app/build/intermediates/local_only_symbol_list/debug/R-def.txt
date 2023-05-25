@@ -7,10 +7,12 @@ color purple_700
 color teal_200
 color teal_700
 color white
+drawable arrow_back
 drawable btn_google
 drawable btn_join
 drawable btn_kakao
 drawable btn_naver
+drawable comment
 drawable edittext_round
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -24,12 +26,14 @@ id btn_join
 id btn_kakao
 id btn_naver
 id btn_postlist
+id img_comment
 id line3
 id logo
 id music_icon
 id or
 id post
 id post_Recycler
+id post_comment
 id post_cont
 id post_create
 id post_date
