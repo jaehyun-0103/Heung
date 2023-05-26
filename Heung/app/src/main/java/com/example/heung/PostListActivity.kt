@@ -96,7 +96,7 @@ class PostListActivity : AppCompatActivity() {
     // 인기 게시글 가져오기
     private fun loadPopularPosts() {
         firestore.collection("Likes")
-            .orderBy("like_id")
+            .orderBy("like")
             .startAt(5)
             .addSnapshotListener { likesSnapshot, likesException ->
                 if (likesException != null) {
