@@ -55,6 +55,7 @@
 | cal_id (pk)  | 문자열    | 캘린더 식별자 |
 | user_id (fk) | 문자열    | 사용자 식별자 |
 | cal_title    | 문자열    | 일정 제목     |
+| cal_memo     | 문자열    | 일정 메모     |
 | cal_date     | 문자열    | 작성 날짜     |
 | cal_startDate| 문자열    | 일정 시작일   |
 | cal_endDate  | 문자열    | 일정 종료일   |
