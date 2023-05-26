@@ -2,14 +2,14 @@
 
 | Column Name   | Data Type | Description     |
 |---------------|-----------|-----------------|
-| user_id       | 문자열    | 사용자 식별자     |
+| user_id (pk)  | 문자열    | 사용자 식별자     |
 | user_nickname | 문자열    | 사용자 닉네임     |
 
 테이블명: Posts
 
 | Column Name | Data Type  | Description      |
 |-------------|------------|----------------- |
-| post_id     | 문자열     | 게시글 식별자      |
+| post_id (pk)| 문자열     | 게시글 식별자      |
 | user_id     | 문자열     | 사용자 식별자      |
 | post_title  | 문자열     | 게시글 제목        |
 | post_content| 문자열     | 게시글 내용        |
@@ -19,11 +19,15 @@
 
 | Column Name    | Data Type  | Description      |
 |----------------|------------|------------------|
-| recruit_id     | 문자열     | 모집글 식별자      |
+| recruit_id (pk)| 문자열     | 모집글 식별자      |
 | user_id        | 문자열     | 사용자 식별자      |
 | recruit_title  | 문자열     | 모집글 제목        |
 | recruit_content| 문자열     | 모집글 내용        |
 | recruit_date   | 문자열     | 모집글 작성 일시   |
+| recruit_endDate| 문자열     | 모집글 종료 일시   |
+| recruit_max    | 문자열     | 모집 인원          |
+| recruit_curr   | 문자열     | 현재 모집 인원     |
+| recruit_type   | 문자열     | 모집 유형          |
 
 테이블명: Comments
 
@@ -43,23 +47,13 @@
 | post_id     | 문자열    | 게시글의 식별자        |
 | user_id     | 문자열    | 사용자 식별자          |
 
-테이블명: Recruitment
-
-| Column Name       | Data Type  | Description      |
-|-------------------|------------|------------------|
-| recruitment_id    | 문자열     | 모집 신청 식별자   |
-| recruit_id        | 문자열     | 모집글의 식별자    |
-| user_id           | 문자열     | 사용자의 식별자    |
-| recruit_status    | 문자열     | 참여 신청 상태     |
-
 테이블명 : Calendar
 
-| Column Name | Data Type | Description      |
-|-------------|-----------|------------------|
-| user_id     | 문자열    | 사용자 식별자      |
-| date        | 문자열    | 사용자 닉네임      |
-| endTime     | 문자열    | 게시글 식별자      |
-| location    | 문자열    | 게시글 제목        |
-| startTime   | 문자열    | 게시글 내용        |
-| title       | 문자열    | 게시글 작성 일시   |
-
+| Column Name  | Data Type | Description |
+|--------------|-----------|-------------|
+| user_id      | 문자열    | 사용자 식별자 |
+| cal_title    | 문자열    | 일정 제목     |
+| cal_date     | 문자열    | 작성 날짜     |
+| cal_startDate| 문자열    | 일정 시작일   |
+| cal_endDate  | 문자열    | 일정 종료일   |
+| cal_location | 문자열    | 일정 위치     |
