@@ -46,7 +46,7 @@
 | like_id (pk)| 문자열    | 추천 식별자      |
 | post_id (fk)| 문자열    | 게시글의 식별자  |
 | user_id (fk)| 문자열    | 사용자 식별자    |
-| like_likes  | 문자열    | 추천수          |
+| like        | 문자열    | 추천수          |
 
 테이블명 : Calendar
 
