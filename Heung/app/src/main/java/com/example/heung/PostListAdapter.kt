@@ -25,6 +25,10 @@ class PostListAdapter(private val postList: MutableList<Posts>) :
         holder.itemView.setOnClickListener {
             onItemClickListener?.invoke(position)
         }
+        holder.itemView.findViewById<TextView>(R.id.post_date).text = " | ${post.post_date} | "
+        holder.itemView.setOnClickListener {
+            onItemClickListener?.invoke(position)
+        }
     }
 
     // 리스트의 총 아이템 수 반환

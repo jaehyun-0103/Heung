@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.FirebaseFirestore
+import data.Likes
 import data.Posts
+import data.Users
 
 class PostListActivity : AppCompatActivity() {
     private lateinit var firestore: FirebaseFirestore
@@ -41,6 +43,9 @@ class PostListActivity : AppCompatActivity() {
             // 인텐트 생성 및 데이터 전달
             val intent = Intent(this, PostContActivity::class.java)
             intent.putExtra("postId", clickedPost.post_id)
+            // RecyclerView의 클릭 이벤트 리스너 내에서
+            intent.putExtra("postTitle", clickedPost.post_title)
+            intent.putExtra("postContent", clickedPost.post_content)
             startActivity(intent)
         }
 
@@ -78,17 +83,95 @@ class PostListActivity : AppCompatActivity() {
                 }
 
                 querySnapshot?.let {
-                    postList.clear()
+                    val loadedPostList = mutableListOf<Posts>()
                     for (document in it.documents) {
                         val post = document.toObject(Posts::class.java)
                         post?.let {
-                            postList.add(post)
+                            loadedPostList.add(post)
                         }
                     }
+                    postList.clear()
+                    postList.addAll(loadedPostList)
                     postListAdapter.notifyDataSetChanged()
 
                     val post = findViewById<TextView>(R.id.post)
                     post.text = "게시글"
+
+                    // 게시글 작성자의 닉네임 가져오기
+                    loadPostAuthorsLikesAndComments()
+
+                }
+            }
+    }
+
+    // 게시글 작성자의 닉네임, 좋아요 수, 댓글 수 가져오기
+    private fun loadPostAuthorsLikesAndComments() {
+        val postIds = postList.map { it.post_id }
+
+        // 게시글 작성자의 닉네임 가져오기
+        firestore.collection("Users")
+            .whereIn("user_id", postList.map { it.user_id })
+            .get()
+            .addOnSuccessListener { userQuerySnapshot ->
+                val users = userQuerySnapshot.toObjects(Users::class.java)
+                val userMap = users.associateBy { it.user_id }
+
+                // 게시글 목록의 닉네임 및 좋아요 수 업데이트
+                for (i in 0 until postListAdapter.itemCount) {
+                    val post = postList[i]
+                    val user = userMap[post.user_id]
+                    val nickname = user?.user_nickname ?: "알 수 없는 사용자"
+                    val holder = recyclerViewPosts.findViewHolderForAdapterPosition(i) as? PostListAdapter.PostViewHolder
+                    holder?.itemView?.findViewById<TextView>(R.id.post_nickname)?.text = nickname
+                }
+            }
+
+        // 게시글의 좋아요 수 가져오기
+        firestore.collection("Likes")
+            .whereIn("post_id", postIds)
+            .get()
+            .addOnSuccessListener { likesQuerySnapshot ->
+                val likes = likesQuerySnapshot.toObjects(Likes::class.java)
+                val likeMap = likes.associateBy { it.post_id }
+
+                // 게시글 목록의 좋아요 수 업데이트
+                for (i in 0 until postListAdapter.itemCount) {
+                    val post = postList[i]
+                    val like = likeMap[post.post_id]
+                    val likeCount = like?.like ?: 0 // 해당 게시글에 대한 좋아요 수
+
+                    val holder = recyclerViewPosts.findViewHolderForAdapterPosition(i) as? PostListAdapter.PostViewHolder
+                    holder?.itemView?.findViewById<TextView>(R.id.post_likes)?.text = likeCount.toString()
+                }
+            }
+
+        // 게시글의 댓글 수 가져오기
+        firestore.collection("Comments")
+            .whereIn("post_id", postIds)
+            .get()
+            .addOnSuccessListener { commentsQuerySnapshot ->
+                val commentsCountMap = mutableMapOf<String, Int>()
+
+                // 각 게시물의 댓글 수 계산
+                for (document in commentsQuerySnapshot.documents) {
+                    val postId = document.getString("post_id")
+                    if (postId != null) {
+                        if (commentsCountMap.containsKey(postId)) {
+                            val count = commentsCountMap[postId] ?: 0
+                            commentsCountMap[postId] = count + 1
+                        } else {
+                            commentsCountMap[postId] = 1
+                        }
+                    }
+                }
+
+                // 게시글 목록의 댓글 수 업데이트
+                for (i in 0 until postListAdapter.itemCount) {
+                    val post = postList[i]
+                    val commentsCount = commentsCountMap[post.post_id] ?: 0 // 해당 게시글에 대한 댓글 수
+
+                    val holder = recyclerViewPosts.findViewHolderForAdapterPosition(i) as? PostListAdapter.PostViewHolder
+                    holder?.itemView?.findViewById<TextView>(R.id.post_comment)?.text = commentsCount.toString()
                 }
             }
     }
@@ -96,7 +179,7 @@ class PostListActivity : AppCompatActivity() {
     // 인기 게시글 가져오기
     private fun loadPopularPosts() {
         firestore.collection("Likes")
-            .orderBy("like_id")
+            .orderBy("like")
             .startAt(5)
             .addSnapshotListener { likesSnapshot, likesException ->
                 if (likesException != null) {
@@ -134,6 +217,9 @@ class PostListActivity : AppCompatActivity() {
 
                             val post = findViewById<TextView>(R.id.post)
                             post.text = "인기 게시글"
+
+                            // 게시글 작성자의 닉네임 가져오기
+                            loadPostAuthorsLikesAndComments()
                         }
                     }
             }
