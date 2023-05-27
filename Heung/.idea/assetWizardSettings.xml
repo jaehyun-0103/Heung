@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/music_note/baseline_music_note_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/subdirectory_arrow_right/baseline_subdirectory_arrow_right_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,7 +28,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="basic_picture" />
+                            <entry key="color" value="b2b2b2" />
+                            <entry key="outputName" value="arrow_icon" />
                             <entry key="sourceFile" value="C:\Users\rhfuv\Desktop\Heung\Heung" />
                           </map>
                         </option>

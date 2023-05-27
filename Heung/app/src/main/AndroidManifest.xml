@@ -39,6 +39,12 @@
             android:name=".CalActivity"
             android:exported="false" />
         <activity
+            android:name=".CalWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CalDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".RecruListActivity"
             android:exported="false" />
         <activity

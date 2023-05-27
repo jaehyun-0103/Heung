@@ -15,5 +15,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, PostListActivity::class.java)
             startActivity(intent)
         }
+
+        val btn_perform = findViewById<Button>(R.id.btn_perform)
+        btn_perform.setOnClickListener {
+            val intent = Intent(this, CalActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

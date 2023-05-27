@@ -62,6 +62,12 @@
             android:name="com.example.heung.CalActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.heung.CalWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.heung.CalDetailActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.heung.RecruListActivity"
             android:exported="false" />
         <activity

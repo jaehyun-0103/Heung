@@ -20,10 +20,15 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button btnPerform;
+
+  @NonNull
   public final Button btnPostlist;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnPostlist) {
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnPerform,
+      @NonNull Button btnPostlist) {
     this.rootView = rootView;
+    this.btnPerform = btnPerform;
     this.btnPostlist = btnPostlist;
   }
 
@@ -54,13 +59,19 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btn_perform;
+      Button btnPerform = ViewBindings.findChildViewById(rootView, id);
+      if (btnPerform == null) {
+        break missingId;
+      }
+
       id = R.id.btn_postlist;
       Button btnPostlist = ViewBindings.findChildViewById(rootView, id);
       if (btnPostlist == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, btnPostlist);
+      return new ActivityMainBinding((ConstraintLayout) rootView, btnPerform, btnPostlist);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

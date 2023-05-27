@@ -15,13 +15,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/btn_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:layout_marginStart="8dp"
-                android:src="@drawable/music_icon"
+                android:src="@drawable/arrow_back"
+                android:background="#FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -81,8 +82,10 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:textSize="15sp"
-                    android:background="@drawable/edittext_round"/>
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textSize="18sp"
+                    android:background="@drawable/edittext_round" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -104,11 +107,12 @@
                     android:layout_marginRight="16dp"
                     android:ems="10"
                     android:gravity="top"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
                     android:inputType="textMultiLine"
                     android:minHeight="280dp"
                     android:background="@drawable/edittext_round"
-                    android:textSize="15sp"
-                    />
+                    android:textSize="15sp" />
 
             </LinearLayout>
         </ScrollView>

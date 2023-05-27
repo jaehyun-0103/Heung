@@ -13,8 +13,7 @@ class PostListAdapter(private val postList: MutableList<Posts>) :
 
     // 각 아이템 뷰에 대한 ViewHolder 생성
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_postlist, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_postlist, parent, false)
         return PostViewHolder(view)
     }
 
