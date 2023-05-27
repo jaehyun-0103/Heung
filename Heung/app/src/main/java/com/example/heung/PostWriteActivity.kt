@@ -9,11 +9,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import java.text.SimpleDateFormat
 import java.util.Date
 
 class PostWriteActivity : AppCompatActivity() {
     private val firestore = FirebaseFirestore.getInstance()
+    private lateinit var latestPostId: String
 
     @SuppressLint("SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +30,9 @@ class PostWriteActivity : AppCompatActivity() {
         // 초기 상태에서 버튼 비활성화
         postSave.isEnabled = false
 
+        // 게시글 ID 가져오기
+        getLatestPostId()
+
         // 저장 버튼 클릭 이벤트 처리
         postSave.setOnClickListener {
             val inputTitle = postTitle.text.toString()
@@ -37,8 +42,12 @@ class PostWriteActivity : AppCompatActivity() {
             val postDate = Date()
             val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm")
 
+            // 새로운 게시글 ID 생성
+            val newPostId = generateNewPostId()
+
             // 추가할 데이터
             val post = hashMapOf(
+                "post_id" to newPostId,
                 "user_id" to userId,
                 "post_title" to inputTitle,
                 "post_content" to inputCont,
@@ -62,6 +71,7 @@ class PostWriteActivity : AppCompatActivity() {
             postTitle.text.clear()
             postCont.text.clear()
         }
+
         // 뒤로 가기 버튼
         btnBack.setOnClickListener {
             postTitle.text.clear()
@@ -89,6 +99,31 @@ class PostWriteActivity : AppCompatActivity() {
 
             override fun afterTextChanged(s: Editable?) {}
         })
+    }
+
+    // 가장 최근 게시글 ID 가져오기
+    private fun getLatestPostId() {
+        firestore.collection("Posts")
+            .orderBy("post_id", Query.Direction.DESCENDING)
+            .limit(1)
+            .get()
+            .addOnSuccessListener { querySnapshot ->
+                if (!querySnapshot.isEmpty) {
+                    val document = querySnapshot.documents[0]
+                    latestPostId = document.getString("post_id") ?: "0"
+                } else {
+                    latestPostId = "0"
+                }
+            }
+            .addOnFailureListener { e ->
+                latestPostId = "0"
+            }
+    }
+
+    // 새로운 게시글 ID 생성
+    private fun generateNewPostId(): String {
+        val latestId = latestPostId.toIntOrNull() ?: 0
+        return (latestId + 1).toString()
     }
 
     // 입력 필드의 텍스트 변경 시 호출되는 메서드
