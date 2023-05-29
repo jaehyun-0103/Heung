@@ -23,6 +23,7 @@ drawable music_icon
 drawable star
 drawable star_border
 drawable thumb_up
+id CommentCnt
 id ConstraintLayout_already
 id Date
 id account_iv_profile
@@ -50,6 +51,7 @@ id calwriteBtn
 id cl_timepicker1
 id cl_timepicker2
 id comment
+id comment_btn
 id comment_layout
 id comment_textview
 id connect
@@ -60,11 +62,11 @@ id edt_comment
 id endDate
 id endTime
 id fl_add_timebox
-id imgComment
-id imgPhoto
 id imgSetting
 id iv_schedule_time_end
 id iv_schedule_time_start
+id likeCnt
+id like_btn
 id line3
 id logo
 id music_icon
@@ -90,8 +92,6 @@ id search_view
 id startDate
 id startTime
 id title
-id tvCommentCnt
-id tvPhotoCnt
 id tv_author
 id tv_cal_add_location
 id tv_cal_add_memo

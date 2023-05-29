@@ -96,15 +96,17 @@
                 android:id="@+id/content_photo_recycler"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imgPhoto"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toBottomOf="@+id/like_btn"
+                app:layout_constraintVertical_bias="1.0" />
 
             <ImageView
-                android:id="@+id/imgPhoto"
+                android:id="@+id/like_btn"
                 android:layout_width="13dp"
                 android:layout_height="15dp"
                 android:layout_marginStart="10dp"
@@ -114,34 +116,34 @@
                 app:srcCompat="@drawable/thumb_up" />
 
             <TextView
-                android:id="@+id/tvPhotoCnt"
+                android:id="@+id/likeCnt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:text="0"
                 android:textSize="12sp"
-                app:layout_constraintStart_toEndOf="@+id/imgPhoto"
+                app:layout_constraintStart_toEndOf="@+id/like_btn"
                 app:layout_constraintTop_toBottomOf="@+id/tv_content" />
 
             <ImageView
-                android:id="@+id/imgComment"
+                android:id="@+id/comment_btn"
                 android:layout_width="13dp"
                 android:layout_height="12dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="3dp"
                 android:scaleType="fitXY"
-                app:layout_constraintStart_toEndOf="@id/tvPhotoCnt"
+                app:layout_constraintStart_toEndOf="@id/like_btn"
                 app:layout_constraintTop_toBottomOf="@+id/tv_content"
                 app:srcCompat="@drawable/chat_icon" />
 
             <TextView
-                android:id="@+id/tvCommentCnt"
+                android:id="@+id/CommentCnt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:text="0"
                 android:textSize="12sp"
-                app:layout_constraintStart_toEndOf="@+id/imgComment"
+                app:layout_constraintStart_toEndOf="@+id/comment_btn"
                 app:layout_constraintTop_toBottomOf="@+id/tv_content" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

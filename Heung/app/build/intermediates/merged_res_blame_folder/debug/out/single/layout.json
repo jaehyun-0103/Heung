@@ -36,10 +36,6 @@
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-39:\\layout\\activity_otherprof.xml"
     },
     {
-        "merged": "com.example.heung.app-mergeDebugResources-36:/layout/activity_calwrite.xml",
-        "source": "com.example.heung.app-main-39:/layout/activity_calwrite.xml"
-    },
-    {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-36:\\layout\\item_postcont.xml",
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-39:\\layout\\item_postcont.xml"
     },
@@ -56,6 +52,10 @@
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-39:\\layout\\activity_postwrite.xml"
     },
     {
+        "merged": "com.example.heung.app-mergeDebugResources-36:/layout/activity_postcont.xml",
+        "source": "com.example.heung.app-main-39:/layout/activity_postcont.xml"
+    },
+    {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-36:\\layout\\activity_main.xml",
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-39:\\layout\\activity_main.xml"
     },
@@ -64,12 +64,12 @@
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-39:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-36:\\layout\\item_calserch.xml",
-        "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-39:\\layout\\item_calserch.xml"
-    },
-    {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-36:\\layout\\activity_postcont.xml",
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-39:\\layout\\activity_postcont.xml"
+    },
+    {
+        "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-36:\\layout\\item_calserch.xml",
+        "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-39:\\layout\\item_calserch.xml"
     },
     {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-36:\\layout\\item_postcomment.xml",

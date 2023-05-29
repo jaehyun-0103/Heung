@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,6 +20,9 @@ class PostContActivity : AppCompatActivity() {
     private lateinit var Adapter: CommentsAdapter
     private lateinit var recyclerView: RecyclerView
     private lateinit var comments: MutableList<Comments>
+    // 추가된 부분
+    private lateinit var likeCountTextView: TextView
+    private lateinit var likeButton: ImageView
 
     @SuppressLint("SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,7 +52,6 @@ class PostContActivity : AppCompatActivity() {
 
         firestore = FirebaseFirestore.getInstance() // Firebase 데이터베이스 참조 초기화
 
-
         val commentTextview = findViewById<EditText>(R.id.comment_textview)
         val btnCtv = findViewById<Button>(R.id.btn_ctv)
 
@@ -60,11 +63,10 @@ class PostContActivity : AppCompatActivity() {
             val userId = "user_id"
             val commentDate = Date()
             val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm")
-            val postId1 = intent.getStringExtra("postId")
 
             // 추가할 데이터
             val comment = hashMapOf(
-                "post_id" to postId1,
+                "post_id" to postId,
                 "user_id" to userId,
                 "comment" to inputCont,
                 "comment_date" to dateFormat.format(commentDate)
@@ -108,5 +110,4 @@ class PostContActivity : AppCompatActivity() {
                 }
             }
     }
-
 }

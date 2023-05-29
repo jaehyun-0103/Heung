@@ -2858,6 +2858,7 @@ int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
 int id CTRL 0x7f080003
+int id CommentCnt 0x7f080260
 int id ConstraintLayout_already 0x7f080004
 int id Date 0x7f080256
 int id FUNCTION 0x7f080005
@@ -3004,6 +3005,7 @@ int id clockwise 0x7f080085
 int id closest 0x7f080086
 int id collapseActionView 0x7f080087
 int id comment 0x7f080088
+int id comment_btn 0x7f080261
 int id comment_layout 0x7f080089
 int id comment_textview 0x7f08008a
 int id compress 0x7f08008b
@@ -3113,8 +3115,6 @@ int id ifRoom 0x7f0800ef
 int id ignore 0x7f0800f0
 int id ignoreRequest 0x7f0800f1
 int id image 0x7f0800f2
-int id imgComment 0x7f0800f3
-int id imgPhoto 0x7f0800f4
 int id imgSetting 0x7f0800f5
 int id immediateStop 0x7f0800f6
 int id included 0x7f0800f7
@@ -3134,6 +3134,8 @@ int id left 0x7f080102
 int id leftToRight 0x7f080103
 int id legacy 0x7f080104
 int id light 0x7f080105
+int id likeCnt 0x7f080262
+int id like_btn 0x7f080263
 int id line1 0x7f080106
 int id line3 0x7f080107
 int id linear 0x7f080108
@@ -3397,8 +3399,6 @@ int id transition_position 0x7f080202
 int id transition_scene_layoutid_cache 0x7f080203
 int id transition_transform 0x7f080204
 int id triangle 0x7f080205
-int id tvCommentCnt 0x7f080206
-int id tvPhotoCnt 0x7f080207
 int id tv_author 0x7f080208
 int id tv_cal_add_location 0x7f08024a
 int id tv_cal_add_memo 0x7f08024b

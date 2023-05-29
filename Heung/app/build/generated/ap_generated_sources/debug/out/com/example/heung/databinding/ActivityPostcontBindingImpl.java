@@ -22,10 +22,10 @@ public class ActivityPostcontBindingImpl extends ActivityPostcontBinding  {
         sViewsWithIds.put(R.id.tv_title, 6);
         sViewsWithIds.put(R.id.tv_content, 7);
         sViewsWithIds.put(R.id.content_photo_recycler, 8);
-        sViewsWithIds.put(R.id.imgPhoto, 9);
-        sViewsWithIds.put(R.id.tvPhotoCnt, 10);
-        sViewsWithIds.put(R.id.imgComment, 11);
-        sViewsWithIds.put(R.id.tvCommentCnt, 12);
+        sViewsWithIds.put(R.id.like_btn, 9);
+        sViewsWithIds.put(R.id.likeCnt, 10);
+        sViewsWithIds.put(R.id.comment_btn, 11);
+        sViewsWithIds.put(R.id.CommentCnt, 12);
         sViewsWithIds.put(R.id.edt_comment, 13);
         sViewsWithIds.put(R.id.comment_layout, 14);
         sViewsWithIds.put(R.id.comment_textview, 15);
@@ -44,20 +44,20 @@ public class ActivityPostcontBindingImpl extends ActivityPostcontBinding  {
     }
     private ActivityPostcontBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
+            , (android.widget.TextView) bindings[12]
             , (android.widget.ImageView) bindings[2]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[5]
             , (android.widget.Button) bindings[16]
+            , (android.widget.ImageView) bindings[11]
             , (com.google.android.material.textfield.TextInputLayout) bindings[14]
             , (com.google.android.material.textfield.TextInputEditText) bindings[15]
             , (androidx.recyclerview.widget.RecyclerView) bindings[8]
             , (android.widget.LinearLayout) bindings[13]
-            , (android.widget.ImageView) bindings[11]
             , (android.widget.ImageView) bindings[9]
+            , (android.widget.TextView) bindings[10]
             , (android.widget.TextView) bindings[3]
-            , (android.widget.TextView) bindings[12]
             , (android.widget.TextView) bindings[7]
             , (android.widget.TextView) bindings[4]
-            , (android.widget.TextView) bindings[10]
             , (android.widget.TextView) bindings[6]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[1]
             );
