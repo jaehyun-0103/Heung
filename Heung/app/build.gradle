@@ -2,11 +2,17 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id 'kotlin-parcelize'
 }
-
 android {
     namespace 'com.example.heung'
     compileSdk 33
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+
 
     defaultConfig {
         applicationId "com.example.heung"

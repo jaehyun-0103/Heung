@@ -1,36 +1,26 @@
 {
   "project_info": {
-    "project_number": "684572523168",
-    "project_id": "heung-166fa",
-    "storage_bucket": "heung-166fa.appspot.com"
+    "project_number": "821409698235",
+    "project_id": "testproject-d4d38",
+    "storage_bucket": "testproject-d4d38.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:684572523168:android:c3d99397918506495667c5",
+        "mobilesdk_app_id": "1:821409698235:android:f41f4c8aed08473727f49e",
         "android_client_info": {
-          "package_name": "com.example.heung"
+          "package_name": "net.flow.Heung"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "684572523168-7o6cp3391eq340huf2khaq9geqbds047.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyD0P2m5cESQgjJqFO0UG9Ijmq3FvKMq7e8"
+          "current_key": "AIzaSyBc8u1SHbf_RO1dh_vPdcDSshnGqh745_8"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "684572523168-7o6cp3391eq340huf2khaq9geqbds047.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
