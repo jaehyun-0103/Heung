@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ConstraintLayout_already"
@@ -59,6 +58,27 @@
         android:layout_marginBottom="3dp"
         app:layout_constraintBottom_toTopOf="@+id/post_line"
         app:layout_constraintStart_toEndOf="@+id/post_date" />
+
+    <TextView
+        android:id="@+id/post_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="댓글 수"
+        android:textSize="12sp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_comment"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="2dp"
+        android:src="@drawable/comment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/post_comment" />
 
     <View
         android:id="@+id/post_line"
