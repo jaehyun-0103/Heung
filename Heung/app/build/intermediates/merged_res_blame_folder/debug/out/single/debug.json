@@ -20,6 +20,10 @@
         "source": "com.example.heung.app-main-8:/layout/activity_postcont.xml"
     },
     {
+        "merged": "com.example.heung.app-merged_res-6:/drawable_kakao_login_medium_narrow.png.flat",
+        "source": "com.example.heung.app-main-8:/drawable/kakao_login_medium_narrow.png"
+    },
+    {
         "merged": "com.example.heung.app-merged_res-6:/mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "com.example.heung.app-main-8:/mipmap-hdpi/ic_launcher_round.webp"
     },

@@ -3,4 +3,6 @@
     <string name="postwrite">게시글 작성</string>
     <string name="upload">등록</string>
     <string name="title">제목</string>
+    <string name="kakao_app_key">카카오_앱_키</string>
+
 </resources>

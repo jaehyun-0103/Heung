@@ -15,6 +15,7 @@ drawable btn_naver
 drawable edittext_round
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable kakao_login_medium_narrow
 drawable music_icon
 drawable redprofile
 drawable star
@@ -23,19 +24,15 @@ id ConstraintLayout_already
 id Post
 id btn_back
 id btn_edit
-id btn_google
-id btn_join
-id btn_kakao
-id btn_naver
 id btn_postlist
 id btn_quit
 id content
+id kakao_login_button
 id line3
 id logo
 id music_icon
 id nick_change
 id nickname
-id or
 id other_profile
 id post
 id post_Recycler
@@ -77,6 +74,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string kakao_app_key
 string postwrite
 string project_id
 string title

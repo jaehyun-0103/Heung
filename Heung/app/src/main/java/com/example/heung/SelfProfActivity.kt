@@ -1,5 +1,6 @@
 package com.example.heung
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.DialogInterface
@@ -9,16 +10,22 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
+import android.util.Log
 import android.view.Gravity
 import android.widget.*
 import androidx.core.app.ActivityCompat.*
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.gms.common.util.ClientLibraryUtils.getPackageInfo
 import com.google.firebase.FirebaseApp
 import com.google.firebase.database.*
 import com.google.firebase.firestore.FirebaseFirestore
+import com.kakao.sdk.common.util.Utility
 import data.Posts
+import java.security.MessageDigest
+import java.security.NoSuchAlgorithmException
+
 
 class SelfProfActivity : AppCompatActivity() {
     lateinit var edit_button: ImageView
@@ -27,8 +34,14 @@ class SelfProfActivity : AppCompatActivity() {
     private val COLLECTION_NAME = "Posts"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_selfprof)
+
+
+
+        val keyHash = Utility.getKeyHash(this)
+        Log.d("Hash", keyHash)
+
+
         // Firebase 앱 초기화
         FirebaseApp.initializeApp(this)
 
@@ -65,7 +78,6 @@ class SelfProfActivity : AppCompatActivity() {
             .addOnFailureListener { exception ->
                 // 오류 처리
             }
-
 
 
         //닉네임 변경
@@ -181,6 +193,18 @@ class SelfProfActivity : AppCompatActivity() {
             .create()
             .show()
     }
+    private fun createDummyPosts(): List<Posts> {
+        val postsList = mutableListOf<Posts>()
+        // 임의의 4개의 게시글 생성
+        for (i in 1..4) {
+            val title = "게시글 $i"
+            val content = "게시글 내용 $i"
+            val post = Posts(title, content)
+            postsList.add(post)
+        }
+        return postsList
+    }
+
 
 
 
