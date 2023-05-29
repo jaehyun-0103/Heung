@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#808080" />
+
+    <TextView
+        android:id="@+id/recruit_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="모집글 제목"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/recruit_item_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="작성자 닉네임"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/recruit_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="작성일"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/recruit_item_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버스킹"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#808080" />
+
+</LinearLayout>
