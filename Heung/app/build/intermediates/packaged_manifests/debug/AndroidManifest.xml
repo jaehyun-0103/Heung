@@ -9,7 +9,6 @@
         android:targetSdkVersion="33" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
     <!-- <uses-sdk android:minSdkVersion="14" /> -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -50,9 +49,6 @@
             android:name="com.example.heung.RecrutWriteActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.heung.PostWriteActivity"
-            android:exported="false" />
-        <activity
             android:name="com.example.heung.RecruContActivity"
             android:exported="false" />
         <activity
@@ -63,12 +59,6 @@
             android:exported="false" />
         <activity
             android:name="com.example.heung.RecruListActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.heung.PostListActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.heung.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
