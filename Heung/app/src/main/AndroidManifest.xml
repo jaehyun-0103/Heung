@@ -83,7 +83,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyA31kkd5bVzb1DHgUL0YktIXMTXFhhi_4U"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="Google API 코드 "/>
         <uses-library android:name="org.apache.http.legacy" android:required="false" />
     </application>
 </manifest>
