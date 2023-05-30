@@ -8,7 +8,6 @@ import androidx.appcompat.widget.AppCompatButton
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Toast
-import com.example.heung.R
 import com.google.firebase.firestore.FirebaseFirestore
 
 class RecrutWriteActivity : AppCompatActivity() {
@@ -17,15 +16,11 @@ class RecrutWriteActivity : AppCompatActivity() {
     private lateinit var contentEditText: EditText
     private lateinit var uploadButton: AppCompatButton
     private lateinit var backButton: AppCompatImageButton
-
     private lateinit var buskingFilterButton: AppCompatButton
     private lateinit var classFilterButton: AppCompatButton
-
     private lateinit var buskingLayout: LinearLayout
     private lateinit var classLayout: LinearLayout
-
     private var selectedFilter: String = "" // 선택된 필터를 저장하는 변수
-
     private lateinit var firestore: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {

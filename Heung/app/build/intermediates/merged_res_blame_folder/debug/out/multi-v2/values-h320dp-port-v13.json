@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.heung.app-mergeDebugResources-38:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "outputFile": "com.example.heung.app-mergeDebugResources-39:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\rhfuv\\.gradle\\caches\\transforms-3\\d051c0e6200fe6ae5b4696be471df4c7\\transformed\\material-1.8.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",

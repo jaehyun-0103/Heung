@@ -37,15 +37,15 @@
         android:text="@string/nickname"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/post_line"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/recruit_item_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
         android:text="@string/date"
         android:textSize="12sp"
-        android:layout_marginBottom="3dp"
         app:layout_constraintBottom_toTopOf="@+id/post_line"
         app:layout_constraintStart_toEndOf="@+id/recruit_item_author" />
 
@@ -53,22 +53,12 @@
         android:id="@+id/recruit_item_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp"
         android:text="@string/buskingR"
         android:textSize="12sp"
-        android:layout_marginBottom="3dp"
-        android:layout_marginEnd="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageView
-        android:id="@+id/img_comment"
-        android:layout_width="18dp"
-        android:layout_height="18dp"
-        android:layout_marginBottom="2dp"
-        android:layout_marginEnd="2dp"
-        android:src="@drawable/comment"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/recruit_item_type" />
 
     <View
         android:id="@+id/post_line"

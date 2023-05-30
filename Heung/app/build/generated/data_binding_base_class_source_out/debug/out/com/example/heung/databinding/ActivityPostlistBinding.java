@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.heung.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -21,6 +22,9 @@ import java.lang.String;
 public final class ActivityPostlistBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
+
+  @NonNull
+  public final BottomNavigationView bottomNavigation;
 
   @NonNull
   public final ImageView btnBack;
@@ -40,10 +44,12 @@ public final class ActivityPostlistBinding implements ViewBinding {
   @NonNull
   public final RecyclerView postRecycler;
 
-  private ActivityPostlistBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView btnBack,
+  private ActivityPostlistBinding(@NonNull ConstraintLayout rootView,
+      @NonNull BottomNavigationView bottomNavigation, @NonNull ImageView btnBack,
       @NonNull TextView post, @NonNull Button postCreate, @NonNull View postLine,
       @NonNull Button postPopular, @NonNull RecyclerView postRecycler) {
     this.rootView = rootView;
+    this.bottomNavigation = bottomNavigation;
     this.btnBack = btnBack;
     this.post = post;
     this.postCreate = postCreate;
@@ -79,6 +85,12 @@ public final class ActivityPostlistBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottom_navigation;
+      BottomNavigationView bottomNavigation = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavigation == null) {
+        break missingId;
+      }
+
       id = R.id.btn_back;
       ImageView btnBack = ViewBindings.findChildViewById(rootView, id);
       if (btnBack == null) {
@@ -115,8 +127,8 @@ public final class ActivityPostlistBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityPostlistBinding((ConstraintLayout) rootView, btnBack, post, postCreate,
-          postLine, postPopular, postRecycler);
+      return new ActivityPostlistBinding((ConstraintLayout) rootView, bottomNavigation, btnBack,
+          post, postCreate, postLine, postPopular, postRecycler);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

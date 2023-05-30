@@ -4,6 +4,7 @@ package com.example.heung.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,16 +26,20 @@ public final class ActivityMainBinding implements ViewBinding {
   public final BottomNavigationView bottomNavigation;
 
   @NonNull
+  public final Button btnPostlist;
+
+  @NonNull
   public final RecyclerView latestPostsRecyclerview;
 
   @NonNull
   public final LinearLayout popularPostsContainer;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull RecyclerView latestPostsRecyclerview,
-      @NonNull LinearLayout popularPostsContainer) {
+      @NonNull BottomNavigationView bottomNavigation, @NonNull Button btnPostlist,
+      @NonNull RecyclerView latestPostsRecyclerview, @NonNull LinearLayout popularPostsContainer) {
     this.rootView = rootView;
     this.bottomNavigation = bottomNavigation;
+    this.btnPostlist = btnPostlist;
     this.latestPostsRecyclerview = latestPostsRecyclerview;
     this.popularPostsContainer = popularPostsContainer;
   }
@@ -72,6 +77,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btn_postlist;
+      Button btnPostlist = ViewBindings.findChildViewById(rootView, id);
+      if (btnPostlist == null) {
+        break missingId;
+      }
+
       id = R.id.latest_posts_recyclerview;
       RecyclerView latestPostsRecyclerview = ViewBindings.findChildViewById(rootView, id);
       if (latestPostsRecyclerview == null) {
@@ -84,7 +95,7 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, bottomNavigation,
+      return new ActivityMainBinding((ConstraintLayout) rootView, bottomNavigation, btnPostlist,
           latestPostsRecyclerview, popularPostsContainer);
     }
     String missingId = rootView.getResources().getResourceName(id);

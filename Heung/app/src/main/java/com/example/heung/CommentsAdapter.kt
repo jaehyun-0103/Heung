@@ -12,7 +12,10 @@ class CommentsAdapter(private val postList: MutableList<Comments>) :
     private var onItemClickListener: ((position: Int) -> Unit)? = null // 아이템 클릭 이벤트를 위한 리스너
 
     // 각 아이템 뷰에 대한 ViewHolder 생성
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommentsAdapter.CommentViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): CommentsAdapter.CommentViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.item_postcont, parent, false)
         return CommentsAdapter.CommentViewHolder(view)

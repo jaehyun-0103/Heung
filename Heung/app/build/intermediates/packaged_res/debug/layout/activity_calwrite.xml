@@ -1,47 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/tv_schedule_add_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:includeFontPadding="false"
         android:text="공연 정보을 등록해주세요"
         android:textColor="#474c51"
-        android:textSize="23sp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.248"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:background="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.987" />
+        app:srcCompat="@drawable/arrow_back" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="12dp"
+        android:paddingStart="16dp"
         android:paddingTop="36dp"
-        android:paddingEnd="12dp"
+        android:paddingEnd="16dp"
         android:paddingBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/tv_schedule_add_description">
 
         <TextView
             android:id="@+id/tv_schedule_add_what"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-
             android:includeFontPadding="false"
             android:text="어떤 공연인가요?"
             android:textColor="#474c51"
@@ -53,11 +57,11 @@
             android:id="@+id/cal_title"
             android:layout_width="320dp"
             android:layout_height="40dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-
+            android:layout_marginEnd="8dp"
             android:hint="Ex.버스킹"
             android:includeFontPadding="false"
-
             android:paddingStart="12dp"
             android:textColor="#2e3236"
             android:textSize="14sp"
@@ -70,14 +74,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-
             android:includeFontPadding="false"
             android:text="시간 추가하기"
             android:textColor="#474c51"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@id/cal_title"
             app:layout_constraintTop_toBottomOf="@id/cal_title" />
-
 
         <FrameLayout
             android:id="@+id/fl_add_timebox"
@@ -113,9 +115,9 @@
                     android:id="@+id/startDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:includeFontPadding="false"
                     android:layout_marginStart="28dp"
                     android:layout_marginTop="12dp"
+                    android:includeFontPadding="false"
                     android:text="2021.01.01(일)"
                     android:textColor="#a0a4a8"
                     android:textSize="14sp"
@@ -135,13 +137,14 @@
                         android:id="@+id/startTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:includeFontPadding="false"
                         android:hint="오후 12:00"
+                        android:includeFontPadding="false"
                         android:textColor="#a0a4a8"
                         android:textSize="16sp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
                     android:id="@+id/endDate"
@@ -160,8 +163,8 @@
                     android:id="@+id/cl_timepicker2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="40dp"
                     android:layout_marginTop="4dp"
+                    android:layout_marginEnd="40dp"
                     app:layout_constraintEnd_toEndOf="@id/iv_schedule_time_end"
                     app:layout_constraintTop_toBottomOf="@id/endDate">
 
@@ -169,15 +172,14 @@
                         android:id="@+id/endTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:includeFontPadding="false"
                         android:hint="오후 12:00"
+                        android:includeFontPadding="false"
                         android:textColor="#a0a4a8"
                         android:textSize="16sp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -210,7 +212,6 @@
             app:layout_constraintStart_toStartOf="@id/tv_cal_add_location"
             app:layout_constraintTop_toBottomOf="@id/tv_cal_add_location" />
 
-
         <TextView
             android:id="@+id/tv_cal_add_memo"
             android:layout_width="wrap_content"
@@ -242,10 +243,8 @@
             android:layout_width="320dp"
             android:layout_height="40dp"
             android:layout_marginTop="8dp"
-
             android:hint="Ex.안녕하세요"
             android:includeFontPadding="false"
-
             android:paddingStart="12dp"
             android:textColor="#2e3236"
             android:textSize="14sp"
@@ -265,17 +264,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cal_memo" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageButton
-        android:id="@+id/btn_back"
-        android:background="#FFFFFF"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrow_back" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

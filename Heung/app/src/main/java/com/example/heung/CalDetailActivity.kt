@@ -10,8 +10,6 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class CalDetailActivity : AppCompatActivity() {
-    // ...
-
     private lateinit var calTitleTextView: TextView
     private lateinit var calLocationTextView: TextView
     private lateinit var calStartTimeTextView: TextView
@@ -47,7 +45,7 @@ class CalDetailActivity : AppCompatActivity() {
         calStartTimeTextView.text = formatTime(calStartTime)
         calEndTimeTextView.text = formatTime(calEndTime)
         calMemoTextView.text = calMemo
-        DateTextView.text = selectedDate // 선택한 날짜를 startDate TextView에 표시
+        DateTextView.text = selectedDate
 
         // 수정 버튼 클릭 리스너 설정
         val editButton = findViewById<Button>(R.id.calEdit)
@@ -66,6 +64,7 @@ class CalDetailActivity : AppCompatActivity() {
         }
 
     }
+
     // 시간 형식을 변환하는 함수
     private fun formatTime(date: Long): String {
         val calendar = java.util.Calendar.getInstance()
@@ -74,12 +73,10 @@ class CalDetailActivity : AppCompatActivity() {
         val outputFormat = SimpleDateFormat("a hh:mm", Locale.getDefault())
         return outputFormat.format(calendar.time)
     }
+
     // 현재 사용자와 동일한 사용자인지 확인하는 함수
     private fun isCurrentUser(userId: String): Boolean {
-        // 사용자 인증 또는 세션 관리 등의 로직을 사용하여 현재 사용자의 ID를 가져온 후, userId와 비교합니다.
-        // 예시로 "currentUserId"라는 가상의 현재 사용자 ID를 사용합니다.
         val currentUserId = "currentUserId"
         return userId == currentUserId
     }
-
 }

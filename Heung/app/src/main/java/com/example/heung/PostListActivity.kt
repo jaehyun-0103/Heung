@@ -121,7 +121,8 @@ class PostListActivity : AppCompatActivity() {
                     val post = postList[i]
                     val user = userMap[post.user_id]
                     val nickname = user?.user_nickname ?: "알 수 없는 사용자"
-                    val holder = recyclerViewPosts.findViewHolderForAdapterPosition(i) as? PostListAdapter.PostViewHolder
+                    val holder =
+                        recyclerViewPosts.findViewHolderForAdapterPosition(i) as? PostListAdapter.PostViewHolder
                     holder?.itemView?.findViewById<TextView>(R.id.post_nickname)?.text = nickname
                 }
             }
@@ -140,8 +141,10 @@ class PostListActivity : AppCompatActivity() {
                     val like = likeMap[post.post_id]
                     val likeCount = like?.like ?: 0 // 해당 게시글에 대한 좋아요 수
 
-                    val holder = recyclerViewPosts.findViewHolderForAdapterPosition(i) as? PostListAdapter.PostViewHolder
-                    holder?.itemView?.findViewById<TextView>(R.id.post_likes)?.text = likeCount.toString()
+                    val holder =
+                        recyclerViewPosts.findViewHolderForAdapterPosition(i) as? PostListAdapter.PostViewHolder
+                    holder?.itemView?.findViewById<TextView>(R.id.post_likes)?.text =
+                        likeCount.toString()
                 }
             }
 
@@ -170,8 +173,10 @@ class PostListActivity : AppCompatActivity() {
                     val post = postList[i]
                     val commentsCount = commentsCountMap[post.post_id] ?: 0 // 해당 게시글에 대한 댓글 수
 
-                    val holder = recyclerViewPosts.findViewHolderForAdapterPosition(i) as? PostListAdapter.PostViewHolder
-                    holder?.itemView?.findViewById<TextView>(R.id.post_comment)?.text = commentsCount.toString()
+                    val holder =
+                        recyclerViewPosts.findViewHolderForAdapterPosition(i) as? PostListAdapter.PostViewHolder
+                    holder?.itemView?.findViewById<TextView>(R.id.post_comment)?.text =
+                        commentsCount.toString()
                 }
             }
     }
@@ -224,5 +229,4 @@ class PostListActivity : AppCompatActivity() {
                     }
             }
     }
-
 }

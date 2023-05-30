@@ -24,9 +24,6 @@ public final class ItemRecruitBinding implements ViewBinding {
   public final ConstraintLayout ConstraintLayoutAlready;
 
   @NonNull
-  public final ImageView imgComment;
-
-  @NonNull
   public final ImageView musicIcon;
 
   @NonNull
@@ -45,13 +42,12 @@ public final class ItemRecruitBinding implements ViewBinding {
   public final TextView recruitItemType;
 
   private ItemRecruitBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout ConstraintLayoutAlready, @NonNull ImageView imgComment,
-      @NonNull ImageView musicIcon, @NonNull View postLine, @NonNull TextView recruitItemAuthor,
+      @NonNull ConstraintLayout ConstraintLayoutAlready, @NonNull ImageView musicIcon,
+      @NonNull View postLine, @NonNull TextView recruitItemAuthor,
       @NonNull TextView recruitItemDate, @NonNull TextView recruitItemTitle,
       @NonNull TextView recruitItemType) {
     this.rootView = rootView;
     this.ConstraintLayoutAlready = ConstraintLayoutAlready;
-    this.imgComment = imgComment;
     this.musicIcon = musicIcon;
     this.postLine = postLine;
     this.recruitItemAuthor = recruitItemAuthor;
@@ -89,12 +85,6 @@ public final class ItemRecruitBinding implements ViewBinding {
     missingId: {
       ConstraintLayout ConstraintLayoutAlready = (ConstraintLayout) rootView;
 
-      id = R.id.img_comment;
-      ImageView imgComment = ViewBindings.findChildViewById(rootView, id);
-      if (imgComment == null) {
-        break missingId;
-      }
-
       id = R.id.music_icon;
       ImageView musicIcon = ViewBindings.findChildViewById(rootView, id);
       if (musicIcon == null) {
@@ -131,9 +121,8 @@ public final class ItemRecruitBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemRecruitBinding((ConstraintLayout) rootView, ConstraintLayoutAlready,
-          imgComment, musicIcon, postLine, recruitItemAuthor, recruitItemDate, recruitItemTitle,
-          recruitItemType);
+      return new ItemRecruitBinding((ConstraintLayout) rootView, ConstraintLayoutAlready, musicIcon,
+          postLine, recruitItemAuthor, recruitItemDate, recruitItemTitle, recruitItemType);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

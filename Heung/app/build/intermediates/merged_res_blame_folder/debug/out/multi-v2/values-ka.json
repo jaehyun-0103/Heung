@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.heung.app-mergeDebugResources-38:/values-ka/values-ka.xml",
+            "outputFile": "com.example.heung.app-mergeDebugResources-39:/values-ka/values-ka.xml",
             "map": [
                 {
                     "source": "C:\\Users\\rhfuv\\.gradle\\caches\\transforms-3\\92fd276ea72857ab79f77b0aa017c3e5\\transformed\\core-1.9.0\\res\\values-ka\\values-ka.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.heung.app-mergeDebugResources-38:/values-v31/values-v31.xml",
+            "outputFile": "com.example.heung.app-mergeDebugResources-39:/values-v31/values-v31.xml",
             "map": [
                 {
                     "source": "C:\\Users\\rhfuv\\.gradle\\caches\\transforms-3\\d051c0e6200fe6ae5b4696be471df4c7\\transformed\\material-1.8.0\\res\\values-v31\\values-v31.xml",

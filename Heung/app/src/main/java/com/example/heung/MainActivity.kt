@@ -3,13 +3,9 @@ package com.example.heung
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
+import android.widget.Button
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.example.heung.databinding.ActivityMainBinding
-import com.example.heung.R
-import com.example.heung.CalActivity
-import com.example.heung.RecruListActivity
-import com.example.heung.RentActivity
-import com.example.heung.SelfProfActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -55,6 +51,11 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             true
+        }
+        val btn_postlist = findViewById<Button>(R.id.btn_postlist)
+        btn_postlist.setOnClickListener {
+            val intent = Intent(this, PostListActivity::class.java)
+            startActivity(intent)
         }
     }
 }

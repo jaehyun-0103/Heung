@@ -9,6 +9,7 @@ color teal_700
 color white
 drawable arrow_back
 drawable arrow_icon
+drawable backgroundcolor
 drawable baseline_create_24
 drawable btn_google
 drawable btn_join
@@ -43,6 +44,7 @@ id btnReply
 id btn_back
 id btn_ctv
 id btn_edit
+id btn_postlist
 id btn_quit
 id button_apply
 id button_back
@@ -82,6 +84,7 @@ id likeCnt
 id like_btn
 id line3
 id logo
+id map
 id music_icon
 id nav_calendar
 id nav_main

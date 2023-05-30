@@ -14,7 +14,6 @@ class RecruListActivity : AppCompatActivity() {
     private lateinit var recruitListAdapter: RecruitListAdapter
     private lateinit var recyclerViewRecruits: RecyclerView
     private lateinit var recruitList: MutableList<Recruits>
-
     private lateinit var buskingFilterButton: Button
     private lateinit var classFilterButton: Button
 

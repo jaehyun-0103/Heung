@@ -15,8 +15,7 @@ class CalAdapter(private val calendar: MutableList<Calendar>) :
 
     // 각 아이템 뷰에 대한 ViewHolder 생성
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CalAdapter.CalViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_callist, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_callist, parent, false)
         return CalAdapter.CalViewHolder(view)
     }
 
@@ -49,7 +48,6 @@ class CalAdapter(private val calendar: MutableList<Calendar>) :
     // 각 아이템을 위한 ViewHolder 클래스
     class CalViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-
     // 날짜 형식을 변환하는 함수
     private fun convertToFormattedDate(date: Long): String {
         val calendar = java.util.Calendar.getInstance()
@@ -58,5 +56,4 @@ class CalAdapter(private val calendar: MutableList<Calendar>) :
         val outputFormat = SimpleDateFormat("a hh:mm", Locale.getDefault())
         return outputFormat.format(calendar.time)
     }
-
 }
