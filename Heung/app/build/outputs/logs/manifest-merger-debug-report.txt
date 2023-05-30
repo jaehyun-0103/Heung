@@ -1,10 +1,18 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-58:12
-INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-58:12
-INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-58:12
-INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-58:12
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
+MERGED from [androidx.databinding:databinding-adapters:7.4.2] C:\Users\rhfuv\.gradle\caches\transforms-3\f4c8be7ce288e460073d3ce578548d36\transformed\databinding-adapters-7.4.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.databinding:databinding-ktx:7.4.2] C:\Users\rhfuv\.gradle\caches\transforms-3\fafc6388ea1735f01029f696ec10e485\transformed\databinding-ktx-7.4.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.databinding:databinding-runtime:7.4.2] C:\Users\rhfuv\.gradle\caches\transforms-3\d96c0daeedf86f6a6a02c0ce886bd274\transformed\databinding-runtime-7.4.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:viewbinding:7.4.2] C:\Users\rhfuv\.gradle\caches\transforms-3\254e3404f089adb0ae3c65a66d3e345e\transformed\viewbinding-7.4.2\AndroidManifest.xml:2:1-7:12
+MERGED from [com.kakao.sdk:v2-user:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\abad9b55367a30e88b7b143bc9639be2\transformed\v2-user-2.10.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:2:1-21:12
+MERGED from [com.kakao.sdk:v2-network:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\cf0000e95bd2d4a166cea1676c141ce6\transformed\v2-network-2.10.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.kakao.sdk:v2-common:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:2:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.4.0] C:\Users\rhfuv\.gradle\caches\transforms-3\7df0f7d972ee0b4023923538b1177f90\transformed\lifecycle-runtime-ktx-2.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\rhfuv\.gradle\caches\transforms-3\d051c0e6200fe6ae5b4696be471df4c7\transformed\material-1.8.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\rhfuv\.gradle\caches\transforms-3\cc749da094ee92def6c00d2a563953a4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\rhfuv\.gradle\caches\transforms-3\e5e6d08f9356a9c043695b5b353a0fa9\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -52,20 +60,22 @@ MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\rhfuv\.gradl
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\a053b10eba83c9c123b9e8b429b65324\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\20c66d83c8d8174df478fb2a086fd357\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\505084e478014d69d86d10e3cfa5589d\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.3.0] C:\Users\rhfuv\.gradle\caches\transforms-3\3740788846aaf1d5d346ac249458a2f1\transformed\browser-1.3.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.9.0] C:\Users\rhfuv\.gradle\caches\transforms-3\92fd276ea72857ab79f77b0aa017c3e5\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\rhfuv\.gradle\caches\transforms-3\392e3e5ce3e58bd5f64f9bc4113711a8\transformed\core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\897225a32ace09f17803cd0501c3feef\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.4.0] C:\Users\rhfuv\.gradle\caches\transforms-3\84e8d52cd6a88992550fee9b3c7e1f68\transformed\lifecycle-service-2.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\rhfuv\.gradle\caches\transforms-3\2e4cf9e5985a2758483a29fa37ab5b9d\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\rhfuv\.gradle\caches\transforms-3\dc3b0f9f25ae9c0db3b777f46c9f10b6\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\897225a32ace09f17803cd0501c3feef\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\rhfuv\.gradle\caches\transforms-3\0f642a0bbe2dafe6363a9da692d62fdf\transformed\savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\d10cf30b2d77aedb1064f861e77aba11\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\22e43fbed123a2db024751632a75080c\transformed\firebase-components-17.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.4.0] C:\Users\rhfuv\.gradle\caches\transforms-3\fb6fd4add75569f9482e1b5a81119188\transformed\lifecycle-livedata-2.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\rhfuv\.gradle\caches\transforms-3\2f173bf957a86b87c44a9a6c9f12e549\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\0cc147d9c79318b8f9fb422eeafedd03\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\8f6a1e894698f278cb9de643c8cb2a68\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\115218e0f4870abe11f35bc7dd088de1\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\5e75599f17b8f3a589a701105663b833\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\799dcab938c0323a6a97791a3ea9f936\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\rhfuv\.gradle\caches\transforms-3\2f173bf957a86b87c44a9a6c9f12e549\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\0cc147d9c79318b8f9fb422eeafedd03\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\b270246d7331a8fbe00be0ec082ddaef\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\225135a9c81495b6f0cf558429a7050d\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\eb6b3b0a30ce7849f8b41bd4085d253d\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -73,22 +83,22 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\rhfuv\.gradle\caches\transform
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\rhfuv\.gradle\caches\transforms-3\8cfe1fc317fc262edc8e1d92ee61104a\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\rhfuv\.gradle\caches\transforms-3\15335a192ea95772cf19e32af1d9bef4\transformed\grpc-android-1.44.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\edc6c03eaee96d4d8cde448ac672aa63\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-58:12
-INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-58:12
-INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-58:12
+INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
 	package
 		INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-58:12
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
 		INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-58:12
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
 		INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-58:12
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
 		INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:11-69
@@ -111,7 +121,9 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.0.0] C:
 	android:name
 		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:5:5-56:19
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:5:5-73:19
+MERGED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:9:5-19:19
+MERGED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:9:5-19:19
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\rhfuv\.gradle\caches\transforms-3\d051c0e6200fe6ae5b4696be471df4c7\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\rhfuv\.gradle\caches\transforms-3\d051c0e6200fe6ae5b4696be471df4c7\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\rhfuv\.gradle\caches\transforms-3\cc749da094ee92def6c00d2a563953a4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -173,109 +185,171 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\rhfuv\.gradle\cach
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] C:\Users\rhfuv\.gradle\caches\transforms-3\92fd276ea72857ab79f77b0aa017c3e5\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:11:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:8:9-54
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:9:9-54
 	tools:targetApi
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:13:9-29
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:14:9-29
 	android:icon
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:10:9-43
 	android:allowBackup
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:7:9-35
 	android:theme
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:13:9-43
 	android:dataExtractionRules
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:7:9-65
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:8:9-65
+	android:name
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:6:9-42
+activity#com.kakao.sdk.auth.AuthCodeHandlerActivity
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:15:9-24:20
+MERGED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:15:9-18:56
+MERGED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:15:9-18:56
+	android:launchMode
+		ADDED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:17:13-44
+	android:exported
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:16:13-36
+	android:theme
+		ADDED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:18:13-53
+	android:name
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:15:19-76
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:oauth+data:scheme:네이티브 키
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:17:13-23:29
+action#android.intent.action.VIEW
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:18:17-69
+	android:name
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:18:25-66
+category#android.intent.category.DEFAULT
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:19:17-76
+	android:name
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:19:27-73
+category#android.intent.category.BROWSABLE
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:20:17-78
+	android:name
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:20:27-75
+data
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:21:17-22:47
+	android:host
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:21:23-43
+	android:scheme
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:22:21-44
 activity#com.example.heung.OtherProfActivity
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:14:9-16:40
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:25:9-27:40
 	android:exported
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:16:13-37
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:15:13-46
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:26:13-46
 activity#com.example.heung.SelfProfActivity
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:17:9-19:40
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:28:9-30:40
 	android:exported
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:19:13-37
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:18:13-45
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:29:13-45
 activity#com.example.heung.RentActivity
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:20:9-22:40
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:31:9-33:40
 	android:exported
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:22:13-37
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:33:13-37
 	android:name
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:21:13-41
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:32:13-41
 activity#com.example.heung.LoginActivity
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:23:9-25:40
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:34:9-36:40
 	android:exported
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:25:13-37
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:24:13-42
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:35:13-42
 activity#com.example.heung.RecrutWriteActivity
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:26:9-28:40
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:37:9-39:40
 	android:exported
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:28:13-37
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:39:13-37
 	android:name
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:27:13-48
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:38:13-48
 activity#com.example.heung.PostWriteActivity
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:29:9-31:40
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:40:9-42:40
 	android:exported
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:31:13-37
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:30:13-46
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:41:13-46
 activity#com.example.heung.RecruContActivity
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:32:9-34:40
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:43:9-45:40
 	android:exported
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:34:13-37
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:45:13-37
 	android:name
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:33:13-46
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:44:13-46
 activity#com.example.heung.PostContActivity
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:35:9-37:40
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:46:9-48:40
 	android:exported
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:37:13-37
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:48:13-37
 	android:name
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:36:13-45
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:47:13-45
 activity#com.example.heung.CalActivity
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:38:9-40:40
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:49:9-51:40
 	android:exported
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:40:13-37
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:51:13-37
 	android:name
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:39:13-40
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:50:13-40
+activity#com.example.heung.CalWriteActivity
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:52:9-54:40
+	android:exported
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:54:13-37
+	android:name
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:53:13-45
+activity#com.example.heung.CalDetailActivity
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:55:9-57:40
+	android:exported
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:57:13-37
+	android:name
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:56:13-46
 activity#com.example.heung.RecruListActivity
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:41:9-43:40
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:58:9-60:40
 	android:exported
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:43:13-37
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:60:13-37
 	android:name
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:42:13-46
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:59:13-46
 activity#com.example.heung.PostListActivity
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:44:9-46:40
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:61:9-63:40
 	android:exported
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:46:13-37
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:63:13-37
 	android:name
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:45:13-45
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:62:13-45
 activity#com.example.heung.MainActivity
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:47:9-55:20
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:64:9-72:20
 	android:exported
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:49:13-36
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:66:13-36
 	android:name
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:48:13-41
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:65:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:50:13-54:29
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:67:13-71:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:51:17-69
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:68:17-69
 	android:name
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:51:25-66
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:68:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:53:17-77
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:70:17-77
 	android:name
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:53:27-74
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:70:27-74
 uses-sdk
 INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
+MERGED from [androidx.databinding:databinding-adapters:7.4.2] C:\Users\rhfuv\.gradle\caches\transforms-3\f4c8be7ce288e460073d3ce578548d36\transformed\databinding-adapters-7.4.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:databinding-adapters:7.4.2] C:\Users\rhfuv\.gradle\caches\transforms-3\f4c8be7ce288e460073d3ce578548d36\transformed\databinding-adapters-7.4.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:databinding-ktx:7.4.2] C:\Users\rhfuv\.gradle\caches\transforms-3\fafc6388ea1735f01029f696ec10e485\transformed\databinding-ktx-7.4.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:databinding-ktx:7.4.2] C:\Users\rhfuv\.gradle\caches\transforms-3\fafc6388ea1735f01029f696ec10e485\transformed\databinding-ktx-7.4.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:databinding-runtime:7.4.2] C:\Users\rhfuv\.gradle\caches\transforms-3\d96c0daeedf86f6a6a02c0ce886bd274\transformed\databinding-runtime-7.4.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:databinding-runtime:7.4.2] C:\Users\rhfuv\.gradle\caches\transforms-3\d96c0daeedf86f6a6a02c0ce886bd274\transformed\databinding-runtime-7.4.2\AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:viewbinding:7.4.2] C:\Users\rhfuv\.gradle\caches\transforms-3\254e3404f089adb0ae3c65a66d3e345e\transformed\viewbinding-7.4.2\AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:viewbinding:7.4.2] C:\Users\rhfuv\.gradle\caches\transforms-3\254e3404f089adb0ae3c65a66d3e345e\transformed\viewbinding-7.4.2\AndroidManifest.xml:5:5-44
+MERGED from [com.kakao.sdk:v2-user:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\abad9b55367a30e88b7b143bc9639be2\transformed\v2-user-2.10.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-user:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\abad9b55367a30e88b7b143bc9639be2\transformed\v2-user-2.10.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-network:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\cf0000e95bd2d4a166cea1676c141ce6\transformed\v2-network-2.10.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-network:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\cf0000e95bd2d4a166cea1676c141ce6\transformed\v2-network-2.10.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-common:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.kakao.sdk:v2-common:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.4.0] C:\Users\rhfuv\.gradle\caches\transforms-3\7df0f7d972ee0b4023923538b1177f90\transformed\lifecycle-runtime-ktx-2.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.4.0] C:\Users\rhfuv\.gradle\caches\transforms-3\7df0f7d972ee0b4023923538b1177f90\transformed\lifecycle-runtime-ktx-2.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\rhfuv\.gradle\caches\transforms-3\d051c0e6200fe6ae5b4696be471df4c7\transformed\material-1.8.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\rhfuv\.gradle\caches\transforms-3\d051c0e6200fe6ae5b4696be471df4c7\transformed\material-1.8.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\rhfuv\.gradle\caches\transforms-3\cc749da094ee92def6c00d2a563953a4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
@@ -370,34 +444,38 @@ MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\rhfuv\.gradle\ca
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\20c66d83c8d8174df478fb2a086fd357\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\505084e478014d69d86d10e3cfa5589d\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\505084e478014d69d86d10e3cfa5589d\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.3.0] C:\Users\rhfuv\.gradle\caches\transforms-3\3740788846aaf1d5d346ac249458a2f1\transformed\browser-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.3.0] C:\Users\rhfuv\.gradle\caches\transforms-3\3740788846aaf1d5d346ac249458a2f1\transformed\browser-1.3.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.9.0] C:\Users\rhfuv\.gradle\caches\transforms-3\92fd276ea72857ab79f77b0aa017c3e5\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.9.0] C:\Users\rhfuv\.gradle\caches\transforms-3\92fd276ea72857ab79f77b0aa017c3e5\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\rhfuv\.gradle\caches\transforms-3\392e3e5ce3e58bd5f64f9bc4113711a8\transformed\core-ktx-1.9.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\rhfuv\.gradle\caches\transforms-3\392e3e5ce3e58bd5f64f9bc4113711a8\transformed\core-ktx-1.9.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\897225a32ace09f17803cd0501c3feef\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\897225a32ace09f17803cd0501c3feef\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.4.0] C:\Users\rhfuv\.gradle\caches\transforms-3\84e8d52cd6a88992550fee9b3c7e1f68\transformed\lifecycle-service-2.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.4.0] C:\Users\rhfuv\.gradle\caches\transforms-3\84e8d52cd6a88992550fee9b3c7e1f68\transformed\lifecycle-service-2.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\rhfuv\.gradle\caches\transforms-3\2e4cf9e5985a2758483a29fa37ab5b9d\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\rhfuv\.gradle\caches\transforms-3\2e4cf9e5985a2758483a29fa37ab5b9d\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\rhfuv\.gradle\caches\transforms-3\dc3b0f9f25ae9c0db3b777f46c9f10b6\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\rhfuv\.gradle\caches\transforms-3\dc3b0f9f25ae9c0db3b777f46c9f10b6\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\897225a32ace09f17803cd0501c3feef\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\897225a32ace09f17803cd0501c3feef\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\rhfuv\.gradle\caches\transforms-3\0f642a0bbe2dafe6363a9da692d62fdf\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\rhfuv\.gradle\caches\transforms-3\0f642a0bbe2dafe6363a9da692d62fdf\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\d10cf30b2d77aedb1064f861e77aba11\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\d10cf30b2d77aedb1064f861e77aba11\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\22e43fbed123a2db024751632a75080c\transformed\firebase-components-17.0.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\22e43fbed123a2db024751632a75080c\transformed\firebase-components-17.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.4.0] C:\Users\rhfuv\.gradle\caches\transforms-3\fb6fd4add75569f9482e1b5a81119188\transformed\lifecycle-livedata-2.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.4.0] C:\Users\rhfuv\.gradle\caches\transforms-3\fb6fd4add75569f9482e1b5a81119188\transformed\lifecycle-livedata-2.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\rhfuv\.gradle\caches\transforms-3\2f173bf957a86b87c44a9a6c9f12e549\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\rhfuv\.gradle\caches\transforms-3\2f173bf957a86b87c44a9a6c9f12e549\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\0cc147d9c79318b8f9fb422eeafedd03\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\0cc147d9c79318b8f9fb422eeafedd03\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\8f6a1e894698f278cb9de643c8cb2a68\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\8f6a1e894698f278cb9de643c8cb2a68\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\115218e0f4870abe11f35bc7dd088de1\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\115218e0f4870abe11f35bc7dd088de1\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\5e75599f17b8f3a589a701105663b833\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\5e75599f17b8f3a589a701105663b833\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\799dcab938c0323a6a97791a3ea9f936\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\799dcab938c0323a6a97791a3ea9f936\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\rhfuv\.gradle\caches\transforms-3\2f173bf957a86b87c44a9a6c9f12e549\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\rhfuv\.gradle\caches\transforms-3\2f173bf957a86b87c44a9a6c9f12e549\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\0cc147d9c79318b8f9fb422eeafedd03\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\0cc147d9c79318b8f9fb422eeafedd03\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\b270246d7331a8fbe00be0ec082ddaef\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\b270246d7331a8fbe00be0ec082ddaef\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\225135a9c81495b6f0cf558429a7050d\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
@@ -422,6 +500,36 @@ INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xm
 		INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
+activity#com.kakao.sdk.auth.TalkAuthCodeActivity
+ADDED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:10:9-14:56
+	android:launchMode
+		ADDED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:13:13-44
+	android:exported
+		ADDED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:14:13-53
+	android:name
+		ADDED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:11:13-67
+queries
+ADDED from [com.kakao.sdk:v2-common:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:9:5-22:15
+package#com.kakao.talk
+ADDED from [com.kakao.sdk:v2-common:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:10:9-50
+	android:name
+		ADDED from [com.kakao.sdk:v2-common:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:10:18-47
+package#com.kakao.talk.alpha
+ADDED from [com.kakao.sdk:v2-common:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:11:9-56
+	android:name
+		ADDED from [com.kakao.sdk:v2-common:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:11:18-53
+package#com.kakao.talk.sandbox
+ADDED from [com.kakao.sdk:v2-common:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:12:9-58
+	android:name
+		ADDED from [com.kakao.sdk:v2-common:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:12:18-55
+package#com.kakao.onetalk
+ADDED from [com.kakao.sdk:v2-common:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:13:9-53
+	android:name
+		ADDED from [com.kakao.sdk:v2-common:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:13:18-50
+intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:scheme:https
+ADDED from [com.kakao.sdk:v2-common:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:15:9-21:18
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\rhfuv\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\rhfuv\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:12:9-18:19

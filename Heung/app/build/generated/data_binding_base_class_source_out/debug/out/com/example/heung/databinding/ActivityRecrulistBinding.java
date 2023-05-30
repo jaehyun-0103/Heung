@@ -4,20 +4,58 @@ package com.example.heung.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.heung.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityRecrulistBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
-  private ActivityRecrulistBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final ImageView recruitBtnBack;
+
+  @NonNull
+  public final Button recruitCreate;
+
+  @NonNull
+  public final Button recruitFilter;
+
+  @NonNull
+  public final Button recruitFilterBusking;
+
+  @NonNull
+  public final Button recruitFilterClass;
+
+  @NonNull
+  public final RecyclerView recruitList;
+
+  @NonNull
+  public final TextView recruitTitle;
+
+  private ActivityRecrulistBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ImageView recruitBtnBack, @NonNull Button recruitCreate,
+      @NonNull Button recruitFilter, @NonNull Button recruitFilterBusking,
+      @NonNull Button recruitFilterClass, @NonNull RecyclerView recruitList,
+      @NonNull TextView recruitTitle) {
     this.rootView = rootView;
+    this.recruitBtnBack = recruitBtnBack;
+    this.recruitCreate = recruitCreate;
+    this.recruitFilter = recruitFilter;
+    this.recruitFilterBusking = recruitFilterBusking;
+    this.recruitFilterClass = recruitFilterClass;
+    this.recruitList = recruitList;
+    this.recruitTitle = recruitTitle;
   }
 
   @Override
@@ -43,10 +81,57 @@ public final class ActivityRecrulistBinding implements ViewBinding {
 
   @NonNull
   public static ActivityRecrulistBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.recruit_btn_back;
+      ImageView recruitBtnBack = ViewBindings.findChildViewById(rootView, id);
+      if (recruitBtnBack == null) {
+        break missingId;
+      }
 
-    return new ActivityRecrulistBinding((ConstraintLayout) rootView);
+      id = R.id.recruit_create;
+      Button recruitCreate = ViewBindings.findChildViewById(rootView, id);
+      if (recruitCreate == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_filter;
+      Button recruitFilter = ViewBindings.findChildViewById(rootView, id);
+      if (recruitFilter == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_filter_busking;
+      Button recruitFilterBusking = ViewBindings.findChildViewById(rootView, id);
+      if (recruitFilterBusking == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_filter_class;
+      Button recruitFilterClass = ViewBindings.findChildViewById(rootView, id);
+      if (recruitFilterClass == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_list;
+      RecyclerView recruitList = ViewBindings.findChildViewById(rootView, id);
+      if (recruitList == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_title;
+      TextView recruitTitle = ViewBindings.findChildViewById(rootView, id);
+      if (recruitTitle == null) {
+        break missingId;
+      }
+
+      return new ActivityRecrulistBinding((ConstraintLayout) rootView, recruitBtnBack,
+          recruitCreate, recruitFilter, recruitFilterBusking, recruitFilterClass, recruitList,
+          recruitTitle);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

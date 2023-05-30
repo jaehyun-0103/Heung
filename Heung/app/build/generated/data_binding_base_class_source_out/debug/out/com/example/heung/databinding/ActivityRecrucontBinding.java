@@ -4,25 +4,66 @@ package com.example.heung.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ScrollView;
+import android.widget.TextView;
+import android.widget.ToggleButton;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.heung.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityRecrucontBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final ScrollView rootView;
 
-  private ActivityRecrucontBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final Button buttonApply;
+
+  @NonNull
+  public final Button buttonBack;
+
+  @NonNull
+  public final TextView textParticipants;
+
+  @NonNull
+  public final TextView textRecruitContent;
+
+  @NonNull
+  public final TextView textRecruitDate;
+
+  @NonNull
+  public final TextView textRecruitEndDate;
+
+  @NonNull
+  public final TextView textRecruitTitle;
+
+  @NonNull
+  public final ToggleButton toggleStatus;
+
+  private ActivityRecrucontBinding(@NonNull ScrollView rootView, @NonNull Button buttonApply,
+      @NonNull Button buttonBack, @NonNull TextView textParticipants,
+      @NonNull TextView textRecruitContent, @NonNull TextView textRecruitDate,
+      @NonNull TextView textRecruitEndDate, @NonNull TextView textRecruitTitle,
+      @NonNull ToggleButton toggleStatus) {
     this.rootView = rootView;
+    this.buttonApply = buttonApply;
+    this.buttonBack = buttonBack;
+    this.textParticipants = textParticipants;
+    this.textRecruitContent = textRecruitContent;
+    this.textRecruitDate = textRecruitDate;
+    this.textRecruitEndDate = textRecruitEndDate;
+    this.textRecruitTitle = textRecruitTitle;
+    this.toggleStatus = toggleStatus;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -43,10 +84,63 @@ public final class ActivityRecrucontBinding implements ViewBinding {
 
   @NonNull
   public static ActivityRecrucontBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.button_apply;
+      Button buttonApply = ViewBindings.findChildViewById(rootView, id);
+      if (buttonApply == null) {
+        break missingId;
+      }
 
-    return new ActivityRecrucontBinding((ConstraintLayout) rootView);
+      id = R.id.button_back;
+      Button buttonBack = ViewBindings.findChildViewById(rootView, id);
+      if (buttonBack == null) {
+        break missingId;
+      }
+
+      id = R.id.text_participants;
+      TextView textParticipants = ViewBindings.findChildViewById(rootView, id);
+      if (textParticipants == null) {
+        break missingId;
+      }
+
+      id = R.id.text_recruit_content;
+      TextView textRecruitContent = ViewBindings.findChildViewById(rootView, id);
+      if (textRecruitContent == null) {
+        break missingId;
+      }
+
+      id = R.id.text_recruit_date;
+      TextView textRecruitDate = ViewBindings.findChildViewById(rootView, id);
+      if (textRecruitDate == null) {
+        break missingId;
+      }
+
+      id = R.id.text_recruit_endDate;
+      TextView textRecruitEndDate = ViewBindings.findChildViewById(rootView, id);
+      if (textRecruitEndDate == null) {
+        break missingId;
+      }
+
+      id = R.id.text_recruit_title;
+      TextView textRecruitTitle = ViewBindings.findChildViewById(rootView, id);
+      if (textRecruitTitle == null) {
+        break missingId;
+      }
+
+      id = R.id.toggle_status;
+      ToggleButton toggleStatus = ViewBindings.findChildViewById(rootView, id);
+      if (toggleStatus == null) {
+        break missingId;
+      }
+
+      return new ActivityRecrucontBinding((ScrollView) rootView, buttonApply, buttonBack,
+          textParticipants, textRecruitContent, textRecruitDate, textRecruitEndDate,
+          textRecruitTitle, toggleStatus);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

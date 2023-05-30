@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -22,33 +21,16 @@ public final class ActivityLoginBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ImageButton btnGoogle;
-
-  @NonNull
-  public final ImageButton btnJoin;
-
-  @NonNull
-  public final ImageButton btnKakao;
-
-  @NonNull
-  public final ImageButton btnNaver;
+  public final ImageButton kakaoLoginButton;
 
   @NonNull
   public final ImageView logo;
 
-  @NonNull
-  public final LinearLayout or;
-
-  private ActivityLoginBinding(@NonNull ConstraintLayout rootView, @NonNull ImageButton btnGoogle,
-      @NonNull ImageButton btnJoin, @NonNull ImageButton btnKakao, @NonNull ImageButton btnNaver,
-      @NonNull ImageView logo, @NonNull LinearLayout or) {
+  private ActivityLoginBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ImageButton kakaoLoginButton, @NonNull ImageView logo) {
     this.rootView = rootView;
-    this.btnGoogle = btnGoogle;
-    this.btnJoin = btnJoin;
-    this.btnKakao = btnKakao;
-    this.btnNaver = btnNaver;
+    this.kakaoLoginButton = kakaoLoginButton;
     this.logo = logo;
-    this.or = or;
   }
 
   @Override
@@ -78,27 +60,9 @@ public final class ActivityLoginBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btn_google;
-      ImageButton btnGoogle = ViewBindings.findChildViewById(rootView, id);
-      if (btnGoogle == null) {
-        break missingId;
-      }
-
-      id = R.id.btn_join;
-      ImageButton btnJoin = ViewBindings.findChildViewById(rootView, id);
-      if (btnJoin == null) {
-        break missingId;
-      }
-
-      id = R.id.btn_kakao;
-      ImageButton btnKakao = ViewBindings.findChildViewById(rootView, id);
-      if (btnKakao == null) {
-        break missingId;
-      }
-
-      id = R.id.btn_naver;
-      ImageButton btnNaver = ViewBindings.findChildViewById(rootView, id);
-      if (btnNaver == null) {
+      id = R.id.kakao_login_button;
+      ImageButton kakaoLoginButton = ViewBindings.findChildViewById(rootView, id);
+      if (kakaoLoginButton == null) {
         break missingId;
       }
 
@@ -108,14 +72,7 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.or;
-      LinearLayout or = ViewBindings.findChildViewById(rootView, id);
-      if (or == null) {
-        break missingId;
-      }
-
-      return new ActivityLoginBinding((ConstraintLayout) rootView, btnGoogle, btnJoin, btnKakao,
-          btnNaver, logo, or);
+      return new ActivityLoginBinding((ConstraintLayout) rootView, kakaoLoginButton, logo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

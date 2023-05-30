@@ -1,6 +1,45 @@
 <resources>
     <string name="app_name">Heung</string>
-    <string name="postwrite">게시글 작성</string>
+    <string name="write">작성</string>
     <string name="upload">등록</string>
     <string name="title">제목</string>
+    <string name="search">검색</string>
+    <string name="notice">공연 알림</string>
+    <string name="detail">공연 정보 세부사항</string>
+    <string name="place">장소</string>
+    <string name="intro">소개글</string>
+    <string name="modify">수정</string>
+    <string name="delete">삭제</string>
+    <string name="nickname">닉네임</string>
+    <string name="post">게시물</string>
+    <string name="date">날짜</string>
+    <string name="content">내용</string>
+    <string name="like">좋아요</string>
+    <string name="comment">댓글</string>
+    <string name="complete">완료</string>
+    <string name="popular">인기</string>
+    <string name="create">생성</string>
+    <string name="posting">게시판</string>
+    <string name="back">돌아가기</string>
+    <string name="recruitEnd">모집 종료 시간</string>
+    <string name="recruitReq">모집 신청</string>
+    <string name="recruit">모집글</string>
+    <string name="buskingR">버스킹</string>
+    <string name="classR">클래스</string>
+    <string name="filter">필터</string>
+    <string name="sessionType">세션 종류</string>
+    <string name="classType">클래스 종류</string>
+    <string name="period">기간</string>
+    <string name="nicknameChange">닉네임 변경</string>
+    <string name="withdrawal">회원탈퇴</string>
+    <string name="performName">공연 이름</string>
+    <string name="startTime">시작 시간</string>
+    <string name="endTime">끝나는 시간</string>
+    <string name="commentCnt">댓글수</string>
+
+
+
+
+    <string name="perfromName">소개글</string>
+    <string name="kakao_app_key">카카오_앱_키</string>
 </resources>

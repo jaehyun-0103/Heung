@@ -4,20 +4,43 @@ package com.example.heung.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.heung.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityOtherprofBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
-  private ActivityOtherprofBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final TextView Post;
+
+  @NonNull
+  public final TextView nickname;
+
+  @NonNull
+  public final ImageView otherProfile;
+
+  @NonNull
+  public final RecyclerView recyclerView;
+
+  private ActivityOtherprofBinding(@NonNull ConstraintLayout rootView, @NonNull TextView Post,
+      @NonNull TextView nickname, @NonNull ImageView otherProfile,
+      @NonNull RecyclerView recyclerView) {
     this.rootView = rootView;
+    this.Post = Post;
+    this.nickname = nickname;
+    this.otherProfile = otherProfile;
+    this.recyclerView = recyclerView;
   }
 
   @Override
@@ -43,10 +66,38 @@ public final class ActivityOtherprofBinding implements ViewBinding {
 
   @NonNull
   public static ActivityOtherprofBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.Post;
+      TextView Post = ViewBindings.findChildViewById(rootView, id);
+      if (Post == null) {
+        break missingId;
+      }
 
-    return new ActivityOtherprofBinding((ConstraintLayout) rootView);
+      id = R.id.nickname;
+      TextView nickname = ViewBindings.findChildViewById(rootView, id);
+      if (nickname == null) {
+        break missingId;
+      }
+
+      id = R.id.other_profile;
+      ImageView otherProfile = ViewBindings.findChildViewById(rootView, id);
+      if (otherProfile == null) {
+        break missingId;
+      }
+
+      id = R.id.recyclerView;
+      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerView == null) {
+        break missingId;
+      }
+
+      return new ActivityOtherprofBinding((ConstraintLayout) rootView, Post, nickname, otherProfile,
+          recyclerView);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

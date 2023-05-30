@@ -4,25 +4,95 @@ package com.example.heung.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.heung.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityRecrutwriteBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
-  private ActivityRecrutwriteBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final ImageButton recruitBtnBack;
+
+  @NonNull
+  public final EditText recruitContent;
+
+  @NonNull
+  public final Button recruitFilterBusking;
+
+  @NonNull
+  public final EditText recruitFilterBuskingDate;
+
+  @NonNull
+  public final LinearLayout recruitFilterBuskingLayout;
+
+  @NonNull
+  public final EditText recruitFilterBuskingSession;
+
+  @NonNull
+  public final Button recruitFilterClass;
+
+  @NonNull
+  public final EditText recruitFilterClassDuration;
+
+  @NonNull
+  public final LinearLayout recruitFilterClassLayout;
+
+  @NonNull
+  public final EditText recruitFilterClassType;
+
+  @NonNull
+  public final View recruitLine;
+
+  @NonNull
+  public final TextView recruitPost;
+
+  @NonNull
+  public final EditText recruitTitle;
+
+  @NonNull
+  public final Button recruitUpload;
+
+  private ActivityRecrutwriteBinding(@NonNull LinearLayout rootView,
+      @NonNull ImageButton recruitBtnBack, @NonNull EditText recruitContent,
+      @NonNull Button recruitFilterBusking, @NonNull EditText recruitFilterBuskingDate,
+      @NonNull LinearLayout recruitFilterBuskingLayout,
+      @NonNull EditText recruitFilterBuskingSession, @NonNull Button recruitFilterClass,
+      @NonNull EditText recruitFilterClassDuration, @NonNull LinearLayout recruitFilterClassLayout,
+      @NonNull EditText recruitFilterClassType, @NonNull View recruitLine,
+      @NonNull TextView recruitPost, @NonNull EditText recruitTitle,
+      @NonNull Button recruitUpload) {
     this.rootView = rootView;
+    this.recruitBtnBack = recruitBtnBack;
+    this.recruitContent = recruitContent;
+    this.recruitFilterBusking = recruitFilterBusking;
+    this.recruitFilterBuskingDate = recruitFilterBuskingDate;
+    this.recruitFilterBuskingLayout = recruitFilterBuskingLayout;
+    this.recruitFilterBuskingSession = recruitFilterBuskingSession;
+    this.recruitFilterClass = recruitFilterClass;
+    this.recruitFilterClassDuration = recruitFilterClassDuration;
+    this.recruitFilterClassLayout = recruitFilterClassLayout;
+    this.recruitFilterClassType = recruitFilterClassType;
+    this.recruitLine = recruitLine;
+    this.recruitPost = recruitPost;
+    this.recruitTitle = recruitTitle;
+    this.recruitUpload = recruitUpload;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -43,10 +113,101 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
 
   @NonNull
   public static ActivityRecrutwriteBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.recruit_btn_back;
+      ImageButton recruitBtnBack = ViewBindings.findChildViewById(rootView, id);
+      if (recruitBtnBack == null) {
+        break missingId;
+      }
 
-    return new ActivityRecrutwriteBinding((ConstraintLayout) rootView);
+      id = R.id.recruit_content;
+      EditText recruitContent = ViewBindings.findChildViewById(rootView, id);
+      if (recruitContent == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_filter_busking;
+      Button recruitFilterBusking = ViewBindings.findChildViewById(rootView, id);
+      if (recruitFilterBusking == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_filter_busking_date;
+      EditText recruitFilterBuskingDate = ViewBindings.findChildViewById(rootView, id);
+      if (recruitFilterBuskingDate == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_filter_busking_layout;
+      LinearLayout recruitFilterBuskingLayout = ViewBindings.findChildViewById(rootView, id);
+      if (recruitFilterBuskingLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_filter_busking_session;
+      EditText recruitFilterBuskingSession = ViewBindings.findChildViewById(rootView, id);
+      if (recruitFilterBuskingSession == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_filter_class;
+      Button recruitFilterClass = ViewBindings.findChildViewById(rootView, id);
+      if (recruitFilterClass == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_filter_class_duration;
+      EditText recruitFilterClassDuration = ViewBindings.findChildViewById(rootView, id);
+      if (recruitFilterClassDuration == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_filter_class_layout;
+      LinearLayout recruitFilterClassLayout = ViewBindings.findChildViewById(rootView, id);
+      if (recruitFilterClassLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_filter_class_type;
+      EditText recruitFilterClassType = ViewBindings.findChildViewById(rootView, id);
+      if (recruitFilterClassType == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_line;
+      View recruitLine = ViewBindings.findChildViewById(rootView, id);
+      if (recruitLine == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_post;
+      TextView recruitPost = ViewBindings.findChildViewById(rootView, id);
+      if (recruitPost == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_title;
+      EditText recruitTitle = ViewBindings.findChildViewById(rootView, id);
+      if (recruitTitle == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_upload;
+      Button recruitUpload = ViewBindings.findChildViewById(rootView, id);
+      if (recruitUpload == null) {
+        break missingId;
+      }
+
+      return new ActivityRecrutwriteBinding((LinearLayout) rootView, recruitBtnBack, recruitContent,
+          recruitFilterBusking, recruitFilterBuskingDate, recruitFilterBuskingLayout,
+          recruitFilterBuskingSession, recruitFilterClass, recruitFilterClassDuration,
+          recruitFilterClassLayout, recruitFilterClassType, recruitLine, recruitPost, recruitTitle,
+          recruitUpload);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

@@ -4,13 +4,15 @@ package com.example.heung.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.heung.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,11 +22,21 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button btnPostlist;
+  public final BottomNavigationView bottomNavigation;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnPostlist) {
+  @NonNull
+  public final RecyclerView latestPostsRecyclerview;
+
+  @NonNull
+  public final LinearLayout popularPostsContainer;
+
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView,
+      @NonNull BottomNavigationView bottomNavigation, @NonNull RecyclerView latestPostsRecyclerview,
+      @NonNull LinearLayout popularPostsContainer) {
     this.rootView = rootView;
-    this.btnPostlist = btnPostlist;
+    this.bottomNavigation = bottomNavigation;
+    this.latestPostsRecyclerview = latestPostsRecyclerview;
+    this.popularPostsContainer = popularPostsContainer;
   }
 
   @Override
@@ -54,13 +66,26 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btn_postlist;
-      Button btnPostlist = ViewBindings.findChildViewById(rootView, id);
-      if (btnPostlist == null) {
+      id = R.id.bottom_navigation;
+      BottomNavigationView bottomNavigation = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavigation == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, btnPostlist);
+      id = R.id.latest_posts_recyclerview;
+      RecyclerView latestPostsRecyclerview = ViewBindings.findChildViewById(rootView, id);
+      if (latestPostsRecyclerview == null) {
+        break missingId;
+      }
+
+      id = R.id.popular_posts_container;
+      LinearLayout popularPostsContainer = ViewBindings.findChildViewById(rootView, id);
+      if (popularPostsContainer == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((ConstraintLayout) rootView, bottomNavigation,
+          latestPostsRecyclerview, popularPostsContainer);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

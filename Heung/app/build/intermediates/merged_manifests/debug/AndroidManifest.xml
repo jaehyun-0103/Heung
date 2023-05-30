@@ -10,7 +10,20 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+    <queries>
+        <package android:name="com.kakao.talk" />
+        <package android:name="com.kakao.talk.alpha" />
+        <package android:name="com.kakao.talk.sandbox" />
+        <package android:name="com.kakao.onetalk" />
+
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data android:scheme="https" />
+        </intent>
+    </queries> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
     <!-- <uses-sdk android:minSdkVersion="14" /> -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -23,6 +36,7 @@
     <uses-permission android:name="com.example.heung.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
+        android:name="com.example.heung.GlobalApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -34,6 +48,22 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Heung" >
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/TransparentCompat" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="oauth"
+                    android:scheme="네이티브 키" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.example.heung.OtherProfActivity"
             android:exported="false" />
@@ -62,6 +92,12 @@
             android:name="com.example.heung.CalActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.heung.CalWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.heung.CalDetailActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.heung.RecruListActivity"
             android:exported="false" />
         <activity
@@ -76,6 +112,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.kakao.sdk.auth.TalkAuthCodeActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@style/TransparentCompat" />
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"

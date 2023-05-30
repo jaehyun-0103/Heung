@@ -1,12 +1,12 @@
 package data
 
-data class Calendar(
+data class Calendar (
     val cal_id: String = "",
     val user_id: String = "",
-    val cal_title: String = "",
-    val cal_memo: String = "",
     val cal_date: String = "",
-    val cal_startDate: String = "",
-    val cal_endDate: String = "",
+    var cal_startDate: Long = 0L,
+    var cal_endDate: Long = 0L,
     val cal_location: String = "",
+    val cal_memo: String = "",
+    val cal_title: String = ""
 )
