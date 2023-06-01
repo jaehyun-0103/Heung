@@ -8,6 +8,7 @@ import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.GroundOverlayOptions
 import com.google.android.gms.maps.model.LatLng
+import android.content.Intent
 
 class RentActivity : AppCompatActivity(), OnMapReadyCallback {
     lateinit var gMap: GoogleMap
@@ -62,5 +63,12 @@ class RentActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         }
         return false
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, MainActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+        startActivity(intent)
+        finish()
     }
 }

@@ -3,21 +3,21 @@
     <item
         android:id="@+id/nav_main"
         android:icon="@drawable/home"
-        android:title="Main" />
+        android:title="홈" />
     <item
         android:id="@+id/nav_recruit"
         android:icon="@drawable/recruit"
-        android:title="Recruit" />
+        android:title="모집" />
     <item
         android:id="@+id/nav_map"
         android:icon="@drawable/map"
-        android:title="Map" />
+        android:title="지도" />
     <item
         android:id="@+id/nav_calendar"
         android:icon="@drawable/calendar"
-        android:title="Calendar" />
+        android:title="달력/일정" />
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/profile"
-        android:title="Profile" />
+        android:title="프로필" />
 </menu>

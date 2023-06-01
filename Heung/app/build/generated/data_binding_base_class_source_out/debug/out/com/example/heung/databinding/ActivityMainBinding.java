@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,6 +30,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button btnPostlist;
 
   @NonNull
+  public final FrameLayout fragmentContainer;
+
+  @NonNull
   public final RecyclerView latestPostsRecyclerview;
 
   @NonNull
@@ -36,10 +40,12 @@ public final class ActivityMainBinding implements ViewBinding {
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView,
       @NonNull BottomNavigationView bottomNavigation, @NonNull Button btnPostlist,
-      @NonNull RecyclerView latestPostsRecyclerview, @NonNull LinearLayout popularPostsContainer) {
+      @NonNull FrameLayout fragmentContainer, @NonNull RecyclerView latestPostsRecyclerview,
+      @NonNull LinearLayout popularPostsContainer) {
     this.rootView = rootView;
     this.bottomNavigation = bottomNavigation;
     this.btnPostlist = btnPostlist;
+    this.fragmentContainer = fragmentContainer;
     this.latestPostsRecyclerview = latestPostsRecyclerview;
     this.popularPostsContainer = popularPostsContainer;
   }
@@ -83,6 +89,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.fragment_container;
+      FrameLayout fragmentContainer = ViewBindings.findChildViewById(rootView, id);
+      if (fragmentContainer == null) {
+        break missingId;
+      }
+
       id = R.id.latest_posts_recyclerview;
       RecyclerView latestPostsRecyclerview = ViewBindings.findChildViewById(rootView, id);
       if (latestPostsRecyclerview == null) {
@@ -96,7 +108,7 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((ConstraintLayout) rootView, bottomNavigation, btnPostlist,
-          latestPostsRecyclerview, popularPostsContainer);
+          fragmentContainer, latestPostsRecyclerview, popularPostsContainer);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
