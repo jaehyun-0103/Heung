@@ -1,7 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 color black
-color bottom_nav_item_colors
+color bottom_navigation_selected_item
 color purple_200
 color purple_500
 color purple_700
@@ -86,6 +86,7 @@ id likeCnt
 id like_btn
 id line3
 id logo
+id main_layout
 id map
 id music_icon
 id nav_calendar
@@ -142,8 +143,6 @@ id self_profile
 id self_recycler
 id startDate
 id startTime
-id textView_home
-id textView_recruit
 id text_participants
 id text_recruit_content
 id text_recruit_date
@@ -178,10 +177,7 @@ layout activity_recrulist
 layout activity_recrutwrite
 layout activity_rent
 layout activity_selfprof
-layout fragement_profile
-layout fragment_calendar
-layout fragment_main
-layout fragment_recruit
+layout bottom_navigation_layout
 layout item_callist
 layout item_calserch
 layout item_otherprof
@@ -214,6 +210,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string hello_blank_fragment
 string intro
 string kakao_app_key
 string like

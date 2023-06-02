@@ -240,11 +240,11 @@
 125        </activity>
 126
 127        <meta-data
-127-->C:\Heung\Heung\app\src\main\AndroidManifest.xml:86:9-128
+127-->C:\Heung\Heung\app\src\main\AndroidManifest.xml:86:9-95
 128            android:name="com.google.android.maps.v2.API_KEY"
 128-->C:\Heung\Heung\app\src\main\AndroidManifest.xml:86:20-69
-129            android:value="AIzaSyA31kkd5bVzb1DHgUL0YktIXMTXFhhi_4U " />
-129-->C:\Heung\Heung\app\src\main\AndroidManifest.xml:86:70-126
+129            android:value="구글 API키" />
+129-->C:\Heung\Heung\app\src\main\AndroidManifest.xml:86:70-93
 130
 131        <uses-library
 131-->C:\Heung\Heung\app\src\main\AndroidManifest.xml:87:9-88

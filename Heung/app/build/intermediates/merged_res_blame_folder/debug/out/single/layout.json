@@ -20,20 +20,16 @@
         "source": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-main-8:\\layout\\activity_main.xml"
     },
     {
+        "merged": "com.example.heung.app-mergeDebugResources-5:/layout/activity_recrulist.xml",
+        "source": "com.example.heung.app-main-8:/layout/activity_recrulist.xml"
+    },
+    {
         "merged": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-5:\\layout\\item_postcont.xml",
         "source": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-main-8:\\layout\\item_postcont.xml"
     },
     {
-        "merged": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-5:\\layout\\fragment_calendar.xml",
-        "source": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-main-8:\\layout\\fragment_calendar.xml"
-    },
-    {
         "merged": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-5:\\layout\\activity_selfprof.xml",
         "source": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-main-8:\\layout\\activity_selfprof.xml"
-    },
-    {
-        "merged": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-5:\\layout\\fragment_recruit.xml",
-        "source": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-main-8:\\layout\\fragment_recruit.xml"
     },
     {
         "merged": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-5:\\layout\\item_postlist.xml",
@@ -54,6 +50,10 @@
     {
         "merged": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-5:\\layout\\activity_postcont.xml",
         "source": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-main-8:\\layout\\activity_postcont.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-5:\\layout\\bottom_navigation_layout.xml",
+        "source": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-main-8:\\layout\\bottom_navigation_layout.xml"
     },
     {
         "merged": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-5:\\layout\\activity_otherprof.xml",
@@ -80,32 +80,24 @@
         "source": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-main-8:\\layout\\activity_postlist.xml"
     },
     {
+        "merged": "com.example.heung.app-mergeDebugResources-5:/layout/activity_cal.xml",
+        "source": "com.example.heung.app-main-8:/layout/activity_cal.xml"
+    },
+    {
         "merged": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-5:\\layout\\item_postcomment.xml",
         "source": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-main-8:\\layout\\item_postcomment.xml"
-    },
-    {
-        "merged": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-5:\\layout\\fragement_profile.xml",
-        "source": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-main-8:\\layout\\fragement_profile.xml"
-    },
-    {
-        "merged": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-5:\\layout\\fragment_main.xml",
-        "source": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-main-8:\\layout\\fragment_main.xml"
     },
     {
         "merged": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-5:\\layout\\activity_calwrite.xml",
         "source": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-main-8:\\layout\\activity_calwrite.xml"
     },
     {
-        "merged": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-5:\\layout\\fragement_recruit.xml",
-        "source": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-main-8:\\layout\\fragement_recruit.xml"
+        "merged": "com.example.heung.app-mergeDebugResources-5:/layout/activity_selfprof.xml",
+        "source": "com.example.heung.app-main-8:/layout/activity_selfprof.xml"
     },
     {
         "merged": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-5:\\layout\\activity_recrulist.xml",
         "source": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-main-8:\\layout\\activity_recrulist.xml"
-    },
-    {
-        "merged": "com.example.heung.app-mergeDebugResources-5:/layout/activity_main.xml",
-        "source": "com.example.heung.app-main-8:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\1\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-5:\\layout\\item_otherprof.xml",

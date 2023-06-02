@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.CalendarView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.FirebaseFirestore
 import data.Calendar
 import java.util.*
@@ -19,6 +20,8 @@ class CalActivity : AppCompatActivity() {
     private lateinit var calendar: MutableList<Calendar>
 
     @SuppressLint("MissingInflatedId")
+
+    //여기부터 하단바 관련 코드
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cal)
@@ -34,6 +37,56 @@ class CalActivity : AppCompatActivity() {
 
         val calendarView = findViewById<CalendarView>(R.id.calendarView)
         val calWriteBtn = findViewById<Button>(R.id.calwriteBtn)
+
+        // 하단바 아이템 선택 이벤트 처리
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_main -> {
+                    if (this::class.java.canonicalName == MainActivity::class.java.canonicalName) {
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    startActivity(Intent(this, MainActivity::class.java))
+                    finish()
+                    true
+                }
+                R.id.nav_recruit -> {
+                    if(this::class.java.canonicalName == MainActivity::class.java.canonicalName) {
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    startActivity(Intent(this, RecruListActivity::class.java))
+                    finish()
+                    true
+                }
+                R.id.nav_map -> {
+                    if (this::class.java.canonicalName == RentActivity::class.java.canonicalName) {
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    startActivity(Intent(this, RentActivity::class.java))
+                    finish()
+                    true
+                }
+                R.id.nav_calendar -> {
+                    if (this::class.java.canonicalName == CalActivity::class.java.canonicalName) {
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    startActivity(Intent(this, CalActivity::class.java))
+                    finish()
+                    true
+                }
+                R.id.nav_profile -> {
+                    if (this::class.java.canonicalName == SelfProfActivity::class.java.canonicalName) {
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    startActivity(Intent(this, SelfProfActivity::class.java))
+                    finish()
+                    true
+                }
+                else -> false
+            }
+        }
+
+        bottomNavigationView.menu.findItem(R.id.nav_calendar)?.isChecked = true//하단바 상태 유지
 
         calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
             val selectedDate = "$year-${month + 1}-$dayOfMonth"
@@ -63,6 +116,7 @@ class CalActivity : AppCompatActivity() {
                         adapter.notifyDataSetChanged()
                     }
                 }
+            //여기까지 하단바 관련 코드 밑에부턴 기존코드
 
             // 게시글 목록 클릭 이벤트 처리
             adapter.setOnItemClickListener { position ->
