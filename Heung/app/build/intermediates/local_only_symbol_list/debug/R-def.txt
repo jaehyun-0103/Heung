@@ -26,10 +26,12 @@ id btn_back
 id btn_edit
 id btn_postlist
 id btn_quit
+id button
 id content
 id kakao_login_button
 id line3
 id logo
+id logout
 id music_icon
 id nick_change
 id nickname
@@ -48,7 +50,9 @@ id post_title
 id recyclerView
 id self_profile
 id self_recycler
+id textView
 id title
+id tv_hashKey
 id zone_features
 layout activity_cal
 layout activity_login
@@ -75,6 +79,7 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
 string kakao_app_key
+string kakao_app_key2
 string postwrite
 string project_id
 string title

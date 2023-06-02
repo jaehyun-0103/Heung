@@ -4,10 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.ImageButton
-import android.widget.Toast
+import android.widget.*
 //import com.kakao.sdk.auth.LoginClient
 import com.kakao.sdk.auth.model.OAuthToken
+import com.kakao.sdk.common.KakaoSdk
 import com.kakao.sdk.common.model.AuthErrorCause
 import com.kakao.sdk.common.util.Utility
 import com.kakao.sdk.common.model.AuthErrorCause.*
@@ -78,7 +78,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
 
-      val kakao_login_button = findViewById<ImageButton>(R.id.kakao_login_button) // 로그인 버튼
+        val kakao_login_button = findViewById<ImageButton>(R.id.kakao_login_button) // 로그인 버튼
 
         val loginCallback: (OAuthToken?, Throwable?) -> Unit = { token, error ->
             if (error != null) {

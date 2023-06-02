@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-80:12
-INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-80:12
-INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-80:12
-INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-80:12
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
 MERGED from [androidx.databinding:viewbinding:7.4.2] C:\Users\유세정\.gradle\caches\transforms-3\254e3404f089adb0ae3c65a66d3e345e\transformed\viewbinding-7.4.2\AndroidManifest.xml:2:1-7:12
 MERGED from [com.kakao.sdk:v2-user:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\abad9b55367a30e88b7b143bc9639be2\transformed\v2-user-2.10.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:2:1-21:12
@@ -78,22 +78,22 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\유세정\.gradle\caches\trans
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\유세정\.gradle\caches\transforms-3\8cfe1fc317fc262edc8e1d92ee61104a\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\유세정\.gradle\caches\transforms-3\15335a192ea95772cf19e32af1d9bef4\transformed\grpc-android-1.44.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\유세정\.gradle\caches\transforms-3\edc6c03eaee96d4d8cde448ac672aa63\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-80:12
-INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-80:12
-INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-80:12
+INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
 	package
 		INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-80:12
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
 		INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-80:12
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
 		INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-80:12
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-75:12
 		INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:2:11-69
@@ -124,7 +124,7 @@ ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidMani
 	android:name
 		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:7:22-77
 application
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:9:5-78:19
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:9:5-73:19
 MERGED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:9:5-19:19
 MERGED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:9:5-19:19
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\유세정\.gradle\caches\transforms-3\d051c0e6200fe6ae5b4696be471df4c7\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
@@ -205,128 +205,82 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\유세정\.gradle\
 		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:12:9-65
 	android:name
 		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:10:9-42
+activity#com.example.heung.MainActivity
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:20:9-27:20
+	android:exported
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:22:13-36
+	android:name
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:21:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:23:13-26:29
+action#android.intent.action.MAIN
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:24:17-69
+	android:name
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:24:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:25:27-74
 activity#com.kakao.sdk.auth.AuthCodeHandlerActivity
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:19:9-28:20
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:29:9-40:20
 MERGED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:15:9-18:56
 MERGED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:15:9-18:56
 	android:launchMode
 		ADDED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:17:13-44
 	android:exported
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:20:13-36
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:31:13-36
 	android:theme
 		ADDED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:18:13-53
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:19:19-76
-intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:oauth+data:scheme:6de2823164e42a1f96eabbc998a1feb8
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:21:13-27:29
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:30:13-70
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:oauth+data:scheme:kakao6de2823164e42a1f96eabbc998a1feb8
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:32:13-39:29
 action#android.intent.action.VIEW
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:33:17-69
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:33:25-66
 category#android.intent.category.DEFAULT
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:23:17-76
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:34:17-76
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:23:27-73
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:34:27-73
 category#android.intent.category.BROWSABLE
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:24:17-78
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:35:17-78
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:24:27-75
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:35:27-75
 data
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:25:17-26:73
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:36:17-38:78
 	android:host
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:25:23-43
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:37:21-41
 	android:scheme
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:26:21-70
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:38:21-75
 activity#com.example.heung.SelfProfAdapter
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:30:9-32:39
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:42:9-44:39
 	android:exported
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:32:13-36
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:44:13-36
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:31:13-44
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:43:13-44
 activity#com.example.heung.OtherProfActivity
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:33:9-35:40
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:45:9-47:40
 	android:exported
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:35:13-37
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:47:13-37
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:34:13-46
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:46:13-46
 activity#com.example.heung.RentActivity
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:36:9-38:40
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:48:9-50:40
 	android:exported
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:38:13-37
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:50:13-37
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:37:13-41
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:49:13-41
 activity#com.example.heung.LoginActivity
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:39:9-48:20
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:51:9-68:19
 	android:launchMode
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:41:13-44
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:53:13-44
 	android:exported
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:42:13-36
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:54:13-36
 	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:40:13-42
-intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:43:13-47:29
-action#android.intent.action.MAIN
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:45:17-69
-	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:45:25-66
-category#android.intent.category.LAUNCHER
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:46:17-77
-	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:46:27-74
-activity#com.example.heung.RecrutWriteActivity
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:49:9-51:40
-	android:exported
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:51:13-37
-	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:50:13-48
-activity#com.example.heung.PostWriteActivity
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:52:9-54:40
-	android:exported
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:54:13-37
-	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:53:13-46
-activity#com.example.heung.RecruContActivity
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:55:9-57:40
-	android:exported
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:57:13-37
-	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:56:13-46
-activity#com.example.heung.PostContActivity
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:58:9-60:40
-	android:exported
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:60:13-37
-	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:59:13-45
-activity#com.example.heung.CalActivity
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:61:9-63:40
-	android:exported
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:63:13-37
-	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:62:13-40
-activity#com.example.heung.RecruListActivity
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:64:9-66:40
-	android:exported
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:66:13-37
-	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:65:13-46
-activity#com.example.heung.PostListActivity
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:67:9-69:40
-	android:exported
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:69:13-37
-	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:68:13-45
-activity#com.example.heung.MainActivity
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:70:9-72:40
-	android:exported
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:72:13-37
-	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:71:13-41
-activity#com.example.heung.SelfProfActivity
-ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:74:9-76:38
-	android:exported
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:76:13-36
-	android:name
-		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:75:13-45
+		ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:52:13-42
+intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.LAUNCHER+data:scheme:6de2823164e42a1f96eabbc998a1feb8
+ADDED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:55:13-66:29
 uses-sdk
 INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml

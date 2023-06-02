@@ -9,6 +9,6 @@ class GlobalApplication : Application() {
         super.onCreate()
 
         // KaKao SDK  초기화
-        KakaoSdk.init(this, "네이티브 키")
+        KakaoSdk.init(this, "6de2823164e42a1f96eabbc998a1feb8")
     }
 }

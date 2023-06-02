@@ -37,7 +37,6 @@ class SelfProfActivity : AppCompatActivity() {
         setContentView(R.layout.activity_selfprof)
 
 
-
         val keyHash = Utility.getKeyHash(this)
         Log.d("Hash", keyHash)
 
@@ -82,7 +81,7 @@ class SelfProfActivity : AppCompatActivity() {
 
         //닉네임 변경
         val nick_change: Button = findViewById<Button>(R.id.nick_change)
-        val nickname : TextView = findViewById<TextView>(R.id.nickname)
+        val nickname: TextView = findViewById<TextView>(R.id.nickname)
         nick_change.setOnClickListener {
             val et = EditText(this)
             et.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_MULTI_LINE
@@ -93,14 +92,13 @@ class SelfProfActivity : AppCompatActivity() {
                 .setPositiveButton("변경하기",
                     DialogInterface.OnClickListener { dialog, which ->
                         //Toast.makeText(this, et.text, Toast.LENGTH_SHORT).show()
-                        val newNickname : String = et.text.toString()
+                        val newNickname: String = et.text.toString()
                         nickname.text = newNickname
                     })
             builder.show()
         }
 
     }
-
 
 
     private fun initImageViewProfile() {
@@ -131,6 +129,7 @@ class SelfProfActivity : AppCompatActivity() {
 
         }
     }
+
     // 권한 요청 승인 이후 실행되는 함수
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -193,6 +192,7 @@ class SelfProfActivity : AppCompatActivity() {
             .create()
             .show()
     }
+
     private fun createDummyPosts(): List<Posts> {
         val postsList = mutableListOf<Posts>()
         // 임의의 4개의 게시글 생성
@@ -204,11 +204,4 @@ class SelfProfActivity : AppCompatActivity() {
         }
         return postsList
     }
-
-
-
-
 }
-
-
-

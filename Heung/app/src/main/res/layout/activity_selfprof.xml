@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="395dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="44dp"
+        android:text="로그아웃"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:id="@+id/self_profile"
         android:layout_width="150dp"
@@ -30,18 +42,6 @@
         app:layout_constraintStart_toStartOf="@+id/self_profile"
         app:layout_constraintTop_toBottomOf="@+id/self_profile" />
 
-    <TextView
-        android:id="@+id/post"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginStart="8dp"
-        android:text="게시글"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nickname" />
-
     <Button
         android:id="@+id/nick_change"
         android:layout_width="200dp"
@@ -51,12 +51,6 @@
         android:text="닉네임 변경"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#aaa"
-        app:layout_constraintBottom_toTopOf="@+id/self_recycler" />
 
     <Button
         android:id="@+id/btn_quit"
@@ -85,12 +79,31 @@
         android:id="@+id/self_recycler"
         android:layout_width="match_parent"
         android:layout_height="345dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/post"
         tools:listitem="@layout/item_selfprof" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#aaa"
+        app:layout_constraintBottom_toTopOf="@+id/self_recycler"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:text="게시글"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nickname" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

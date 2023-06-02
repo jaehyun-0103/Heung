@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -22,9 +23,22 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final Button btnPostlist;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnPostlist) {
+  @NonNull
+  public final Button button;
+
+  @NonNull
+  public final Button logout;
+
+  @NonNull
+  public final TextView textView;
+
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnPostlist,
+      @NonNull Button button, @NonNull Button logout, @NonNull TextView textView) {
     this.rootView = rootView;
     this.btnPostlist = btnPostlist;
+    this.button = button;
+    this.logout = logout;
+    this.textView = textView;
   }
 
   @Override
@@ -60,7 +74,26 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, btnPostlist);
+      id = R.id.button;
+      Button button = ViewBindings.findChildViewById(rootView, id);
+      if (button == null) {
+        break missingId;
+      }
+
+      id = R.id.logout;
+      Button logout = ViewBindings.findChildViewById(rootView, id);
+      if (logout == null) {
+        break missingId;
+      }
+
+      id = R.id.textView;
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
+      if (textView == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((ConstraintLayout) rootView, btnPostlist, button, logout,
+          textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

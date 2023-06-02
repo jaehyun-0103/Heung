@@ -51,6 +51,15 @@
         android:testOnly="true"
         android:theme="@style/Theme.Heung" >
         <activity
+            android:name="com.example.heung.MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true"
             android:launchMode="singleTask"
@@ -63,7 +72,7 @@
 
                 <data
                     android:host="oauth"
-                    android:scheme="6de2823164e42a1f96eabbc998a1feb8" />
+                    android:scheme="kakao6de2823164e42a1f96eabbc998a1feb8" />
             </intent-filter>
         </activity>
         <activity
@@ -78,41 +87,23 @@
         <activity
             android:name="com.example.heung.LoginActivity"
             android:exported="true"
-            android:launchMode="singleTask" > <!-- 이 줄로 이동되었습니다. -->
+            android:launchMode="singleTask" >
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 카카오 로그인을 처리하는 액티비티에 대한 스키마 추가 -->
+                <data android:scheme="6de2823164e42a1f96eabbc998a1feb8" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.example.heung.RecrutWriteActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.heung.PostWriteActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.heung.RecruContActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.heung.PostContActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.heung.CalActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.heung.RecruListActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.heung.PostListActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.heung.MainActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.heung.SelfProfActivity"
-            android:exported="true" />
+
+        <!-- 나머지 액티비티들의 정의 -->
+
         <activity
             android:name="com.kakao.sdk.auth.TalkAuthCodeActivity"
             android:exported="false"
