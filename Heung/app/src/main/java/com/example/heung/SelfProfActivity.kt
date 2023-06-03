@@ -20,22 +20,27 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.common.util.ClientLibraryUtils.getPackageInfo
 import com.google.firebase.FirebaseApp
 import com.google.firebase.database.*
+import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 import com.kakao.sdk.common.util.Utility
+import com.kakao.sdk.user.UserApiClient
 import data.Posts
+import data.Users
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 
 
 class SelfProfActivity : AppCompatActivity() {
     lateinit var edit_button: ImageView
+
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: SelfProfAdapter
     private val COLLECTION_NAME = "Posts"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_selfprof)
-
+        val nickname: TextView = findViewById<TextView>(R.id.nickname)
 
         val keyHash = Utility.getKeyHash(this)
         Log.d("Hash", keyHash)
@@ -48,57 +53,196 @@ class SelfProfActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
 
+
         getPostsList()
-    }
 
-    private fun getPostsList() {
-        val db = FirebaseFirestore.getInstance()
 
-        db.collection("Posts")
-            .whereEqualTo("user_id", "jaehyun")
-            .get()
-            .addOnSuccessListener { documents ->
-                val postsList = mutableListOf<Posts>()
+        // 로그아웃 버튼 클릭 시
 
-                for (document in documents) {
-                    val postId = document.id
-                    val userId = document.getString("user_id") ?: ""
-                    val title = document.getString("post_title") ?: ""
-                    val content = document.getString("post_content") ?: ""
-                    val date = document.getString("post_date") ?: ""
-
-                    val post = Posts(postId, userId, title, content, date)
-                    postsList.add(post)
+        val logout = findViewById<Button>(R.id.logout)
+        logout.setOnClickListener {
+            // 카카오 로그아웃 요청
+            UserApiClient.instance.logout { error ->
+                if (error != null) {
+                    // 로그아웃 실패
+                    // 오류 처리 코드를 추가하세요.
+                } else {
+                    // 로그아웃 성공
+                    // LoginActivity로 돌아가는 인텐트 생성
+                    val intent = Intent(this@SelfProfActivity, LoginActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                    startActivity(intent)
+                    finish()
                 }
-
-                adapter = SelfProfAdapter(postsList)
-                recyclerView.adapter = adapter
-            }
-            .addOnFailureListener { exception ->
-                // 오류 처리
             }
 
-
-        //닉네임 변경
-        val nick_change: Button = findViewById<Button>(R.id.nick_change)
-        val nickname: TextView = findViewById<TextView>(R.id.nickname)
-        nick_change.setOnClickListener {
-            val et = EditText(this)
-            et.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_MULTI_LINE
-            et.gravity = Gravity.CENTER
+        }
+        // 탈퇴 버튼 클릭 이벤트 처리
+        val dropoutButton: Button = findViewById(R.id.btn_quit)
+        dropoutButton.setOnClickListener {
             val builder = AlertDialog.Builder(this)
-                .setTitle("변경할 닉네임을 입력하세요.(특수문자 사용불가)")
-                .setView(et)
-                .setPositiveButton("변경하기",
-                    DialogInterface.OnClickListener { dialog, which ->
-                        //Toast.makeText(this, et.text, Toast.LENGTH_SHORT).show()
-                        val newNickname: String = et.text.toString()
-                        nickname.text = newNickname
-                    })
+                .setTitle("탈퇴하기")
+                .setMessage("정말 탈퇴하시겠습니까?")
+                .setPositiveButton("네") { dialog, which ->
+                    // 탈퇴 처리 로직
+                    // 탈퇴를 수행하는 코드를 여기에 작성하세요.
+                    // 예를 들어, 사용자 데이터 삭제 등을 수행합니다.
+
+                    // 사용자 데이터 삭제 코드
+                    // 데이터베이스에서 사용자 정보를 삭제하는 등의 작업을 수행합니다.
+                    // 삭제가 성공적으로 이루어졌을 경우, 로그아웃을 수행합니다.
+
+                    // 사용자 데이터 삭제 후 로그아웃
+                    UserApiClient.instance.unlink { error ->
+                        if (error != null) {
+                            // 탈퇴 실패 처리
+                        } else {
+                            // 탈퇴 성공 및 로그아웃
+                            UserApiClient.instance.logout { logoutError ->
+                                if (logoutError != null) {
+                                    // 로그아웃 실패 처리
+                                } else {
+                                    // 로그아웃 성공
+                                    // 추가적인 작업을 수행하세요.
+                                }
+                            }
+                        }
+                    }
+                }
+                .setNegativeButton("아니요", null)
+
             builder.show()
         }
 
+        //닉네임 userId식별자로 넣기(기본값)
+
+        UserApiClient.instance.me { user, error ->
+            if (error != null) {
+                // 프로필 정보 가져오기 실패
+                // 에러 처리 로직 추가
+            } else if (user != null) {
+                // 프로필 정보 가져오기 성공
+                val userId = user.id.toString()
+                // userId 변수에 사용자 식별자가 저장됩니다.
+
+                // TextView에 식별자를 설정합니다.
+                nickname.text = userId
+
+            }
+        }
+
+
+        // 닉네임 변경 버튼 클릭 이벤트 처리
+        val nickChangeButton: Button = findViewById(R.id.nick_change)
+        nickChangeButton.setOnClickListener {
+            val et = EditText(this)
+            et.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_MULTI_LINE
+            et.gravity = Gravity.CENTER
+
+            val builder = AlertDialog.Builder(this)
+                .setTitle("변경할 닉네임을 입력하세요.(특수문자 사용불가)")
+                .setView(et)
+                .setPositiveButton("변경하기") { dialog, which ->
+                    val newNickname: String = et.text.toString()
+
+                    // Firebase Firestore 업데이트
+                    val db = FirebaseFirestore.getInstance()
+                    val usersCollection = db.collection("Users")
+
+                    // 사용자 정보 가져오기
+                    UserApiClient.instance.me { user, error ->
+                        if (error != null) {
+                            // 사용자 정보 가져오기 실패
+                            // 에러 처리 로직 추가
+                        } else if (user != null) {
+                            // 사용자 정보 가져오기 성공
+                            val userId = user.id.toString()
+
+                            // Users 컬렉션에서 해당 user_id의 문서를 찾아 닉네임 업데이트
+                            usersCollection
+                                .whereEqualTo("user_id", userId)
+                                .get()
+                                .addOnSuccessListener { querySnapshot ->
+                                    if (!querySnapshot.isEmpty) {
+                                        val documentSnapshot = querySnapshot.documents[0]
+                                        val documentId = documentSnapshot.id
+
+                                        // 업데이트할 필드와 값 설정
+                                        val updates = hashMapOf<String, Any>(
+                                            "user_nickname" to newNickname
+                                        )
+
+                                        // 문서 업데이트
+                                        usersCollection.document(documentId)
+                                            .update(updates)
+                                            .addOnSuccessListener {
+                                                // 업데이트 성공
+                                                // 성공적으로 업데이트되었을 때 수행할 작업을 추가하세요.
+                                                // TextView에 변경된 닉네임 표시
+                                                nickname.text = newNickname
+                                            }
+                                            .addOnFailureListener { e ->
+                                                // 업데이트 실패
+                                                // 업데이트 실패 시 수행할 작업을 추가하세요.
+                                            }
+                                    } else {
+                                        // 해당 user_id의 문서를 찾을 수 없음
+                                        // 처리할 작업을 추가하세요.
+                                    }
+                                }
+                                .addOnFailureListener { e ->
+                                    // 데이터 가져오기 실패
+                                    // 실패 처리 작업을 추가하세요.
+                                }
+                        }
+                    }
+                }
+
+            builder.show()
+        }
     }
+
+
+
+
+
+        private fun getPostsList() {
+            val db = FirebaseFirestore.getInstance()
+
+            db.collection("Posts")
+                .whereEqualTo("user_id", "jaehyun")
+                .get()
+                .addOnSuccessListener { documents ->
+                    val postsList = mutableListOf<Posts>()
+
+                    for (document in documents) {
+                        val postId = document.id
+                        val userId = document.getString("user_id") ?: ""
+                        val title = document.getString("post_title") ?: ""
+                        val content = document.getString("post_content") ?: ""
+                        val date = document.getString("post_date") ?: ""
+
+                        val post = Posts(postId, userId, title, content, date)
+                        postsList.add(post)
+                    }
+
+                    adapter = SelfProfAdapter(postsList)
+                    recyclerView.adapter = adapter
+                }
+                .addOnFailureListener { exception ->
+                    // 오류 처리
+                }
+
+
+        }
+
+        private fun updateUserData(userId: String, nickname: String) {
+            val database = Firebase.database
+            val usersRef = database.getReference("users")
+
+            val userData = Users(userId, nickname)
+            usersRef.child(userId).setValue(userData)
+        }
 
 
     private fun initImageViewProfile() {
@@ -193,15 +337,5 @@ class SelfProfActivity : AppCompatActivity() {
             .show()
     }
 
-    private fun createDummyPosts(): List<Posts> {
-        val postsList = mutableListOf<Posts>()
-        // 임의의 4개의 게시글 생성
-        for (i in 1..4) {
-            val title = "게시글 $i"
-            val content = "게시글 내용 $i"
-            val post = Posts(title, content)
-            postsList.add(post)
-        }
-        return postsList
-    }
+
 }

@@ -5,6 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.*
+import androidx.core.content.ContextCompat.startActivity
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.ktx.database
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 //import com.kakao.sdk.auth.LoginClient
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.KakaoSdk
@@ -14,8 +23,11 @@ import com.kakao.sdk.common.model.AuthErrorCause.*
 import com.kakao.sdk.common.model.ClientError
 import com.kakao.sdk.common.model.ClientErrorCause
 import com.kakao.sdk.user.UserApiClient
+import data.Users
 
 class LoginActivity : AppCompatActivity() {
+    private val firestore = FirebaseFirestore.getInstance()
+    private lateinit var userId: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -29,6 +41,21 @@ class LoginActivity : AppCompatActivity() {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
                 finish()
+            }
+        }
+
+        // 사용자 정보 가져오기
+        UserApiClient.instance.me { user, error ->
+            if (error != null) {
+                // 프로필 정보 가져오기 실패
+                // 에러 처리 로직 추가
+            } else if (user != null) {
+                // 프로필 정보 가져오기 성공
+                userId = user.id.toString()
+                // userId 변수에 사용자 식별자가 저장됩니다.
+
+                // 사용자 정보 등록
+                registerUserInfo()
             }
         }
 
@@ -118,5 +145,28 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
+    private fun registerUserInfo() {
+        val db = FirebaseFirestore.getInstance()
+        val usersCollection = db.collection("Users")
 
+        // 등록할 사용자 정보
+        val userNickname = userId
+
+        // 사용자 정보를 Users 컬렉션에 등록
+        val user = hashMapOf<String, Any>(
+            "user_id" to userId,
+            "user_nickname" to userNickname
+        )
+
+        usersCollection.document(userId)
+            .set(user)
+            .addOnSuccessListener {
+                // 등록 성공
+                // 성공적으로 등록되었을 때 수행할 작업을 추가하세요.
+            }
+            .addOnFailureListener { e ->
+                // 등록 실패
+                // 등록 실패 시 수행할 작업을 추가하세요.
+            }
+    }
 }

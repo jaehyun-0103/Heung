@@ -19,333 +19,342 @@
 13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 13-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:7:5-80
 13-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:7:22-77
-14
-15    <queries>
-15-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:9:5-22:15
-16        <package android:name="com.kakao.talk" />
-16-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:10:9-50
-16-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:10:18-47
-17        <package android:name="com.kakao.talk.alpha" />
-17-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:11:9-56
-17-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:11:18-53
-18        <package android:name="com.kakao.talk.sandbox" />
-18-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:12:9-58
-18-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:12:18-55
-19        <package android:name="com.kakao.onetalk" />
-19-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:13:9-53
-19-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:13:18-50
-20
-21        <intent>
-21-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:15:9-21:18
-22            <action android:name="android.intent.action.VIEW" />
-22-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:33:17-69
-22-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:33:25-66
-23
-24            <category android:name="android.intent.category.BROWSABLE" />
-24-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:35:17-78
-24-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:35:27-75
-25
-26            <data android:scheme="https" />
-26-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:36:17-38:78
-26-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:38:21-75
-27        </intent>
-28    </queries> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
-29    <!-- <uses-sdk android:minSdkVersion="14" /> -->
-30    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-30-->[com.google.firebase:firebase-firestore:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:13:5-79
-30-->[com.google.firebase:firebase-firestore:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:13:22-76
-31    <uses-permission android:name="android.permission.WAKE_LOCK" />
-31-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:24:5-68
-31-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:24:22-65
-32    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-32-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:26:5-110
-32-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:26:22-107
-33
-34    <permission
-34-->[androidx.core:core:1.9.0] C:\Users\유세정\.gradle\caches\transforms-3\92fd276ea72857ab79f77b0aa017c3e5\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
-35        android:name="com.example.heung.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-35-->[androidx.core:core:1.9.0] C:\Users\유세정\.gradle\caches\transforms-3\92fd276ea72857ab79f77b0aa017c3e5\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
-36        android:protectionLevel="signature" />
-36-->[androidx.core:core:1.9.0] C:\Users\유세정\.gradle\caches\transforms-3\92fd276ea72857ab79f77b0aa017c3e5\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
-37
-38    <uses-permission android:name="com.example.heung.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-38-->[androidx.core:core:1.9.0] C:\Users\유세정\.gradle\caches\transforms-3\92fd276ea72857ab79f77b0aa017c3e5\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-38-->[androidx.core:core:1.9.0] C:\Users\유세정\.gradle\caches\transforms-3\92fd276ea72857ab79f77b0aa017c3e5\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
-39
-40    <application
-40-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:9:5-73:19
-41        android:name="com.example.heung.GlobalApplication"
-41-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:10:9-42
-42        android:allowBackup="true"
-42-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:11:9-35
-43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-43-->[androidx.core:core:1.9.0] C:\Users\유세정\.gradle\caches\transforms-3\92fd276ea72857ab79f77b0aa017c3e5\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
-44        android:dataExtractionRules="@xml/data_extraction_rules"
-44-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:12:9-65
-45        android:debuggable="true"
-46        android:extractNativeLibs="false"
-47        android:fullBackupContent="@xml/backup_rules"
-47-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:13:9-54
-48        android:icon="@mipmap/ic_launcher"
-48-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:14:9-43
-49        android:label="@string/app_name"
-49-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:15:9-41
-50        android:supportsRtl="true"
-50-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:16:9-35
-51        android:testOnly="true"
-52        android:theme="@style/Theme.Heung" >
-52-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:17:9-43
-53        <activity
-53-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:20:9-27:20
-54            android:name="com.example.heung.MainActivity"
-54-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:21:13-41
-55            android:exported="true" >
-55-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:22:13-36
-56            <intent-filter>
-56-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:23:13-26:29
-57                <action android:name="android.intent.action.MAIN" />
-57-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:24:17-69
-57-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:24:25-66
-58
-59                <category android:name="android.intent.category.LAUNCHER" />
-59-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:25:17-77
-59-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:25:27-74
-60            </intent-filter>
-61        </activity>
-62        <activity
-62-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:29:9-40:20
-63            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
-63-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:30:13-70
-64            android:exported="true"
-64-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:31:13-36
-65            android:launchMode="singleTask"
-65-->[com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:17:13-44
-66            android:theme="@style/TransparentCompat" >
-66-->[com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:18:13-53
-67            <intent-filter>
-67-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:32:13-39:29
-68                <action android:name="android.intent.action.VIEW" />
-68-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:33:17-69
-68-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:33:25-66
-69
-70                <category android:name="android.intent.category.DEFAULT" />
-70-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:34:17-76
-70-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:34:27-73
-71                <category android:name="android.intent.category.BROWSABLE" />
-71-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:35:17-78
-71-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:35:27-75
-72
-73                <data
-73-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:36:17-38:78
-74                    android:host="oauth"
-74-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:37:21-41
-75                    android:scheme="kakao6de2823164e42a1f96eabbc998a1feb8" />
-75-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:38:21-75
-76            </intent-filter>
-77        </activity>
-78        <activity
-78-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:42:9-44:39
-79            android:name="com.example.heung.SelfProfAdapter"
-79-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:43:13-44
-80            android:exported="true" />
-80-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:44:13-36
-81        <activity
-81-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:45:9-47:40
-82            android:name="com.example.heung.OtherProfActivity"
-82-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:46:13-46
-83            android:exported="false" />
-83-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:47:13-37
-84        <activity
-84-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:48:9-50:40
-85            android:name="com.example.heung.RentActivity"
-85-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:49:13-41
-86            android:exported="false" />
-86-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:50:13-37
-87        <activity
-87-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:51:9-68:19
-88            android:name="com.example.heung.LoginActivity"
-88-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:52:13-42
-89            android:exported="true"
-89-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:54:13-36
-90            android:launchMode="singleTask" >
-90-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:53:13-44
-91            <intent-filter>
-91-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:55:13-66:29
-92                <action android:name="android.intent.action.MAIN" />
-92-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:24:17-69
-92-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:24:25-66
-93
-94                <category android:name="android.intent.category.LAUNCHER" />
-94-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:25:17-77
-94-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:25:27-74
-95
-96                <action android:name="android.intent.action.VIEW" />
-96-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:33:17-69
-96-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:33:25-66
+14    <uses-permission android:name="android.permission.WRTIE_EXTERNAL_STORAGE " />
+14-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:8:5-81
+14-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:8:22-79
+15
+16    <queries>
+16-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:9:5-22:15
+17        <package android:name="com.kakao.talk" />
+17-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:10:9-50
+17-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:10:18-47
+18        <package android:name="com.kakao.talk.alpha" />
+18-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:11:9-56
+18-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:11:18-53
+19        <package android:name="com.kakao.talk.sandbox" />
+19-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:12:9-58
+19-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:12:18-55
+20        <package android:name="com.kakao.onetalk" />
+20-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:13:9-53
+20-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:13:18-50
+21
+22        <intent>
+22-->[com.kakao.sdk:v2-common:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\2e194b80ab6287a6fc3c7da2c5059a54\transformed\v2-common-2.10.0\AndroidManifest.xml:15:9-21:18
+23            <action android:name="android.intent.action.VIEW" />
+23-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:34:17-69
+23-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:34:25-66
+24
+25            <category android:name="android.intent.category.BROWSABLE" />
+25-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:36:17-78
+25-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:36:27-75
+26
+27            <data android:scheme="https" />
+27-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:37:17-39:78
+27-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:39:21-75
+28        </intent>
+29    </queries> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+30    <!-- <uses-sdk android:minSdkVersion="14" /> -->
+31    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+31-->[com.google.firebase:firebase-firestore:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:13:5-79
+31-->[com.google.firebase:firebase-firestore:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:13:22-76
+32    <uses-permission android:name="android.permission.WAKE_LOCK" />
+32-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:24:5-68
+32-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:24:22-65
+33    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+33-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:26:5-110
+33-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:26:22-107
+34
+35    <permission
+35-->[androidx.core:core:1.9.0] C:\Users\유세정\.gradle\caches\transforms-3\92fd276ea72857ab79f77b0aa017c3e5\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+36        android:name="com.example.heung.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+36-->[androidx.core:core:1.9.0] C:\Users\유세정\.gradle\caches\transforms-3\92fd276ea72857ab79f77b0aa017c3e5\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+37        android:protectionLevel="signature" />
+37-->[androidx.core:core:1.9.0] C:\Users\유세정\.gradle\caches\transforms-3\92fd276ea72857ab79f77b0aa017c3e5\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+38
+39    <uses-permission android:name="com.example.heung.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+39-->[androidx.core:core:1.9.0] C:\Users\유세정\.gradle\caches\transforms-3\92fd276ea72857ab79f77b0aa017c3e5\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+39-->[androidx.core:core:1.9.0] C:\Users\유세정\.gradle\caches\transforms-3\92fd276ea72857ab79f77b0aa017c3e5\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+40
+41    <application
+41-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:10:5-77:19
+42        android:name="com.example.heung.GlobalApplication"
+42-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:11:9-42
+43        android:allowBackup="true"
+43-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:12:9-35
+44        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+44-->[androidx.core:core:1.9.0] C:\Users\유세정\.gradle\caches\transforms-3\92fd276ea72857ab79f77b0aa017c3e5\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+45        android:dataExtractionRules="@xml/data_extraction_rules"
+45-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:13:9-65
+46        android:debuggable="true"
+47        android:extractNativeLibs="false"
+48        android:fullBackupContent="@xml/backup_rules"
+48-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:14:9-54
+49        android:icon="@mipmap/ic_launcher"
+49-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:15:9-43
+50        android:label="@string/app_name"
+50-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:16:9-41
+51        android:supportsRtl="true"
+51-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:17:9-35
+52        android:testOnly="true"
+53        android:theme="@style/Theme.Heung" >
+53-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:18:9-43
+54        <activity
+54-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:21:9-28:20
+55            android:name="com.example.heung.MainActivity"
+55-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:22:13-41
+56            android:exported="true" >
+56-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:23:13-36
+57            <intent-filter>
+57-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:24:13-27:29
+58                <action android:name="android.intent.action.MAIN" />
+58-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:25:17-69
+58-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:25:25-66
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:26:17-77
+60-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:26:27-74
+61            </intent-filter>
+62        </activity>
+63        <activity
+63-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:30:9-41:20
+64            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+64-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:31:13-70
+65            android:exported="true"
+65-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:32:13-36
+66            android:launchMode="singleTask"
+66-->[com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:17:13-44
+67            android:theme="@style/TransparentCompat" >
+67-->[com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:18:13-53
+68            <intent-filter>
+68-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:33:13-40:29
+69                <action android:name="android.intent.action.VIEW" />
+69-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:34:17-69
+69-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:34:25-66
+70
+71                <category android:name="android.intent.category.DEFAULT" />
+71-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:35:17-76
+71-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:35:27-73
+72                <category android:name="android.intent.category.BROWSABLE" />
+72-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:36:17-78
+72-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:36:27-75
+73
+74                <data
+74-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:37:17-39:78
+75                    android:host="oauth"
+75-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:38:21-41
+76                    android:scheme="kakao6de2823164e42a1f96eabbc998a1feb8" />
+76-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:39:21-75
+77            </intent-filter>
+78        </activity>
+79        <activity
+79-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:43:9-45:38
+80            android:name="com.example.heung.SelfProfActivity"
+80-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:44:13-45
+81            android:exported="true" />
+81-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:45:13-36
+82        <activity
+82-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:46:9-48:39
+83            android:name="com.example.heung.SelfProfAdapter"
+83-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:47:13-43
+84            android:exported="true" />
+84-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:48:13-36
+85        <activity
+85-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:49:9-51:40
+86            android:name="com.example.heung.OtherProfActivity"
+86-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:50:13-46
+87            android:exported="false" />
+87-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:51:13-37
+88        <activity
+88-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:52:9-54:40
+89            android:name="com.example.heung.RentActivity"
+89-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:53:13-41
+90            android:exported="false" />
+90-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:54:13-37
+91        <activity
+91-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:55:9-72:19
+92            android:name="com.example.heung.LoginActivity"
+92-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:56:13-42
+93            android:exported="true"
+93-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:58:13-36
+94            android:launchMode="singleTask" >
+94-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:57:13-44
+95            <intent-filter>
+95-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:59:13-70:29
+96                <action android:name="android.intent.action.MAIN" />
+96-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:25:17-69
+96-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:25:25-66
 97
-98                <category android:name="android.intent.category.DEFAULT" />
-98-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:34:17-76
-98-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:34:27-73
-99                <category android:name="android.intent.category.BROWSABLE" />
-99-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:35:17-78
-99-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:35:27-75
-100                <!-- 카카오 로그인을 처리하는 액티비티에 대한 스키마 추가 -->
-101                <data android:scheme="6de2823164e42a1f96eabbc998a1feb8" />
-101-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:36:17-38:78
-101-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:38:21-75
-102            </intent-filter>
-103        </activity>
-104
-105        <!-- 나머지 액티비티들의 정의 -->
-106
-107        <activity
-107-->[com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:10:9-14:56
-108            android:name="com.kakao.sdk.auth.TalkAuthCodeActivity"
-108-->[com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:11:13-67
-109            android:exported="false"
-109-->[com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:12:13-37
-110            android:launchMode="singleTask"
-110-->[com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:13:13-44
-111            android:theme="@style/TransparentCompat" />
-111-->[com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:14:13-53
-112
-113        <service
-113-->[com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:12:9-18:19
-114            android:name="com.google.firebase.components.ComponentDiscoveryService"
-114-->[com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:13:13-84
-115            android:directBootAware="true"
-115-->[com.google.firebase:firebase-common:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\9c065cc3346cdfc624d0c1c7d72c01ff\transformed\firebase-common-20.1.0\AndroidManifest.xml:35:13-43
-116            android:exported="false" >
-116-->[com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:14:13-37
-117            <meta-data
-117-->[com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:15:13-17:85
-118                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar"
-118-->[com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:16:17-126
-119                android:value="com.google.firebase.components.ComponentRegistrar" />
-119-->[com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:17:17-82
-120            <meta-data
-120-->[com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\유세정\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:15:13-17:85
-121                android:name="com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseKtxRegistrar"
-121-->[com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\유세정\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:16:17-124
-122                android:value="com.google.firebase.components.ComponentRegistrar" />
-122-->[com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\유세정\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:17:17-82
-123            <meta-data
-123-->[com.google.firebase:firebase-analytics-ktx:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\f23f4ba78121993881b873595dd2c1dc\transformed\firebase-analytics-ktx-20.0.0\AndroidManifest.xml:11:13-13:85
-124                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
-124-->[com.google.firebase:firebase-analytics-ktx:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\f23f4ba78121993881b873595dd2c1dc\transformed\firebase-analytics-ktx-20.0.0\AndroidManifest.xml:12:17-126
-125                android:value="com.google.firebase.components.ComponentRegistrar" />
-125-->[com.google.firebase:firebase-analytics-ktx:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\f23f4ba78121993881b873595dd2c1dc\transformed\firebase-analytics-ktx-20.0.0\AndroidManifest.xml:13:17-82
-126            <meta-data
-126-->[com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\dd0bc59d6cebac23c57ee9f8518f9575\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:15:13-17:85
-127                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
-127-->[com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\dd0bc59d6cebac23c57ee9f8518f9575\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:16:17-113
-128                android:value="com.google.firebase.components.ComponentRegistrar" />
-128-->[com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\dd0bc59d6cebac23c57ee9f8518f9575\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:17:17-82
-129            <meta-data
-129-->[com.google.firebase:firebase-firestore:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:20:13-22:85
-130                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-130-->[com.google.firebase:firebase-firestore:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:21:17-111
-131                android:value="com.google.firebase.components.ComponentRegistrar" />
-131-->[com.google.firebase:firebase-firestore:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:22:17-82
-132            <meta-data
-132-->[com.google.firebase:firebase-database:20.0.4] C:\Users\유세정\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:32:13-34:85
-133                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-133-->[com.google.firebase:firebase-database:20.0.4] C:\Users\유세정\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:33:17-109
-134                android:value="com.google.firebase.components.ComponentRegistrar" />
-134-->[com.google.firebase:firebase-database:20.0.4] C:\Users\유세정\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:34:17-82
-135            <meta-data
-135-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:30:13-32:85
-136                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-136-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:31:17-139
-137                android:value="com.google.firebase.components.ComponentRegistrar" />
-137-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:32:17-82
-138            <meta-data
-138-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\유세정\.gradle\caches\transforms-3\5ffc57cdec1f00ac39b804e187414780\transformed\firebase-installations-17.0.0\AndroidManifest.xml:18:13-20:85
-139                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-139-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\유세정\.gradle\caches\transforms-3\5ffc57cdec1f00ac39b804e187414780\transformed\firebase-installations-17.0.0\AndroidManifest.xml:19:17-127
-140                android:value="com.google.firebase.components.ComponentRegistrar" />
-140-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\유세정\.gradle\caches\transforms-3\5ffc57cdec1f00ac39b804e187414780\transformed\firebase-installations-17.0.0\AndroidManifest.xml:20:17-82
-141        </service>
-142
-143        <provider
-143-->[com.google.firebase:firebase-common:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\9c065cc3346cdfc624d0c1c7d72c01ff\transformed\firebase-common-20.1.0\AndroidManifest.xml:26:9-31:39
-144            android:name="com.google.firebase.provider.FirebaseInitProvider"
-144-->[com.google.firebase:firebase-common:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\9c065cc3346cdfc624d0c1c7d72c01ff\transformed\firebase-common-20.1.0\AndroidManifest.xml:27:13-77
-145            android:authorities="com.example.heung.firebaseinitprovider"
-145-->[com.google.firebase:firebase-common:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\9c065cc3346cdfc624d0c1c7d72c01ff\transformed\firebase-common-20.1.0\AndroidManifest.xml:28:13-72
-146            android:directBootAware="true"
-146-->[com.google.firebase:firebase-common:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\9c065cc3346cdfc624d0c1c7d72c01ff\transformed\firebase-common-20.1.0\AndroidManifest.xml:29:13-43
-147            android:exported="false"
-147-->[com.google.firebase:firebase-common:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\9c065cc3346cdfc624d0c1c7d72c01ff\transformed\firebase-common-20.1.0\AndroidManifest.xml:30:13-37
-148            android:initOrder="100" />
-148-->[com.google.firebase:firebase-common:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\9c065cc3346cdfc624d0c1c7d72c01ff\transformed\firebase-common-20.1.0\AndroidManifest.xml:31:13-36
-149
-150        <activity
-150-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\유세정\.gradle\caches\transforms-3\d67739144c12c76d90e93a1a4ffa1989\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-151            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-151-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\유세정\.gradle\caches\transforms-3\d67739144c12c76d90e93a1a4ffa1989\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-152            android:exported="false"
-152-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\유세정\.gradle\caches\transforms-3\d67739144c12c76d90e93a1a4ffa1989\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-153            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-153-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\유세정\.gradle\caches\transforms-3\d67739144c12c76d90e93a1a4ffa1989\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-154
-155        <receiver
-155-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:29:9-33:20
-156            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-156-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:30:13-85
-157            android:enabled="true"
-157-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:31:13-35
-158            android:exported="false" >
-158-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:32:13-37
-159        </receiver>
-160
-161        <service
-161-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:35:9-38:40
-162            android:name="com.google.android.gms.measurement.AppMeasurementService"
-162-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:36:13-84
-163            android:enabled="true"
-163-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:37:13-35
-164            android:exported="false" />
-164-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:38:13-37
+98                <category android:name="android.intent.category.LAUNCHER" />
+98-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:26:17-77
+98-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:26:27-74
+99
+100                <action android:name="android.intent.action.VIEW" />
+100-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:34:17-69
+100-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:34:25-66
+101
+102                <category android:name="android.intent.category.DEFAULT" />
+102-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:35:17-76
+102-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:35:27-73
+103                <category android:name="android.intent.category.BROWSABLE" />
+103-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:36:17-78
+103-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:36:27-75
+104                <!-- 카카오 로그인을 처리하는 액티비티에 대한 스키마 추가 -->
+105                <data android:scheme="6de2823164e42a1f96eabbc998a1feb8" />
+105-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:37:17-39:78
+105-->C:\Android\AndroidStudioProjects\Heung\Heung\app\src\main\AndroidManifest.xml:39:21-75
+106            </intent-filter>
+107        </activity>
+108
+109        <!-- 나머지 액티비티들의 정의 -->
+110
+111        <activity
+111-->[com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:10:9-14:56
+112            android:name="com.kakao.sdk.auth.TalkAuthCodeActivity"
+112-->[com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:11:13-67
+113            android:exported="false"
+113-->[com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:12:13-37
+114            android:launchMode="singleTask"
+114-->[com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:13:13-44
+115            android:theme="@style/TransparentCompat" />
+115-->[com.kakao.sdk:v2-auth:2.10.0] C:\Users\유세정\.gradle\caches\transforms-3\49b4f8bade23431014a0ac3ef77d5f24\transformed\v2-auth-2.10.0\AndroidManifest.xml:14:13-53
+116
+117        <service
+117-->[com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:12:9-18:19
+118            android:name="com.google.firebase.components.ComponentDiscoveryService"
+118-->[com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:13:13-84
+119            android:directBootAware="true"
+119-->[com.google.firebase:firebase-common:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\9c065cc3346cdfc624d0c1c7d72c01ff\transformed\firebase-common-20.1.0\AndroidManifest.xml:35:13-43
+120            android:exported="false" >
+120-->[com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:14:13-37
+121            <meta-data
+121-->[com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:15:13-17:85
+122                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar"
+122-->[com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:16:17-126
+123                android:value="com.google.firebase.components.ComponentRegistrar" />
+123-->[com.google.firebase:firebase-firestore-ktx:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\20affeb22e7f57b660721434672156e0\transformed\firebase-firestore-ktx-24.1.1\AndroidManifest.xml:17:17-82
+124            <meta-data
+124-->[com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\유세정\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:15:13-17:85
+125                android:name="com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseKtxRegistrar"
+125-->[com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\유세정\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:16:17-124
+126                android:value="com.google.firebase.components.ComponentRegistrar" />
+126-->[com.google.firebase:firebase-database-ktx:20.0.4] C:\Users\유세정\.gradle\caches\transforms-3\85e80a64899147ad2ac114e84ad615fd\transformed\firebase-database-ktx-20.0.4\AndroidManifest.xml:17:17-82
+127            <meta-data
+127-->[com.google.firebase:firebase-analytics-ktx:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\f23f4ba78121993881b873595dd2c1dc\transformed\firebase-analytics-ktx-20.0.0\AndroidManifest.xml:11:13-13:85
+128                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
+128-->[com.google.firebase:firebase-analytics-ktx:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\f23f4ba78121993881b873595dd2c1dc\transformed\firebase-analytics-ktx-20.0.0\AndroidManifest.xml:12:17-126
+129                android:value="com.google.firebase.components.ComponentRegistrar" />
+129-->[com.google.firebase:firebase-analytics-ktx:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\f23f4ba78121993881b873595dd2c1dc\transformed\firebase-analytics-ktx-20.0.0\AndroidManifest.xml:13:17-82
+130            <meta-data
+130-->[com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\dd0bc59d6cebac23c57ee9f8518f9575\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:15:13-17:85
+131                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+131-->[com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\dd0bc59d6cebac23c57ee9f8518f9575\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:16:17-113
+132                android:value="com.google.firebase.components.ComponentRegistrar" />
+132-->[com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\dd0bc59d6cebac23c57ee9f8518f9575\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:17:17-82
+133            <meta-data
+133-->[com.google.firebase:firebase-firestore:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:20:13-22:85
+134                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+134-->[com.google.firebase:firebase-firestore:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:21:17-111
+135                android:value="com.google.firebase.components.ComponentRegistrar" />
+135-->[com.google.firebase:firebase-firestore:24.1.1] C:\Users\유세정\.gradle\caches\transforms-3\ea0b4de558d3f6420b7fa01de1172094\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:22:17-82
+136            <meta-data
+136-->[com.google.firebase:firebase-database:20.0.4] C:\Users\유세정\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:32:13-34:85
+137                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+137-->[com.google.firebase:firebase-database:20.0.4] C:\Users\유세정\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:33:17-109
+138                android:value="com.google.firebase.components.ComponentRegistrar" />
+138-->[com.google.firebase:firebase-database:20.0.4] C:\Users\유세정\.gradle\caches\transforms-3\c2c8a732f8aaf1037844cfe011520cb8\transformed\firebase-database-20.0.4\AndroidManifest.xml:34:17-82
+139            <meta-data
+139-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:30:13-32:85
+140                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+140-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:31:17-139
+141                android:value="com.google.firebase.components.ComponentRegistrar" />
+141-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\b2d701e94b590a56b20e674fc5f6e92d\transformed\play-services-measurement-api-20.0.0\AndroidManifest.xml:32:17-82
+142            <meta-data
+142-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\유세정\.gradle\caches\transforms-3\5ffc57cdec1f00ac39b804e187414780\transformed\firebase-installations-17.0.0\AndroidManifest.xml:18:13-20:85
+143                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+143-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\유세정\.gradle\caches\transforms-3\5ffc57cdec1f00ac39b804e187414780\transformed\firebase-installations-17.0.0\AndroidManifest.xml:19:17-127
+144                android:value="com.google.firebase.components.ComponentRegistrar" />
+144-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\유세정\.gradle\caches\transforms-3\5ffc57cdec1f00ac39b804e187414780\transformed\firebase-installations-17.0.0\AndroidManifest.xml:20:17-82
+145        </service>
+146
+147        <provider
+147-->[com.google.firebase:firebase-common:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\9c065cc3346cdfc624d0c1c7d72c01ff\transformed\firebase-common-20.1.0\AndroidManifest.xml:26:9-31:39
+148            android:name="com.google.firebase.provider.FirebaseInitProvider"
+148-->[com.google.firebase:firebase-common:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\9c065cc3346cdfc624d0c1c7d72c01ff\transformed\firebase-common-20.1.0\AndroidManifest.xml:27:13-77
+149            android:authorities="com.example.heung.firebaseinitprovider"
+149-->[com.google.firebase:firebase-common:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\9c065cc3346cdfc624d0c1c7d72c01ff\transformed\firebase-common-20.1.0\AndroidManifest.xml:28:13-72
+150            android:directBootAware="true"
+150-->[com.google.firebase:firebase-common:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\9c065cc3346cdfc624d0c1c7d72c01ff\transformed\firebase-common-20.1.0\AndroidManifest.xml:29:13-43
+151            android:exported="false"
+151-->[com.google.firebase:firebase-common:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\9c065cc3346cdfc624d0c1c7d72c01ff\transformed\firebase-common-20.1.0\AndroidManifest.xml:30:13-37
+152            android:initOrder="100" />
+152-->[com.google.firebase:firebase-common:20.1.0] C:\Users\유세정\.gradle\caches\transforms-3\9c065cc3346cdfc624d0c1c7d72c01ff\transformed\firebase-common-20.1.0\AndroidManifest.xml:31:13-36
+153
+154        <activity
+154-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\유세정\.gradle\caches\transforms-3\d67739144c12c76d90e93a1a4ffa1989\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+155            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+155-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\유세정\.gradle\caches\transforms-3\d67739144c12c76d90e93a1a4ffa1989\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+156            android:exported="false"
+156-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\유세정\.gradle\caches\transforms-3\d67739144c12c76d90e93a1a4ffa1989\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+157            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+157-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\유세정\.gradle\caches\transforms-3\d67739144c12c76d90e93a1a4ffa1989\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+158
+159        <receiver
+159-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:29:9-33:20
+160            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+160-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:30:13-85
+161            android:enabled="true"
+161-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:31:13-35
+162            android:exported="false" >
+162-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:32:13-37
+163        </receiver>
+164
 165        <service
-165-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:39:9-43:72
-166            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-166-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:40:13-87
+165-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:35:9-38:40
+166            android:name="com.google.android.gms.measurement.AppMeasurementService"
+166-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:36:13-84
 167            android:enabled="true"
-167-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:41:13-35
-168            android:exported="false"
-168-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:42:13-37
-169            android:permission="android.permission.BIND_JOB_SERVICE" />
-169-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:43:13-69
-170
-171        <meta-data
-171-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\유세정\.gradle\caches\transforms-3\6e54e2c2ef5e9483ac3452650b31a6d7\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
-172            android:name="com.google.android.gms.version"
-172-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\유세정\.gradle\caches\transforms-3\6e54e2c2ef5e9483ac3452650b31a6d7\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
-173            android:value="@integer/google_play_services_version" />
-173-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\유세정\.gradle\caches\transforms-3\6e54e2c2ef5e9483ac3452650b31a6d7\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+167-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:37:13-35
+168            android:exported="false" />
+168-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:38:13-37
+169        <service
+169-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:39:9-43:72
+170            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+170-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:40:13-87
+171            android:enabled="true"
+171-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:41:13-35
+172            android:exported="false"
+172-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:42:13-37
+173            android:permission="android.permission.BIND_JOB_SERVICE" />
+173-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\유세정\.gradle\caches\transforms-3\af96f6fd38787dee7f341da3d07c19da\transformed\play-services-measurement-20.0.0\AndroidManifest.xml:43:13-69
 174
-175        <provider
-175-->[androidx.emoji2:emoji2:1.2.0] C:\Users\유세정\.gradle\caches\transforms-3\5cb3ef076e12b00ab86b32c02d55fb0b\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-176            android:name="androidx.startup.InitializationProvider"
-176-->[androidx.emoji2:emoji2:1.2.0] C:\Users\유세정\.gradle\caches\transforms-3\5cb3ef076e12b00ab86b32c02d55fb0b\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-177            android:authorities="com.example.heung.androidx-startup"
-177-->[androidx.emoji2:emoji2:1.2.0] C:\Users\유세정\.gradle\caches\transforms-3\5cb3ef076e12b00ab86b32c02d55fb0b\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-178            android:exported="false" >
-178-->[androidx.emoji2:emoji2:1.2.0] C:\Users\유세정\.gradle\caches\transforms-3\5cb3ef076e12b00ab86b32c02d55fb0b\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-179            <meta-data
-179-->[androidx.emoji2:emoji2:1.2.0] C:\Users\유세정\.gradle\caches\transforms-3\5cb3ef076e12b00ab86b32c02d55fb0b\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-180                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-180-->[androidx.emoji2:emoji2:1.2.0] C:\Users\유세정\.gradle\caches\transforms-3\5cb3ef076e12b00ab86b32c02d55fb0b\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-181                android:value="androidx.startup" />
-181-->[androidx.emoji2:emoji2:1.2.0] C:\Users\유세정\.gradle\caches\transforms-3\5cb3ef076e12b00ab86b32c02d55fb0b\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-182            <meta-data
-182-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\유세정\.gradle\caches\transforms-3\2e4cf9e5985a2758483a29fa37ab5b9d\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-183                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-183-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\유세정\.gradle\caches\transforms-3\2e4cf9e5985a2758483a29fa37ab5b9d\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-184                android:value="androidx.startup" />
-184-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\유세정\.gradle\caches\transforms-3\2e4cf9e5985a2758483a29fa37ab5b9d\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-185        </provider>
-186    </application>
-187
-188</manifest>
+175        <meta-data
+175-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\유세정\.gradle\caches\transforms-3\6e54e2c2ef5e9483ac3452650b31a6d7\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+176            android:name="com.google.android.gms.version"
+176-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\유세정\.gradle\caches\transforms-3\6e54e2c2ef5e9483ac3452650b31a6d7\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+177            android:value="@integer/google_play_services_version" />
+177-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\유세정\.gradle\caches\transforms-3\6e54e2c2ef5e9483ac3452650b31a6d7\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+178
+179        <provider
+179-->[androidx.emoji2:emoji2:1.2.0] C:\Users\유세정\.gradle\caches\transforms-3\5cb3ef076e12b00ab86b32c02d55fb0b\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+180            android:name="androidx.startup.InitializationProvider"
+180-->[androidx.emoji2:emoji2:1.2.0] C:\Users\유세정\.gradle\caches\transforms-3\5cb3ef076e12b00ab86b32c02d55fb0b\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+181            android:authorities="com.example.heung.androidx-startup"
+181-->[androidx.emoji2:emoji2:1.2.0] C:\Users\유세정\.gradle\caches\transforms-3\5cb3ef076e12b00ab86b32c02d55fb0b\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+182            android:exported="false" >
+182-->[androidx.emoji2:emoji2:1.2.0] C:\Users\유세정\.gradle\caches\transforms-3\5cb3ef076e12b00ab86b32c02d55fb0b\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+183            <meta-data
+183-->[androidx.emoji2:emoji2:1.2.0] C:\Users\유세정\.gradle\caches\transforms-3\5cb3ef076e12b00ab86b32c02d55fb0b\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+184                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+184-->[androidx.emoji2:emoji2:1.2.0] C:\Users\유세정\.gradle\caches\transforms-3\5cb3ef076e12b00ab86b32c02d55fb0b\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+185                android:value="androidx.startup" />
+185-->[androidx.emoji2:emoji2:1.2.0] C:\Users\유세정\.gradle\caches\transforms-3\5cb3ef076e12b00ab86b32c02d55fb0b\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+186            <meta-data
+186-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\유세정\.gradle\caches\transforms-3\2e4cf9e5985a2758483a29fa37ab5b9d\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+187                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+187-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\유세정\.gradle\caches\transforms-3\2e4cf9e5985a2758483a29fa37ab5b9d\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+188                android:value="androidx.startup" />
+188-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\유세정\.gradle\caches\transforms-3\2e4cf9e5985a2758483a29fa37ab5b9d\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+189        </provider>
+190    </application>
+191
+192</manifest>

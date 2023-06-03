@@ -29,6 +29,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        val changeButton: Button = findViewById(R.id.button)
+
+        changeButton.setOnClickListener {
+            val intent = Intent(this, SelfProfActivity::class.java)
+            startActivity(intent)
+        }
 
 
         // 로그아웃 버튼 클릭 시
