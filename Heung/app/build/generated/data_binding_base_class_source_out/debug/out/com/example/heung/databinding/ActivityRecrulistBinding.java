@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.heung.R;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -22,9 +21,6 @@ import java.lang.String;
 public final class ActivityRecrulistBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
-
-  @NonNull
-  public final BottomNavigationView bottomNavigation;
 
   @NonNull
   public final ImageView recruitBtnBack;
@@ -48,12 +44,11 @@ public final class ActivityRecrulistBinding implements ViewBinding {
   public final TextView recruitTitle;
 
   private ActivityRecrulistBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull ImageView recruitBtnBack,
-      @NonNull Button recruitCreate, @NonNull Button recruitFilter,
-      @NonNull Button recruitFilterBusking, @NonNull Button recruitFilterClass,
-      @NonNull RecyclerView recruitList, @NonNull TextView recruitTitle) {
+      @NonNull ImageView recruitBtnBack, @NonNull Button recruitCreate,
+      @NonNull Button recruitFilter, @NonNull Button recruitFilterBusking,
+      @NonNull Button recruitFilterClass, @NonNull RecyclerView recruitList,
+      @NonNull TextView recruitTitle) {
     this.rootView = rootView;
-    this.bottomNavigation = bottomNavigation;
     this.recruitBtnBack = recruitBtnBack;
     this.recruitCreate = recruitCreate;
     this.recruitFilter = recruitFilter;
@@ -90,12 +85,6 @@ public final class ActivityRecrulistBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bottom_navigation;
-      BottomNavigationView bottomNavigation = ViewBindings.findChildViewById(rootView, id);
-      if (bottomNavigation == null) {
-        break missingId;
-      }
-
       id = R.id.recruit_btn_back;
       ImageView recruitBtnBack = ViewBindings.findChildViewById(rootView, id);
       if (recruitBtnBack == null) {
@@ -138,9 +127,9 @@ public final class ActivityRecrulistBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityRecrulistBinding((ConstraintLayout) rootView, bottomNavigation,
-          recruitBtnBack, recruitCreate, recruitFilter, recruitFilterBusking, recruitFilterClass,
-          recruitList, recruitTitle);
+      return new ActivityRecrulistBinding((ConstraintLayout) rootView, recruitBtnBack,
+          recruitCreate, recruitFilter, recruitFilterBusking, recruitFilterClass, recruitList,
+          recruitTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

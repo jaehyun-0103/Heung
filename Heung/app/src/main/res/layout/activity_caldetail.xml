@@ -70,7 +70,7 @@
             android:layout_marginEnd="16dp"
             android:hint="Ex.안녕하세요"
             android:includeFontPadding="false"
-            android:paddingStart="12dp"
+
             android:textColor="#2e3236"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -171,7 +171,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
-            android:enabled="false"
+
             android:text="@string/modify"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -183,7 +183,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
-            android:enabled="false"
+
             android:text="@string/delete"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -191,5 +191,16 @@
             app:layout_constraintVertical_bias="0.518" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/diro"
+        android:background="#FFFFFF"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_back" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

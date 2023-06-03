@@ -18,6 +18,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.common.util.ClientLibraryUtils.getPackageInfo
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.FirebaseApp
 import com.google.firebase.database.*
 import com.google.firebase.firestore.FirebaseFirestore
@@ -32,15 +33,14 @@ class SelfProfActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: SelfProfAdapter
     private val COLLECTION_NAME = "Posts"
+
+    //여기부터 하단바 관련 코드
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_selfprof)
 
-
-
         val keyHash = Utility.getKeyHash(this)
         Log.d("Hash", keyHash)
-
 
         // Firebase 앱 초기화
         FirebaseApp.initializeApp(this)
@@ -48,9 +48,71 @@ class SelfProfActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.self_recycler)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-
+        initImageViewProfile()
         getPostsList()
+        initBottomNavigation()
     }
+
+    private fun initBottomNavigation() {
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_main -> {
+                    // 현재 액티비티가 이미 MainActivity인 경우, 액티비티를 전환하지 않습니다.
+                    if (javaClass.name == MainActivity::class.java.name) {
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 메인화면으로 돌아가도록 합니다.
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.nav_recruit -> {
+                    // 현재 액티비티가 이미 RecruListActivity인 경우, 액티비티를 전환하지 않습니다.
+                    if (javaClass.name == RecruListActivity::class.java.name) {
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    val intent = Intent(this, RecruListActivity::class.java)
+                    startActivity(intent)
+                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 모집 화면으로 돌아가도록 합니다.
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.nav_map -> {
+                    // 현재 액티비티가 이미 RentActivity인 경우, 액티비티를 전환하지 않습니다.
+                    if (javaClass.name == RentActivity::class.java.name) {
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    val intent = Intent(this, RentActivity::class.java)
+                    startActivity(intent)
+                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 지도 화면으로 돌아가도록 합니다.
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.nav_calendar -> {
+                    // 현재 액티비티가 이미 CalActivity인 경우, 액티비티를 전환하지 않습니다.
+                    if (javaClass.name == CalActivity::class.java.name) {
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    val intent = Intent(this, CalActivity::class.java)
+                    startActivity(intent)
+                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 달력/일정 화면으로 돌아가도록 합니다.
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.nav_profile -> {
+                    // 현재 액티비티가 이미 SelfProfActivity인 경우, 액티비티를 전환하지 않습니다.
+                    if (javaClass.name == SelfProfActivity::class.java.name) {
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    val intent = Intent(this, SelfProfActivity::class.java)
+                    startActivity(intent)
+                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 프로필 화면으로 돌아가도록 합니다.
+                    return@setOnNavigationItemSelectedListener true
+                }
+                else -> return@setOnNavigationItemSelectedListener false
+            }
+        }
+        bottomNavigationView.menu.findItem(R.id.nav_profile)?.isChecked = true//하단바 상태 유지
+    }
+// 여기까지 하단바 관련 코드 밑에부턴 기존코드
 
     private fun getPostsList() {
         val db = FirebaseFirestore.getInstance()
@@ -79,10 +141,9 @@ class SelfProfActivity : AppCompatActivity() {
                 // 오류 처리
             }
 
-
-        //닉네임 변경
+        // 닉네임 변경
         val nick_change: Button = findViewById<Button>(R.id.nick_change)
-        val nickname : TextView = findViewById<TextView>(R.id.nickname)
+        val nickname: TextView = findViewById<TextView>(R.id.nickname)
         nick_change.setOnClickListener {
             val et = EditText(this)
             et.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_MULTI_LINE
@@ -92,16 +153,13 @@ class SelfProfActivity : AppCompatActivity() {
                 .setView(et)
                 .setPositiveButton("변경하기",
                     DialogInterface.OnClickListener { dialog, which ->
-                        //Toast.makeText(this, et.text, Toast.LENGTH_SHORT).show()
-                        val newNickname : String = et.text.toString()
+                        // Toast.makeText(this, et.text, Toast.LENGTH_SHORT).show()
+                        val newNickname: String = et.text.toString()
                         nickname.text = newNickname
                     })
             builder.show()
         }
-
     }
-
-
 
     private fun initImageViewProfile() {
         edit_button = findViewById(R.id.btn_edit)
@@ -115,22 +173,20 @@ class SelfProfActivity : AppCompatActivity() {
                 -> {
                     navigateGallery()
                 }
-
                 // 갤러리 접근 권한이 없는 경우 & 교육용 팝업을 보여줘야 하는 경우
                 shouldShowRequestPermissionRationale(android.Manifest.permission.READ_EXTERNAL_STORAGE)
                 -> {
                     showPermissionContextPopup()
                 }
-
                 // 권한 요청 하기(requestPermissions) -> 갤러리 접근(onRequestPermissionResult)
                 else -> requestPermissions(
                     arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
                     1000
                 )
             }
-
         }
     }
+
     // 권한 요청 승인 이후 실행되는 함수
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -187,12 +243,16 @@ class SelfProfActivity : AppCompatActivity() {
             .setTitle("권한이 필요합니다.")
             .setMessage("프로필 이미지를 바꾸기 위해서는 갤러리 접근 권한이 필요합니다.")
             .setPositiveButton("동의하기") { _, _ ->
-                requestPermissions(arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 1000)
+                requestPermissions(
+                    arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
+                    1000
+                )
             }
             .setNegativeButton("취소하기") { _, _ -> }
             .create()
             .show()
     }
+
     private fun createDummyPosts(): List<Posts> {
         val postsList = mutableListOf<Posts>()
         // 임의의 4개의 게시글 생성
@@ -204,8 +264,4 @@ class SelfProfActivity : AppCompatActivity() {
         }
         return postsList
     }
-
-
-
-
 }

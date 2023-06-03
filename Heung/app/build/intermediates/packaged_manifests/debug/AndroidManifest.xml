@@ -94,6 +94,9 @@
             android:name="com.example.heung.PostWriteActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.heung.PostEditActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.heung.RecruContActivity"
             android:exported="false" />
         <activity
@@ -107,6 +110,9 @@
             android:exported="false" />
         <activity
             android:name="com.example.heung.CalDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.heung.CalEditActivity"
             android:exported="false" />
         <activity
             android:name="com.example.heung.RecruListActivity"
@@ -126,7 +132,7 @@
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyA31kkd5bVzb1DHgUL0YktIXMTXFhhi_4U " />
+            android:value="구글 API키" />
 
         <uses-library
             android:name="org.apache.http.legacy"

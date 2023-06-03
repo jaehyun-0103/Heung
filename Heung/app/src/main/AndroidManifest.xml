@@ -54,6 +54,9 @@
             android:name=".PostWriteActivity"
             android:exported="false" />
         <activity
+            android:name=".PostEditActivity"
+            android:exported="false" />
+        <activity
             android:name=".RecruContActivity"
             android:exported="false" />
         <activity
@@ -67,6 +70,9 @@
             android:exported="false" />
         <activity
             android:name=".CalDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CalEditActivity"
             android:exported="false" />
         <activity
             android:name=".RecruListActivity"

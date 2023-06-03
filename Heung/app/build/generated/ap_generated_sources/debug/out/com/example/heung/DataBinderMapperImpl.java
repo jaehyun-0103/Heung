@@ -10,6 +10,7 @@ import com.example.heung.databinding.ActivityPostcontBindingImpl;
 import com.example.heung.databinding.ItemCallistBindingImpl;
 import com.example.heung.databinding.ItemPostcommentBindingImpl;
 import com.example.heung.databinding.ItemPostcontBindingImpl;
+import com.example.heung.databinding.ItemReplyBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
@@ -29,13 +30,16 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ITEMPOSTCONT = 4;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(4);
+  private static final int LAYOUT_ITEMREPLY = 5;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(5);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.heung.R.layout.activity_postcont, LAYOUT_ACTIVITYPOSTCONT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.heung.R.layout.item_callist, LAYOUT_ITEMCALLIST);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.heung.R.layout.item_postcomment, LAYOUT_ITEMPOSTCOMMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.heung.R.layout.item_postcont, LAYOUT_ITEMPOSTCONT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.heung.R.layout.item_reply, LAYOUT_ITEMREPLY);
   }
 
   @Override
@@ -70,6 +74,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ItemPostcontBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for item_postcont is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMREPLY: {
+          if ("layout/item_reply_0".equals(tag)) {
+            return new ItemReplyBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_reply is invalid. Received: " + tag);
         }
       }
     }
@@ -124,13 +134,14 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(4);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(5);
 
     static {
       sKeys.put("layout/activity_postcont_0", com.example.heung.R.layout.activity_postcont);
       sKeys.put("layout/item_callist_0", com.example.heung.R.layout.item_callist);
       sKeys.put("layout/item_postcomment_0", com.example.heung.R.layout.item_postcomment);
       sKeys.put("layout/item_postcont_0", com.example.heung.R.layout.item_postcont);
+      sKeys.put("layout/item_reply_0", com.example.heung.R.layout.item_reply);
     }
   }
 }

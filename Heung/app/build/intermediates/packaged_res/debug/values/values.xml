@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="bottom_nav_item_colors">#FFFFFF</color>
+    <color name="bottom_navigation_selected_item">#FF6200EE</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -29,6 +29,7 @@
     <string name="google_app_id" translatable="false">1:684572523168:android:c3d99397918506495667c5</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD0P2m5cESQgjJqFO0UG9Ijmq3FvKMq7e8</string>
     <string name="google_storage_bucket" translatable="false">heung-166fa.appspot.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="intro">소개글</string>
     <string name="kakao_app_key">카카오_앱_키</string>
     <string name="like">좋아요</string>

@@ -1335,7 +1335,7 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
-color bottom_nav_item_colors
+color bottom_navigation_selected_item
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -3008,12 +3008,16 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnCancel
+id btnDelete
+id btnEdit
 id btnReply
 id btn_back
 id btn_ctv
 id btn_edit
 id btn_postlist
 id btn_quit
+id btn_reply
 id buttonPanel
 id button_apply
 id button_back
@@ -3093,6 +3097,7 @@ id design_navigation_view
 id dialog_button
 id dimensions
 id direct
+id diro
 id disableHome
 id disableIntraAutoTransition
 id disablePostScroll
@@ -3111,7 +3116,9 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id edit_comment
 id edit_query
+id edit_reply
 id edt_comment
 id elastic
 id embed
@@ -3196,6 +3203,7 @@ id listMode
 id list_item
 id logo
 id m3_side_sheet
+id main_layout
 id map
 id marquee
 id masked
@@ -3400,6 +3408,7 @@ id selected
 id selection_type
 id self_profile
 id self_recycler
+id setting
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3462,8 +3471,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView_home
-id textView_recruit
 id textWatcher
 id text_input_end_icon
 id text_input_error_icon
@@ -3655,6 +3662,7 @@ layout activity_recrutwrite
 layout activity_rent
 layout activity_selfprof
 layout activity_talk_auth_code
+layout bottom_navigation_layout
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -3673,10 +3681,6 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout fragement_profile
-layout fragment_calendar
-layout fragment_main
-layout fragment_recruit
 layout item_callist
 layout item_calserch
 layout item_otherprof
@@ -3684,7 +3688,9 @@ layout item_postcomment
 layout item_postcont
 layout item_postlist
 layout item_recruit
+layout item_reply
 layout item_selfprof
+layout item_setting
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3838,6 +3844,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string intro

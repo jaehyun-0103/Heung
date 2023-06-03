@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.heung.R;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -23,9 +22,6 @@ import java.lang.String;
 public final class ActivitySelfprofBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
-
-  @NonNull
-  public final BottomNavigationView bottomNavigation;
 
   @NonNull
   public final FloatingActionButton btnEdit;
@@ -49,11 +45,10 @@ public final class ActivitySelfprofBinding implements ViewBinding {
   public final RecyclerView selfRecycler;
 
   private ActivitySelfprofBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull FloatingActionButton btnEdit,
-      @NonNull Button btnQuit, @NonNull Button nickChange, @NonNull TextView nickname,
-      @NonNull TextView post, @NonNull ImageView selfProfile, @NonNull RecyclerView selfRecycler) {
+      @NonNull FloatingActionButton btnEdit, @NonNull Button btnQuit, @NonNull Button nickChange,
+      @NonNull TextView nickname, @NonNull TextView post, @NonNull ImageView selfProfile,
+      @NonNull RecyclerView selfRecycler) {
     this.rootView = rootView;
-    this.bottomNavigation = bottomNavigation;
     this.btnEdit = btnEdit;
     this.btnQuit = btnQuit;
     this.nickChange = nickChange;
@@ -90,12 +85,6 @@ public final class ActivitySelfprofBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bottom_navigation;
-      BottomNavigationView bottomNavigation = ViewBindings.findChildViewById(rootView, id);
-      if (bottomNavigation == null) {
-        break missingId;
-      }
-
       id = R.id.btn_edit;
       FloatingActionButton btnEdit = ViewBindings.findChildViewById(rootView, id);
       if (btnEdit == null) {
@@ -138,8 +127,8 @@ public final class ActivitySelfprofBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySelfprofBinding((ConstraintLayout) rootView, bottomNavigation, btnEdit,
-          btnQuit, nickChange, nickname, post, selfProfile, selfRecycler);
+      return new ActivitySelfprofBinding((ConstraintLayout) rootView, btnEdit, btnQuit, nickChange,
+          nickname, post, selfProfile, selfRecycler);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,7 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 color black
-color bottom_nav_item_colors
+color bottom_navigation_selected_item
 color purple_200
 color purple_500
 color purple_700
@@ -41,12 +41,16 @@ id Post
 id account_iv_profile
 id boardcontent_conslayout
 id bottom_navigation
+id btnCancel
+id btnDelete
+id btnEdit
 id btnReply
 id btn_back
 id btn_ctv
 id btn_edit
 id btn_postlist
 id btn_quit
+id btn_reply
 id button_apply
 id button_back
 id calDelect
@@ -71,6 +75,9 @@ id constraintLayout
 id constraintLayout2
 id content
 id content_photo_recycler
+id diro
+id edit_comment
+id edit_reply
 id edt_comment
 id endDate
 id endTime
@@ -86,6 +93,7 @@ id likeCnt
 id like_btn
 id line3
 id logo
+id main_layout
 id map
 id music_icon
 id nav_calendar
@@ -140,10 +148,9 @@ id reply_recycler
 id search_view
 id self_profile
 id self_recycler
+id setting
 id startDate
 id startTime
-id textView_home
-id textView_recruit
 id text_participants
 id text_recruit_content
 id text_recruit_date
@@ -178,10 +185,7 @@ layout activity_recrulist
 layout activity_recrutwrite
 layout activity_rent
 layout activity_selfprof
-layout fragement_profile
-layout fragment_calendar
-layout fragment_main
-layout fragment_recruit
+layout bottom_navigation_layout
 layout item_callist
 layout item_calserch
 layout item_otherprof
@@ -189,7 +193,9 @@ layout item_postcomment
 layout item_postcont
 layout item_postlist
 layout item_recruit
+layout item_reply
 layout item_selfprof
+layout item_setting
 menu bottom_navigation_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -214,6 +220,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string hello_blank_fragment
 string intro
 string kakao_app_key
 string like

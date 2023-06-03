@@ -51,6 +51,15 @@
                 app:layout_constraintStart_toEndOf="@+id/account_iv_profile"
                 app:layout_constraintTop_toBottomOf="@+id/tv_author" />
 
+            <Button
+                android:id="@+id/setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -96,13 +105,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/like_btn"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintTop_toBottomOf="@+id/post_line"
+                app:layout_constraintVertical_bias="0.0" />
 
             <ImageView
                 android:id="@+id/like_btn"
@@ -141,10 +149,21 @@
                 app:layout_constraintStart_toEndOf="@+id/comment_btn"
                 app:layout_constraintTop_toBottomOf="@+id/tv_content" />
 
+            <View
+                android:id="@+id/post_line"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="24dp"
+                android:background="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_content"
+                tools:ignore="MissingConstraints" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
             android:id="@+id/edt_comment"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -159,8 +178,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="2"
-                android:background="#FFFFFFFF"
-                app:boxStrokeColor="@null"
+                android:background="#a0a4a8"
+                app:boxStrokeColor="#a0a4a8"
                 app:boxStrokeWidth="0dp"
                 app:boxStrokeWidthFocused="0dp"
                 app:endIconMode="clear_text"
@@ -172,7 +191,7 @@
                     android:layout_height="wrap_content"
                     android:hint="댓글을 입력해주세요"
                     android:inputType="text"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 

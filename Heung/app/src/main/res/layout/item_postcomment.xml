@@ -27,7 +27,7 @@
             android:layout_marginTop="4dp"
             android:text="@string/nickname"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/account_iv_profile"
             app:layout_constraintTop_toTopOf="parent" />
@@ -47,25 +47,26 @@
             android:id="@+id/tv_comment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="5dp"
             android:text="@string/content"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgSetting" />
+            app:layout_constraintTop_toBottomOf="@+id/account_iv_profile" />
 
         <TextView
             android:id="@+id/tv_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="35dp"
             android:layout_marginTop="8dp"
             android:text="@string/date"
-            android:textSize="11sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_comment" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_comment"
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -46,6 +46,8 @@ class PostListActivity : AppCompatActivity() {
             // RecyclerView의 클릭 이벤트 리스너 내에서
             intent.putExtra("postTitle", clickedPost.post_title)
             intent.putExtra("postContent", clickedPost.post_content)
+            intent.putExtra("postDate",clickedPost.post_date) // 이거 추가함 기억하자
+            intent.putExtra("postAuthor", clickedPost.user_id) // 얘도 추가함, 원래 nickname가져와야함
             startActivity(intent)
         }
 

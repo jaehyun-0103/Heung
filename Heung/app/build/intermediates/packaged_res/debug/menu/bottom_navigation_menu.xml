@@ -1,23 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
         android:id="@+id/nav_main"
+        android:title="메인"
         android:icon="@drawable/home"
-        android:title="홈" />
+        app:showAsAction="always"/>
+
     <item
         android:id="@+id/nav_recruit"
         android:icon="@drawable/recruit"
-        android:title="모집" />
+        android:title="모집"
+        app:showAsAction="always"/>
+
     <item
         android:id="@+id/nav_map"
         android:icon="@drawable/map"
-        android:title="지도" />
+        android:title="지도"
+        app:showAsAction="always"/>
+
     <item
         android:id="@+id/nav_calendar"
         android:icon="@drawable/calendar"
-        android:title="달력/일정" />
+        android:title="달력/일정"
+        app:showAsAction="always"/>
+
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/profile"
-        android:title="프로필" />
+        android:title="프로필"
+        app:showAsAction="always"/>
 </menu>
