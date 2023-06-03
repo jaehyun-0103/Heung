@@ -131,6 +131,7 @@ class CalActivity : AppCompatActivity() {
                 intent.putExtra("calStartTime", clickedCal.cal_startDate)
                 intent.putExtra("calEndTime", clickedCal.cal_endDate)
                 intent.putExtra("calMemo", clickedCal.cal_memo)
+                intent.putExtra("calId", clickedCal.cal_id)
                 startActivity(intent)
 
             }

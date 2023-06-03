@@ -3,6 +3,7 @@ package com.example.heung
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.heung.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -22,6 +23,14 @@ class MainActivity : AppCompatActivity() {
 
         // 초기 선택된 아이템 설정
         bottomNavigationView.selectedItemId = R.id.nav_main
+
+
+        val btn_postlist = findViewById<Button>(R.id.btn_postlist) // 여기 내가 추가한거야!!!!!!
+        btn_postlist.setOnClickListener {
+            val intent = Intent(this, PostListActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private val navItemSelectedListener =

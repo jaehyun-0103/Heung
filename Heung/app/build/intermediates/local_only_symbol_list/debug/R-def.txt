@@ -41,12 +41,16 @@ id Post
 id account_iv_profile
 id boardcontent_conslayout
 id bottom_navigation
+id btnCancel
+id btnDelete
+id btnEdit
 id btnReply
 id btn_back
 id btn_ctv
 id btn_edit
 id btn_postlist
 id btn_quit
+id btn_reply
 id button_apply
 id button_back
 id calDelect
@@ -71,6 +75,9 @@ id constraintLayout
 id constraintLayout2
 id content
 id content_photo_recycler
+id diro
+id edit_comment
+id edit_reply
 id edt_comment
 id endDate
 id endTime
@@ -141,6 +148,7 @@ id reply_recycler
 id search_view
 id self_profile
 id self_recycler
+id setting
 id startDate
 id startTime
 id text_participants
@@ -185,7 +193,9 @@ layout item_postcomment
 layout item_postcont
 layout item_postlist
 layout item_recruit
+layout item_reply
 layout item_selfprof
+layout item_setting
 menu bottom_navigation_menu
 mipmap ic_launcher
 mipmap ic_launcher_round

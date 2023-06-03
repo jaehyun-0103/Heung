@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -42,6 +43,9 @@ public final class ActivityCaldetailBinding implements ViewBinding {
   public final ConstraintLayout constraintLayout2;
 
   @NonNull
+  public final ImageButton diro;
+
+  @NonNull
   public final TextView endTime;
 
   @NonNull
@@ -65,8 +69,8 @@ public final class ActivityCaldetailBinding implements ViewBinding {
   private ActivityCaldetailBinding(@NonNull ConstraintLayout rootView, @NonNull TextView Date,
       @NonNull Button calDelect, @NonNull Button calEdit, @NonNull ConstraintLayout clTimepicker1,
       @NonNull TextView connect, @NonNull ConstraintLayout constraintLayout,
-      @NonNull ConstraintLayout constraintLayout2, @NonNull TextView endTime,
-      @NonNull TextView performLocation, @NonNull TextView performMemo,
+      @NonNull ConstraintLayout constraintLayout2, @NonNull ImageButton diro,
+      @NonNull TextView endTime, @NonNull TextView performLocation, @NonNull TextView performMemo,
       @NonNull TextView performName, @NonNull TextView startTime, @NonNull TextView tvCalAddMemo,
       @NonNull TextView tvScheduleAddDescription) {
     this.rootView = rootView;
@@ -77,6 +81,7 @@ public final class ActivityCaldetailBinding implements ViewBinding {
     this.connect = connect;
     this.constraintLayout = constraintLayout;
     this.constraintLayout2 = constraintLayout2;
+    this.diro = diro;
     this.endTime = endTime;
     this.performLocation = performLocation;
     this.performMemo = performMemo;
@@ -155,6 +160,12 @@ public final class ActivityCaldetailBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.diro;
+      ImageButton diro = ViewBindings.findChildViewById(rootView, id);
+      if (diro == null) {
+        break missingId;
+      }
+
       id = R.id.endTime;
       TextView endTime = ViewBindings.findChildViewById(rootView, id);
       if (endTime == null) {
@@ -198,8 +209,9 @@ public final class ActivityCaldetailBinding implements ViewBinding {
       }
 
       return new ActivityCaldetailBinding((ConstraintLayout) rootView, Date, calDelect, calEdit,
-          clTimepicker1, connect, constraintLayout, constraintLayout2, endTime, performLocation,
-          performMemo, performName, startTime, tvCalAddMemo, tvScheduleAddDescription);
+          clTimepicker1, connect, constraintLayout, constraintLayout2, diro, endTime,
+          performLocation, performMemo, performName, startTime, tvCalAddMemo,
+          tvScheduleAddDescription);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

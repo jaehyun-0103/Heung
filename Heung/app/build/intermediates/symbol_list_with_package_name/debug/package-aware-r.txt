@@ -3008,12 +3008,16 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnCancel
+id btnDelete
+id btnEdit
 id btnReply
 id btn_back
 id btn_ctv
 id btn_edit
 id btn_postlist
 id btn_quit
+id btn_reply
 id buttonPanel
 id button_apply
 id button_back
@@ -3093,6 +3097,7 @@ id design_navigation_view
 id dialog_button
 id dimensions
 id direct
+id diro
 id disableHome
 id disableIntraAutoTransition
 id disablePostScroll
@@ -3111,7 +3116,9 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id edit_comment
 id edit_query
+id edit_reply
 id edt_comment
 id elastic
 id embed
@@ -3401,6 +3408,7 @@ id selected
 id selection_type
 id self_profile
 id self_recycler
+id setting
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3680,7 +3688,9 @@ layout item_postcomment
 layout item_postcont
 layout item_postlist
 layout item_recruit
+layout item_reply
 layout item_selfprof
+layout item_setting
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

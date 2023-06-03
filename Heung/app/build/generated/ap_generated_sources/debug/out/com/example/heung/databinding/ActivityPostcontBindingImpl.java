@@ -18,18 +18,20 @@ public class ActivityPostcontBindingImpl extends ActivityPostcontBinding  {
         sViewsWithIds.put(R.id.account_iv_profile, 2);
         sViewsWithIds.put(R.id.tv_author, 3);
         sViewsWithIds.put(R.id.tv_date, 4);
-        sViewsWithIds.put(R.id.boardcontent_conslayout, 5);
-        sViewsWithIds.put(R.id.tv_title, 6);
-        sViewsWithIds.put(R.id.tv_content, 7);
-        sViewsWithIds.put(R.id.content_photo_recycler, 8);
-        sViewsWithIds.put(R.id.like_btn, 9);
-        sViewsWithIds.put(R.id.likeCnt, 10);
-        sViewsWithIds.put(R.id.comment_btn, 11);
-        sViewsWithIds.put(R.id.CommentCnt, 12);
-        sViewsWithIds.put(R.id.edt_comment, 13);
-        sViewsWithIds.put(R.id.comment_layout, 14);
-        sViewsWithIds.put(R.id.comment_textview, 15);
-        sViewsWithIds.put(R.id.btn_ctv, 16);
+        sViewsWithIds.put(R.id.setting, 5);
+        sViewsWithIds.put(R.id.boardcontent_conslayout, 6);
+        sViewsWithIds.put(R.id.tv_title, 7);
+        sViewsWithIds.put(R.id.tv_content, 8);
+        sViewsWithIds.put(R.id.content_photo_recycler, 9);
+        sViewsWithIds.put(R.id.like_btn, 10);
+        sViewsWithIds.put(R.id.likeCnt, 11);
+        sViewsWithIds.put(R.id.comment_btn, 12);
+        sViewsWithIds.put(R.id.CommentCnt, 13);
+        sViewsWithIds.put(R.id.post_line, 14);
+        sViewsWithIds.put(R.id.edt_comment, 15);
+        sViewsWithIds.put(R.id.comment_layout, 16);
+        sViewsWithIds.put(R.id.comment_textview, 17);
+        sViewsWithIds.put(R.id.btn_ctv, 18);
     }
     // views
     @NonNull
@@ -40,25 +42,27 @@ public class ActivityPostcontBindingImpl extends ActivityPostcontBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityPostcontBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 17, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 19, sIncludes, sViewsWithIds));
     }
     private ActivityPostcontBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.TextView) bindings[12]
+            , (android.widget.TextView) bindings[13]
             , (android.widget.ImageView) bindings[2]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[5]
-            , (android.widget.Button) bindings[16]
-            , (android.widget.ImageView) bindings[11]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[14]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[15]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[8]
-            , (android.widget.LinearLayout) bindings[13]
-            , (android.widget.ImageView) bindings[9]
-            , (android.widget.TextView) bindings[10]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[6]
+            , (android.widget.Button) bindings[18]
+            , (android.widget.ImageView) bindings[12]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[16]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[17]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[9]
+            , (android.widget.LinearLayout) bindings[15]
+            , (android.widget.ImageView) bindings[10]
+            , (android.widget.TextView) bindings[11]
+            , (android.view.View) bindings[14]
+            , (android.widget.Button) bindings[5]
             , (android.widget.TextView) bindings[3]
-            , (android.widget.TextView) bindings[7]
+            , (android.widget.TextView) bindings[8]
             , (android.widget.TextView) bindings[4]
-            , (android.widget.TextView) bindings[6]
+            , (android.widget.TextView) bindings[7]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[1]
             );
         this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
