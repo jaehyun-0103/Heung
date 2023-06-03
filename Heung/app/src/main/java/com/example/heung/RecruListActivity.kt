@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import data.Recruits
 
 class RecruListActivity : AppCompatActivity() {
@@ -108,6 +109,12 @@ class RecruListActivity : AppCompatActivity() {
         bottomNavigationView.menu.findItem(R.id.nav_recruit)?.isChecked = true
         //여기까지 하단바 관련 코드 밑에부턴 기존코드
 
+        // 전체글 보기 버튼 클릭 이벤트 처리
+        val viewAllButton = findViewById<Button>(R.id.recruit_view_all)
+        viewAllButton.setOnClickListener {
+            loadRecruits()
+        }
+
         // 게시글 작성 버튼 클릭 이벤트 처리
         val recruitCreateButton = findViewById<Button>(R.id.recruit_create)
         recruitCreateButton.setOnClickListener {
@@ -118,6 +125,7 @@ class RecruListActivity : AppCompatActivity() {
 
     private fun loadRecruits() {
         firestore.collection("Recruits")
+            .orderBy("recruit_id", Query.Direction.DESCENDING)
             .addSnapshotListener { querySnapshot, exception ->
                 if (exception != null) {
                     // 에러 처리
@@ -129,7 +137,9 @@ class RecruListActivity : AppCompatActivity() {
                     for (document in it.documents) {
                         val recruit = document.toObject(Recruits::class.java)
                         recruit?.let {
-                            recruitList.add(recruit)
+                            if (recruit.recruit_id.isNotEmpty()) {
+                                recruitList.add(recruit)
+                            }
                         }
                     }
                     recruitListAdapter.notifyDataSetChanged()
@@ -140,6 +150,7 @@ class RecruListActivity : AppCompatActivity() {
     private fun filterByType(type: String) {
         firestore.collection("Recruits")
             .whereEqualTo("recruit_type", type)
+            .orderBy("recruit_id", Query.Direction.DESCENDING)
             .addSnapshotListener { querySnapshot, exception ->
                 if (exception != null) {
                     // 에러 처리
@@ -151,7 +162,9 @@ class RecruListActivity : AppCompatActivity() {
                     for (document in it.documents) {
                         val recruit = document.toObject(Recruits::class.java)
                         recruit?.let {
-                            recruitList.add(recruit)
+                            if (recruit.recruit_id.isNotEmpty()) {
+                                recruitList.add(recruit)
+                            }
                         }
                     }
                     recruitListAdapter.notifyDataSetChanged()

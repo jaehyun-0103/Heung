@@ -9,5 +9,7 @@ data class Recruits(
     val recruit_endDate: String = "",
     val recruit_max: String = "",
     val recruit_curr: String = "",
-    val recruit_type: String = ""
+    val recruit_type: String = "",
+    val recruit_session: String = "",
+    val recruit_class: String = ""
 )
