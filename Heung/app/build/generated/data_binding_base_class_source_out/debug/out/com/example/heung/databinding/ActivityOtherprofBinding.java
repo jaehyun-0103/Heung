@@ -31,16 +31,16 @@ public final class ActivityOtherprofBinding implements ViewBinding {
   public final ImageView otherProfile;
 
   @NonNull
-  public final RecyclerView recyclerView;
+  public final RecyclerView otherRecycler;
 
   private ActivityOtherprofBinding(@NonNull ConstraintLayout rootView, @NonNull TextView Post,
       @NonNull TextView nickname, @NonNull ImageView otherProfile,
-      @NonNull RecyclerView recyclerView) {
+      @NonNull RecyclerView otherRecycler) {
     this.rootView = rootView;
     this.Post = Post;
     this.nickname = nickname;
     this.otherProfile = otherProfile;
-    this.recyclerView = recyclerView;
+    this.otherRecycler = otherRecycler;
   }
 
   @Override
@@ -88,14 +88,14 @@ public final class ActivityOtherprofBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.recyclerView;
-      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
-      if (recyclerView == null) {
+      id = R.id.other_recycler;
+      RecyclerView otherRecycler = ViewBindings.findChildViewById(rootView, id);
+      if (otherRecycler == null) {
         break missingId;
       }
 
       return new ActivityOtherprofBinding((ConstraintLayout) rootView, Post, nickname, otherProfile,
-          recyclerView);
+          otherRecycler);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

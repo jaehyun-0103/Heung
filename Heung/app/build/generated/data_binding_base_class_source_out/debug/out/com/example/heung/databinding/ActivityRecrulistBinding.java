@@ -29,9 +29,6 @@ public final class ActivityRecrulistBinding implements ViewBinding {
   public final Button recruitCreate;
 
   @NonNull
-  public final Button recruitFilter;
-
-  @NonNull
   public final Button recruitFilterBusking;
 
   @NonNull
@@ -43,19 +40,22 @@ public final class ActivityRecrulistBinding implements ViewBinding {
   @NonNull
   public final TextView recruitTitle;
 
+  @NonNull
+  public final Button recruitViewAll;
+
   private ActivityRecrulistBinding(@NonNull ConstraintLayout rootView,
       @NonNull ImageView recruitBtnBack, @NonNull Button recruitCreate,
-      @NonNull Button recruitFilter, @NonNull Button recruitFilterBusking,
-      @NonNull Button recruitFilterClass, @NonNull RecyclerView recruitList,
-      @NonNull TextView recruitTitle) {
+      @NonNull Button recruitFilterBusking, @NonNull Button recruitFilterClass,
+      @NonNull RecyclerView recruitList, @NonNull TextView recruitTitle,
+      @NonNull Button recruitViewAll) {
     this.rootView = rootView;
     this.recruitBtnBack = recruitBtnBack;
     this.recruitCreate = recruitCreate;
-    this.recruitFilter = recruitFilter;
     this.recruitFilterBusking = recruitFilterBusking;
     this.recruitFilterClass = recruitFilterClass;
     this.recruitList = recruitList;
     this.recruitTitle = recruitTitle;
+    this.recruitViewAll = recruitViewAll;
   }
 
   @Override
@@ -97,12 +97,6 @@ public final class ActivityRecrulistBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.recruit_filter;
-      Button recruitFilter = ViewBindings.findChildViewById(rootView, id);
-      if (recruitFilter == null) {
-        break missingId;
-      }
-
       id = R.id.recruit_filter_busking;
       Button recruitFilterBusking = ViewBindings.findChildViewById(rootView, id);
       if (recruitFilterBusking == null) {
@@ -127,9 +121,15 @@ public final class ActivityRecrulistBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recruit_view_all;
+      Button recruitViewAll = ViewBindings.findChildViewById(rootView, id);
+      if (recruitViewAll == null) {
+        break missingId;
+      }
+
       return new ActivityRecrulistBinding((ConstraintLayout) rootView, recruitBtnBack,
-          recruitCreate, recruitFilter, recruitFilterBusking, recruitFilterClass, recruitList,
-          recruitTitle);
+          recruitCreate, recruitFilterBusking, recruitFilterClass, recruitList, recruitTitle,
+          recruitViewAll);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

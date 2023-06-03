@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -32,6 +33,9 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
   public final Button recruitFilterBusking;
 
   @NonNull
+  public final NumberPicker recruitFilterBuskingCapacity;
+
+  @NonNull
   public final EditText recruitFilterBuskingDate;
 
   @NonNull
@@ -44,7 +48,10 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
   public final Button recruitFilterClass;
 
   @NonNull
-  public final EditText recruitFilterClassDuration;
+  public final NumberPicker recruitFilterClassCapacity;
+
+  @NonNull
+  public final EditText recruitFilterClassDate2;
 
   @NonNull
   public final LinearLayout recruitFilterClassLayout;
@@ -66,22 +73,24 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
 
   private ActivityRecrutwriteBinding(@NonNull LinearLayout rootView,
       @NonNull ImageButton recruitBtnBack, @NonNull EditText recruitContent,
-      @NonNull Button recruitFilterBusking, @NonNull EditText recruitFilterBuskingDate,
-      @NonNull LinearLayout recruitFilterBuskingLayout,
+      @NonNull Button recruitFilterBusking, @NonNull NumberPicker recruitFilterBuskingCapacity,
+      @NonNull EditText recruitFilterBuskingDate, @NonNull LinearLayout recruitFilterBuskingLayout,
       @NonNull EditText recruitFilterBuskingSession, @NonNull Button recruitFilterClass,
-      @NonNull EditText recruitFilterClassDuration, @NonNull LinearLayout recruitFilterClassLayout,
-      @NonNull EditText recruitFilterClassType, @NonNull View recruitLine,
-      @NonNull TextView recruitPost, @NonNull EditText recruitTitle,
+      @NonNull NumberPicker recruitFilterClassCapacity, @NonNull EditText recruitFilterClassDate2,
+      @NonNull LinearLayout recruitFilterClassLayout, @NonNull EditText recruitFilterClassType,
+      @NonNull View recruitLine, @NonNull TextView recruitPost, @NonNull EditText recruitTitle,
       @NonNull Button recruitUpload) {
     this.rootView = rootView;
     this.recruitBtnBack = recruitBtnBack;
     this.recruitContent = recruitContent;
     this.recruitFilterBusking = recruitFilterBusking;
+    this.recruitFilterBuskingCapacity = recruitFilterBuskingCapacity;
     this.recruitFilterBuskingDate = recruitFilterBuskingDate;
     this.recruitFilterBuskingLayout = recruitFilterBuskingLayout;
     this.recruitFilterBuskingSession = recruitFilterBuskingSession;
     this.recruitFilterClass = recruitFilterClass;
-    this.recruitFilterClassDuration = recruitFilterClassDuration;
+    this.recruitFilterClassCapacity = recruitFilterClassCapacity;
+    this.recruitFilterClassDate2 = recruitFilterClassDate2;
     this.recruitFilterClassLayout = recruitFilterClassLayout;
     this.recruitFilterClassType = recruitFilterClassType;
     this.recruitLine = recruitLine;
@@ -135,6 +144,12 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recruit_filter_busking_capacity;
+      NumberPicker recruitFilterBuskingCapacity = ViewBindings.findChildViewById(rootView, id);
+      if (recruitFilterBuskingCapacity == null) {
+        break missingId;
+      }
+
       id = R.id.recruit_filter_busking_date;
       EditText recruitFilterBuskingDate = ViewBindings.findChildViewById(rootView, id);
       if (recruitFilterBuskingDate == null) {
@@ -159,9 +174,15 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.recruit_filter_class_duration;
-      EditText recruitFilterClassDuration = ViewBindings.findChildViewById(rootView, id);
-      if (recruitFilterClassDuration == null) {
+      id = R.id.recruit_filter_class_capacity;
+      NumberPicker recruitFilterClassCapacity = ViewBindings.findChildViewById(rootView, id);
+      if (recruitFilterClassCapacity == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_filter_class_date2;
+      EditText recruitFilterClassDate2 = ViewBindings.findChildViewById(rootView, id);
+      if (recruitFilterClassDate2 == null) {
         break missingId;
       }
 
@@ -202,10 +223,10 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
       }
 
       return new ActivityRecrutwriteBinding((LinearLayout) rootView, recruitBtnBack, recruitContent,
-          recruitFilterBusking, recruitFilterBuskingDate, recruitFilterBuskingLayout,
-          recruitFilterBuskingSession, recruitFilterClass, recruitFilterClassDuration,
-          recruitFilterClassLayout, recruitFilterClassType, recruitLine, recruitPost, recruitTitle,
-          recruitUpload);
+          recruitFilterBusking, recruitFilterBuskingCapacity, recruitFilterBuskingDate,
+          recruitFilterBuskingLayout, recruitFilterBuskingSession, recruitFilterClass,
+          recruitFilterClassCapacity, recruitFilterClassDate2, recruitFilterClassLayout,
+          recruitFilterClassType, recruitLine, recruitPost, recruitTitle, recruitUpload);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
