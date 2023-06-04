@@ -1,6 +1,6 @@
 package data
 
-data class Reply( // 새로생긴~~~데이터~~~필드~~~가 아닌~~ㅋㅓㄹ렉션~~
+data class Reply(
     val reply_id: String?,
     val comment_id: String?,
     val user_id: String?,

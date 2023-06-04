@@ -19,7 +19,6 @@ class RecruListActivity : AppCompatActivity() {
     private lateinit var buskingFilterButton: Button
     private lateinit var classFilterButton: Button
 
-    //여기부터 하단바 관련 코드
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recrulist)
@@ -48,6 +47,16 @@ class RecruListActivity : AppCompatActivity() {
         // 클래스 필터 버튼 클릭 이벤트 처리
         classFilterButton.setOnClickListener {
             filterByType("클래스")
+        }
+
+        recruitListAdapter.setOnItemClickListener { position ->
+            val clickedPost = recruitList[position]
+
+            // 인텐트 생성 및 데이터 전달
+            val intent = Intent(this, RecruContActivity::class.java)
+            intent.putExtra("recruitId", clickedPost.recruit_id)
+            intent.putExtra("postAuthor", clickedPost.user_id)
+            startActivity(intent)
         }
 
         // 하단바 아이템 선택 이벤트 처리
@@ -105,9 +114,7 @@ class RecruListActivity : AppCompatActivity() {
                 else -> false
             }
         }
-
         bottomNavigationView.menu.findItem(R.id.nav_recruit)?.isChecked = true
-        //여기까지 하단바 관련 코드 밑에부턴 기존코드
 
         // 전체글 보기 버튼 클릭 이벤트 처리
         val viewAllButton = findViewById<Button>(R.id.recruit_view_all)

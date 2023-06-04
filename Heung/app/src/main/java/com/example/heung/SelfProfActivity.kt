@@ -18,6 +18,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.common.util.ClientLibraryUtils.getPackageInfo
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.FirebaseApp
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
@@ -33,18 +34,16 @@ import java.security.NoSuchAlgorithmException
 
 class SelfProfActivity : AppCompatActivity() {
     lateinit var edit_button: ImageView
-
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: SelfProfAdapter
     private val COLLECTION_NAME = "Posts"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_selfprof)
         val nickname: TextView = findViewById<TextView>(R.id.nickname)
-
         val keyHash = Utility.getKeyHash(this)
         Log.d("Hash", keyHash)
-
 
         // Firebase 앱 초기화
         FirebaseApp.initializeApp(this)
@@ -52,13 +51,11 @@ class SelfProfActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.self_recycler)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-
-
+        initImageViewProfile()
         getPostsList()
-
+        initBottomNavigation()
 
         // 로그아웃 버튼 클릭 시
-
         val logout = findViewById<Button>(R.id.logout)
         logout.setOnClickListener {
             // 카카오 로그아웃 요청
@@ -75,8 +72,8 @@ class SelfProfActivity : AppCompatActivity() {
                     finish()
                 }
             }
-
         }
+
         // 탈퇴 버튼 클릭 이벤트 처리
         val dropoutButton: Button = findViewById(R.id.btn_quit)
         dropoutButton.setOnClickListener {
@@ -84,15 +81,7 @@ class SelfProfActivity : AppCompatActivity() {
                 .setTitle("탈퇴하기")
                 .setMessage("정말 탈퇴하시겠습니까?")
                 .setPositiveButton("네") { dialog, which ->
-                    // 탈퇴 처리 로직
-                    // 탈퇴를 수행하는 코드를 여기에 작성하세요.
-                    // 예를 들어, 사용자 데이터 삭제 등을 수행합니다.
 
-                    // 사용자 데이터 삭제 코드
-                    // 데이터베이스에서 사용자 정보를 삭제하는 등의 작업을 수행합니다.
-                    // 삭제가 성공적으로 이루어졌을 경우, 로그아웃을 수행합니다.
-
-                    // 사용자 데이터 삭제 후 로그아웃
                     UserApiClient.instance.unlink { error ->
                         if (error != null) {
                             // 탈퇴 실패 처리
@@ -103,14 +92,12 @@ class SelfProfActivity : AppCompatActivity() {
                                     // 로그아웃 실패 처리
                                 } else {
                                     // 로그아웃 성공
-                                    // 추가적인 작업을 수행하세요.
                                 }
                             }
                         }
                     }
                 }
                 .setNegativeButton("아니요", null)
-
             builder.show()
         }
 
@@ -124,13 +111,10 @@ class SelfProfActivity : AppCompatActivity() {
                 // 프로필 정보 가져오기 성공
                 val userId = user.id.toString()
                 // userId 변수에 사용자 식별자가 저장됩니다.
-
                 // TextView에 식별자를 설정합니다.
                 nickname.text = userId
-
             }
         }
-
 
         // 닉네임 변경 버튼 클릭 이벤트 처리
         val nickChangeButton: Button = findViewById(R.id.nick_change)
@@ -197,14 +181,69 @@ class SelfProfActivity : AppCompatActivity() {
                         }
                     }
                 }
-
             builder.show()
         }
     }
 
-
-
-
+    private fun initBottomNavigation() {
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_main -> {
+                    // 현재 액티비티가 이미 MainActivity인 경우, 액티비티를 전환하지 않습니다.
+                    if (javaClass.name == MainActivity::class.java.name) {
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 메인화면으로 돌아가도록 합니다.
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.nav_recruit -> {
+                    // 현재 액티비티가 이미 RecruListActivity인 경우, 액티비티를 전환하지 않습니다.
+                    if (javaClass.name == RecruListActivity::class.java.name) {
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    val intent = Intent(this, RecruListActivity::class.java)
+                    startActivity(intent)
+                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 모집 화면으로 돌아가도록 합니다.
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.nav_map -> {
+                    // 현재 액티비티가 이미 RentActivity인 경우, 액티비티를 전환하지 않습니다.
+                    if (javaClass.name == RentActivity::class.java.name) {
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    val intent = Intent(this, RentActivity::class.java)
+                    startActivity(intent)
+                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 지도 화면으로 돌아가도록 합니다.
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.nav_calendar -> {
+                    // 현재 액티비티가 이미 CalActivity인 경우, 액티비티를 전환하지 않습니다.
+                    if (javaClass.name == CalActivity::class.java.name) {
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    val intent = Intent(this, CalActivity::class.java)
+                    startActivity(intent)
+                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 달력/일정 화면으로 돌아가도록 합니다.
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.nav_profile -> {
+                    // 현재 액티비티가 이미 SelfProfActivity인 경우, 액티비티를 전환하지 않습니다.
+                    if (javaClass.name == SelfProfActivity::class.java.name) {
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    val intent = Intent(this, SelfProfActivity::class.java)
+                    startActivity(intent)
+                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 프로필 화면으로 돌아가도록 합니다.
+                    return@setOnNavigationItemSelectedListener true
+                }
+                else -> return@setOnNavigationItemSelectedListener false
+            }
+        }
+        bottomNavigationView.menu.findItem(R.id.nav_profile)?.isChecked = true//하단바 상태 유지
+    }
 
     private fun getPostsList() {
         val db = FirebaseFirestore.getInstance()
@@ -221,7 +260,6 @@ class SelfProfActivity : AppCompatActivity() {
                     val title = document.getString("post_title") ?: ""
                     val content = document.getString("post_content") ?: ""
                     val date = document.getString("post_date") ?: ""
-
                     val post = Posts(postId, userId, title, content, date)
                     postsList.add(post)
                 }
@@ -232,14 +270,11 @@ class SelfProfActivity : AppCompatActivity() {
             .addOnFailureListener { exception ->
                 // 오류 처리
             }
-
-
     }
 
     private fun updateUserData(userId: String, nickname: String) {
         val database = Firebase.database
         val usersRef = database.getReference("users")
-
         val userData = Users(userId, nickname)
         usersRef.child(userId).setValue(userData)
     }
@@ -336,6 +371,4 @@ class SelfProfActivity : AppCompatActivity() {
             .create()
             .show()
     }
-
-
 }

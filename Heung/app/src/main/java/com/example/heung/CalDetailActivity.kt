@@ -98,8 +98,6 @@ class CalDetailActivity : AppCompatActivity() {
                 .addOnFailureListener { e ->
                     // 쿼리 실행 실패
                 }
-
-
         }
     }
 

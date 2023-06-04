@@ -9,7 +9,7 @@ import data.Recruits
 
 class RecruitListAdapter(private val recruitList: MutableList<Recruits>) :
     RecyclerView.Adapter<RecruitListAdapter.RecruitViewHolder>() {
-
+    private var onItemClickListener: ((position: Int) -> Unit)? = null
     // 뷰 홀더 생성
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecruitViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_recruit, parent, false)
@@ -25,6 +25,11 @@ class RecruitListAdapter(private val recruitList: MutableList<Recruits>) :
     // 아이템 개수 반환
     override fun getItemCount(): Int {
         return recruitList.size
+    }
+
+    // 아이템 클릭 리스너 설정
+    fun setOnItemClickListener(listener: (position: Int) -> Unit) {
+        onItemClickListener = listener
     }
 
     inner class RecruitViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

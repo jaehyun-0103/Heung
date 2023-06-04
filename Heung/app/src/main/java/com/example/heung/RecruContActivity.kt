@@ -48,7 +48,7 @@ class RecruContActivity : AppCompatActivity() {
     }
 
     private fun loadRecruitData() {
-        val recruitId = intent.getStringExtra("RECRUIT_ID") ?: return
+        val recruitId = intent.getStringExtra("recruitId") ?: return
         firestore.collection("Recruits")
             .document(recruitId)
             .get()

@@ -21,18 +21,15 @@ class CalActivity : AppCompatActivity() {
 
     @SuppressLint("MissingInflatedId")
 
-    //여기부터 하단바 관련 코드
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cal)
 
         recyclerView = findViewById(R.id.cal_data)
         recyclerView.layoutManager = LinearLayoutManager(this)
-
         calendar = mutableListOf() // postList 초기화
         adapter = CalAdapter(calendar)
         recyclerView.adapter = adapter
-
         firestore = FirebaseFirestore.getInstance()
 
         val calendarView = findViewById<CalendarView>(R.id.calendarView)
@@ -85,13 +82,11 @@ class CalActivity : AppCompatActivity() {
                 else -> false
             }
         }
-
         bottomNavigationView.menu.findItem(R.id.nav_calendar)?.isChecked = true//하단바 상태 유지
 
         calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
             val selectedDate = "$year-${month + 1}-$dayOfMonth"
 
-            // 작성 버튼 클릭 시
             calWriteBtn.setOnClickListener {
                 val intent = Intent(this, CalWriteActivity::class.java)
                 intent.putExtra("selectedDate", selectedDate)
@@ -116,7 +111,6 @@ class CalActivity : AppCompatActivity() {
                         adapter.notifyDataSetChanged()
                     }
                 }
-            //여기까지 하단바 관련 코드 밑에부턴 기존코드
 
             // 게시글 목록 클릭 이벤트 처리
             adapter.setOnItemClickListener { position ->
@@ -133,7 +127,6 @@ class CalActivity : AppCompatActivity() {
                 intent.putExtra("calMemo", clickedCal.cal_memo)
                 intent.putExtra("calId", clickedCal.cal_id)
                 startActivity(intent)
-
             }
         }
     }

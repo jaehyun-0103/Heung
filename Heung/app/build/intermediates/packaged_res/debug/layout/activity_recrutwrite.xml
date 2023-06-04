@@ -52,8 +52,7 @@
                 android:text="버스킹"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/recruit_filter_class"
-                app:layout_constraintTop_toTopOf="@+id/recruit_upload" />
+                app:layout_constraintEnd_toStartOf="@+id/recruit_filter_class" />
 
             <Button
                 android:id="@+id/recruit_filter_class"
@@ -61,9 +60,8 @@
                 android:layout_height="wrap_content"
                 android:text="클래스"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/recruit_upload"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/recruit_upload" />
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

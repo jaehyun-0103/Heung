@@ -55,7 +55,6 @@ class CommentsAdapter(private val postList: MutableList<Comments>
                     val userId = replyDocument.getString("user_id")
                     val reply = replyDocument.getString("reply")
                     val replyDate = replyDocument.getString("reply_date")
-
                     val replyObject = Reply(
                         replyId,
                         commentId,
@@ -71,14 +70,12 @@ class CommentsAdapter(private val postList: MutableList<Comments>
             .addOnFailureListener { exception ->
                 // 대댓글 가져오기 실패
             }
-
     }
 
     // 리스트의 총 아이템 수 반환
     override fun getItemCount(): Int {
         return postList.size
     }
-
 
     // 각 아이템을 위한 ViewHolder 클래스
     inner class CommentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -92,7 +89,6 @@ class CommentsAdapter(private val postList: MutableList<Comments>
                 }
             }
         }
-
     }
 
     interface OnReplyClickListener {

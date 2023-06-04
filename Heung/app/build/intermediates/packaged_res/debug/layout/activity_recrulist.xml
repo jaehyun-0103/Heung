@@ -27,59 +27,59 @@
         app:layout_constraintStart_toEndOf="@+id/recruit_btn_back"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <View
+        android:id="@+id/post_line"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="#808080"
+        app:layout_constraintBottom_toBottomOf="@+id/recruit_btn_back"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Button
         android:id="@+id/recruit_filter_busking"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="버스킹"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/recruit_title"
-        app:layout_constraintEnd_toStartOf="@+id/recruit_filter_class"
-        app:layout_constraintTop_toTopOf="@+id/recruit_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recruit_view_all"
         app:layout_constraintWidth_default="spread" />
 
     <Button
         android:id="@+id/recruit_filter_class"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="클래스"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/recruit_filter_busking"
-        app:layout_constraintEnd_toStartOf="@+id/recruit_view_all"
-        app:layout_constraintTop_toTopOf="@+id/recruit_filter_busking"
+        app:layout_constraintStart_toEndOf="@+id/recruit_filter_busking"
+        app:layout_constraintTop_toTopOf="@+id/recruit_view_all"
         app:layout_constraintWidth_default="spread" />
 
     <Button
         android:id="@+id/recruit_view_all"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:text="전체글 보기"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/recruit_filter_class"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/recruit_filter_class"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toEndOf="@+id/recruit_filter_class"
+        app:layout_constraintTop_toBottomOf="@+id/post_line" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recruit_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/recruit_create"
-        app:layout_constraintTop_toBottomOf="@+id/recruit_title"
+        app:layout_constraintTop_toBottomOf="@+id/recruit_filter_busking"
         tools:listitem="@layout/item_recruit" />
 
     <Button
         android:id="@+id/recruit_create"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:text="게시글 작성"
+        android:layout_height="wrap_content"
+        android:text="모집글 작성"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/recruit_view_all"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recruit_list" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <include
         layout="@layout/bottom_navigation_layout"

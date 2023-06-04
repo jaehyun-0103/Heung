@@ -23,6 +23,9 @@ public final class ActivityRecrulistBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final View postLine;
+
+  @NonNull
   public final ImageView recruitBtnBack;
 
   @NonNull
@@ -43,12 +46,13 @@ public final class ActivityRecrulistBinding implements ViewBinding {
   @NonNull
   public final Button recruitViewAll;
 
-  private ActivityRecrulistBinding(@NonNull ConstraintLayout rootView,
+  private ActivityRecrulistBinding(@NonNull ConstraintLayout rootView, @NonNull View postLine,
       @NonNull ImageView recruitBtnBack, @NonNull Button recruitCreate,
       @NonNull Button recruitFilterBusking, @NonNull Button recruitFilterClass,
       @NonNull RecyclerView recruitList, @NonNull TextView recruitTitle,
       @NonNull Button recruitViewAll) {
     this.rootView = rootView;
+    this.postLine = postLine;
     this.recruitBtnBack = recruitBtnBack;
     this.recruitCreate = recruitCreate;
     this.recruitFilterBusking = recruitFilterBusking;
@@ -85,6 +89,12 @@ public final class ActivityRecrulistBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.post_line;
+      View postLine = ViewBindings.findChildViewById(rootView, id);
+      if (postLine == null) {
+        break missingId;
+      }
+
       id = R.id.recruit_btn_back;
       ImageView recruitBtnBack = ViewBindings.findChildViewById(rootView, id);
       if (recruitBtnBack == null) {
@@ -127,7 +137,7 @@ public final class ActivityRecrulistBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityRecrulistBinding((ConstraintLayout) rootView, recruitBtnBack,
+      return new ActivityRecrulistBinding((ConstraintLayout) rootView, postLine, recruitBtnBack,
           recruitCreate, recruitFilterBusking, recruitFilterClass, recruitList, recruitTitle,
           recruitViewAll);
     }

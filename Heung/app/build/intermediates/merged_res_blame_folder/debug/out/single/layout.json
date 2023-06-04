@@ -8,10 +8,6 @@
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-43:\\layout\\activity_calwrite.xml"
     },
     {
-        "merged": "com.example.heung.app-mergeDebugResources-40:/layout/activity_main.xml",
-        "source": "com.example.heung.app-main-43:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-40:\\layout\\activity_recrulist.xml",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-43:\\layout\\activity_recrulist.xml"
     },
@@ -34,6 +30,10 @@
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-40:\\layout\\item_reply.xml",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-43:\\layout\\item_reply.xml"
+    },
+    {
+        "merged": "com.example.heung.app-mergeDebugResources-40:/layout/activity_rent.xml",
+        "source": "com.example.heung.app-main-43:/layout/activity_rent.xml"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-40:\\layout\\bottom_navigation_layout.xml",
@@ -84,12 +84,12 @@
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-43:\\layout\\item_selfprof.xml"
     },
     {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-40:\\layout\\item_calserch.xml",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-43:\\layout\\item_calserch.xml"
-    },
-    {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-40:\\layout\\activity_cal.xml",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-43:\\layout\\activity_cal.xml"
+    },
+    {
+        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-40:\\layout\\item_calserch.xml",
+        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-43:\\layout\\item_calserch.xml"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-40:\\layout\\activity_main.xml",

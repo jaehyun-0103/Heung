@@ -4,11 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.FirebaseFirestore
+import com.kakao.sdk.user.UserApiClient
 import data.Likes
 import data.Posts
 import data.Users
@@ -23,6 +25,11 @@ class PostListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_postlist)
+
+        val backButton = findViewById<ImageButton>(R.id.btn_back)
+        backButton.setOnClickListener {
+            onBackPressed()
+        }
 
         recyclerViewPosts = findViewById(R.id.post_Recycler)
         recyclerViewPosts.layoutManager = LinearLayoutManager(this)
@@ -58,8 +65,14 @@ class PostListActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        ////////////////
-        val userId = "jaehyun"
+        UserApiClient.instance.me { user, error ->
+            if (error != null) {
+                // 프로필 정보 가져오기 실패
+            } else if (user != null) {
+                // 프로필 정보 가져오기 성공
+                val userId = user.id.toString()
+            }
+        }
 
         // 인기 게시글 보기 버튼 클릭 이벤트 처리
         val postPopular = findViewById<Button>(R.id.post_popular)

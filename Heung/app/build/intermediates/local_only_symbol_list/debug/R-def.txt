@@ -41,6 +41,7 @@ id ConstraintLayout_already
 id Date
 id Post
 id account_iv_profile
+id app
 id boardcontent_conslayout
 id bottom_navigation
 id btnCancel
@@ -64,7 +65,6 @@ id cal_memo
 id cal_save
 id cal_title
 id calendarView
-id calserchBtn
 id calwriteBtn
 id cl_timepicker1
 id cl_timepicker2
@@ -155,7 +155,6 @@ id self_recycler
 id setting
 id startDate
 id startTime
-id textView
 id text_participants
 id text_recruit_content
 id text_recruit_date
@@ -231,6 +230,7 @@ string google_storage_bucket
 string hello_blank_fragment
 string intro
 string kakao_app_key
+string kakao_app_key2
 string like
 string modify
 string nickname

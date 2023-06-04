@@ -7,5 +7,5 @@ data class Comments(
     val comment: String = "",
     val comment_date: String = "",
     val replies: MutableList<Reply> = mutableListOf(),
-    var replyCount: Int = 0 // 예얍 추가함
+    var replyCount: Int = 0
 )

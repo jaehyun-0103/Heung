@@ -298,13 +298,13 @@ ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:3
 activity#com.example.heung.LoginActivity
 ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:41:9-55:20
 	android:launchMode
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:44:13-44
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:43:13-44
 	android:exported
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:43:13-36
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:44:13-36
 	android:name
 		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:42:13-42
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:45:13-48:29
+intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.LAUNCHER+data:scheme:6de2823164e42a1f96eabbc998a1feb8
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:45:13-53:29
 action#android.intent.action.MAIN
 ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:46:17-69
 	android:name
@@ -313,8 +313,6 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:47:17-77
 	android:name
 		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:47:27-74
-intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:kakao6de2823164e42a1f96eabbc998a1feb8
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:49:13-54:29
 activity#com.example.heung.OtherProfActivity
 ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:56:9-58:40
 	android:exported
@@ -405,6 +403,8 @@ ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:9
 		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:100:13-36
 	android:name
 		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:99:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:101:13-104:29
 meta-data#com.google.android.maps.v2.API_KEY
 ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:106:9-108:71
 	android:value

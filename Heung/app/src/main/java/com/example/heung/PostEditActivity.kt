@@ -14,7 +14,6 @@ class PostEditActivity : AppCompatActivity() {
     private lateinit var etTitle: EditText
     private lateinit var etContent: EditText
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_postwrite)
@@ -50,7 +49,6 @@ class PostEditActivity : AppCompatActivity() {
 
     private fun updatePost(postId: String, newTitle: String, newContent: String) {
         val collectionName = "Posts"
-
         val collectionRef = FirebaseFirestore.getInstance().collection(collectionName)
         val query = collectionRef.whereEqualTo("post_id", postId)
 

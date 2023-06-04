@@ -16,12 +16,10 @@ class CalEditActivity : AppCompatActivity() {
     private lateinit var editCalStartTime: TextView
     private lateinit var editCalEndTime: TextView
     private lateinit var editCalMemo: EditText
-
     private lateinit var startTimeImageView: ImageView
     private lateinit var endTimeImageView: ImageView
     private var selectedStartTime: Calendar = Calendar.getInstance()
     private var selectedEndTime: Calendar = Calendar.getInstance()
-
     private val firestore = FirebaseFirestore.getInstance()
 
     @SuppressLint("MissingInflatedId")

@@ -85,14 +85,13 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <intent-filter>
+
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="kakao6de2823164e42a1f96eabbc998a1feb8" />
+                <data android:scheme="6de2823164e42a1f96eabbc998a1feb8" />
             </intent-filter>
         </activity>
         <activity

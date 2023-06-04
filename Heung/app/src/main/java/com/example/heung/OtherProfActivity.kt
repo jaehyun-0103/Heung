@@ -18,9 +18,7 @@ class OtherProfActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_otherprof)
 
-        // Firebase 앱 초기화
         FirebaseApp.initializeApp(this)
-
         recyclerView = findViewById(R.id.other_recycler)
         recyclerView.layoutManager = LinearLayoutManager(this)
         getPostsList()
@@ -35,7 +33,6 @@ class OtherProfActivity : AppCompatActivity() {
             .get()
             .addOnSuccessListener { documents ->
                 val postsList = mutableListOf<Posts>()
-
                 for (document in documents) {
                     val postId = document.id
                     val userId = document.getString("user_id") ?: ""
@@ -46,14 +43,11 @@ class OtherProfActivity : AppCompatActivity() {
                     val post = Posts(postId, userId, title, content, date)
                     postsList.add(post)
                 }
-
                 adapter = OtherProfAdapter(postsList)
                 recyclerView.adapter = adapter
             }
             .addOnFailureListener { exception ->
                 // 오류 처리
             }
-
-
     }
 }

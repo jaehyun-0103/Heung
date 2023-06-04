@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
+import com.kakao.sdk.user.UserApiClient
 import java.text.SimpleDateFormat
 import java.util.Date
 
@@ -38,34 +39,41 @@ class PostWriteActivity : AppCompatActivity() {
             val inputTitle = postTitle.text.toString()
             val inputCont = postCont.text.toString()
             val collectionName = "Posts"
-            val userId = "user_id"
             val postDate = Date()
             val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm")
 
             // 새로운 게시글 ID 생성
             val newPostId = generateNewPostId()
 
-            // 추가할 데이터
-            val post = hashMapOf(
-                "post_id" to newPostId,
-                "user_id" to userId,
-                "post_title" to inputTitle,
-                "post_content" to inputCont,
-                "post_date" to dateFormat.format(postDate)
-            )
+            UserApiClient.instance.me { user, error ->
+                if (error != null) {
+                    // 프로필 정보 가져오기 실패
+                } else if (user != null) {
+                    // 프로필 정보 가져오기 성공
+                    val userId = user.id.toString()
 
-            // 데이터베이스에 데이터 추가
-            firestore.collection(collectionName)
-                .add(post)
-                .addOnSuccessListener {
-                    // 데이터 추가 성공
+                    // 추가할 데이터
+                    val post = hashMapOf(
+                        "post_id" to newPostId,
+                        "user_id" to userId,
+                        "post_title" to inputTitle,
+                        "post_content" to inputCont,
+                        "post_date" to dateFormat.format(postDate)
+                    )
+                    // 데이터베이스에 데이터 추가
+                    firestore.collection(collectionName)
+                        .add(post)
+                        .addOnSuccessListener {
+                            // 데이터 추가 성공
 
-                    // 등록 성공 후 이전 페이지로 이동
-                    finish()
+                            // 등록 성공 후 이전 페이지로 이동
+                            finish()
+                        }
+                        .addOnFailureListener { e ->
+                            // 데이터 추가 실패
+                        }
                 }
-                .addOnFailureListener { e ->
-                    // 데이터 추가 실패
-                }
+            }
 
             // 게시글 저장 후 입력 필드 초기화
             postTitle.text.clear()

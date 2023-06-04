@@ -29,21 +29,16 @@ public final class ActivityCalBinding implements ViewBinding {
   public final CalendarView calendarView;
 
   @NonNull
-  public final Button calserchBtn;
-
-  @NonNull
   public final Button calwriteBtn;
 
   @NonNull
   public final TextView title;
 
   private ActivityCalBinding(@NonNull ConstraintLayout rootView, @NonNull RecyclerView calData,
-      @NonNull CalendarView calendarView, @NonNull Button calserchBtn, @NonNull Button calwriteBtn,
-      @NonNull TextView title) {
+      @NonNull CalendarView calendarView, @NonNull Button calwriteBtn, @NonNull TextView title) {
     this.rootView = rootView;
     this.calData = calData;
     this.calendarView = calendarView;
-    this.calserchBtn = calserchBtn;
     this.calwriteBtn = calwriteBtn;
     this.title = title;
   }
@@ -87,12 +82,6 @@ public final class ActivityCalBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.calserchBtn;
-      Button calserchBtn = ViewBindings.findChildViewById(rootView, id);
-      if (calserchBtn == null) {
-        break missingId;
-      }
-
       id = R.id.calwriteBtn;
       Button calwriteBtn = ViewBindings.findChildViewById(rootView, id);
       if (calwriteBtn == null) {
@@ -105,8 +94,8 @@ public final class ActivityCalBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityCalBinding((ConstraintLayout) rootView, calData, calendarView, calserchBtn,
-          calwriteBtn, title);
+      return new ActivityCalBinding((ConstraintLayout) rootView, calData, calendarView, calwriteBtn,
+          title);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -2985,6 +2985,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id app
 id arc
 id asConfigured
 id async
@@ -3034,7 +3035,6 @@ id cal_save
 id cal_title
 id calendarView
 id callMeasure
-id calserchBtn
 id calwriteBtn
 id cancel_button
 id carryVelocity
@@ -3475,7 +3475,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id textWatcher
 id text_input_end_icon
 id text_input_error_icon
@@ -3858,6 +3857,7 @@ string icon_content_description
 string intro
 string item_view_role_description
 string kakao_app_key
+string kakao_app_key2
 string like
 string m3_sys_motion_easing_emphasized
 string m3_sys_motion_easing_emphasized_accelerate

@@ -31,7 +31,8 @@
     <string name="google_storage_bucket" translatable="false">heung-166fa.appspot.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="intro">소개글</string>
-    <string name="kakao_app_key">카카오_앱_키</string>
+    <string name="kakao_app_key">6de2823164e42a1f96eabbc998a1feb8</string>
+    <string name="kakao_app_key2">kakao6de2823164e42a1f96eabbc998a1feb8</string>
     <string name="like">좋아요</string>
     <string name="modify">수정</string>
     <string name="nickname">닉네임</string>
