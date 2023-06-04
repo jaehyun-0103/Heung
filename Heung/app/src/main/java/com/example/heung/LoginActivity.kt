@@ -4,18 +4,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.ImageButton
-import android.widget.Toast
-//import com.kakao.sdk.auth.LoginClient
+import android.widget.*
+import com.google.firebase.firestore.FirebaseFirestore
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.AuthErrorCause
-import com.kakao.sdk.common.util.Utility
-import com.kakao.sdk.common.model.AuthErrorCause.*
 import com.kakao.sdk.common.model.ClientError
 import com.kakao.sdk.common.model.ClientErrorCause
 import com.kakao.sdk.user.UserApiClient
 
 class LoginActivity : AppCompatActivity() {
+    private val firestore = FirebaseFirestore.getInstance()
+    private lateinit var userId: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -32,10 +31,20 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
+        // 사용자 정보 가져오기
+        UserApiClient.instance.me { user, error ->
+            if (error != null) {
+                // 프로필 정보 가져오기 실패
+                // 에러 처리 로직 추가
+            } else if (user != null) {
+                // 프로필 정보 가져오기 성공
+                userId = user.id.toString()
+                // userId 변수에 사용자 식별자가 저장됩니다.
 
-//        val keyHash = Utility.getKeyHash(this)
-//        Log.d("Hash", keyHash)
-
+                // 사용자 정보 등록
+                registerUserInfo()
+            }
+        }
 
         val callback: (OAuthToken?, Throwable?) -> Unit = { token, error ->
             if (error != null) {
@@ -118,5 +127,28 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
+    private fun registerUserInfo() {
+        val db = FirebaseFirestore.getInstance()
+        val usersCollection = db.collection("Users")
 
+        // 등록할 사용자 정보
+        val userNickname = userId
+
+        // 사용자 정보를 Users 컬렉션에 등록
+        val user = hashMapOf<String, Any>(
+            "user_id" to userId,
+            "user_nickname" to userNickname
+        )
+
+        usersCollection.document(userId)
+            .set(user)
+            .addOnSuccessListener {
+                // 등록 성공
+                // 성공적으로 등록되었을 때 수행할 작업을 추가하세요.
+            }
+            .addOnFailureListener { e ->
+                // 등록 실패
+                // 등록 실패 시 수행할 작업을 추가하세요.
+            }
+    }
 }

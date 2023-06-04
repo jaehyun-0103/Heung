@@ -5,8 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -26,26 +25,44 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button btnPostlist;
 
   @NonNull
-  public final FrameLayout fragmentContainer;
+  public final RecyclerView latestPostsRecyclerview;
 
   @NonNull
-  public final RecyclerView latestPostsRecyclerview;
+  public final Button logout;
 
   @NonNull
   public final ConstraintLayout mainLayout;
 
   @NonNull
-  public final LinearLayout popularPostsContainer;
+  public final RecyclerView popularPostsRecyclerview;
+
+  @NonNull
+  public final TextView post;
+
+  @NonNull
+  public final TextView textView;
+
+  @NonNull
+  public final TextView tvPopularPosts;
+
+  @NonNull
+  public final TextView tvRecentPosts;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnPostlist,
-      @NonNull FrameLayout fragmentContainer, @NonNull RecyclerView latestPostsRecyclerview,
-      @NonNull ConstraintLayout mainLayout, @NonNull LinearLayout popularPostsContainer) {
+      @NonNull RecyclerView latestPostsRecyclerview, @NonNull Button logout,
+      @NonNull ConstraintLayout mainLayout, @NonNull RecyclerView popularPostsRecyclerview,
+      @NonNull TextView post, @NonNull TextView textView, @NonNull TextView tvPopularPosts,
+      @NonNull TextView tvRecentPosts) {
     this.rootView = rootView;
     this.btnPostlist = btnPostlist;
-    this.fragmentContainer = fragmentContainer;
     this.latestPostsRecyclerview = latestPostsRecyclerview;
+    this.logout = logout;
     this.mainLayout = mainLayout;
-    this.popularPostsContainer = popularPostsContainer;
+    this.popularPostsRecyclerview = popularPostsRecyclerview;
+    this.post = post;
+    this.textView = textView;
+    this.tvPopularPosts = tvPopularPosts;
+    this.tvRecentPosts = tvRecentPosts;
   }
 
   @Override
@@ -81,28 +98,53 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.fragment_container;
-      FrameLayout fragmentContainer = ViewBindings.findChildViewById(rootView, id);
-      if (fragmentContainer == null) {
-        break missingId;
-      }
-
       id = R.id.latest_posts_recyclerview;
       RecyclerView latestPostsRecyclerview = ViewBindings.findChildViewById(rootView, id);
       if (latestPostsRecyclerview == null) {
         break missingId;
       }
 
-      ConstraintLayout mainLayout = (ConstraintLayout) rootView;
-
-      id = R.id.popular_posts_container;
-      LinearLayout popularPostsContainer = ViewBindings.findChildViewById(rootView, id);
-      if (popularPostsContainer == null) {
+      id = R.id.logout;
+      Button logout = ViewBindings.findChildViewById(rootView, id);
+      if (logout == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, btnPostlist, fragmentContainer,
-          latestPostsRecyclerview, mainLayout, popularPostsContainer);
+      ConstraintLayout mainLayout = (ConstraintLayout) rootView;
+
+      id = R.id.popular_posts_recyclerview;
+      RecyclerView popularPostsRecyclerview = ViewBindings.findChildViewById(rootView, id);
+      if (popularPostsRecyclerview == null) {
+        break missingId;
+      }
+
+      id = R.id.post;
+      TextView post = ViewBindings.findChildViewById(rootView, id);
+      if (post == null) {
+        break missingId;
+      }
+
+      id = R.id.textView;
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
+      if (textView == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_popular_posts;
+      TextView tvPopularPosts = ViewBindings.findChildViewById(rootView, id);
+      if (tvPopularPosts == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_recent_posts;
+      TextView tvRecentPosts = ViewBindings.findChildViewById(rootView, id);
+      if (tvRecentPosts == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((ConstraintLayout) rootView, btnPostlist,
+          latestPostsRecyclerview, logout, mainLayout, popularPostsRecyclerview, post, textView,
+          tvPopularPosts, tvRecentPosts);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

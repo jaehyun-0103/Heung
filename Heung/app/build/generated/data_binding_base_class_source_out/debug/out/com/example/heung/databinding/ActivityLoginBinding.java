@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -26,11 +27,15 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final ImageView logo;
 
+  @NonNull
+  public final TextView tvHashKey;
+
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageButton kakaoLoginButton, @NonNull ImageView logo) {
+      @NonNull ImageButton kakaoLoginButton, @NonNull ImageView logo, @NonNull TextView tvHashKey) {
     this.rootView = rootView;
     this.kakaoLoginButton = kakaoLoginButton;
     this.logo = logo;
+    this.tvHashKey = tvHashKey;
   }
 
   @Override
@@ -72,7 +77,14 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLoginBinding((ConstraintLayout) rootView, kakaoLoginButton, logo);
+      id = R.id.tv_hashKey;
+      TextView tvHashKey = ViewBindings.findChildViewById(rootView, id);
+      if (tvHashKey == null) {
+        break missingId;
+      }
+
+      return new ActivityLoginBinding((ConstraintLayout) rootView, kakaoLoginButton, logo,
+          tvHashKey);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
