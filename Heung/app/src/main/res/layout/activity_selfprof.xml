@@ -13,7 +13,8 @@
         android:text="로그아웃"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/include"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
     <ImageView
@@ -104,7 +105,6 @@
         tools:listitem="@layout/item_selfprof" />
 
     <include
-        android:id="@+id/include"
         layout="@layout/bottom_navigation_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
