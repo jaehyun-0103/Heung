@@ -47,15 +47,23 @@ class PostListActivity : AppCompatActivity() {
         postListAdapter.setOnItemClickListener { position ->
             val clickedPost = postList[position]
 
-            // 인텐트 생성 및 데이터 전달
-            val intent = Intent(this, PostContActivity::class.java)
-            intent.putExtra("postId", clickedPost.post_id)
-            // RecyclerView의 클릭 이벤트 리스너 내에서
-            intent.putExtra("postTitle", clickedPost.post_title)
-            intent.putExtra("postContent", clickedPost.post_content)
-            intent.putExtra("postDate",clickedPost.post_date) // 이거 추가함 기억하자
-            intent.putExtra("postAuthor", clickedPost.user_id) // 얘도 추가함, 원래 nickname가져와야함
-            startActivity(intent)
+            // 게시글 작성자의 닉네임 가져오기
+            firestore.collection("Users")
+                .document(clickedPost.user_id)
+                .get()
+                .addOnSuccessListener { userDocumentSnapshot ->
+                    val user = userDocumentSnapshot.toObject(Users::class.java)
+                    val nickname = user?.user_nickname ?: "알 수 없는 사용자"
+
+                    // 인텐트 생성 및 데이터 전달
+                    val intent = Intent(this, PostContActivity::class.java)
+                    intent.putExtra("postId", clickedPost.post_id)
+                    intent.putExtra("postTitle", clickedPost.post_title)
+                    intent.putExtra("postContent", clickedPost.post_content)
+                    intent.putExtra("postDate", clickedPost.post_date)
+                    intent.putExtra("postAuthor", nickname)
+                    startActivity(intent)
+                }
         }
 
         // 게시글 작성 버튼 클릭 이벤트 처리
@@ -163,14 +171,14 @@ class PostListActivity : AppCompatActivity() {
                 }
             }
 
-        // 게시글의 댓글 수 가져오기
+        // 게시글의 댓글 수와 대댓글 수 가져오기
         firestore.collection("Comments")
             .whereIn("post_id", postIds)
             .get()
             .addOnSuccessListener { commentsQuerySnapshot ->
                 val commentsCountMap = mutableMapOf<String, Int>()
 
-                // 각 게시물의 댓글 수 계산
+                // 각 게시글의 댓글 수 계산
                 for (document in commentsQuerySnapshot.documents) {
                     val postId = document.getString("post_id")
                     if (postId != null) {
@@ -183,15 +191,43 @@ class PostListActivity : AppCompatActivity() {
                     }
                 }
 
-                // 게시글 목록의 댓글 수 업데이트
+                // 각 게시글의 대댓글 수 계산 및 업데이트
                 for (i in 0 until postListAdapter.itemCount) {
                     val post = postList[i]
                     val commentsCount = commentsCountMap[post.post_id] ?: 0 // 해당 게시글에 대한 댓글 수
 
-                    val holder =
-                        recyclerViewPosts.findViewHolderForAdapterPosition(i) as? PostListAdapter.PostViewHolder
-                    holder?.itemView?.findViewById<TextView>(R.id.post_comment)?.text =
-                        commentsCount.toString()
+                    firestore.collection("Comments")
+                        .whereEqualTo("post_id", post.post_id)
+                        .get()
+                        .addOnSuccessListener { commentsQuerySnapshot ->
+                            val repliesCountMap = mutableMapOf<String, Int>()
+                            var totalCount = commentsCount
+
+                            for (commentDocument in commentsQuerySnapshot.documents) {
+                                val commentId = commentDocument.getString("comment_id")
+                                if (commentId != null) {
+                                    firestore.collection("Reply")
+                                        .whereEqualTo("comment_id", commentId)
+                                        .get()
+                                        .addOnSuccessListener { replyQuerySnapshot ->
+                                            val replyCount = replyQuerySnapshot.size()
+                                            repliesCountMap[commentId] = replyCount
+
+                                            totalCount += replyCount
+
+                                            val holder = recyclerViewPosts.findViewHolderForAdapterPosition(i) as? PostListAdapter.PostViewHolder
+                                            holder?.itemView?.findViewById<TextView>(R.id.post_comment)?.text =
+                                                totalCount.toString()
+                                        }
+                                }
+                            }
+
+                            // 댓글이 하나도 없는 경우 0으로 표시
+                            if (commentsQuerySnapshot.isEmpty) {
+                                val holder = recyclerViewPosts.findViewHolderForAdapterPosition(i) as? PostListAdapter.PostViewHolder
+                                holder?.itemView?.findViewById<TextView>(R.id.post_comment)?.text = "0"
+                            }
+                        }
                 }
             }
     }

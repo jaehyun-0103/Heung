@@ -20,12 +20,12 @@
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-43:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-41:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-43:\\mipmap-xhdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-41:\\drawable_googlemap_icon.jpg.flat",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-43:\\drawable\\googlemap_icon.jpg"
+    },
+    {
+        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-41:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-43:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-41:\\layout_activity_otherprof.xml.flat",
@@ -70,6 +70,10 @@
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-41:\\drawable_redprofile.png.flat",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-43:\\drawable\\redprofile.png"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-41:/layout_activity_selfprof.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/activity_selfprof.xml"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-41:\\layout_activity_rent.xml.flat",
@@ -166,10 +170,6 @@
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-41:\\mipmap-anydpi-v33_ic_launcher.xml.flat",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-43:\\mipmap-anydpi-v33\\ic_launcher.xml"
-    },
-    {
-        "merged": "com.example.heung.app-merged_res-41:/layout_activity_rent.xml.flat",
-        "source": "com.example.heung.app-main-43:/layout/activity_rent.xml"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-41:\\layout_item_setting.xml.flat",

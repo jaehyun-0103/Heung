@@ -367,4 +367,15 @@ class PostContActivity : AppCompatActivity() {
                 // Firestore에 대댓글 추가 실패
             }
     }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        // 게시글 목록을 다시 불러오는 로직 실행
+        loadPostList()
+    }
+
+    private fun loadPostList() {
+        val intent = Intent(this, PostListActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
 }
