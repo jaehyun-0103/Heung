@@ -60,3 +60,13 @@
 | cal_startDate| 문자열    | 일정 시작일   |
 | cal_endDate  | 문자열    | 일정 종료일   |
 | cal_location | 문자열    | 일정 위치     |
+
+테이블명 : Reply
+
+| Column Name    | Data Type | Description    |
+|----------------|-----------|----------------|
+| reply_id (pk)  | 문자열    | 대댓글 식별자    |
+| comment_id (fk)| 문자열    | 댓글 식별자      |
+| reply (fk)     | 문자열    | 댓글 내용        |
+| user_id        | 문자열    | 사용자 식별자    |
+| reply_date     | 문자열    | 대댓글 작성 일시 |
