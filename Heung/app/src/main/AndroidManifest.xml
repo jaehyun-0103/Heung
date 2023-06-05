@@ -3,11 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-feature android:required="true" android:glEsVersion="0x00020000"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
     <permission
         android:name="com.cookandroid.cookmap.permission.MAPS_RECEIVE"
         android:label="signature" />
@@ -26,14 +31,27 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-
                 <data
                     android:host="oauth"
-                    android:scheme="네이티브 키" />
+                    android:scheme="kakao6de2823164e42a1f96eabbc998a1feb8" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:launchMode="singleTask"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="6de2823164e42a1f96eabbc998a1feb8" />
+            </intent-filter>
+
         </activity>
         <activity
             android:name=".OtherProfActivity"
@@ -44,9 +62,6 @@
         <activity
             android:name=".RentActivity"
             android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true" />
         <activity
             android:name=".RecrutWriteActivity"
             android:exported="false" />
@@ -85,11 +100,14 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="구글 API키"/>
-        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyA31kkd5bVzb1DHgUL0YktIXMTXFhhi_4U" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
     </application>
 </manifest>

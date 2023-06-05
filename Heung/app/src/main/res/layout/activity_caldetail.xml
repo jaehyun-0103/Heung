@@ -9,12 +9,11 @@
         android:id="@+id/tv_schedule_add_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:includeFontPadding="false"
         android:text="@string/detail"
         android:textColor="#474c51"
         android:textSize="23sp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,17 +22,16 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="413dp"
-        android:paddingStart="12dp"
-        android:paddingTop="36dp"
-        android:paddingEnd="12dp"
-        android:paddingBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.374">
+        app:layout_constraintTop_toBottomOf="@+id/tv_schedule_add_description">
 
         <TextView
             android:id="@+id/performLocation"
@@ -70,7 +68,6 @@
             android:layout_marginEnd="16dp"
             android:hint="Ex.안녕하세요"
             android:includeFontPadding="false"
-
             android:textColor="#2e3236"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -171,7 +168,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
-
             android:text="@string/modify"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -183,7 +179,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
-
             android:text="@string/delete"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -194,11 +189,11 @@
 
     <ImageButton
         android:id="@+id/diro"
-        android:background="#FFFFFF"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/arrow_back" />

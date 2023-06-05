@@ -20,6 +20,8 @@ drawable calendar
 drawable chat_icon
 drawable comment
 drawable edittext_round
+drawable googlemap_icon
+drawable googlemap_marker
 drawable home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -39,6 +41,7 @@ id ConstraintLayout_already
 id Date
 id Post
 id account_iv_profile
+id app
 id boardcontent_conslayout
 id bottom_navigation
 id btnCancel
@@ -62,7 +65,6 @@ id cal_memo
 id cal_save
 id cal_title
 id calendarView
-id calserchBtn
 id calwriteBtn
 id cl_timepicker1
 id cl_timepicker2
@@ -82,7 +84,6 @@ id edt_comment
 id endDate
 id endTime
 id fl_add_timebox
-id fragment_container
 id imgSetting
 id img_comment
 id iv_schedule_time_end
@@ -93,6 +94,7 @@ id likeCnt
 id like_btn
 id line3
 id logo
+id logout
 id main_layout
 id map
 id music_icon
@@ -104,12 +106,13 @@ id nav_recruit
 id nick_change
 id nickname
 id other_profile
+id other_recycler
 id performEnd
 id performLocation
 id performMemo
 id performName
 id performStart
-id popular_posts_container
+id popular_posts_recyclerview
 id post
 id post_Recycler
 id post_comment
@@ -125,13 +128,14 @@ id post_title
 id recruit_btn_back
 id recruit_content
 id recruit_create
-id recruit_filter
 id recruit_filter_busking
+id recruit_filter_busking_capacity
 id recruit_filter_busking_date
 id recruit_filter_busking_layout
 id recruit_filter_busking_session
 id recruit_filter_class
-id recruit_filter_class_duration
+id recruit_filter_class_capacity
+id recruit_filter_class_date2
 id recruit_filter_class_layout
 id recruit_filter_class_type
 id recruit_item_author
@@ -143,7 +147,7 @@ id recruit_list
 id recruit_post
 id recruit_title
 id recruit_upload
-id recyclerView
+id recruit_view_all
 id reply_recycler
 id search_view
 id self_profile
@@ -164,6 +168,9 @@ id tv_cal_add_memo
 id tv_comment
 id tv_content
 id tv_date
+id tv_hashKey
+id tv_popular_posts
+id tv_recent_posts
 id tv_schedule_add_description
 id tv_schedule_add_memo_condition
 id tv_schedule_add_time
@@ -223,6 +230,7 @@ string google_storage_bucket
 string hello_blank_fragment
 string intro
 string kakao_app_key
+string kakao_app_key2
 string like
 string modify
 string nickname
