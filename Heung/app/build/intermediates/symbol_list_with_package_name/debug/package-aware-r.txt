@@ -2906,6 +2906,7 @@ id CommentCnt
 id ConstraintLayout_already
 id Date
 id FUNCTION
+id HeungTextView
 id META
 id NO_DEBUG
 id Post
@@ -3046,6 +3047,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id check
 id checkbox
 id checked
 id chronometer
@@ -3173,6 +3175,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id imgSetting
 id img_comment
 id immediateStop
@@ -3657,6 +3660,7 @@ layout abc_tooltip
 layout activity_cal
 layout activity_caldetail
 layout activity_calwrite
+layout activity_logcheck
 layout activity_login
 layout activity_main
 layout activity_otherprof

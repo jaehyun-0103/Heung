@@ -39,6 +39,7 @@ drawable thumb_up
 id CommentCnt
 id ConstraintLayout_already
 id Date
+id HeungTextView
 id Post
 id account_iv_profile
 id app
@@ -66,6 +67,7 @@ id cal_save
 id cal_title
 id calendarView
 id calwriteBtn
+id check
 id cl_timepicker1
 id cl_timepicker2
 id comment
@@ -84,6 +86,7 @@ id edt_comment
 id endDate
 id endTime
 id fl_add_timebox
+id imageView
 id imgSetting
 id img_comment
 id iv_schedule_time_end
@@ -181,6 +184,7 @@ id zone_features
 layout activity_cal
 layout activity_caldetail
 layout activity_calwrite
+layout activity_logcheck
 layout activity_login
 layout activity_main
 layout activity_otherprof

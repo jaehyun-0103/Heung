@@ -37,6 +37,8 @@ class SelfProfActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: SelfProfAdapter
     private val COLLECTION_NAME = "Posts"
+    private var currentNickname: String = ""
+    private lateinit var userId: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,7 +54,16 @@ class SelfProfActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         initImageViewProfile()
-        getPostsList()
+        UserApiClient.instance.me { user, error ->
+            if (error != null) {
+                // 프로필 정보 가져오기 실패
+                // 에러 처리 로직 추가
+            } else if (user != null) {
+                // 프로필 정보 가져오기 성공
+                this.userId = user.id.toString()
+                getPostsList()
+            }
+        }
         initBottomNavigation()
 
         // 로그아웃 버튼 클릭 시
@@ -81,17 +92,52 @@ class SelfProfActivity : AppCompatActivity() {
                 .setTitle("탈퇴하기")
                 .setMessage("정말 탈퇴하시겠습니까?")
                 .setPositiveButton("네") { dialog, which ->
+                    // 사용자 정보 가져오기
+                    UserApiClient.instance.me { user, _ ->
+                        if (user != null) {
+                            val userId = user.id.toString()
 
-                    UserApiClient.instance.unlink { error ->
-                        if (error != null) {
-                            // 탈퇴 실패 처리
-                        } else {
-                            // 탈퇴 성공 및 로그아웃
-                            UserApiClient.instance.logout { logoutError ->
-                                if (logoutError != null) {
-                                    // 로그아웃 실패 처리
+                            // 카카오 탈퇴 수행
+                            UserApiClient.instance.unlink { error ->
+                                if (error != null) {
+                                    // 탈퇴 실패 처리
                                 } else {
-                                    // 로그아웃 성공
+                                    // 탈퇴 성공 후 문서 삭제 수행
+                                    val db = FirebaseFirestore.getInstance()
+                                    val usersCollection = db.collection("Users")
+
+                                    // userId와 일치하는 문서를 찾아서 삭제
+                                    usersCollection
+                                        .whereEqualTo("user_id", userId)
+                                        .get()
+                                        .addOnSuccessListener { querySnapshot ->
+                                            if (!querySnapshot.isEmpty) {
+                                                val documentSnapshot = querySnapshot.documents[0]
+                                                val documentId = documentSnapshot.id
+
+                                                // 문서 삭제
+                                                usersCollection
+                                                    .document(documentId)
+                                                    .delete()
+                                                    .addOnSuccessListener {
+                                                        // 문서 삭제 성공
+                                                        val intent = Intent(this@SelfProfActivity, LoginActivity::class.java)
+                                                        startActivity(intent)
+                                                        finish() // 현재 액티비티를 종료하여 이전 화면으로 돌아가도록 함
+                                                    }
+                                                    .addOnFailureListener { e ->
+                                                        // 문서 삭제 실패
+                                                        // 실패 처리 작업을 수행하세요.
+                                                    }
+                                            } else {
+                                                // 해당 userId의 문서를 찾을 수 없음
+                                                // 처리할 작업을 추가하세요.
+                                            }
+                                        }
+                                        .addOnFailureListener { e ->
+                                            // 데이터 가져오기 실패
+                                            // 실패 처리 작업을 추가하세요.
+                                        }
                                 }
                             }
                         }
@@ -100,7 +146,6 @@ class SelfProfActivity : AppCompatActivity() {
                 .setNegativeButton("아니요", null)
             builder.show()
         }
-
         //닉네임 userId식별자로 넣기(기본값)
 
         UserApiClient.instance.me { user, error ->
@@ -109,10 +154,23 @@ class SelfProfActivity : AppCompatActivity() {
                 // 에러 처리 로직 추가
             } else if (user != null) {
                 // 프로필 정보 가져오기 성공
-                val userId = user.id.toString()
-                // userId 변수에 사용자 식별자가 저장됩니다.
-                // TextView에 식별자를 설정합니다.
-                nickname.text = userId
+                userId = user.id.toString()
+
+                // 파이어베이스에서 user_nickname 가져오기
+                val db = FirebaseFirestore.getInstance()
+                val usersCollection = db.collection("Users")
+
+                usersCollection
+                    .whereEqualTo("user_id", userId)
+                    .get()
+                    .addOnSuccessListener { querySnapshot ->
+                        if (!querySnapshot.isEmpty) {
+                            val documentSnapshot = querySnapshot.documents[0]
+                            val user = documentSnapshot.toObject(Users::class.java)
+                            currentNickname = user?.user_nickname ?: "" // user_nickname 가져오기
+                            nickname.text = currentNickname // TextView에 닉네임 설정
+                        }
+                    }
             }
         }
 
@@ -141,47 +199,65 @@ class SelfProfActivity : AppCompatActivity() {
                         } else if (user != null) {
                             // 사용자 정보 가져오기 성공
                             val userId = user.id.toString()
-
-                            // Users 컬렉션에서 해당 user_id의 문서를 찾아 닉네임 업데이트
+                            // 중복 여부 확인
                             usersCollection
-                                .whereEqualTo("user_id", userId)
+                                .whereEqualTo("user_nickname", newNickname)
                                 .get()
                                 .addOnSuccessListener { querySnapshot ->
-                                    if (!querySnapshot.isEmpty) {
-                                        val documentSnapshot = querySnapshot.documents[0]
-                                        val documentId = documentSnapshot.id
+                                    val isNicknameDuplicate = !querySnapshot.isEmpty
 
-                                        // 업데이트할 필드와 값 설정
-                                        val updates = hashMapOf<String, Any>(
-                                            "user_nickname" to newNickname
-                                        )
+                                    if (isNicknameDuplicate) {
+                                        // 중복된 닉네임이 존재하는 경우
+                                        Toast.makeText(this, "중복된 닉네임입니다.", Toast.LENGTH_SHORT)
+                                            .show()
+                                    } else {
+                                        // 중복된 닉네임이 존재하지 않는 경우
+                                        // Users 컬렉션에서 해당 user_id의 문서를 찾아 닉네임 업데이트
+                                        usersCollection
+                                            .whereEqualTo("user_id", userId)
+                                            .get()
+                                            .addOnSuccessListener { querySnapshot ->
+                                                if (!querySnapshot.isEmpty) {
+                                                    val documentSnapshot =
+                                                        querySnapshot.documents[0]
+                                                    val documentId = documentSnapshot.id
 
-                                        // 문서 업데이트
-                                        usersCollection.document(documentId)
-                                            .update(updates)
-                                            .addOnSuccessListener {
-                                                // 업데이트 성공
-                                                // 성공적으로 업데이트되었을 때 수행할 작업을 추가하세요.
-                                                // TextView에 변경된 닉네임 표시
-                                                nickname.text = newNickname
+                                                    // 업데이트할 필드와 값 설정
+                                                    val updates = hashMapOf<String, Any>(
+                                                        "user_nickname" to newNickname
+                                                    )
+
+                                                    // 문서 업데이트
+                                                    usersCollection.document(documentId)
+                                                        .update(updates)
+                                                        .addOnSuccessListener {
+                                                            // 업데이트 성공
+                                                            // 성공적으로 업데이트되었을 때 수행할 작업을 추가하세요.
+                                                            // TextView에 변경된 닉네임 표시
+                                                            nickname.text = newNickname
+                                                        }
+                                                        .addOnFailureListener { e ->
+                                                            // 업데이트 실패
+                                                            // 업데이트 실패 시 수행할 작업을 추가하세요.
+                                                        }
+                                                } else {
+                                                    // 해당 user_id의 문서를 찾을 수 없음
+                                                    // 처리할 작업을 추가하세요.
+                                                }
                                             }
                                             .addOnFailureListener { e ->
-                                                // 업데이트 실패
-                                                // 업데이트 실패 시 수행할 작업을 추가하세요.
+                                                // 데이터 가져오기 실패
+                                                // 실패 처리 작업을 추가하세요.
                                             }
-                                    } else {
-                                        // 해당 user_id의 문서를 찾을 수 없음
-                                        // 처리할 작업을 추가하세요.
                                     }
-                                }
-                                .addOnFailureListener { e ->
-                                    // 데이터 가져오기 실패
-                                    // 실패 처리 작업을 추가하세요.
+
                                 }
                         }
                     }
                 }
-            builder.show()
+                    builder.show()
+
+
         }
     }
 
@@ -246,31 +322,35 @@ class SelfProfActivity : AppCompatActivity() {
     }
 
     private fun getPostsList() {
-        val db = FirebaseFirestore.getInstance()
 
-        db.collection("Posts")
-            .whereEqualTo("user_id", "jaehyun")
-            .get()
-            .addOnSuccessListener { documents ->
-                val postsList = mutableListOf<Posts>()
+            val db = FirebaseFirestore.getInstance()
 
-                for (document in documents) {
-                    val postId = document.id
-                    val userId = document.getString("user_id") ?: ""
-                    val title = document.getString("post_title") ?: ""
-                    val content = document.getString("post_content") ?: ""
-                    val date = document.getString("post_date") ?: ""
-                    val post = Posts(postId, userId, title, content, date)
-                    postsList.add(post)
+
+            db.collection("Posts")
+                .whereEqualTo("user_id", userId)
+                .get()
+                .addOnSuccessListener { documents ->
+                    val postsList = mutableListOf<Posts>()
+
+                    for (document in documents) {
+                        val postId = document.id
+                        val userId = document.getString("user_id") ?: ""
+                        val title = document.getString("post_title") ?: ""
+                        val content = document.getString("post_content") ?: ""
+                        val date = document.getString("post_date") ?: ""
+                        val post = Posts(postId, userId, title, content, date)
+                        postsList.add(post)
+                    }
+
+                    adapter = SelfProfAdapter(postsList)
+                    recyclerView.adapter = adapter
                 }
+                .addOnFailureListener { exception ->
+                    // 오류 처리
+                }
+        }
 
-                adapter = SelfProfAdapter(postsList)
-                recyclerView.adapter = adapter
-            }
-            .addOnFailureListener { exception ->
-                // 오류 처리
-            }
-    }
+
 
     private fun updateUserData(userId: String, nickname: String) {
         val database = Firebase.database

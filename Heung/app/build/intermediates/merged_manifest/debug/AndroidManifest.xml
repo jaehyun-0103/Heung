@@ -98,6 +98,9 @@
             android:name="com.example.heung.OtherProfActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.heung.LogcheckActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.heung.SelfProfActivity"
             android:exported="false" />
         <activity
