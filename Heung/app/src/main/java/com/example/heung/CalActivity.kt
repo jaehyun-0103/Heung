@@ -84,6 +84,8 @@ class CalActivity : AppCompatActivity() {
         }
         bottomNavigationView.menu.findItem(R.id.nav_calendar)?.isChecked = true//하단바 상태 유지
 
+
+
         calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
             val selectedDate = "$year-${month + 1}-$dayOfMonth"
 

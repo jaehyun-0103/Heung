@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CalendarView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.heung.R;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ActivityCalBinding implements ViewBinding {
   public final RecyclerView calData;
 
   @NonNull
-  public final CalendarView calendarView;
+  public final MaterialCalendarView calendarView;
 
   @NonNull
   public final Button calwriteBtn;
@@ -35,7 +35,8 @@ public final class ActivityCalBinding implements ViewBinding {
   public final TextView title;
 
   private ActivityCalBinding(@NonNull ConstraintLayout rootView, @NonNull RecyclerView calData,
-      @NonNull CalendarView calendarView, @NonNull Button calwriteBtn, @NonNull TextView title) {
+      @NonNull MaterialCalendarView calendarView, @NonNull Button calwriteBtn,
+      @NonNull TextView title) {
     this.rootView = rootView;
     this.calData = calData;
     this.calendarView = calendarView;
@@ -77,7 +78,7 @@ public final class ActivityCalBinding implements ViewBinding {
       }
 
       id = R.id.calendarView;
-      CalendarView calendarView = ViewBindings.findChildViewById(rootView, id);
+      MaterialCalendarView calendarView = ViewBindings.findChildViewById(rootView, id);
       if (calendarView == null) {
         break missingId;
       }

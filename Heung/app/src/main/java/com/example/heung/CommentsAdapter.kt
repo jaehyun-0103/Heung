@@ -30,6 +30,7 @@ class CommentsAdapter(private val postList: MutableList<Comments>
         val comments = postList[position]
         holder.itemView.findViewById<TextView>(R.id.tv_comment).text = comments.comment
         holder.itemView.findViewById<TextView>(R.id.tv_date).text = comments.comment_date
+        holder.itemView.findViewById<TextView>(R.id.tv_author).text = comments.user_nickname
         holder.itemView.setOnClickListener {
             onItemClickListener?.invoke(position)
         }
@@ -52,13 +53,13 @@ class CommentsAdapter(private val postList: MutableList<Comments>
                 for (replyDocument in replySnapshot.documents) {
                     val replyId = replyDocument.getString("reply_id")
                     val commentId = replyDocument.getString("comment_id")
-                    val userId = replyDocument.getString("user_id")
+                    val nickname = replyDocument.getString("user_nickname")
                     val reply = replyDocument.getString("reply")
                     val replyDate = replyDocument.getString("reply_date")
                     val replyObject = Reply(
                         replyId,
                         commentId,
-                        userId,
+                        nickname,
                         reply,
                         replyDate)
                     replyList.add(replyObject)

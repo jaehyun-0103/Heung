@@ -24,6 +24,9 @@ public final class ActivitySelfprofBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final BottomNavigationLayoutBinding bottomNavigation;
+
+  @NonNull
   public final FloatingActionButton btnEdit;
 
   @NonNull
@@ -48,10 +51,12 @@ public final class ActivitySelfprofBinding implements ViewBinding {
   public final RecyclerView selfRecycler;
 
   private ActivitySelfprofBinding(@NonNull ConstraintLayout rootView,
+      @NonNull BottomNavigationLayoutBinding bottomNavigation,
       @NonNull FloatingActionButton btnEdit, @NonNull Button btnQuit, @NonNull Button logout,
       @NonNull Button nickChange, @NonNull TextView nickname, @NonNull TextView post,
       @NonNull ImageView selfProfile, @NonNull RecyclerView selfRecycler) {
     this.rootView = rootView;
+    this.bottomNavigation = bottomNavigation;
     this.btnEdit = btnEdit;
     this.btnQuit = btnQuit;
     this.logout = logout;
@@ -89,6 +94,13 @@ public final class ActivitySelfprofBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottom_navigation;
+      View bottomNavigation = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavigation == null) {
+        break missingId;
+      }
+      BottomNavigationLayoutBinding binding_bottomNavigation = BottomNavigationLayoutBinding.bind(bottomNavigation);
+
       id = R.id.btn_edit;
       FloatingActionButton btnEdit = ViewBindings.findChildViewById(rootView, id);
       if (btnEdit == null) {
@@ -137,8 +149,8 @@ public final class ActivitySelfprofBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySelfprofBinding((ConstraintLayout) rootView, btnEdit, btnQuit, logout,
-          nickChange, nickname, post, selfProfile, selfRecycler);
+      return new ActivitySelfprofBinding((ConstraintLayout) rootView, binding_bottomNavigation,
+          btnEdit, btnQuit, logout, nickChange, nickname, post, selfProfile, selfRecycler);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

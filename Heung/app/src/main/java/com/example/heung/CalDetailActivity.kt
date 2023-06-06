@@ -3,12 +3,14 @@ package com.example.heung
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.FirebaseFirestore
+import com.kakao.sdk.user.UserApiClient
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -59,45 +61,73 @@ class CalDetailActivity : AppCompatActivity() {
 
         // 수정 버튼 클릭 리스너 설정
         val editButton = findViewById<Button>(R.id.calEdit)
-        editButton.setOnClickListener {
-            val intent = Intent(this, CalEditActivity::class.java)
-            intent.putExtra("calTitle", calTitle)
-            intent.putExtra("calLocation", calLocation)
-            intent.putExtra("calStartTime", calStartTime)
-            intent.putExtra("calEndTime", calEndTime)
-            intent.putExtra("calMemo", calMemo)
-            intent.putExtra("selectedDate", selectedDate)
-            intent.putExtra("calId", calId)
-            startActivity(intent)
+        editButton.visibility = View.GONE
+
+
+        UserApiClient.instance.me { user, error ->
+            if (error != null) {
+                // 프로필 정보 가져오기 실패
+            } else if (user != null) {
+                val calUserId = user.id.toString() // 사용자 ID
+
+                if (userId == calUserId) { // user_id가 동일한 경우에만 수정 버튼 활성화
+                    editButton.visibility = View.VISIBLE
+                }
+                editButton.setOnClickListener {
+                val intent = Intent(this, CalEditActivity::class.java)
+                intent.putExtra("calTitle", calTitle)
+                intent.putExtra("calLocation", calLocation)
+                intent.putExtra("calStartTime", calStartTime)
+                intent.putExtra("calEndTime", calEndTime)
+                intent.putExtra("calMemo", calMemo)
+                intent.putExtra("selectedDate", selectedDate)
+                intent.putExtra("calId", calId)
+                startActivity(intent)
+            }
+        }
         }
 
-        // 삭제 버튼 클릭 리스너 설정
+
+        // 삭제 버튼 초기 상태를 숨김으로 설정
         val deleteButton = findViewById<Button>(R.id.calDelect)
-        deleteButton.setOnClickListener {
-            val collectionName = "Calendar"
+        deleteButton.visibility = View.GONE
 
-            val collectionRef = FirebaseFirestore.getInstance().collection(collectionName)
-            val query = collectionRef.whereEqualTo("cal_id", calId)
+            UserApiClient.instance.me { user, error ->
+                if (error != null) {
+                    // 프로필 정보 가져오기 실패
+                } else if (user != null) {
+                    val calUserId = user.id.toString() // 사용자 ID
 
-            query.get()
-                .addOnSuccessListener { querySnapshot ->
-                    for (documentSnapshot in querySnapshot.documents) {
-                        documentSnapshot.reference.delete()
-                            .addOnSuccessListener {
-                                Toast.makeText(this, "삭제 성공했습니다.", Toast.LENGTH_SHORT).show()
-                                // 메인 화면으로 이동
-                                val intent = Intent(this, CalActivity::class.java)
-                                startActivity(intent)
-                                finish() // 현재 액티비티 종료
+                    if (userId == calUserId) { // user_id가 동일한 경우에는 삭제 버튼을 보이지 않음
+                        deleteButton.visibility = View.VISIBLE
+                    }
+                    deleteButton.setOnClickListener {
+                    val collectionName = "Calendar"
+
+                    val collectionRef = FirebaseFirestore.getInstance().collection(collectionName)
+                    val query = collectionRef.whereEqualTo("cal_id", calId)
+
+                        query.get()
+                            .addOnSuccessListener { querySnapshot ->
+                                for (documentSnapshot in querySnapshot.documents) {
+                                    documentSnapshot.reference.delete()
+                                        .addOnSuccessListener {
+                                            Toast.makeText(this, "삭제 성공했습니다.", Toast.LENGTH_SHORT).show()
+                                            // 메인 화면으로 이동
+                                            val intent = Intent(this, CalActivity::class.java)
+                                            startActivity(intent)
+                                            finish() // 현재 액티비티 종료
+                                        }
+                                        .addOnFailureListener { e ->
+                                            Toast.makeText(this, "삭제 실패했습니다.", Toast.LENGTH_SHORT).show()
+                                        }
+                                }
                             }
                             .addOnFailureListener { e ->
-                                Toast.makeText(this, "삭제 실패했습니다.", Toast.LENGTH_SHORT).show()
+                                // 쿼리 실행 실패
                             }
-                    }
                 }
-                .addOnFailureListener { e ->
-                    // 쿼리 실행 실패
-                }
+            }
         }
     }
 

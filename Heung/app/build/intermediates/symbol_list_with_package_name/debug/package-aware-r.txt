@@ -829,6 +829,22 @@ attr maxImageSize
 attr maxLines
 attr maxVelocity
 attr maxWidth
+attr mcv_allowClickDaysOutsideCurrentMonth
+attr mcv_arrowColor
+attr mcv_calendarMode
+attr mcv_dateTextAppearance
+attr mcv_firstDayOfWeek
+attr mcv_headerTextAppearance
+attr mcv_leftArrowMask
+attr mcv_monthLabels
+attr mcv_rightArrowMask
+attr mcv_selectionColor
+attr mcv_showOtherDates
+attr mcv_tileHeight
+attr mcv_tileSize
+attr mcv_tileWidth
+attr mcv_weekDayLabels
+attr mcv_weekDayTextAppearance
 attr measureWithLargestChild
 attr menu
 attr menuAlignmentMode
@@ -1876,6 +1892,8 @@ color material_timepicker_button_stroke
 color material_timepicker_clock_text_color
 color material_timepicker_clockface
 color material_timepicker_modebutton_tint
+color mcv_text_date_dark
+color mcv_text_date_light
 color mtrl_btn_bg_color_selector
 color mtrl_btn_ripple_color
 color mtrl_btn_stroke_color_selector
@@ -2838,6 +2856,8 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable mcv_action_next
+drawable mcv_action_previous
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked
@@ -3065,6 +3085,7 @@ id comment_textview
 id compress
 id confirm_button
 id connect
+id conslayout
 id constraint
 id constraintLayout
 id constraintLayout2
@@ -3088,7 +3109,9 @@ id date_picker_actions
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
+id decorated_disabled
 id default_activity_button
+id defaults
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -3100,6 +3123,7 @@ id dialog_button
 id dimensions
 id direct
 id diro
+id dirogagi
 id disableHome
 id disableIntraAutoTransition
 id disablePostScroll
@@ -3149,6 +3173,7 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
+id friday
 id frost
 id fullscreen_header
 id ghost_view
@@ -3232,9 +3257,12 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id mcv_pager
 id message
 id middle
 id mini
+id monday
+id month
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -3297,8 +3325,10 @@ id on
 id onAttachStateChangeListener
 id onDateChanged
 id onInterceptTouchReturnSwipe
+id other_months
 id other_profile
 id other_recycler
+id out_of_range
 id outline
 id outward
 id overshoot
@@ -3330,6 +3360,7 @@ id post_create
 id post_date
 id post_likes
 id post_line
+id post_line2
 id post_nickname
 id post_popular
 id post_save
@@ -3372,6 +3403,7 @@ id right_side
 id rounded
 id row_index_key
 id satellite
+id saturday
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3452,6 +3484,7 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id sunday
 id supportScrollUp
 id tabMode
 id tag_accessibility_actions
@@ -3490,6 +3523,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id thursday
 id time
 id title
 id titleDividerNoCustom
@@ -3507,6 +3541,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tuesday
 id tv_author
 id tv_cal_add_location
 id tv_cal_add_memo
@@ -3536,6 +3571,8 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id wednesday
+id week
 id west
 id wide
 id withText
@@ -3801,6 +3838,7 @@ string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
 string buskingR
+string calendar
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -3955,6 +3993,7 @@ string mtrl_switch_track_decoration_path
 string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
+string next
 string nickname
 string nicknameChange
 string notice
@@ -3970,6 +4009,7 @@ string place
 string popular
 string post
 string posting
+string previous
 string project_id
 string recruit
 string recruitEnd
@@ -4476,6 +4516,9 @@ style TextAppearance_Material3_SearchView_Prefix
 style TextAppearance_Material3_TitleLarge
 style TextAppearance_Material3_TitleMedium
 style TextAppearance_Material3_TitleSmall
+style TextAppearance_MaterialCalendarWidget_Date
+style TextAppearance_MaterialCalendarWidget_Header
+style TextAppearance_MaterialCalendarWidget_WeekDay
 style TextAppearance_MaterialComponents_Badge
 style TextAppearance_MaterialComponents_Body1
 style TextAppearance_MaterialComponents_Body2
@@ -5168,6 +5211,7 @@ styleable MaterialButton android_background android_insetLeft android_insetRight
 styleable MaterialButtonToggleGroup android_enabled checkedButton selectionRequired singleSelection
 styleable MaterialCalendar android_windowFullscreen dayInvalidStyle daySelectedStyle dayStyle dayTodayStyle nestedScrollable rangeFillColor yearSelectedStyle yearStyle yearTodayStyle
 styleable MaterialCalendarItem android_insetLeft android_insetRight android_insetTop android_insetBottom itemFillColor itemShapeAppearance itemShapeAppearanceOverlay itemStrokeColor itemStrokeWidth itemTextColor
+styleable MaterialCalendarView mcv_allowClickDaysOutsideCurrentMonth mcv_arrowColor mcv_calendarMode mcv_dateTextAppearance mcv_firstDayOfWeek mcv_headerTextAppearance mcv_leftArrowMask mcv_monthLabels mcv_rightArrowMask mcv_selectionColor mcv_showOtherDates mcv_tileHeight mcv_tileSize mcv_tileWidth mcv_weekDayLabels mcv_weekDayTextAppearance
 styleable MaterialCardView android_checkable cardForegroundColor checkedIcon checkedIconGravity checkedIconMargin checkedIconSize checkedIconTint rippleColor shapeAppearance shapeAppearanceOverlay state_dragged strokeColor strokeWidth
 styleable MaterialCheckBox android_button buttonCompat buttonIcon buttonIconTint buttonIconTintMode buttonTint centerIfNoTextEnabled checkedState errorAccessibilityLabel errorShown useMaterialThemeColors
 styleable MaterialCheckBoxStates state_error state_indeterminate

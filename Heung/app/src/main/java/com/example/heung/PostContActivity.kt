@@ -3,8 +3,10 @@ package com.example.heung
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -42,6 +44,7 @@ class PostContActivity : AppCompatActivity() {
         val postAuthor = intent.getStringExtra("postAuthor")
         val postId = intent.getStringExtra("postId")
         val postDate = intent.getStringExtra("postDate")
+        val userId = intent.getStringExtra("userId")
 
         tvTitle.text = postTitle
         tvContent.text = postContent
@@ -63,149 +66,177 @@ class PostContActivity : AppCompatActivity() {
 
         val commentTextview = findViewById<EditText>(R.id.comment_textview)
         val btnSetting = findViewById<Button>(R.id.setting)
-        btnSetting.setOnClickListener {
-            showSettingPopup()
+
+
+        val btnBack = findViewById<ImageButton>(R.id.dirogagi)
+// 뒤로 가기 버튼
+        btnBack.setOnClickListener {
+            onBackPressed()
         }
+
+        btnSetting.visibility = View.GONE
         UserApiClient.instance.me { user, error ->
             if (error != null) {
                 // 프로필 정보 가져오기 실패
             } else if (user != null) {
                 // 프로필 정보 가져오기 성공
-                val userId = user.id.toString()
-
-                val btnCtv = findViewById<Button>(R.id.btn_ctv)
-                btnCtv.setOnClickListener {
-                    val inputCont = commentTextview.text.toString()
-                    val commentId = UUID.randomUUID().toString()
-                    val commentDate = Date()
-                    val dateFormat = SimpleDateFormat("yyyy-MM-dd")
-                    val comment = hashMapOf(
-                        "comment_id" to commentId,
-                        "post_id" to postId,
-                        "user_id" to userId,
-                        "comment" to inputCont,
-                        "comment_date" to dateFormat.format(commentDate)
-                    )
-
-                    firestore.collection("Comments")
-                        .add(comment)
-                        .addOnSuccessListener {
-                            val newComment = Comments(
-                                commentId,
-                                postId,
-                                userId,
-                                inputCont,
-                                dateFormat.format(commentDate)
-                            )
-                            comments.add(newComment)
-                            adapter.notifyDataSetChanged()
-                            commentTextview.text.clear()
-
-                            if (postId != null) {
-                                updateCommentsCount(postId)
-                            }
-                        }
-                        .addOnFailureListener { exception ->
-                            // 실패 처리
-                        }
-                }
-            }
-        }
-
-        firestore.collection("Comments")
-            .whereEqualTo("post_id", postId)
-            .orderBy("comment_date", Query.Direction.ASCENDING)
-            .get()
-            .addOnSuccessListener { querySnapshot ->
-                comments.clear()
-                for (document in querySnapshot.documents) {
-                    val comment = document.toObject(Comments::class.java)
-                    comment?.let {
-                        comments.add(comment)
-                        // 해당 댓글의 대댓글 가져오기
+                val currentUserId = user.id.toString() // 사용자 ID
+                if (userId == currentUserId) {
+                    btnSetting.visibility = View.VISIBLE
+                    btnSetting.setOnClickListener {
+                        showSettingPopup()
                     }
                 }
-                adapter.notifyDataSetChanged()
-
-                // 댓글 수 업데이트
-                if (postId != null) {
-                    updateCommentsCount(postId)
-                }
-            }
-            .addOnFailureListener { exception ->
-                // 댓글 가져오기 실패
             }
 
-        btnLike = findViewById(R.id.like_btn)
-        tvLikeCount = findViewById(R.id.likeCnt)
+            UserApiClient.instance.me { user, error ->
+                if (error != null) {
+                    // 프로필 정보 가져오기 실패
+                } else if (user != null) {
+                    // 프로필 정보 가져오기 성공
+                    val nickname = user.kakaoAccount?.profile?.nickname
 
-        // 해당 게시글의 좋아요 수 가져오기
-        firestore.collection("Likes")
-            .document(postId!!)
-            .get()
-            .addOnSuccessListener { documentSnapshot ->
-                val likes = documentSnapshot.toObject(Likes::class.java)
-                if (likes != null) {
-                    val currentLikeCountStr = likes.like ?: "0"
-                    val currentLikeCount = currentLikeCountStr.toInt()
-
-                    // 좋아요 수 텍스트뷰 업데이트
-                    tvLikeCount.text = currentLikeCount.toString()
-                } else {
-                    // Likes 컬렉션에 해당 postId에 대한 문서가 없는 경우
-                    // 좋아요 수 텍스트뷰 업데이트
-                    tvLikeCount.text = "0"
-                }
-            }
-            .addOnFailureListener { exception ->
-                // 게시글 가져오기 실패
-            }
-
-        btnLike.setOnClickListener {
-            // 좋아요 버튼이 클릭되었을 때 실행될 코드
-
-            // 해당 게시글의 좋아요 여부를 가져옴
-            val likesRef = firestore.collection("Likes").document(postId)
-            likesRef.get()
-                .addOnSuccessListener { documentSnapshot ->
-                    val likes = documentSnapshot.toObject(Likes::class.java)
-                    if (likes != null) {
-                        // 좋아요가 이미 존재하는 경우
-                        btnLike.isEnabled = false // 좋아요 버튼 비활성화
-                        Toast.makeText(this, "이미 좋아요를 눌렀습니다.", Toast.LENGTH_SHORT).show()
-
-                    } else {
-                        // 좋아요가 존재하지 않는 경우
-                        val newLikeCount = tvLikeCount.text.toString().toInt() + 1
-
-                        // 게시글의 좋아요 수 업데이트
-                        val likeData = hashMapOf(
+                    val btnCtv = findViewById<Button>(R.id.btn_ctv)
+                    btnCtv.setOnClickListener {
+                        val inputCont = commentTextview.text.toString()
+                        val commentId = UUID.randomUUID().toString()
+                        val commentDate = Date()
+                        val dateFormat = SimpleDateFormat("yyyy-MM-dd")
+                        val comment = hashMapOf(
+                            "comment_id" to commentId,
                             "post_id" to postId,
-                            "like" to newLikeCount.toString()
+                            "user_nickname" to nickname,
+                            "comment" to inputCont,
+                            "comment_date" to dateFormat.format(commentDate)
                         )
 
-                        firestore.collection("Likes")
-                            .document(postId)
-                            .set(likeData)
+                        firestore.collection("Comments")
+                            .add(comment)
                             .addOnSuccessListener {
-                                // 좋아요 수 업데이트 성공
-                                tvLikeCount.text = newLikeCount.toString()
+                                val newComment = Comments(
+                                    commentId,
+                                    postId,
+                                    nickname,
+                                    inputCont,
+                                    dateFormat.format(commentDate)
+                                )
+                                comments.add(newComment)
+                                adapter.notifyDataSetChanged()
+                                commentTextview.text.clear()
 
-                                // 좋아요 버튼 비활성화
-                                btnLike.isEnabled = false
-                                Toast.makeText(this, "좋아요를 눌렀습니다.", Toast.LENGTH_SHORT).show()
+                                if (postId != null) {
+                                    updateCommentsCount(postId)
+                                }
                             }
                             .addOnFailureListener { exception ->
-                                // 좋아요 수 업데이트 실패
+                                // 실패 처리
                             }
+                    }
+                }
+            }
+
+            firestore.collection("Comments")
+                .whereEqualTo("post_id", postId)
+                .orderBy("comment_date", Query.Direction.ASCENDING)
+                .get()
+                .addOnSuccessListener { querySnapshot ->
+                    comments.clear()
+                    for (document in querySnapshot.documents) {
+                        val comment = document.toObject(Comments::class.java)
+                        comment?.let {
+                            comments.add(comment)
+                            // 해당 댓글의 대댓글 가져오기
+                        }
+                    }
+                    adapter.notifyDataSetChanged()
+
+                    // 댓글 수 업데이트
+                    if (postId != null) {
+                        updateCommentsCount(postId)
                     }
                 }
                 .addOnFailureListener { exception ->
-                    // 좋아요 여부 확인 실패
+                    // 댓글 가져오기 실패
                 }
+
+            btnLike = findViewById(R.id.like_btn)
+            tvLikeCount = findViewById(R.id.likeCnt)
+
+            // 해당 게시글의 좋아요 수 가져오기
+            firestore.collection("Likes")
+                .document(postId!!)
+                .get()
+                .addOnSuccessListener { documentSnapshot ->
+                    val likes = documentSnapshot.toObject(Likes::class.java)
+                    if (likes != null) {
+                        val currentLikeCountStr = likes.like ?: "0"
+                        val currentLikeCount = currentLikeCountStr.toInt()
+
+                        // 좋아요 수 텍스트뷰 업데이트
+                        tvLikeCount.text = currentLikeCount.toString()
+                    } else {
+                        // Likes 컬렉션에 해당 postId에 대한 문서가 없는 경우
+                        // 좋아요 수 텍스트뷰 업데이트
+                        tvLikeCount.text = "0"
+                    }
+                }
+                .addOnFailureListener { exception ->
+                    // 게시글 가져오기 실패
+                }
+
+            btnLike.setOnClickListener {
+                // 현재 사용자의 ID
+                UserApiClient.instance.me { user, error ->
+                    if (error != null) {
+                        // 프로필 정보 가져오기 실패
+                    } else if (user != null) {
+                        // 프로필 정보 가져오기 성공
+                        val userId = user.id.toString() // 사용자 ID
+                        // 해당 게시글의 좋아요 정보 가져오기
+                        val likesRef = firestore.collection("Likes").document(postId)
+                        likesRef.get()
+                            .addOnSuccessListener { documentSnapshot ->
+                                val likes = documentSnapshot.toObject(Likes::class.java)
+
+                                if (likes != null) { // 좋아요가 이미 존재, 즉 문서 필드 존재?
+                                    val likedUserIds = likes.userIds ?: emptyList<String>()
+                                    if (likedUserIds.contains(userId)) {
+                                        // 현재 사용자가 이미 좋아요를 누른 경우
+                                        btnLike.isEnabled = false // 좋아요 버튼 비활성화
+                                        Toast.makeText(this, "이미 좋아요를 눌렀습니다.", Toast.LENGTH_SHORT)
+                                            .show()
+                                    }
+                                } else {
+                                    // 좋아요 추가
+                                    val newLikeCount = tvLikeCount.text.toString().toInt() + 1
+                                    // 좋아요 정보 업데이트
+                                    val likeData = hashMapOf(
+                                        "post_id" to postId,
+                                        "like" to newLikeCount.toString(),
+                                        "userIds" to listOf(userId) // 처음 좋아요를 누른 경우 새로운 리스트 생성
+                                    )
+                                    likesRef
+                                        .set(likeData)
+                                        .addOnSuccessListener {
+                                            // 좋아요 수 업데이트 성공
+                                            tvLikeCount.text = newLikeCount.toString()
+
+                                            // 좋아요 버튼 비활성화
+                                            btnLike.isEnabled = false
+                                            Toast.makeText(this, "좋아요를 눌렀습니다.", Toast.LENGTH_SHORT)
+                                                .show()
+                                        }
+                                        .addOnFailureListener { exception ->
+                                            // 좋아요 수 업데이트 실패
+                                        }
+                                }
+                            }
+                    }
+                }
+            }
+
         }
     }
-
     private fun updateCommentsCount(postId: String) {
         firestore.collection("Comments")
             .whereEqualTo("post_id", postId)
@@ -223,9 +254,10 @@ class PostContActivity : AppCompatActivity() {
                             val repliesCountMap = mutableMapOf<String, Int>()
 
                             for (commentId in commentIds) {
-                                val repliesCount = repliesQuerySnapshot.documents.count { document ->
-                                    document.getString("comment_id") == commentId
-                                }
+                                val repliesCount =
+                                    repliesQuerySnapshot.documents.count { document ->
+                                        document.getString("comment_id") == commentId
+                                    }
                                 repliesCountMap[commentId] = repliesCount
                             }
                             var totalCommentCount = 0
@@ -268,7 +300,7 @@ class PostContActivity : AppCompatActivity() {
 
         btnEdit.setOnClickListener {
             val intent = Intent(this, PostEditActivity::class.java)
-            intent.putExtra("postId",postId)
+            intent.putExtra("postId", postId)
             intent.putExtra("postTitle", postTitle)
             intent.putExtra("postContent", postContent)
             dialog.dismiss()
@@ -328,43 +360,54 @@ class PostContActivity : AppCompatActivity() {
     private fun saveReply(commentId: String, inputReply: String) {
         val firestore = FirebaseFirestore.getInstance()
         val replyId = UUID.randomUUID().toString()
-        val userId = "user_id"
-        val replyDate = Date()
-        val dateFormat = SimpleDateFormat("yyyy-MM-dd")
         val postId = intent.getStringExtra("postId")
 
-        val reply = hashMapOf(
-            "reply_id" to replyId,
-            "comment_id" to commentId,
-            "user_id" to userId,
-            "reply" to inputReply,
-            "reply_date" to dateFormat.format(replyDate)
-        )
+        UserApiClient.instance.me { user, error ->
+            if (error != null) {
+                // 프로필 정보 가져오기 실패
+            } else if (user != null) {
+                // 프로필 정보 가져오기 성공
 
-        firestore.collection("Reply")
-            .add(reply)
-            .addOnSuccessListener {
-                val newReply = Reply(
-                    replyId,
-                    commentId,
-                    userId,
-                    inputReply,
-                    dateFormat.format(replyDate)
+                val nickname = user.kakaoAccount?.profile?.nickname // 사용자 닉네임
+
+                val replyDate = Date()
+                val dateFormat = SimpleDateFormat("yyyy-MM-dd")
+
+                val reply = hashMapOf(
+                    "reply_id" to replyId,
+                    "comment_id" to commentId,
+                    "user_nickname" to nickname,
+                    "reply" to inputReply,
+                    "reply_date" to dateFormat.format(replyDate)
                 )
-                for (comment in comments) {
-                    if (comment.comment_id == commentId) {
-                        comment.replies.add(newReply)
-                        break
-                    }
-                }
 
-                adapter.notifyDataSetChanged()
-                if (postId != null) {
-                    updateCommentsCount(postId)
-                }
+                firestore.collection("Reply")
+                    .add(reply)
+                    .addOnSuccessListener { documentReference ->
+                        val newReply = Reply(
+                            replyId,
+                            commentId,
+                            nickname,
+                            inputReply,
+                            dateFormat.format(replyDate)
+                        )
+
+                        for (comment in comments) {
+                            if (comment.comment_id == commentId) {
+                                comment.replies.add(newReply)
+                                break
+                            }
+                        }
+
+                        adapter.notifyDataSetChanged()
+                        if (postId != null) {
+                            updateCommentsCount(postId)
+                        }
+                    }
+                    .addOnFailureListener { exception ->
+                        // Firestore에 대댓글 추가 실패
+                    }
             }
-            .addOnFailureListener { exception ->
-                // Firestore에 대댓글 추가 실패
-            }
+        }
     }
 }

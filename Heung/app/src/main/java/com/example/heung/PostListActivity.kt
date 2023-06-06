@@ -55,6 +55,7 @@ class PostListActivity : AppCompatActivity() {
             intent.putExtra("postContent", clickedPost.post_content)
             intent.putExtra("postDate",clickedPost.post_date) // 이거 추가함 기억하자
             intent.putExtra("postAuthor", clickedPost.user_id) // 얘도 추가함, 원래 nickname가져와야함
+            intent.putExtra("userId", clickedPost.user_id) // New!
             startActivity(intent)
         }
 

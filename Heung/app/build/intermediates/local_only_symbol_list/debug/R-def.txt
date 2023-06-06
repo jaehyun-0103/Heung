@@ -73,11 +73,13 @@ id comment_btn
 id comment_layout
 id comment_textview
 id connect
+id conslayout
 id constraintLayout
 id constraintLayout2
 id content
 id content_photo_recycler
 id diro
+id dirogagi
 id edit_comment
 id edit_reply
 id edt_comment
@@ -121,6 +123,7 @@ id post_create
 id post_date
 id post_likes
 id post_line
+id post_line2
 id post_nickname
 id post_popular
 id post_save
