@@ -65,7 +65,7 @@ class RecruListActivity : AppCompatActivity() {
         recruitListAdapter.setOnItemClickListener(object : RecruitListAdapter.OnItemClickListener {
             override fun onItemClick(recruit: Recruits) {
                 val intent = Intent(this@RecruListActivity, RecruContActivity::class.java)
-                intent.putExtra("RECRUIT_ID", recruit.recruit_id)
+                intent.putExtra("recruit_id", recruit.recruit_id)
                 startActivity(intent)
             }
         })

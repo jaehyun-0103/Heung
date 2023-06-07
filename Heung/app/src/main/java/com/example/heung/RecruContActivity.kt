@@ -1,93 +1,96 @@
 package com.example.heung
 
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
-import android.widget.ToggleButton
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatImageButton
 import com.google.firebase.firestore.FirebaseFirestore
+import data.Recruits
 
 class RecruContActivity : AppCompatActivity() {
+
     private lateinit var firestore: FirebaseFirestore
-    lateinit var titleTextView: TextView
-    lateinit var dateTextView: TextView
-    lateinit var toggleStatus: ToggleButton
-    lateinit var applyButton: Button
-    lateinit var endDateTextView: TextView
-    lateinit var contentTextView: TextView
-    lateinit var participantsTextView: TextView
-    lateinit var backButton: Button
+    private lateinit var musicIconImageView: ImageView
+    private lateinit var titleTextView: TextView
+    private lateinit var nicknameTextView: TextView
+    private lateinit var dateTextView: TextView
+    private lateinit var typeTextView: TextView
+    private lateinit var sessionTypeTextView: TextView
+    private lateinit var classTypeTextView: TextView
+    private lateinit var contentTextView: TextView
+    private lateinit var endDateTextView: TextView
+    private lateinit var maxParticipantsTextView: TextView
+    private lateinit var currentParticipantsTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recrucont)
-        initViews()
-        setListeners()
-        loadRecruitData()
-    }
 
-    private fun initViews() {
         firestore = FirebaseFirestore.getInstance()
-        titleTextView = findViewById(R.id.text_recruit_title)
-        dateTextView = findViewById(R.id.text_recruit_date)
-        toggleStatus = findViewById(R.id.toggle_status)
-        applyButton = findViewById(R.id.button_apply)
-        endDateTextView = findViewById(R.id.text_recruit_endDate)
-        contentTextView = findViewById(R.id.text_recruit_content)
-        participantsTextView = findViewById(R.id.text_participants)
-        backButton = findViewById(R.id.button_back)
-    }
+        musicIconImageView = findViewById(R.id.recruit_content_profile)
+        titleTextView = findViewById(R.id.recruit_content_title)
+        nicknameTextView = findViewById(R.id.recruit_content_author)
+        dateTextView = findViewById(R.id.recruit_content_date)
+        typeTextView = findViewById(R.id.recruit_content_type)
+        sessionTypeTextView = findViewById(R.id.recruit_content_session)
+        classTypeTextView = findViewById(R.id.recruit_content_class)
+        contentTextView = findViewById(R.id.recruit_content_content)
+        endDateTextView = findViewById(R.id.recruit_content_endDate)
+        maxParticipantsTextView = findViewById(R.id.recruit_content_max)
+        currentParticipantsTextView = findViewById(R.id.recruit_content_curr)
 
-    private fun setListeners() {
-        toggleStatus.setOnCheckedChangeListener { _, isChecked ->
-            changeRecruitmentStatus(isChecked)
+        val recruitId = intent.getStringExtra("recruit_id")
+
+        if (recruitId != null) {
+            loadRecruit(recruitId)
+        } else {
+            Toast.makeText(this, "게시글을 찾을 수 없습니다.", Toast.LENGTH_SHORT).show()
+            finish()
         }
-        applyButton.setOnClickListener { applyRecruit() }
-        backButton.setOnClickListener { finish() }
+
+        val backButton = findViewById<AppCompatImageButton>(R.id.recruit_content_button_back)
+        backButton.setOnClickListener {
+            onBackPressed()
+        }
     }
 
-    private fun loadRecruitData() {
-        val recruitId = intent.getStringExtra("recruitId") ?: return
-        firestore.collection("Recruits")
-            .document(recruitId)
+    private fun loadRecruit(recruitId: String) {
+        val recruitsCollection = firestore.collection("Recruits")
+
+        recruitsCollection
+            .whereEqualTo("recruit_id", recruitId)
             .get()
-            .addOnSuccessListener { document ->
-                titleTextView.text = document.getString("recruit_title")
-                dateTextView.text = document.getString("recruit_date")
-                contentTextView.text = document.getString("recruit_content")
-                endDateTextView.text = document.getString("recruit_endDate")
-
-                val isOpen = document.getBoolean("recruit_isOpen") ?: false
-                toggleStatus.isChecked = !isOpen
-                participantsTextView.visibility = if (isOpen) View.VISIBLE else View.GONE
-                loadParticipants(recruitId)
-            }
-    }
-
-    private fun changeRecruitmentStatus(isClosed: Boolean) {
-        val recruitId = intent.getStringExtra("RECRUIT_ID") ?: return
-        firestore.collection("Recruits").document(recruitId).update("recruit_isOpen", !isClosed)
-            .addOnSuccessListener {
-                participantsTextView.visibility = if (!isClosed) View.VISIBLE else View.GONE
-            }
-    }
-
-    private fun applyRecruit() {
-        // 기존의 참여 신청 코드를 작성하세요.
-    }
-
-    private fun loadParticipants(recruitId: String) {
-        firestore.collection("Recruits")
-            .document(recruitId)
-            .collection("Participants")
-            .get()
-            .addOnSuccessListener { documents ->
-                val names = mutableListOf<String>()
-                for (document in documents) {
-                    names.add(document["name"].toString())
+            .addOnSuccessListener { querySnapshot ->
+                if (!querySnapshot.isEmpty) {
+                    val documentSnapshot = querySnapshot.documents[0]
+                    val recruit = documentSnapshot.toObject(Recruits::class.java)
+                    if (recruit != null) {
+                        titleTextView.text = recruit.recruit_title
+                        nicknameTextView.text = recruit.user_nickname
+                        dateTextView.text = recruit.recruit_date
+                        typeTextView.text = recruit.recruit_type
+                        sessionTypeTextView.text = recruit.recruit_session
+                        classTypeTextView.text = recruit.recruit_class
+                        contentTextView.text = recruit.recruit_content
+                        endDateTextView.text = recruit.recruit_endDate
+                        maxParticipantsTextView.text = recruit.recruit_max
+                        currentParticipantsTextView.text = recruit.recruit_curr
+                    }
+                } else {
+                    Toast.makeText(this, "게시글을 찾을 수 없습니다.", Toast.LENGTH_SHORT).show()
+                    finish()
                 }
-                participantsTextView.text = names.joinToString(", ")
             }
+            .addOnFailureListener { exception ->
+                Toast.makeText(this, "게시글을 불러오는 데 실패했습니다.", Toast.LENGTH_SHORT).show()
+                finish()
+            }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
     }
 }

@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import data.Recruits
 
+
 class RecruitListAdapter(private val recruitList: MutableList<Recruits>) :
     RecyclerView.Adapter<RecruitListAdapter.RecruitViewHolder>() {
 
