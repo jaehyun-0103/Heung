@@ -1,81 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout_already"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RecruContActivity">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/recruit_content_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chat_icon" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/text_recruit_title"
+            android:id="@+id/recruit_content_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/title"
-            android:textColor="@android:color/black"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/recruit_content_author"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/recruit_content_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/date"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/recruit_content_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recruit_type"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/recruit_content_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#808080" />
 
         <TextView
-            android:id="@+id/text_recruit_date"
+            android:id="@+id/recruit_content_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/date"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-
-        <ToggleButton
-            android:id="@+id/toggle_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:textOff="진행중"
-            android:textOn="종료" />
-
-        <Button
-            android:id="@+id/button_apply"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/recruitReq" />
-
-        <TextView
-            android:id="@+id/text_recruit_endDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/recruitEnd"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/text_recruit_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/content"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/text_participants"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="참여자 이름: OOO, O*O, OO*"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-
-        <Button
-            android:id="@+id/button_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/back" />
+            android:textSize="14sp" />
 
     </LinearLayout>
 
-</ScrollView>
+    <!-- 아래로 이동된 내용 -->
+
+    <TextView
+        android:id="@+id/recruit_content_endDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/end_date"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/recruit_content_max"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/max_participants"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/recruit_content_curr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/current_participants"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/recruit_content_session"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/session_type"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/recruit_content_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/class_type"
+        android:textSize="12sp" />
+
+
+
+    <ImageButton
+        android:id="@+id/recruit_content_button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_back"
+        android:background="@android:color/transparent" />
+
+
+</LinearLayout>
