@@ -6,7 +6,6 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import data.Recruits
@@ -49,73 +48,6 @@ class RecruListActivity : AppCompatActivity() {
             filterByType("클래스")
         }
 
-        recruitListAdapter.setOnItemClickListener { position ->
-            val clickedPost = recruitList[position]
-
-            // 인텐트 생성 및 데이터 전달
-            val intent = Intent(this, RecruContActivity::class.java)
-            intent.putExtra("recruitId", clickedPost.recruit_id)
-            intent.putExtra("postAuthor", clickedPost.user_id)
-            startActivity(intent)
-        }
-
-        // 하단바 아이템 선택 이벤트 처리
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_main -> {
-                    // 이미 MainActivity인 경우 액티비티 전환하지 않음
-                    if (this::class.java.canonicalName == MainActivity::class.java.canonicalName) {
-                        return@setOnNavigationItemSelectedListener true
-                    }
-                    val intent = Intent(this, MainActivity::class.java)
-                    intent.putExtra("selectedItemId", R.id.nav_main) // 현재 선택된 항목 ID를 전달
-                    startActivity(intent)
-                    finish()
-                    true
-                }
-                R.id.nav_recruit -> {
-                    // 현재 액티비티이므로 아무 작업 없이 true 반환
-                    true
-                }
-                R.id.nav_map -> {
-                    // 이미 RentActivity인 경우 액티비티 전환하지 않음
-                    if (this::class.java.canonicalName == RentActivity::class.java.canonicalName) {
-                        return@setOnNavigationItemSelectedListener true
-                    }
-                    val intent = Intent(this, RentActivity::class.java)
-                    intent.putExtra("selectedItemId", R.id.nav_recruit) // 현재 선택된 항목 ID를 전달
-                    startActivity(intent)
-                    finish()
-                    true
-                }
-                R.id.nav_calendar -> {
-                    // 이미 CalActivity인 경우 액티비티 전환하지 않음
-                    if (this::class.java.canonicalName == CalActivity::class.java.canonicalName) {
-                        return@setOnNavigationItemSelectedListener true
-                    }
-                    val intent = Intent(this, CalActivity::class.java)
-                    intent.putExtra("selectedItemId", R.id.nav_recruit) // 현재 선택된 항목 ID를 전달
-                    startActivity(intent)
-                    finish()
-                    true
-                }
-                R.id.nav_profile -> {
-                    // 이미 SelfProfActivity인 경우 액티비티 전환하지 않음
-                    if (this::class.java.canonicalName == SelfProfActivity::class.java.canonicalName) {
-                        return@setOnNavigationItemSelectedListener true
-                    }
-                    val intent = Intent(this, SelfProfActivity::class.java)
-                    intent.putExtra("selectedItemId", R.id.nav_recruit) // 현재 선택된 항목 ID를 전달
-                    startActivity(intent)
-                    finish()
-                    true
-                }
-                else -> false
-            }
-        }
-        bottomNavigationView.menu.findItem(R.id.nav_recruit)?.isChecked = true
-
         // 전체글 보기 버튼 클릭 이벤트 처리
         val viewAllButton = findViewById<Button>(R.id.recruit_view_all)
         viewAllButton.setOnClickListener {
@@ -128,6 +60,15 @@ class RecruListActivity : AppCompatActivity() {
             val intent = Intent(this, RecrutWriteActivity::class.java)
             startActivity(intent)
         }
+
+        // 게시글 클릭 이벤트 처리
+        recruitListAdapter.setOnItemClickListener(object : RecruitListAdapter.OnItemClickListener {
+            override fun onItemClick(recruit: Recruits) {
+                val intent = Intent(this@RecruListActivity, RecruContActivity::class.java)
+                intent.putExtra("recruit_id", recruit.recruit_id)
+                startActivity(intent)
+            }
+        })
     }
 
     private fun loadRecruits() {
