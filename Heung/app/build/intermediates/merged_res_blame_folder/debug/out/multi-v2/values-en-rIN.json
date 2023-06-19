@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.heung.app-mergeDebugResources-40:/values-en-rIN/values-en-rIN.xml",
+            "outputFile": "com.example.heung.app-mergeDebugResources-41:/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\RDH\\.gradle\\caches\\transforms-3\\f98aa23de29ad430ace45a5aa43cded7\\transformed\\appcompat-1.6.1\\res\\values-en-rIN\\values-en-rIN.xml",

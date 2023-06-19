@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import com.kakao.sdk.user.UserApiClient
@@ -51,6 +51,9 @@ class PostContActivity : AppCompatActivity() {
         tvAuthor.text = postAuthor
         tvDate.text = postDate
 
+        val commentTextview = findViewById<EditText>(R.id.comment_textview)
+        val btnSetting = findViewById<ImageButton>(R.id.setting)
+
         comments = mutableListOf()
         adapter = CommentsAdapter(comments, object : CommentsAdapter.OnReplyClickListener {
             override fun onReplyClick(position: Int) {
@@ -64,8 +67,7 @@ class PostContActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
         firestore = FirebaseFirestore.getInstance()
 
-        val commentTextview = findViewById<EditText>(R.id.comment_textview)
-        val btnSetting = findViewById<Button>(R.id.setting)
+
 
 
         val btnBack = findViewById<ImageButton>(R.id.dirogagi)

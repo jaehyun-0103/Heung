@@ -33,6 +33,7 @@ drawable music_icon
 drawable profile
 drawable recruit
 drawable redprofile
+drawable setting
 drawable star
 drawable star_border
 drawable thumb_up
@@ -51,6 +52,7 @@ id btnReply
 id btn_back
 id btn_ctv
 id btn_edit
+id btn_populars_post
 id btn_postlist
 id btn_quit
 id btn_reply
@@ -77,6 +79,7 @@ id conslayout
 id constraintLayout
 id constraintLayout2
 id content
+id content_conslayout
 id content_photo_recycler
 id diro
 id dirogagi
@@ -92,6 +95,8 @@ id iv_schedule_time_end
 id iv_schedule_time_start
 id kakao_login_button
 id latest_posts_recyclerview
+id layout
+id layout2
 id likeCnt
 id like_btn
 id line3
@@ -198,6 +203,7 @@ layout activity_selfprof
 layout bottom_navigation_layout
 layout item_callist
 layout item_calserch
+layout item_mainlist
 layout item_otherprof
 layout item_postcomment
 layout item_postcont

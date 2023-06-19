@@ -50,6 +50,9 @@ public abstract class ActivityPostcontBinding extends ViewDataBinding {
   public final ConstraintLayout conslayout;
 
   @NonNull
+  public final ConstraintLayout contentConslayout;
+
+  @NonNull
   public final RecyclerView contentPhotoRecycler;
 
   @NonNull
@@ -71,7 +74,7 @@ public abstract class ActivityPostcontBinding extends ViewDataBinding {
   public final View postLine2;
 
   @NonNull
-  public final Button setting;
+  public final ImageButton setting;
 
   @NonNull
   public final TextView tvAuthor;
@@ -92,9 +95,9 @@ public abstract class ActivityPostcontBinding extends ViewDataBinding {
       TextView CommentCnt, ImageView accountIvProfile, TextView app,
       ConstraintLayout boardcontentConslayout, Button btnCtv, ImageView commentBtn,
       TextInputLayout commentLayout, TextInputEditText commentTextview, ConstraintLayout conslayout,
-      RecyclerView contentPhotoRecycler, ImageButton dirogagi, LinearLayout edtComment,
-      ImageView likeBtn, TextView likeCnt, View postLine, View postLine2, Button setting,
-      TextView tvAuthor, TextView tvContent, TextView tvDate, TextView tvTitle,
+      ConstraintLayout contentConslayout, RecyclerView contentPhotoRecycler, ImageButton dirogagi,
+      LinearLayout edtComment, ImageView likeBtn, TextView likeCnt, View postLine, View postLine2,
+      ImageButton setting, TextView tvAuthor, TextView tvContent, TextView tvDate, TextView tvTitle,
       ConstraintLayout userinfoConslayout) {
     super(_bindingComponent, _root, _localFieldCount);
     this.CommentCnt = CommentCnt;
@@ -106,6 +109,7 @@ public abstract class ActivityPostcontBinding extends ViewDataBinding {
     this.commentLayout = commentLayout;
     this.commentTextview = commentTextview;
     this.conslayout = conslayout;
+    this.contentConslayout = contentConslayout;
     this.contentPhotoRecycler = contentPhotoRecycler;
     this.dirogagi = dirogagi;
     this.edtComment = edtComment;

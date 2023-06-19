@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +24,9 @@ public final class ActivityCalBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ImageView btnBack;
+
+  @NonNull
   public final RecyclerView calData;
 
   @NonNull
@@ -32,15 +36,20 @@ public final class ActivityCalBinding implements ViewBinding {
   public final Button calwriteBtn;
 
   @NonNull
+  public final View postLine;
+
+  @NonNull
   public final TextView title;
 
-  private ActivityCalBinding(@NonNull ConstraintLayout rootView, @NonNull RecyclerView calData,
-      @NonNull MaterialCalendarView calendarView, @NonNull Button calwriteBtn,
-      @NonNull TextView title) {
+  private ActivityCalBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView btnBack,
+      @NonNull RecyclerView calData, @NonNull MaterialCalendarView calendarView,
+      @NonNull Button calwriteBtn, @NonNull View postLine, @NonNull TextView title) {
     this.rootView = rootView;
+    this.btnBack = btnBack;
     this.calData = calData;
     this.calendarView = calendarView;
     this.calwriteBtn = calwriteBtn;
+    this.postLine = postLine;
     this.title = title;
   }
 
@@ -71,6 +80,12 @@ public final class ActivityCalBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btn_back;
+      ImageView btnBack = ViewBindings.findChildViewById(rootView, id);
+      if (btnBack == null) {
+        break missingId;
+      }
+
       id = R.id.cal_data;
       RecyclerView calData = ViewBindings.findChildViewById(rootView, id);
       if (calData == null) {
@@ -89,14 +104,20 @@ public final class ActivityCalBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.post_line;
+      View postLine = ViewBindings.findChildViewById(rootView, id);
+      if (postLine == null) {
+        break missingId;
+      }
+
       id = R.id.title;
       TextView title = ViewBindings.findChildViewById(rootView, id);
       if (title == null) {
         break missingId;
       }
 
-      return new ActivityCalBinding((ConstraintLayout) rootView, calData, calendarView, calwriteBtn,
-          title);
+      return new ActivityCalBinding((ConstraintLayout) rootView, btnBack, calData, calendarView,
+          calwriteBtn, postLine, title);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

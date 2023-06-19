@@ -5,20 +5,26 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.CalendarView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.FirebaseFirestore
+import com.prolificinteractive.materialcalendarview.CalendarDay
+import com.prolificinteractive.materialcalendarview.DayViewDecorator
+import com.prolificinteractive.materialcalendarview.DayViewFacade
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView
+import com.prolificinteractive.materialcalendarview.spans.DotSpan
 import data.Calendar
+import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
 class CalActivity : AppCompatActivity() {
     private lateinit var firestore: FirebaseFirestore
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: CalAdapter
     private lateinit var calendar: MutableList<Calendar>
-
+    private lateinit var calendarView: MaterialCalendarView
     @SuppressLint("MissingInflatedId")
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +38,7 @@ class CalActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
         firestore = FirebaseFirestore.getInstance()
 
-        val calendarView = findViewById<CalendarView>(R.id.calendarView)
+        calendarView = findViewById(R.id.calendarView)
         val calWriteBtn = findViewById<Button>(R.id.calwriteBtn)
 
         // 하단바 아이템 선택 이벤트 처리
@@ -84,10 +90,15 @@ class CalActivity : AppCompatActivity() {
         }
         bottomNavigationView.menu.findItem(R.id.nav_calendar)?.isChecked = true//하단바 상태 유지
 
+        calendarView.setSelectedDate(CalendarDay.today());
+        // 달력에 점으로 날짜 표시
+        decorateCalendar()
 
-
-        calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
-            val selectedDate = "$year-${month + 1}-$dayOfMonth"
+        calendarView.setOnDateChangedListener { widget, date, selected ->
+            val year = date.year
+            val month = date.month + 1 // month는 0부터 시작하므로 1을 더해줍니다.
+            val dayOfMonth = date.day
+            val selectedDate = String.format("%04d-%02d-%02d", year, month, dayOfMonth)
 
             calWriteBtn.setOnClickListener {
                 val intent = Intent(this, CalWriteActivity::class.java)
@@ -130,6 +141,38 @@ class CalActivity : AppCompatActivity() {
                 intent.putExtra("calId", clickedCal.cal_id)
                 startActivity(intent)
             }
+        }
+    }
+    private fun decorateCalendar() {
+        firestore.collection("Calendar")
+            .get()
+            .addOnSuccessListener { querySnapshot ->
+                val datesWithEvents = ArrayList<CalendarDay>()
+                for (document in querySnapshot.documents) {
+                    val calDate = document.getString("cal_date")
+                    val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                    val date = dateFormat.parse(calDate)
+                    val calendarDay = CalendarDay.from(date)
+                    datesWithEvents.add(calendarDay)
+                }
+                val decorator = EventDecorator(datesWithEvents)
+                calendarView.addDecorator(decorator)
+            }
+            .addOnFailureListener { exception ->
+                // 실패 처리
+            }
+    }
+
+    inner class EventDecorator(private val dates: List<CalendarDay>) : DayViewDecorator {
+        private val color = resources.getColor(R.color.teal_200)
+        private val radius = 5f
+
+        override fun shouldDecorate(day: CalendarDay): Boolean {
+            return dates.contains(day)
+        }
+
+        override fun decorate(view: DayViewFacade) {
+            view.addSpan(DotSpan(radius, color))
         }
     }
 }

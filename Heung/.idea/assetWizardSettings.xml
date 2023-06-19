@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/favorite/baseline_favorite_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/more_vert/baseline_more_vert_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,8 +28,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="f56363" />
-                            <entry key="outputName" value="like" />
+                            <entry key="color" value="757575" />
+                            <entry key="outputName" value="setting" />
                             <entry key="sourceFile" value="C:\Users\rhfuv\Desktop\Heung\Heung" />
                           </map>
                         </option>

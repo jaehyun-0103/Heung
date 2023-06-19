@@ -843,6 +843,7 @@ attr mcv_showOtherDates
 attr mcv_tileHeight
 attr mcv_tileSize
 attr mcv_tileWidth
+attr mcv_titleAnimationOrientation
 attr mcv_weekDayLabels
 attr mcv_weekDayTextAppearance
 attr measureWithLargestChild
@@ -1951,6 +1952,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color notification_material_background_media_default_color
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -2679,6 +2681,10 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen subtitle_corner_radius
+dimen subtitle_outline_width
+dimen subtitle_shadow_offset
+dimen subtitle_shadow_radius
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -2912,6 +2918,7 @@ drawable notify_panel_notification_icon_bg
 drawable profile
 drawable recruit
 drawable redprofile
+drawable setting
 drawable star
 drawable star_border
 drawable test_level_drawable
@@ -2971,6 +2978,7 @@ id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
 id account_iv_profile
+id action0
 id actionDown
 id actionDownUp
 id actionUp
@@ -3038,6 +3046,7 @@ id btnReply
 id btn_back
 id btn_ctv
 id btn_edit
+id btn_populars_post
 id btn_postlist
 id btn_quit
 id btn_reply
@@ -3056,6 +3065,7 @@ id cal_title
 id calendarView
 id callMeasure
 id calwriteBtn
+id cancel_action
 id cancel_button
 id carryVelocity
 id center
@@ -3092,6 +3102,7 @@ id constraintLayout2
 id container
 id content
 id contentPanel
+id content_conslayout
 id content_photo_recycler
 id contiguous
 id continuousVelocity
@@ -3152,6 +3163,7 @@ id end
 id endDate
 id endTime
 id endToStart
+id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
@@ -3189,6 +3201,7 @@ id hideable
 id home
 id homeAsUp
 id honorRequest
+id horizontal
 id horizontal_only
 id hybrid
 id icon
@@ -3216,6 +3229,7 @@ id kakao_login_button
 id labeled
 id latest_posts_recyclerview
 id layout
+id layout2
 id left
 id leftToRight
 id legacy
@@ -3258,6 +3272,7 @@ id material_timepicker_view
 id material_value_index
 id matrix
 id mcv_pager
+id media_actions
 id message
 id middle
 id mini
@@ -3480,6 +3495,7 @@ id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
+id status_bar_latest_event_content
 id stop
 id stretch
 id submenuarrow
@@ -3562,6 +3578,7 @@ id unlabeled
 id up
 id useLogo
 id userinfo_conslayout
+id vertical
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3727,6 +3744,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout item_callist
 layout item_calserch
+layout item_mainlist
 layout item_otherprof
 layout item_postcomment
 layout item_postcont
@@ -3788,8 +3806,17 @@ layout mtrl_search_bar
 layout mtrl_search_view
 layout notification_action
 layout notification_action_tombstone
+layout notification_media_action
+layout notification_media_cancel_action
+layout notification_template_big_media
+layout notification_template_big_media_custom
+layout notification_template_big_media_narrow
+layout notification_template_big_media_narrow_custom
 layout notification_template_custom_big
 layout notification_template_icon_group
+layout notification_template_lines_media
+layout notification_template_media
+layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout select_dialog_item_material
@@ -4466,9 +4493,14 @@ style TextAppearance_AppCompat_Widget_Switch
 style TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 style TextAppearance_Compat_Notification
 style TextAppearance_Compat_Notification_Info
+style TextAppearance_Compat_Notification_Info_Media
 style TextAppearance_Compat_Notification_Line2
+style TextAppearance_Compat_Notification_Line2_Media
+style TextAppearance_Compat_Notification_Media
 style TextAppearance_Compat_Notification_Time
+style TextAppearance_Compat_Notification_Time_Media
 style TextAppearance_Compat_Notification_Title
+style TextAppearance_Compat_Notification_Title_Media
 style TextAppearance_Design_CollapsingToolbar_Expanded
 style TextAppearance_Design_Counter
 style TextAppearance_Design_Counter_Overflow
@@ -5211,7 +5243,7 @@ styleable MaterialButton android_background android_insetLeft android_insetRight
 styleable MaterialButtonToggleGroup android_enabled checkedButton selectionRequired singleSelection
 styleable MaterialCalendar android_windowFullscreen dayInvalidStyle daySelectedStyle dayStyle dayTodayStyle nestedScrollable rangeFillColor yearSelectedStyle yearStyle yearTodayStyle
 styleable MaterialCalendarItem android_insetLeft android_insetRight android_insetTop android_insetBottom itemFillColor itemShapeAppearance itemShapeAppearanceOverlay itemStrokeColor itemStrokeWidth itemTextColor
-styleable MaterialCalendarView mcv_allowClickDaysOutsideCurrentMonth mcv_arrowColor mcv_calendarMode mcv_dateTextAppearance mcv_firstDayOfWeek mcv_headerTextAppearance mcv_leftArrowMask mcv_monthLabels mcv_rightArrowMask mcv_selectionColor mcv_showOtherDates mcv_tileHeight mcv_tileSize mcv_tileWidth mcv_weekDayLabels mcv_weekDayTextAppearance
+styleable MaterialCalendarView mcv_allowClickDaysOutsideCurrentMonth mcv_arrowColor mcv_calendarMode mcv_dateTextAppearance mcv_firstDayOfWeek mcv_headerTextAppearance mcv_leftArrowMask mcv_monthLabels mcv_rightArrowMask mcv_selectionColor mcv_showOtherDates mcv_tileHeight mcv_tileSize mcv_tileWidth mcv_titleAnimationOrientation mcv_weekDayLabels mcv_weekDayTextAppearance
 styleable MaterialCardView android_checkable cardForegroundColor checkedIcon checkedIconGravity checkedIconMargin checkedIconSize checkedIconTint rippleColor shapeAppearance shapeAppearanceOverlay state_dragged strokeColor strokeWidth
 styleable MaterialCheckBox android_button buttonCompat buttonIcon buttonIconTint buttonIconTintMode buttonTint centerIfNoTextEnabled checkedState errorAccessibilityLabel errorShown useMaterialThemeColors
 styleable MaterialCheckBoxStates state_error state_indeterminate

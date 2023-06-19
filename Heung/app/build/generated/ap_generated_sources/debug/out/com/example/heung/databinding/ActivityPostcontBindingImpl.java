@@ -26,16 +26,17 @@ public class ActivityPostcontBindingImpl extends ActivityPostcontBinding  {
         sViewsWithIds.put(R.id.boardcontent_conslayout, 10);
         sViewsWithIds.put(R.id.tv_title, 11);
         sViewsWithIds.put(R.id.tv_content, 12);
-        sViewsWithIds.put(R.id.content_photo_recycler, 13);
-        sViewsWithIds.put(R.id.like_btn, 14);
-        sViewsWithIds.put(R.id.likeCnt, 15);
-        sViewsWithIds.put(R.id.comment_btn, 16);
-        sViewsWithIds.put(R.id.CommentCnt, 17);
-        sViewsWithIds.put(R.id.post_line, 18);
-        sViewsWithIds.put(R.id.edt_comment, 19);
-        sViewsWithIds.put(R.id.comment_layout, 20);
-        sViewsWithIds.put(R.id.comment_textview, 21);
-        sViewsWithIds.put(R.id.btn_ctv, 22);
+        sViewsWithIds.put(R.id.like_btn, 13);
+        sViewsWithIds.put(R.id.likeCnt, 14);
+        sViewsWithIds.put(R.id.comment_btn, 15);
+        sViewsWithIds.put(R.id.CommentCnt, 16);
+        sViewsWithIds.put(R.id.post_line, 17);
+        sViewsWithIds.put(R.id.content_conslayout, 18);
+        sViewsWithIds.put(R.id.content_photo_recycler, 19);
+        sViewsWithIds.put(R.id.edt_comment, 20);
+        sViewsWithIds.put(R.id.comment_layout, 21);
+        sViewsWithIds.put(R.id.comment_textview, 22);
+        sViewsWithIds.put(R.id.btn_ctv, 23);
     }
     // views
     @NonNull
@@ -46,27 +47,28 @@ public class ActivityPostcontBindingImpl extends ActivityPostcontBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityPostcontBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 23, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 24, sIncludes, sViewsWithIds));
     }
     private ActivityPostcontBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.TextView) bindings[17]
+            , (android.widget.TextView) bindings[16]
             , (android.widget.ImageView) bindings[7]
             , (android.widget.TextView) bindings[2]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[10]
-            , (android.widget.Button) bindings[22]
-            , (android.widget.ImageView) bindings[16]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[20]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[21]
+            , (android.widget.Button) bindings[23]
+            , (android.widget.ImageView) bindings[15]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[21]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[22]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[1]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[13]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[18]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[19]
             , (android.widget.ImageButton) bindings[5]
-            , (android.widget.LinearLayout) bindings[19]
-            , (android.widget.ImageView) bindings[14]
-            , (android.widget.TextView) bindings[15]
-            , (android.view.View) bindings[18]
+            , (android.widget.LinearLayout) bindings[20]
+            , (android.widget.ImageView) bindings[13]
+            , (android.widget.TextView) bindings[14]
+            , (android.view.View) bindings[17]
             , (android.view.View) bindings[4]
-            , (android.widget.Button) bindings[3]
+            , (android.widget.ImageButton) bindings[3]
             , (android.widget.TextView) bindings[8]
             , (android.widget.TextView) bindings[12]
             , (android.widget.TextView) bindings[9]

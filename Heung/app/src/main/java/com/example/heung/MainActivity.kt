@@ -15,7 +15,7 @@ import data.Posts
 class MainActivity : AppCompatActivity() {
     private lateinit var popularPostsRecyclerView: RecyclerView
     private lateinit var latestPostsRecyclerView: RecyclerView
-    private lateinit var postListAdapter: PostListAdapter
+    private lateinit var postListAdapter: MainAdapter
     private val popularPostList = mutableListOf<Posts>()
     private val latestPostList = mutableListOf<Posts>()
     private lateinit var bottomNavigationView: BottomNavigationView
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         popularPostsRecyclerView = findViewById(R.id.popular_posts_recyclerview)
         latestPostsRecyclerView = findViewById(R.id.latest_posts_recyclerview)
-        postListAdapter = PostListAdapter(popularPostList)
+        postListAdapter = MainAdapter(popularPostList)
         popularPostsRecyclerView.adapter = postListAdapter
         popularPostsRecyclerView.layoutManager = LinearLayoutManager(this)
         bottomNavigationView = findViewById(R.id.bottom_navigation)
@@ -43,7 +43,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, PostListActivity::class.java)
             startActivity(intent)
         }
-
+        val btnpopPostList = findViewById<Button>(R.id.btn_populars_post)
+        btnpopPostList.setOnClickListener {
+            val intent = Intent(this, PostListActivity::class.java)
+            startActivity(intent)
+        }
         // 하단바 설정
         bottomNavigationView = findViewById(R.id.bottom_navigation)
         bottomNavigationView.setOnNavigationItemSelectedListener(navItemSelectedListener)
@@ -116,7 +120,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     postListAdapter.notifyDataSetChanged()
 
-                    val latestPostListAdapter = PostListAdapter(latestPostList)
+                    val latestPostListAdapter = MainAdapter(latestPostList)
                     latestPostsRecyclerView.adapter = latestPostListAdapter
                     latestPostsRecyclerView.layoutManager = LinearLayoutManager(this)
                 }
