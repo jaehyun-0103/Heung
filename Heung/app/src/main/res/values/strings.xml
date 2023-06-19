@@ -17,6 +17,12 @@
     <string name="like">좋아요</string>
     <string name="comment">댓글</string>
     <string name="complete">완료</string>
+    <string name="recruit_type">Recruit Type</string>
+    <string name="end_date">End Date</string>
+    <string name="max_participants">Max Participants</string>
+    <string name="current_participants">Current Participants</string>
+    <string name="session_type">Session Type</string>
+    <string name="class_type">Class Type</string>
     <string name="popular">인기</string>
     <string name="create">생성</string>
     <string name="posting">게시판</string>
