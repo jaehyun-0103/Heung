@@ -1,5 +1,6 @@
 package com.example.heung
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -22,7 +23,9 @@ class MainActivity : AppCompatActivity() {
     private val popularPostList = mutableListOf<Posts>()
     private val latestPostList = mutableListOf<Posts>()
     private lateinit var bottomNavigationView: BottomNavigationView
+    private var selectedItemId: Int = R.id.nav_main
 
+    @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -80,7 +83,7 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener(navItemSelectedListener)
         bottomNavigationView.selectedItemId = R.id.nav_main
     }
-
+    @SuppressLint("NotifyDataSetChanged")
     private fun loadPopularPosts() {
         val firestore = FirebaseFirestore.getInstance()
         firestore.collection("Likes")
@@ -108,7 +111,6 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                 }
-
                 if (postIdList.isNotEmpty()) {
                     firestore.collection("Posts")
                         .whereIn("post_id", postIdList)
@@ -135,6 +137,8 @@ class MainActivity : AppCompatActivity() {
             }
     }
 
+
+    @SuppressLint("NotifyDataSetChanged")
     private fun loadLatestPosts() {
         val firestore = FirebaseFirestore.getInstance()
 
@@ -163,30 +167,33 @@ class MainActivity : AppCompatActivity() {
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_main -> {
+                    // 현재 액티비티가 이미 MainActivity인 경우, 액티비티를 전환하지 않습니다.
                     if (javaClass.name == MainActivity::class.java.name) {
                         return@OnNavigationItemSelectedListener true
                     }
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
-                    finish()
+                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 메인화면으로 돌아가도록 합니다.
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.nav_recruit -> {
+                    // 현재 액티비티가 이미 RecruListActivity인 경우, 액티비티를 전환하지 않습니다.
                     if (javaClass.name == RecruListActivity::class.java.name) {
                         return@OnNavigationItemSelectedListener true
                     }
                     val intent = Intent(this, RecruListActivity::class.java)
                     startActivity(intent)
-                    finish()
+                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 모집 화면으로 돌아가도록 합니다.
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.nav_map -> {
+                    // 현재 액티비티가 이미 RentActivity인 경우, 액티비티를 전환하지 않습니다.
                     if (javaClass.name == RentActivity::class.java.name) {
                         return@OnNavigationItemSelectedListener true
                     }
                     val intent = Intent(this, RentActivity::class.java)
                     startActivity(intent)
-                    finish()
+                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 지도 화면으로 돌아가도록 합니다.
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.nav_calendar -> {
