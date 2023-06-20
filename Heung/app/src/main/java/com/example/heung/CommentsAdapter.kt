@@ -28,7 +28,18 @@ class CommentsAdapter(private val postList: MutableList<Comments>
         val comments = postList[position]
         holder.itemView.findViewById<TextView>(R.id.tv_comment).text = comments.comment
         holder.itemView.findViewById<TextView>(R.id.tv_date).text = comments.comment_date
-        holder.itemView.findViewById<TextView>(R.id.tv_author).text = "닉네임"
+        val firestore = FirebaseFirestore.getInstance()
+        firestore.collection("Users")
+            .document(comments.user_id ?: "")
+            .get()
+            .addOnSuccessListener { userDocument ->
+                val userNickname = userDocument.getString("user_nickname")
+                holder.itemView.findViewById<TextView>(R.id.tv_author).text = userNickname
+            }
+            .addOnFailureListener { exception ->
+                // 사용자 닉네임 가져오기 실패
+            }
+
         holder.itemView.setOnClickListener {
             onItemClickListener?.invoke(position)
         }
@@ -41,7 +52,7 @@ class CommentsAdapter(private val postList: MutableList<Comments>
         rvReplies.layoutManager = LinearLayoutManager(holder.itemView.context)
         rvReplies.adapter = replyAdapter
 
-        val firestore = FirebaseFirestore.getInstance()
+
         firestore.collection("Reply")
             .whereEqualTo("comment_id", comments.comment_id)
             .orderBy("reply_date", Query.Direction.ASCENDING)
