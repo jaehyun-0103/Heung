@@ -3474,7 +3474,6 @@ int id btnReply 0x7f090077
 int id btn_back 0x7f090078
 int id btn_ctv 0x7f090079
 int id btn_edit 0x7f09007a
-int id btn_populars_post 0x7f09007b
 int id btn_postlist 0x7f09007c
 int id btn_quit 0x7f09007d
 int id btn_reply 0x7f09007e

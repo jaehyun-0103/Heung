@@ -3475,7 +3475,6 @@ id btnReply
 id btn_back
 id btn_ctv
 id btn_edit
-id btn_populars_post
 id btn_postlist
 id btn_quit
 id btn_reply

@@ -32,9 +32,6 @@ public final class ActivityMainBinding implements ViewBinding {
   public final ImageView btnBack;
 
   @NonNull
-  public final Button btnPopularsPost;
-
-  @NonNull
   public final Button btnPostlist;
 
   @NonNull
@@ -66,16 +63,15 @@ public final class ActivityMainBinding implements ViewBinding {
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull TextView app,
       @NonNull BottomNavigationLayoutBinding bottomNavigation, @NonNull ImageView btnBack,
-      @NonNull Button btnPopularsPost, @NonNull Button btnPostlist,
-      @NonNull RecyclerView latestPostsRecyclerview, @NonNull ConstraintLayout layout,
-      @NonNull ConstraintLayout layout2, @NonNull ConstraintLayout mainLayout,
-      @NonNull RecyclerView popularPostsRecyclerview, @NonNull TextView post,
-      @NonNull View postLine, @NonNull TextView tvPopularPosts, @NonNull TextView tvRecentPosts) {
+      @NonNull Button btnPostlist, @NonNull RecyclerView latestPostsRecyclerview,
+      @NonNull ConstraintLayout layout, @NonNull ConstraintLayout layout2,
+      @NonNull ConstraintLayout mainLayout, @NonNull RecyclerView popularPostsRecyclerview,
+      @NonNull TextView post, @NonNull View postLine, @NonNull TextView tvPopularPosts,
+      @NonNull TextView tvRecentPosts) {
     this.rootView = rootView;
     this.app = app;
     this.bottomNavigation = bottomNavigation;
     this.btnBack = btnBack;
-    this.btnPopularsPost = btnPopularsPost;
     this.btnPostlist = btnPostlist;
     this.latestPostsRecyclerview = latestPostsRecyclerview;
     this.layout = layout;
@@ -131,12 +127,6 @@ public final class ActivityMainBinding implements ViewBinding {
       id = R.id.btn_back;
       ImageView btnBack = ViewBindings.findChildViewById(rootView, id);
       if (btnBack == null) {
-        break missingId;
-      }
-
-      id = R.id.btn_populars_post;
-      Button btnPopularsPost = ViewBindings.findChildViewById(rootView, id);
-      if (btnPopularsPost == null) {
         break missingId;
       }
 
@@ -197,8 +187,8 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((ConstraintLayout) rootView, app, binding_bottomNavigation,
-          btnBack, btnPopularsPost, btnPostlist, latestPostsRecyclerview, layout, layout2,
-          mainLayout, popularPostsRecyclerview, post, postLine, tvPopularPosts, tvRecentPosts);
+          btnBack, btnPostlist, latestPostsRecyclerview, layout, layout2, mainLayout,
+          popularPostsRecyclerview, post, postLine, tvPopularPosts, tvRecentPosts);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
