@@ -61,15 +61,6 @@
             app:layout_constraintStart_toStartOf="@+id/layout"
             app:layout_constraintTop_toTopOf="@+id/layout" />
 
-        <Button
-            android:id="@+id/btn_populars_post"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="더보기"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/popular_posts_recyclerview"
             android:layout_width="match_parent"

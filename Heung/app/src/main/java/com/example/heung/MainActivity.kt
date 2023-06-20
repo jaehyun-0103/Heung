@@ -10,11 +10,15 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import data.Posts
+import data.Users
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var firestore: FirebaseFirestore
     private lateinit var popularPostsRecyclerView: RecyclerView
     private lateinit var latestPostsRecyclerView: RecyclerView
     private lateinit var postListAdapter: MainAdapter
+    private lateinit var latestPostListAdapter: MainAdapter
+    private lateinit var postList: MutableList<Posts>
     private val popularPostList = mutableListOf<Posts>()
     private val latestPostList = mutableListOf<Posts>()
     private lateinit var bottomNavigationView: BottomNavigationView
@@ -22,27 +26,51 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        firestore = FirebaseFirestore.getInstance()
         popularPostsRecyclerView = findViewById(R.id.popular_posts_recyclerview)
         latestPostsRecyclerView = findViewById(R.id.latest_posts_recyclerview)
+
+        postList = mutableListOf()
         postListAdapter = MainAdapter(popularPostList)
         popularPostsRecyclerView.adapter = postListAdapter
         popularPostsRecyclerView.layoutManager = LinearLayoutManager(this)
+
+        latestPostListAdapter = MainAdapter(latestPostList)
+        latestPostsRecyclerView.adapter = latestPostListAdapter
+        latestPostsRecyclerView.layoutManager = LinearLayoutManager(this)
+
         bottomNavigationView = findViewById(R.id.bottom_navigation)
         bottomNavigationView.setOnNavigationItemSelectedListener(navItemSelectedListener)
         bottomNavigationView.selectedItemId = R.id.nav_main
 
+        // 게시글 목록 클릭 이벤트 처리
+        postListAdapter.setOnItemClickListener { position ->
+            val clickedPost = popularPostList[position]
+
+            // 게시글 작성자의 닉네임 가져오기
+            firestore.collection("Users")
+                .document(clickedPost.user_id)
+                .get()
+                .addOnSuccessListener { userDocumentSnapshot ->
+                    val user = userDocumentSnapshot.toObject(Users::class.java)
+                    val nickname = user?.user_nickname ?: "닉네임"
+
+                    // 인텐트 생성 및 데이터 전달
+                    val intent = Intent(this, PostContActivity::class.java)
+                    intent.putExtra("postId", clickedPost.post_id)
+                    intent.putExtra("postTitle", clickedPost.post_title)
+                    intent.putExtra("postContent", clickedPost.post_content)
+                    intent.putExtra("postDate", clickedPost.post_date)
+                    intent.putExtra("postAuthor", nickname)
+                    intent.putExtra("userId", clickedPost.user_id)
+                    startActivity(intent)
+                }
+        }
         loadPopularPosts() // 인기 게시글 가져오기
         loadLatestPosts() // 최신 게시글 가져오기
 
         val btnPostList = findViewById<Button>(R.id.btn_postlist)
         btnPostList.setOnClickListener {
-            val intent = Intent(this, PostListActivity::class.java)
-            startActivity(intent)
-        }
-
-        val btnpopPostList = findViewById<Button>(R.id.btn_populars_post)
-        btnpopPostList.setOnClickListener {
             val intent = Intent(this, PostListActivity::class.java)
             startActivity(intent)
         }
@@ -53,7 +81,6 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.selectedItemId = R.id.nav_main
     }
 
-    // 인기 게시글 가져오기
     private fun loadPopularPosts() {
         val firestore = FirebaseFirestore.getInstance()
         firestore.collection("Likes")
@@ -81,13 +108,10 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                 }
+
                 if (postIdList.isNotEmpty()) {
                     firestore.collection("Posts")
-                        .apply {
-                            if (postIdList.isNotEmpty()) {
-                                whereIn("post_id", postIdList)
-                            }
-                        }
+                        .whereIn("post_id", postIdList)
                         .orderBy("post_date", Query.Direction.DESCENDING)
                         .addSnapshotListener { postsSnapshot, postsException ->
                             if (postsException != null) { // Error handling
@@ -105,13 +129,15 @@ class MainActivity : AppCompatActivity() {
                                 postListAdapter.notifyDataSetChanged()
                             }
                         }
+                } else {
+
                 }
-        }
+            }
     }
 
-    // 최신 게시글 가져오기
     private fun loadLatestPosts() {
         val firestore = FirebaseFirestore.getInstance()
+
         firestore.collection("Posts")
             .orderBy("post_date", Query.Direction.DESCENDING)
             .limit(5) // 최신 5개 글만 가져오도록 제한
@@ -120,6 +146,7 @@ class MainActivity : AppCompatActivity() {
                     return@addSnapshotListener
                 }
                 querySnapshot?.let {
+                    popularPostList.clear()
                     latestPostList.clear()
                     for (document in it.documents) {
                         val post = document.toObject(Posts::class.java)
@@ -127,11 +154,7 @@ class MainActivity : AppCompatActivity() {
                             latestPostList.add(post)
                         }
                     }
-                    postListAdapter.notifyDataSetChanged()
-
-                    val latestPostListAdapter = MainAdapter(latestPostList)
-                    latestPostsRecyclerView.adapter = latestPostListAdapter
-                    latestPostsRecyclerView.layoutManager = LinearLayoutManager(this)
+                    latestPostListAdapter.notifyDataSetChanged()
                 }
             }
     }
