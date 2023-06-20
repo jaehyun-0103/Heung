@@ -98,7 +98,6 @@ class PostContActivity : AppCompatActivity() {
                         .addOnSuccessListener { querySnapshot ->
                             if (!querySnapshot.isEmpty) {
                                 val userDocument = querySnapshot.documents[0]
-                                val nickname = userDocument.getString("user_nickname")
                                 val btnCtv = findViewById<Button>(R.id.btn_ctv)
                                 btnCtv.setOnClickListener {
                                     val inputCont = commentTextview.text.toString()
@@ -108,7 +107,7 @@ class PostContActivity : AppCompatActivity() {
                                     val comment = hashMapOf(
                                         "comment_id" to commentId,
                                         "post_id" to postId,
-                                        "user_nickname" to nickname,
+                                        "user_id" to userId, // user_id 필드를 사용하여 댓글 작성자를 식별
                                         "comment" to inputCont,
                                         "comment_date" to dateFormat.format(commentDate)
                                     )
@@ -119,7 +118,7 @@ class PostContActivity : AppCompatActivity() {
                                             val newComment = Comments(
                                                 commentId,
                                                 postId,
-                                                nickname,
+                                                userId, // user_id를 사용하여 댓글 작성자를 식별
                                                 inputCont,
                                                 dateFormat.format(commentDate)
                                             )
@@ -384,7 +383,7 @@ class PostContActivity : AppCompatActivity() {
                             val reply = hashMapOf(
                                 "reply_id" to replyId,
                                 "comment_id" to commentId,
-                                "user_nickname" to nickname,
+                                "user_id" to userId,
                                 "reply" to inputReply,
                                 "reply_date" to dateFormat.format(replyDate)
                             )
@@ -395,7 +394,7 @@ class PostContActivity : AppCompatActivity() {
                                     val newReply = Reply(
                                         replyId,
                                         commentId,
-                                        nickname,
+                                        userId,
                                         inputReply,
                                         dateFormat.format(replyDate)
                                     )

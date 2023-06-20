@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.firestore.FirebaseFirestore
 import data.Reply
 
 class ReplyAdapter(private val replyList: MutableList<Reply>) :
@@ -22,7 +23,17 @@ class ReplyAdapter(private val replyList: MutableList<Reply>) :
         val reply = replyList[position]
         holder.itemView.findViewById<TextView>(R.id.tv_comment).text = reply.reply
         holder.itemView.findViewById<TextView>(R.id.tv_date).text = reply.reply_date
-        holder.itemView.findViewById<TextView>(R.id.tv_author).text = "닉네임"
+        val firestore = FirebaseFirestore.getInstance()
+        firestore.collection("Users")
+            .document(reply.user_id ?: "")
+            .get()
+            .addOnSuccessListener { userDocument ->
+                val userNickname = userDocument.getString("user_nickname")
+                holder.itemView.findViewById<TextView>(R.id.tv_author).text = userNickname
+            }
+            .addOnFailureListener { exception ->
+                // 사용자 닉네임 가져오기 실패
+            }
     }
 
     // 리스트의 총 아이템 수 반환
