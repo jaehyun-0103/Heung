@@ -1,18 +1,53 @@
 package com.example.heung
 
 import android.app.AlertDialog
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat.startActivity
 import com.google.firebase.firestore.FirebaseFirestore
 import com.kakao.sdk.user.UserApiClient
+import java.util.*
 
 class Setting : AppCompatActivity() {
+    private val sharedPreferencesKey = "language_preference"
+    private val languagePreferenceKey = "selected_language"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setting)
+
+        val backButton = findViewById<ImageButton>(R.id.btn_back)
+        backButton.setOnClickListener {
+            onBackPressed()
+        }
+
+        val koreanButton = findViewById<Button>(R.id.button_korean)
+        val englishButton = findViewById<Button>(R.id.button_english)
+
+
+
+        koreanButton.setOnClickListener {
+            saveLanguagePreference("korean")
+            // 한국어 선택 시 처리
+            setLocale("ko") // 한국어 리소스 사용 설정
+            recreate() // 액티비티 재생성하여 변경된 언어 적용
+        }
+
+        englishButton.setOnClickListener {
+            saveLanguagePreference("english")
+            // 영어 선택 시 처리
+            setLocale("en") // 영어 리소스 사용 설정
+            recreate() // 액티비티 재생성하여 변경된 언어 적용
+        }
+
 
         // 로그아웃 버튼 클릭 시
         val logout = findViewById<Button>(R.id.logout)
@@ -87,6 +122,22 @@ class Setting : AppCompatActivity() {
                 .setNegativeButton("아니요", null)
             builder.show()
         }
+    }
+
+    private fun setLocale(languageCode: String) {
+        val resources = resources
+        val configuration = resources.configuration
+        val locale = Locale(languageCode)
+        configuration.setLocale(locale)
+        resources.updateConfiguration(configuration, resources.displayMetrics)
+    }
+
+    // 언어 설정 저장 메서드
+    private fun saveLanguagePreference(language: String) {
+        val sharedPreferences = getSharedPreferences(sharedPreferencesKey, Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString(languagePreferenceKey, language)
+        editor.apply()
     }
 
     fun toggleDarkMode(view: android.view.View) {

@@ -30,7 +30,7 @@
                 android:id="@+id/recruit_post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="모집글"
+                android:text="@string/recruit"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/recruit_btn_back"
@@ -49,7 +49,7 @@
                 android:id="@+id/recruit_filter_busking"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="버스킹"
+                android:text="@string/buskingR"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/recruit_filter_class" />
@@ -58,7 +58,7 @@
                 android:id="@+id/recruit_filter_class"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="클래스"
+                android:text="@string/classR"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -80,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:text="제목"
+                    android:text="@string/title"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -101,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:text="내용"
+                    android:text="@string/content"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="@+id/zone_features"
@@ -136,7 +136,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="모집기간"
+                        android:text="@string/period"
                         android:textSize="16sp" />
 
                     <EditText
@@ -145,16 +145,16 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:background="@drawable/edittext_round"
-                        android:paddingStart="8dp"
-                        android:paddingEnd="8dp"
                         android:focusable="false"
-                        android:onClick="showDatePickerDialog" />
+                        android:onClick="showDatePickerDialog"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="세션 타입"
+                        android:text="@string/sessionType"
                         android:textSize="16sp" />
 
                     <EditText
@@ -170,7 +170,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="수강인원"
+                        android:text="@string/number"
                         android:textSize="16sp" />
 
                     <NumberPicker
@@ -196,7 +196,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="모집기간"
+                        android:text="@string/period"
                         android:textSize="16sp" />
 
                     <EditText
@@ -205,16 +205,16 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:background="@drawable/edittext_round"
-                        android:paddingStart="8dp"
-                        android:paddingEnd="8dp"
                         android:focusable="false"
-                        android:onClick="showDatePickerDialog" />
+                        android:onClick="showDatePickerDialog"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="클래스 타입"
+                        android:text="@string/classType"
                         android:textSize="16sp" />
 
                     <EditText
@@ -230,7 +230,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="수강인원"
+                        android:text="@string/number"
                         android:textSize="16sp" />
 
                     <NumberPicker
@@ -247,7 +247,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_marginTop="16dp"
-                    android:text="게시글 작성"
+                    android:text="@string/write"
                     android:textSize="12sp" />
 
             </LinearLayout>

@@ -5,9 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -22,7 +21,16 @@ public final class ActivitySettingBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final ImageButton btnBack;
+
+  @NonNull
   public final Button btnQuit;
+
+  @NonNull
+  public final Button buttonEnglish;
+
+  @NonNull
+  public final Button buttonKorean;
 
   @NonNull
   public final Button darkModeButton;
@@ -31,29 +39,19 @@ public final class ActivitySettingBinding implements ViewBinding {
   public final Button defaultModeButton;
 
   @NonNull
-  public final RadioGroup languageRadioGroup;
-
-  @NonNull
   public final Button logout;
 
-  @NonNull
-  public final RadioButton radioButtonEnglish;
-
-  @NonNull
-  public final RadioButton radioButtonKorean;
-
-  private ActivitySettingBinding(@NonNull LinearLayout rootView, @NonNull Button btnQuit,
-      @NonNull Button darkModeButton, @NonNull Button defaultModeButton,
-      @NonNull RadioGroup languageRadioGroup, @NonNull Button logout,
-      @NonNull RadioButton radioButtonEnglish, @NonNull RadioButton radioButtonKorean) {
+  private ActivitySettingBinding(@NonNull LinearLayout rootView, @NonNull ImageButton btnBack,
+      @NonNull Button btnQuit, @NonNull Button buttonEnglish, @NonNull Button buttonKorean,
+      @NonNull Button darkModeButton, @NonNull Button defaultModeButton, @NonNull Button logout) {
     this.rootView = rootView;
+    this.btnBack = btnBack;
     this.btnQuit = btnQuit;
+    this.buttonEnglish = buttonEnglish;
+    this.buttonKorean = buttonKorean;
     this.darkModeButton = darkModeButton;
     this.defaultModeButton = defaultModeButton;
-    this.languageRadioGroup = languageRadioGroup;
     this.logout = logout;
-    this.radioButtonEnglish = radioButtonEnglish;
-    this.radioButtonKorean = radioButtonKorean;
   }
 
   @Override
@@ -83,9 +81,27 @@ public final class ActivitySettingBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btn_back;
+      ImageButton btnBack = ViewBindings.findChildViewById(rootView, id);
+      if (btnBack == null) {
+        break missingId;
+      }
+
       id = R.id.btn_quit;
       Button btnQuit = ViewBindings.findChildViewById(rootView, id);
       if (btnQuit == null) {
+        break missingId;
+      }
+
+      id = R.id.button_english;
+      Button buttonEnglish = ViewBindings.findChildViewById(rootView, id);
+      if (buttonEnglish == null) {
+        break missingId;
+      }
+
+      id = R.id.button_korean;
+      Button buttonKorean = ViewBindings.findChildViewById(rootView, id);
+      if (buttonKorean == null) {
         break missingId;
       }
 
@@ -101,32 +117,14 @@ public final class ActivitySettingBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.language_radio_group;
-      RadioGroup languageRadioGroup = ViewBindings.findChildViewById(rootView, id);
-      if (languageRadioGroup == null) {
-        break missingId;
-      }
-
       id = R.id.logout;
       Button logout = ViewBindings.findChildViewById(rootView, id);
       if (logout == null) {
         break missingId;
       }
 
-      id = R.id.radio_button_english;
-      RadioButton radioButtonEnglish = ViewBindings.findChildViewById(rootView, id);
-      if (radioButtonEnglish == null) {
-        break missingId;
-      }
-
-      id = R.id.radio_button_korean;
-      RadioButton radioButtonKorean = ViewBindings.findChildViewById(rootView, id);
-      if (radioButtonKorean == null) {
-        break missingId;
-      }
-
-      return new ActivitySettingBinding((LinearLayout) rootView, btnQuit, darkModeButton,
-          defaultModeButton, languageRadioGroup, logout, radioButtonEnglish, radioButtonKorean);
+      return new ActivitySettingBinding((LinearLayout) rootView, btnBack, btnQuit, buttonEnglish,
+          buttonKorean, darkModeButton, defaultModeButton, logout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

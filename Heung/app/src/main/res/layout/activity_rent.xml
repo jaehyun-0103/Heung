@@ -26,7 +26,7 @@
         android:id="@+id/locationNow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="현재 위치"
+        android:text="@string/location"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -75,7 +75,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:completionThreshold="1"
-        android:hint="검색할 행정동을 입력하세요"
+        android:hint="@string/Search_example"
         android:imeOptions="actionSearch"
         app:layout_constraintEnd_toStartOf="@+id/searchButton"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -86,7 +86,7 @@
         android:id="@+id/searchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search"
+        android:text="@string/search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

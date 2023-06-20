@@ -20,6 +20,10 @@
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\activity_selfprof.xml"
     },
     {
+        "merged": "com.example.heung.app-mergeDebugResources-61:/layout/activity_postcont.xml",
+        "source": "com.example.heung.app-main-64:/layout/activity_postcont.xml"
+    },
+    {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-61:\\layout\\item_postcomment.xml",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\item_postcomment.xml"
     },
@@ -36,16 +40,16 @@
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\activity_setting.xml"
     },
     {
+        "merged": "com.example.heung.app-mergeDebugResources-61:/layout/item_reply.xml",
+        "source": "com.example.heung.app-main-64:/layout/item_reply.xml"
+    },
+    {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-61:\\layout\\item_setting.xml",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\item_setting.xml"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-61:\\layout\\activity_postlist.xml",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\activity_postlist.xml"
-    },
-    {
-        "merged": "com.example.heung.app-mergeDebugResources-61:/layout/activity_main.xml",
-        "source": "com.example.heung.app-main-64:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-61:\\layout\\activity_logcheck.xml",
@@ -90,6 +94,10 @@
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-61:\\layout\\activity_postwrite.xml",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\activity_postwrite.xml"
+    },
+    {
+        "merged": "com.example.heung.app-mergeDebugResources-61:/layout/activity_setting.xml",
+        "source": "com.example.heung.app-main-64:/layout/activity_setting.xml"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-61:\\layout\\item_recruit.xml",

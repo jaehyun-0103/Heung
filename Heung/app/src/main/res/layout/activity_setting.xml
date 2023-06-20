@@ -2,56 +2,76 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="start"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/darkModeButton"
+    <ImageButton
+        android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="다크모드 켜기"
-        android:onClick="toggleDarkMode" />
+        android:layout_gravity="start"
+        android:padding="8dp"
+        android:src="@drawable/arrow_back" />
 
-    <Button
-        android:id="@+id/defaultModeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="기본값으로 설정"
-        android:onClick="setDefaultMode" />
-
-    <Button
-        android:id="@+id/logout"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:text="@string/logout"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/btn_quit"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:text="@string/withdrawal"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <RadioGroup
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/language_radio_group">
+        android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/radio_button_korean"
+        <Button
+            android:id="@+id/darkModeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="한국어" />
+            android:onClick="toggleDarkMode"
+            android:text="@string/darkmode" />
 
-        <RadioButton
-            android:id="@+id/radio_button_english"
+        <Button
+            android:id="@+id/defaultModeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="English" />
+            android:onClick="setDefaultMode"
+            android:text="@string/defaultmode" />
+    </LinearLayout>
 
-    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_quit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/withdrawal"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_korean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ko" />
+
+        <Button
+            android:id="@+id/button_english"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/en" />
+
+    </LinearLayout>
+
 </LinearLayout>
