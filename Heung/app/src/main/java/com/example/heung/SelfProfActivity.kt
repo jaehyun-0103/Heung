@@ -1,9 +1,7 @@
 package com.example.heung
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -13,34 +11,29 @@ import android.text.InputType
 import android.util.Log
 import android.view.Gravity
 import android.widget.*
-import androidx.core.app.ActivityCompat.*
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.gms.common.util.ClientLibraryUtils.getPackageInfo
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.FirebaseApp
-import com.google.firebase.database.*
-import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
 import com.kakao.sdk.common.util.Utility
 import com.kakao.sdk.user.UserApiClient
 import data.Posts
 import data.Users
-import java.security.MessageDigest
-import java.security.NoSuchAlgorithmException
 
 
 class SelfProfActivity : AppCompatActivity() {
     lateinit var edit_button: ImageView
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: SelfProfAdapter
-    private val COLLECTION_NAME = "Posts"
+    private var currentNickname: String = ""
+    private lateinit var userId: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_selfprof)
+
         val nickname: TextView = findViewById<TextView>(R.id.nickname)
         val keyHash = Utility.getKeyHash(this)
         Log.d("Hash", keyHash)
@@ -52,67 +45,45 @@ class SelfProfActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         initImageViewProfile()
-        getPostsList()
-        initBottomNavigation()
-
-        // 로그아웃 버튼 클릭 시
-        val logout = findViewById<Button>(R.id.logout)
-        logout.setOnClickListener {
-            // 카카오 로그아웃 요청
-            UserApiClient.instance.logout { error ->
-                if (error != null) {
-                    // 로그아웃 실패
-                    // 오류 처리 코드를 추가하세요.
-                } else {
-                    // 로그아웃 성공
-                    // LoginActivity로 돌아가는 인텐트 생성
-                    val intent = Intent(this@SelfProfActivity, LoginActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                    startActivity(intent)
-                    finish()
-                }
-            }
-        }
-
-        // 탈퇴 버튼 클릭 이벤트 처리
-        val dropoutButton: Button = findViewById(R.id.btn_quit)
-        dropoutButton.setOnClickListener {
-            val builder = AlertDialog.Builder(this)
-                .setTitle("탈퇴하기")
-                .setMessage("정말 탈퇴하시겠습니까?")
-                .setPositiveButton("네") { dialog, which ->
-
-                    UserApiClient.instance.unlink { error ->
-                        if (error != null) {
-                            // 탈퇴 실패 처리
-                        } else {
-                            // 탈퇴 성공 및 로그아웃
-                            UserApiClient.instance.logout { logoutError ->
-                                if (logoutError != null) {
-                                    // 로그아웃 실패 처리
-                                } else {
-                                    // 로그아웃 성공
-                                }
-                            }
-                        }
-                    }
-                }
-                .setNegativeButton("아니요", null)
-            builder.show()
-        }
-
-        //닉네임 userId식별자로 넣기(기본값)
 
         UserApiClient.instance.me { user, error ->
             if (error != null) {
                 // 프로필 정보 가져오기 실패
-                // 에러 처리 로직 추가
+            } else if (user != null) {
+                this.userId = user.id.toString()
+                getPostsList()
+            }
+        }
+
+        initBottomNavigation()
+
+        val settingButton: ImageButton = findViewById(R.id.setting)
+        settingButton.setOnClickListener {
+            val intent = Intent(this, Setting::class.java)
+            startActivity(intent)
+        }
+
+        //닉네임 userId식별자로 넣기(기본값)
+        UserApiClient.instance.me { user, error ->
+            if (error != null) {
+                // 프로필 정보 가져오기 실패
             } else if (user != null) {
                 // 프로필 정보 가져오기 성공
-                val userId = user.id.toString()
-                // userId 변수에 사용자 식별자가 저장됩니다.
-                // TextView에 식별자를 설정합니다.
-                nickname.text = userId
+                userId = user.id.toString()
+
+                val db = FirebaseFirestore.getInstance()
+                val usersCollection = db.collection("Users")
+                usersCollection
+                    .whereEqualTo("user_id", userId)
+                    .get()
+                    .addOnSuccessListener { querySnapshot ->
+                        if (!querySnapshot.isEmpty) {
+                            val documentSnapshot = querySnapshot.documents[0]
+                            val user = documentSnapshot.toObject(Users::class.java)
+                            currentNickname = user?.user_nickname ?: ""
+                            nickname.text = currentNickname
+                        }
+                    }
             }
         }
 
@@ -137,46 +108,49 @@ class SelfProfActivity : AppCompatActivity() {
                     UserApiClient.instance.me { user, error ->
                         if (error != null) {
                             // 사용자 정보 가져오기 실패
-                            // 에러 처리 로직 추가
                         } else if (user != null) {
-                            // 사용자 정보 가져오기 성공
                             val userId = user.id.toString()
-
-                            // Users 컬렉션에서 해당 user_id의 문서를 찾아 닉네임 업데이트
+                            // 중복 여부 확인
                             usersCollection
-                                .whereEqualTo("user_id", userId)
+                                .whereEqualTo("user_nickname", newNickname)
                                 .get()
                                 .addOnSuccessListener { querySnapshot ->
-                                    if (!querySnapshot.isEmpty) {
-                                        val documentSnapshot = querySnapshot.documents[0]
-                                        val documentId = documentSnapshot.id
+                                    val isNicknameDuplicate = !querySnapshot.isEmpty
 
-                                        // 업데이트할 필드와 값 설정
-                                        val updates = hashMapOf<String, Any>(
-                                            "user_nickname" to newNickname
-                                        )
-
-                                        // 문서 업데이트
-                                        usersCollection.document(documentId)
-                                            .update(updates)
-                                            .addOnSuccessListener {
-                                                // 업데이트 성공
-                                                // 성공적으로 업데이트되었을 때 수행할 작업을 추가하세요.
-                                                // TextView에 변경된 닉네임 표시
-                                                nickname.text = newNickname
+                                    if (isNicknameDuplicate) {
+                                        // 중복된 닉네임이 존재하는 경우
+                                        Toast.makeText(this, "중복된 닉네임입니다.", Toast.LENGTH_SHORT)
+                                            .show()
+                                    } else {
+                                        // 중복된 닉네임이 존재하지 않는 경우 Users 컬렉션에서 해당 user_id의 문서를 찾아 닉네임 업데이트
+                                        usersCollection
+                                            .whereEqualTo("user_id", userId)
+                                            .get()
+                                            .addOnSuccessListener { querySnapshot ->
+                                                if (!querySnapshot.isEmpty) {
+                                                    val documentSnapshot =
+                                                        querySnapshot.documents[0]
+                                                    val documentId = documentSnapshot.id
+                                                    val updates = hashMapOf<String, Any>(
+                                                        "user_nickname" to newNickname
+                                                    )
+                                                    // 문서 업데이트
+                                                    usersCollection.document(documentId)
+                                                        .update(updates)
+                                                        .addOnSuccessListener {
+                                                            nickname.text = newNickname
+                                                        }
+                                                        .addOnFailureListener { e ->
+                                                            // 업데이트 실패
+                                                        }
+                                                } else {
+                                                    // 해당 user_id의 문서를 찾을 수 없는 경우
+                                                }
                                             }
                                             .addOnFailureListener { e ->
-                                                // 업데이트 실패
-                                                // 업데이트 실패 시 수행할 작업을 추가하세요.
+                                                // 데이터 가져오기 실패
                                             }
-                                    } else {
-                                        // 해당 user_id의 문서를 찾을 수 없음
-                                        // 처리할 작업을 추가하세요.
                                     }
-                                }
-                                .addOnFailureListener { e ->
-                                    // 데이터 가져오기 실패
-                                    // 실패 처리 작업을 추가하세요.
                                 }
                         }
                     }
@@ -190,66 +164,60 @@ class SelfProfActivity : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_main -> {
-                    // 현재 액티비티가 이미 MainActivity인 경우, 액티비티를 전환하지 않습니다.
                     if (javaClass.name == MainActivity::class.java.name) {
                         return@setOnNavigationItemSelectedListener true
                     }
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
-                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 메인화면으로 돌아가도록 합니다.
+                    finish()
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.nav_recruit -> {
-                    // 현재 액티비티가 이미 RecruListActivity인 경우, 액티비티를 전환하지 않습니다.
                     if (javaClass.name == RecruListActivity::class.java.name) {
                         return@setOnNavigationItemSelectedListener true
                     }
                     val intent = Intent(this, RecruListActivity::class.java)
                     startActivity(intent)
-                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 모집 화면으로 돌아가도록 합니다.
+                    finish()
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.nav_map -> {
-                    // 현재 액티비티가 이미 RentActivity인 경우, 액티비티를 전환하지 않습니다.
                     if (javaClass.name == RentActivity::class.java.name) {
                         return@setOnNavigationItemSelectedListener true
                     }
                     val intent = Intent(this, RentActivity::class.java)
                     startActivity(intent)
-                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 지도 화면으로 돌아가도록 합니다.
+                    finish()
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.nav_calendar -> {
-                    // 현재 액티비티가 이미 CalActivity인 경우, 액티비티를 전환하지 않습니다.
                     if (javaClass.name == CalActivity::class.java.name) {
                         return@setOnNavigationItemSelectedListener true
                     }
                     val intent = Intent(this, CalActivity::class.java)
                     startActivity(intent)
-                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 달력/일정 화면으로 돌아가도록 합니다.
+                    finish()
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.nav_profile -> {
-                    // 현재 액티비티가 이미 SelfProfActivity인 경우, 액티비티를 전환하지 않습니다.
                     if (javaClass.name == SelfProfActivity::class.java.name) {
                         return@setOnNavigationItemSelectedListener true
                     }
                     val intent = Intent(this, SelfProfActivity::class.java)
                     startActivity(intent)
-                    finish() // 현재 액티비티를 종료하여 뒤로 가기 시 프로필 화면으로 돌아가도록 합니다.
+                    finish()
                     return@setOnNavigationItemSelectedListener true
                 }
                 else -> return@setOnNavigationItemSelectedListener false
             }
         }
-        bottomNavigationView.menu.findItem(R.id.nav_profile)?.isChecked = true//하단바 상태 유지
+        bottomNavigationView.menu.findItem(R.id.nav_profile)?.isChecked = true
     }
 
     private fun getPostsList() {
         val db = FirebaseFirestore.getInstance()
-
         db.collection("Posts")
-            .whereEqualTo("user_id", "jaehyun")
+            .whereEqualTo("user_id", userId)
             .get()
             .addOnSuccessListener { documents ->
                 val postsList = mutableListOf<Posts>()
@@ -271,14 +239,6 @@ class SelfProfActivity : AppCompatActivity() {
                 // 오류 처리
             }
     }
-
-    private fun updateUserData(userId: String, nickname: String) {
-        val database = Firebase.database
-        val usersRef = database.getReference("users")
-        val userData = Users(userId, nickname)
-        usersRef.child(userId).setValue(userData)
-    }
-
 
     private fun initImageViewProfile() {
         edit_button = findViewById(R.id.btn_edit)
@@ -325,16 +285,16 @@ class SelfProfActivity : AppCompatActivity() {
                     Toast.makeText(this, "권한을 거부하셨습니다.", Toast.LENGTH_SHORT).show()
             }
             else -> {
-                //
+
             }
         }
     }
 
     private fun navigateGallery() {
         val intent = Intent(Intent.ACTION_PICK)
-        // 가져올 컨텐츠들 중에서 Image 만을 가져온다.
+        // 가져올 컨텐츠들 중에서 Image 만을 가져옴
         intent.type = "image/*"
-        // 갤러리에서 이미지를 선택한 후, 프로필 이미지뷰를 수정하기 위해 갤러리에서 수행한 값을 받아오는 startActivityForeResult를 사용한다.
+        // 갤러리에서 이미지를 선택한 후, 프로필 이미지뷰를 수정하기 위해 갤러리에서 수행한 값을 받아오는 startActivityForeResult를 사용
         startActivityForResult(intent, 2000)
     }
 
@@ -345,7 +305,7 @@ class SelfProfActivity : AppCompatActivity() {
             return
 
         when (requestCode) {
-            // 2000: 이미지 컨텐츠를 가져오는 액티비티를 수행한 후 실행되는 Activity 일 때만 수행하기 위해서
+            // 2000: 이미지 컨텐츠를 가져오는 액티비티를 수행한 후 실행되는 Activity 일 때만 수행하기 위함
             2000 -> {
                 val selectedImageUri: Uri? = data?.data
                 if (selectedImageUri != null) {

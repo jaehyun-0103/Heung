@@ -22,7 +22,7 @@ class ReplyAdapter(private val replyList: MutableList<Reply>) :
         val reply = replyList[position]
         holder.itemView.findViewById<TextView>(R.id.tv_comment).text = reply.reply
         holder.itemView.findViewById<TextView>(R.id.tv_date).text = reply.reply_date
-
+        holder.itemView.findViewById<TextView>(R.id.tv_author).text = "닉네임"
     }
 
     // 리스트의 총 아이템 수 반환

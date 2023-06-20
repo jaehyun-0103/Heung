@@ -1,0 +1,286 @@
+[
+    {
+        "merged": "com.example.heung.app-merged_res-42:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.heung.app-main-43:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_music_icon.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/music_icon.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_item_calserch.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/item_calserch.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/mipmap-anydpi-v33_ic_launcher.xml.flat",
+        "source": "com.example.heung.app-main-43:/mipmap-anydpi-v33/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_btn_join.png.flat",
+        "source": "com.example.heung.app-main-43:/drawable/btn_join.png"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_home.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/home.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.heung.app-main-43:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_activity_rent.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/activity_rent.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.heung.app-main-43:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_arrow_back.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/arrow_back.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_activity_otherprof.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/activity_otherprof.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_activity_postcont.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/activity_postcont.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_item_otherprof.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/item_otherprof.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_backgroundcolor.jpg.flat",
+        "source": "com.example.heung.app-main-43:/drawable/backgroundcolor.jpg"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_googlemap_icon.jpg.flat",
+        "source": "com.example.heung.app-main-43:/drawable/googlemap_icon.jpg"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/xml_backup_rules.xml.flat",
+        "source": "com.example.heung.app-main-43:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_redprofile.png.flat",
+        "source": "com.example.heung.app-main-43:/drawable/redprofile.png"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_baseline_location_on_24.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/baseline_location_on_24.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_activity_recrucont.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/activity_recrucont.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_thumb_up.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/thumb_up.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_kakao_login_medium_narrow.png.flat",
+        "source": "com.example.heung.app-main-43:/drawable/kakao_login_medium_narrow.png"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_ic_time_end_boxline.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/ic_time_end_boxline.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.heung.app-main-43:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_star_border.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/star_border.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_item_recruit.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/item_recruit.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_activity_caldetail.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/activity_caldetail.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_map.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/map.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.heung.app-main-43:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_activity_selfprof.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/activity_selfprof.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_activity_main.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_recruit.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/recruit.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_btn_naver.png.flat",
+        "source": "com.example.heung.app-main-43:/drawable/btn_naver.png"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_activity_postlist.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/activity_postlist.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_activity_login.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_activity_recrulist.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/activity_recrulist.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.heung.app-main-43:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/raw_map_style.json.flat",
+        "source": "com.example.heung.app-main-43:/raw/map_style.json"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_item_reply.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/item_reply.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.heung.app-main-43:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_bottom_navigation_layout.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/bottom_navigation_layout.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_btn_google.png.flat",
+        "source": "com.example.heung.app-main-43:/drawable/btn_google.png"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_item_setting.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/item_setting.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_ic_time_start_boxline.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/ic_time_start_boxline.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_item_postcomment.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/item_postcomment.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/menu_bottom_navigation_menu.xml.flat",
+        "source": "com.example.heung.app-main-43:/menu/bottom_navigation_menu.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_item_postcont.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/item_postcont.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_edittext_round.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/edittext_round.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.heung.app-main-43:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_chat_icon.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/chat_icon.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_star.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/star.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_calendar.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/calendar.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_activity_postwrite.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/activity_postwrite.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_comment.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/comment.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.heung.app-main-43:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.heung.app-main-43:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_profile.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/profile.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_activity_calwrite.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/activity_calwrite.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_arrow_icon.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/arrow_icon.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.heung.app-main-43:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_item_callist.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/item_callist.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_googlemap_marker.jpg.flat",
+        "source": "com.example.heung.app-main-43:/drawable/googlemap_marker.jpg"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.heung.app-main-43:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_item_postlist.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/item_postlist.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_baseline_create_24.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable/baseline_create_24.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.heung.app-main-43:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_activity_recrutwrite.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/activity_recrutwrite.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_item_selfprof.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/item_selfprof.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/drawable_btn_kakao.png.flat",
+        "source": "com.example.heung.app-main-43:/drawable/btn_kakao.png"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.heung.app-main-43:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-42:/layout_activity_cal.xml.flat",
+        "source": "com.example.heung.app-main-43:/layout/activity_cal.xml"
+    }
+]

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -24,13 +25,10 @@ public final class ActivitySelfprofBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final BottomNavigationLayoutBinding bottomNavigation;
+
+  @NonNull
   public final FloatingActionButton btnEdit;
-
-  @NonNull
-  public final Button btnQuit;
-
-  @NonNull
-  public final Button logout;
 
   @NonNull
   public final Button nickChange;
@@ -47,19 +45,23 @@ public final class ActivitySelfprofBinding implements ViewBinding {
   @NonNull
   public final RecyclerView selfRecycler;
 
+  @NonNull
+  public final ImageButton setting;
+
   private ActivitySelfprofBinding(@NonNull ConstraintLayout rootView,
-      @NonNull FloatingActionButton btnEdit, @NonNull Button btnQuit, @NonNull Button logout,
-      @NonNull Button nickChange, @NonNull TextView nickname, @NonNull TextView post,
-      @NonNull ImageView selfProfile, @NonNull RecyclerView selfRecycler) {
+      @NonNull BottomNavigationLayoutBinding bottomNavigation,
+      @NonNull FloatingActionButton btnEdit, @NonNull Button nickChange, @NonNull TextView nickname,
+      @NonNull TextView post, @NonNull ImageView selfProfile, @NonNull RecyclerView selfRecycler,
+      @NonNull ImageButton setting) {
     this.rootView = rootView;
+    this.bottomNavigation = bottomNavigation;
     this.btnEdit = btnEdit;
-    this.btnQuit = btnQuit;
-    this.logout = logout;
     this.nickChange = nickChange;
     this.nickname = nickname;
     this.post = post;
     this.selfProfile = selfProfile;
     this.selfRecycler = selfRecycler;
+    this.setting = setting;
   }
 
   @Override
@@ -89,21 +91,16 @@ public final class ActivitySelfprofBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottom_navigation;
+      View bottomNavigation = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavigation == null) {
+        break missingId;
+      }
+      BottomNavigationLayoutBinding binding_bottomNavigation = BottomNavigationLayoutBinding.bind(bottomNavigation);
+
       id = R.id.btn_edit;
       FloatingActionButton btnEdit = ViewBindings.findChildViewById(rootView, id);
       if (btnEdit == null) {
-        break missingId;
-      }
-
-      id = R.id.btn_quit;
-      Button btnQuit = ViewBindings.findChildViewById(rootView, id);
-      if (btnQuit == null) {
-        break missingId;
-      }
-
-      id = R.id.logout;
-      Button logout = ViewBindings.findChildViewById(rootView, id);
-      if (logout == null) {
         break missingId;
       }
 
@@ -137,8 +134,14 @@ public final class ActivitySelfprofBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySelfprofBinding((ConstraintLayout) rootView, btnEdit, btnQuit, logout,
-          nickChange, nickname, post, selfProfile, selfRecycler);
+      id = R.id.setting;
+      ImageButton setting = ViewBindings.findChildViewById(rootView, id);
+      if (setting == null) {
+        break missingId;
+      }
+
+      return new ActivitySelfprofBinding((ConstraintLayout) rootView, binding_bottomNavigation,
+          btnEdit, nickChange, nickname, post, selfProfile, selfRecycler, setting);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

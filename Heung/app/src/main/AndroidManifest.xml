@@ -13,9 +13,11 @@
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
+
     <permission
         android:name="com.cookandroid.cookmap.permission.MAPS_RECEIVE"
         android:label="signature" />
+
     <application
         android:name=".GlobalApplication"
         android:allowBackup="true"
@@ -27,12 +29,20 @@
         android:theme="@style/Theme.Heung"
         tools:targetApi="31">
         <activity
+            android:name=".Setting"
+            android:exported="false" />
+        <activity
+            android:name=".LogcheckActivity"
+            android:exported="false" />
+        <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
                     android:host="oauth"
                     android:scheme="kakao6de2823164e42a1f96eabbc998a1feb8" />
@@ -40,22 +50,19 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:launchMode="singleTask"
-            android:exported="true">
+            android:exported="true"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data
-                    android:scheme="6de2823164e42a1f96eabbc998a1feb8" />
-            </intent-filter>
 
+                <data android:scheme="6de2823164e42a1f96eabbc998a1feb8" />
+            </intent-filter>
         </activity>
-        <activity
-            android:name=".OtherProfActivity"
-            android:exported="false" />
         <activity
             android:name=".SelfProfActivity"
             android:exported="false" />
@@ -100,14 +107,18 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyA31kkd5bVzb1DHgUL0YktIXMTXFhhi_4U" />
+
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
     </application>
+
 </manifest>

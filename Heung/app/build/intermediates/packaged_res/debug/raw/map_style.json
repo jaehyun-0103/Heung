@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "style": [
+    {
+      "featureType": "all",
+      "stylers": [
+        { "saturation": -80 },
+        { "lightness": 60 }
+      ]
+    }
+  ]
+}

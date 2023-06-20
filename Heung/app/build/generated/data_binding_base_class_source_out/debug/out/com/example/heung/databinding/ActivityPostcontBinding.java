@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -28,6 +29,9 @@ public abstract class ActivityPostcontBinding extends ViewDataBinding {
   public final ImageView accountIvProfile;
 
   @NonNull
+  public final TextView app;
+
+  @NonNull
   public final ConstraintLayout boardcontentConslayout;
 
   @NonNull
@@ -43,7 +47,16 @@ public abstract class ActivityPostcontBinding extends ViewDataBinding {
   public final TextInputEditText commentTextview;
 
   @NonNull
+  public final ConstraintLayout conslayout;
+
+  @NonNull
+  public final ConstraintLayout contentConslayout;
+
+  @NonNull
   public final RecyclerView contentPhotoRecycler;
+
+  @NonNull
+  public final ImageButton dirogagi;
 
   @NonNull
   public final LinearLayout edtComment;
@@ -58,7 +71,10 @@ public abstract class ActivityPostcontBinding extends ViewDataBinding {
   public final View postLine;
 
   @NonNull
-  public final Button setting;
+  public final View postLine2;
+
+  @NonNull
+  public final ImageButton setting;
 
   @NonNull
   public final TextView tvAuthor;
@@ -76,24 +92,31 @@ public abstract class ActivityPostcontBinding extends ViewDataBinding {
   public final ConstraintLayout userinfoConslayout;
 
   protected ActivityPostcontBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextView CommentCnt, ImageView accountIvProfile, ConstraintLayout boardcontentConslayout,
-      Button btnCtv, ImageView commentBtn, TextInputLayout commentLayout,
-      TextInputEditText commentTextview, RecyclerView contentPhotoRecycler, LinearLayout edtComment,
-      ImageView likeBtn, TextView likeCnt, View postLine, Button setting, TextView tvAuthor,
-      TextView tvContent, TextView tvDate, TextView tvTitle, ConstraintLayout userinfoConslayout) {
+      TextView CommentCnt, ImageView accountIvProfile, TextView app,
+      ConstraintLayout boardcontentConslayout, Button btnCtv, ImageView commentBtn,
+      TextInputLayout commentLayout, TextInputEditText commentTextview, ConstraintLayout conslayout,
+      ConstraintLayout contentConslayout, RecyclerView contentPhotoRecycler, ImageButton dirogagi,
+      LinearLayout edtComment, ImageView likeBtn, TextView likeCnt, View postLine, View postLine2,
+      ImageButton setting, TextView tvAuthor, TextView tvContent, TextView tvDate, TextView tvTitle,
+      ConstraintLayout userinfoConslayout) {
     super(_bindingComponent, _root, _localFieldCount);
     this.CommentCnt = CommentCnt;
     this.accountIvProfile = accountIvProfile;
+    this.app = app;
     this.boardcontentConslayout = boardcontentConslayout;
     this.btnCtv = btnCtv;
     this.commentBtn = commentBtn;
     this.commentLayout = commentLayout;
     this.commentTextview = commentTextview;
+    this.conslayout = conslayout;
+    this.contentConslayout = contentConslayout;
     this.contentPhotoRecycler = contentPhotoRecycler;
+    this.dirogagi = dirogagi;
     this.edtComment = edtComment;
     this.likeBtn = likeBtn;
     this.likeCnt = likeCnt;
     this.postLine = postLine;
+    this.postLine2 = postLine2;
     this.setting = setting;
     this.tvAuthor = tvAuthor;
     this.tvContent = tvContent;

@@ -5,10 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.heung.R;
@@ -18,10 +18,10 @@ import java.lang.String;
 
 public final class ItemRecruitBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
-  public final ConstraintLayout ConstraintLayoutAlready;
+  public final LinearLayout LinearLayoutAlready;
 
   @NonNull
   public final ImageView musicIcon;
@@ -30,10 +30,10 @@ public final class ItemRecruitBinding implements ViewBinding {
   public final View postLine;
 
   @NonNull
-  public final TextView recruitItemAuthor;
+  public final TextView recruitItemDate;
 
   @NonNull
-  public final TextView recruitItemDate;
+  public final TextView recruitItemNickname;
 
   @NonNull
   public final TextView recruitItemTitle;
@@ -41,24 +41,24 @@ public final class ItemRecruitBinding implements ViewBinding {
   @NonNull
   public final TextView recruitItemType;
 
-  private ItemRecruitBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout ConstraintLayoutAlready, @NonNull ImageView musicIcon,
-      @NonNull View postLine, @NonNull TextView recruitItemAuthor,
-      @NonNull TextView recruitItemDate, @NonNull TextView recruitItemTitle,
+  private ItemRecruitBinding(@NonNull LinearLayout rootView,
+      @NonNull LinearLayout LinearLayoutAlready, @NonNull ImageView musicIcon,
+      @NonNull View postLine, @NonNull TextView recruitItemDate,
+      @NonNull TextView recruitItemNickname, @NonNull TextView recruitItemTitle,
       @NonNull TextView recruitItemType) {
     this.rootView = rootView;
-    this.ConstraintLayoutAlready = ConstraintLayoutAlready;
+    this.LinearLayoutAlready = LinearLayoutAlready;
     this.musicIcon = musicIcon;
     this.postLine = postLine;
-    this.recruitItemAuthor = recruitItemAuthor;
     this.recruitItemDate = recruitItemDate;
+    this.recruitItemNickname = recruitItemNickname;
     this.recruitItemTitle = recruitItemTitle;
     this.recruitItemType = recruitItemType;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -83,7 +83,7 @@ public final class ItemRecruitBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      ConstraintLayout ConstraintLayoutAlready = (ConstraintLayout) rootView;
+      LinearLayout LinearLayoutAlready = (LinearLayout) rootView;
 
       id = R.id.music_icon;
       ImageView musicIcon = ViewBindings.findChildViewById(rootView, id);
@@ -97,15 +97,15 @@ public final class ItemRecruitBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.recruit_item_author;
-      TextView recruitItemAuthor = ViewBindings.findChildViewById(rootView, id);
-      if (recruitItemAuthor == null) {
-        break missingId;
-      }
-
       id = R.id.recruit_item_date;
       TextView recruitItemDate = ViewBindings.findChildViewById(rootView, id);
       if (recruitItemDate == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_item_nickname;
+      TextView recruitItemNickname = ViewBindings.findChildViewById(rootView, id);
+      if (recruitItemNickname == null) {
         break missingId;
       }
 
@@ -121,8 +121,8 @@ public final class ItemRecruitBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemRecruitBinding((ConstraintLayout) rootView, ConstraintLayoutAlready, musicIcon,
-          postLine, recruitItemAuthor, recruitItemDate, recruitItemTitle, recruitItemType);
+      return new ItemRecruitBinding((LinearLayout) rootView, LinearLayoutAlready, musicIcon,
+          postLine, recruitItemDate, recruitItemNickname, recruitItemTitle, recruitItemType);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
