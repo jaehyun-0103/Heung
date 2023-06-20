@@ -371,7 +371,7 @@ class PostContActivity : AppCompatActivity() {
         val replyEditText = dialogView.findViewById<EditText>(R.id.edit_reply)
         val window = dialog.window
         window?.setBackgroundDrawableResource(android.R.color.transparent)
-        window?.setDimAmount(0.01f)
+        window?.setDimAmount(0.0f)
         val postButton = dialogView.findViewById<Button>(R.id.btn_reply)
         postButton.setOnClickListener {
             val inputReply = replyEditText.text.toString()
