@@ -18,7 +18,7 @@
     <string name="like">Like</string>
     <string name="comment">Comment</string>
     <string name="complete">Complete</string>
-    <string name="popular">Popular</string>
+    <string name="popular">Popular post</string>
     <string name="create">Create</string>
     <string name="posting">Board</string>
     <string name="back">Back</string>
@@ -37,16 +37,47 @@
     <string name="startTime">Start Time</string>
     <string name="endTime">End Time</string>
     <string name="commentCnt">Comment Count</string>
+    <string name="logout">Logout</string>
+    <string name="Date_example">2021.01.01(Sun)</string>
+    <string name="Hello_example">ex) hello</string>
+    <string name="Time_example">12:00 pm</string>
+    <string name="regist">Register Performance Information</string>
+    <string name="Place_example">ex) In Oido</string>
+    <string name="start">Start</string>
+    <string name="more">More</string>
+    <string name="Comment_example">Leave Comments</string>
+    <string name="all">View Full Posts</string>
+    <string name="number">Number of Students</string>
+    <string name="cancel">Cancel</string>
+    <string name="Reply_example">Leave Replies</string>
+
+    <string name="Main">Main</string>
+    <string name="Recruit">Recruit</string>
+    <string name="Map">Map</string>
+    <string name="Cal">Cal</string>
+    <string name="Prof">Prof</string>
+
     <string name="google_maps_api_key">AIzaSyA31kkd5bVzb1DHgUL0YktIXMTXFhhi_4U</string>
-    <string name="perfromName">Introduction</string>
     <string name="kakao_app_key">6de2823164e42a1f96eabbc998a1feb8</string>
     <string name="kakao_app_key2">kakao6de2823164e42a1f96eabbc998a1feb8</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_setting">Setting</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="logout">Logout</string>
+
+    <string name="Search_example">Enter Administrative dongs to Search</string>
+    <string name="location">Current Location</string>
+    <string name="Write_location">Enter a location</string>
+    <string name="Write_intro">Enter introductory text</string>
+    <string name="within">Create up to 25 characters</string>
+    <string name="Time_plan">To add time</string>
+    <string name="Cal_title">ex) Busking</string>
+    <string name="Cal_cont">What kind of performance is it?</string>
+
+    <string-array name="items">
+        <item>All</item>
+        <item>Concert Hall</item>
+        <item>Rental Shop</item>
+        <item>Lecture Room</item>
+    </string-array>
+    <string name="darkmode">Dark Mode</string>
+    <string name="defaultmode">Default</string>
+    <string name="ko">한국어</string>
+    <string name="en">영어</string>
 </resources>

@@ -201,30 +201,54 @@ class PostContActivity : AppCompatActivity() {
                                 val likes = documentSnapshot.toObject(Likes::class.java)
 
                                 if (likes != null) { // 좋아요가 이미 존재
-                                    val likedUserIds = likes.userIds
+                                    val likedUserIds = likes.userIds.toMutableList()
                                     if (likedUserIds.contains(userId)) { // 현재 사용자가 이미 좋아요를 누른 경우
                                         btnLike.isEnabled = false // 좋아요 버튼 비활성화
-                                        Toast.makeText(this, "이미 좋아요를 눌렀습니다.", Toast.LENGTH_SHORT)
-                                            .show()
+                                        Toast.makeText(this, "이미 좋아요를 눌렀습니다.", Toast.LENGTH_SHORT).show()
+                                    } else {
+                                        // 좋아요 추가
+                                        val newLikeCount = likes.like.toInt() + 1
+                                        likedUserIds.add(userId)
+
+                                        // 좋아요 정보 업데이트
+                                        val likeData = hashMapOf(
+                                            "post_id" to postId,
+                                            "like" to newLikeCount.toString(),
+                                            "userIds" to likedUserIds
+                                        )
+                                        likesRef
+                                            .set(likeData)
+                                            .addOnSuccessListener {
+                                                tvLikeCount.text = newLikeCount.toString()
+
+                                                // 좋아요 버튼 비활성화
+                                                btnLike.isEnabled = false
+                                                Toast.makeText(this, "좋아요를 눌렀습니다.", Toast.LENGTH_SHORT).show()
+                                            }
+                                            .addOnFailureListener { exception ->
+                                                // 좋아요 수 업데이트 실패
+                                            }
                                     }
                                 } else {
-                                    // 좋아요 추가
-                                    val newLikeCount = tvLikeCount.text.toString().toInt() + 1
+                                    // 좋아요 문서가 존재하지 않음
+                                    // 좋아요 문서 생성
+                                    val initialLikeCount = 1
+                                    val initialUserIds = mutableListOf(userId)
+
                                     // 좋아요 정보 업데이트
                                     val likeData = hashMapOf(
                                         "post_id" to postId,
-                                        "like" to newLikeCount.toString(),
-                                        "userIds" to listOf(userId)
+                                        "like" to initialLikeCount.toString(),
+                                        "userIds" to initialUserIds
                                     )
                                     likesRef
                                         .set(likeData)
                                         .addOnSuccessListener {
-                                            tvLikeCount.text = newLikeCount.toString()
+                                            tvLikeCount.text = initialLikeCount.toString()
 
                                             // 좋아요 버튼 비활성화
                                             btnLike.isEnabled = false
-                                            Toast.makeText(this, "좋아요를 눌렀습니다.", Toast.LENGTH_SHORT)
-                                                .show()
+                                            Toast.makeText(this, "좋아요를 눌렀습니다.", Toast.LENGTH_SHORT).show()
                                         }
                                         .addOnFailureListener { exception ->
                                             // 좋아요 수 업데이트 실패
@@ -345,7 +369,9 @@ class PostContActivity : AppCompatActivity() {
         val dialog = BottomSheetDialog(this)
         val dialogView = layoutInflater.inflate(R.layout.item_reply, null)
         val replyEditText = dialogView.findViewById<EditText>(R.id.edit_reply)
-
+        val window = dialog.window
+        window?.setBackgroundDrawableResource(android.R.color.transparent)
+        window?.setDimAmount(0.0f)
         val postButton = dialogView.findViewById<Button>(R.id.btn_reply)
         postButton.setOnClickListener {
             val inputReply = replyEditText.text.toString()
