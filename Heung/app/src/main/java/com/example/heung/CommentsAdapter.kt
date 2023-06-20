@@ -14,14 +14,12 @@ import data.Reply
 
 class CommentsAdapter(private val postList: MutableList<Comments>
                       ,private val onReplyClickListener: OnReplyClickListener
-) :
-    RecyclerView.Adapter<CommentsAdapter.CommentViewHolder>() {
+) : RecyclerView.Adapter<CommentsAdapter.CommentViewHolder>() {
     private var onItemClickListener: ((position: Int) -> Unit)? = null // 아이템 클릭 이벤트를 위한 리스너
 
     // 각 아이템 뷰에 대한 ViewHolder 생성
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommentsAdapter.CommentViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_postcont, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_postcont, parent, false)
         return CommentViewHolder(view)
     }
 
@@ -30,6 +28,7 @@ class CommentsAdapter(private val postList: MutableList<Comments>
         val comments = postList[position]
         holder.itemView.findViewById<TextView>(R.id.tv_comment).text = comments.comment
         holder.itemView.findViewById<TextView>(R.id.tv_date).text = comments.comment_date
+        holder.itemView.findViewById<TextView>(R.id.tv_author).text = "닉네임"
         holder.itemView.setOnClickListener {
             onItemClickListener?.invoke(position)
         }
@@ -60,7 +59,8 @@ class CommentsAdapter(private val postList: MutableList<Comments>
                         commentId,
                         userId,
                         reply,
-                        replyDate)
+                        replyDate
+                    )
                     replyList.add(replyObject)
                 }
                 comments.replies.clear()
@@ -80,7 +80,6 @@ class CommentsAdapter(private val postList: MutableList<Comments>
     // 각 아이템을 위한 ViewHolder 클래스
     inner class CommentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val btnReply: Button = itemView.findViewById(R.id.btnReply)
-
         init {
             btnReply.setOnClickListener {
                 val position = adapterPosition
@@ -90,9 +89,7 @@ class CommentsAdapter(private val postList: MutableList<Comments>
             }
         }
     }
-
     interface OnReplyClickListener {
         fun onReplyClick(position: Int)
     }
-
 }

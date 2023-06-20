@@ -4,20 +4,78 @@ package com.example.heung.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.Guideline;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.heung.R;
+import com.google.android.gms.maps.MapView;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityRentBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
-  private ActivityRentBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final Spinner dropdown;
+
+  @NonNull
+  public final Guideline guideline;
+
+  @NonNull
+  public final TextView locationAddressTextView;
+
+  @NonNull
+  public final TextView locationContentTextView;
+
+  @NonNull
+  public final LinearLayout locationInfoLayout;
+
+  @NonNull
+  public final TextView locationNameTextView;
+
+  @NonNull
+  public final Button locationNow;
+
+  @NonNull
+  public final TextView locationPhoneTextView;
+
+  @NonNull
+  public final MapView mapView;
+
+  @NonNull
+  public final AutoCompleteTextView searchBar;
+
+  @NonNull
+  public final Button searchButton;
+
+  private ActivityRentBinding(@NonNull ConstraintLayout rootView, @NonNull Spinner dropdown,
+      @NonNull Guideline guideline, @NonNull TextView locationAddressTextView,
+      @NonNull TextView locationContentTextView, @NonNull LinearLayout locationInfoLayout,
+      @NonNull TextView locationNameTextView, @NonNull Button locationNow,
+      @NonNull TextView locationPhoneTextView, @NonNull MapView mapView,
+      @NonNull AutoCompleteTextView searchBar, @NonNull Button searchButton) {
     this.rootView = rootView;
+    this.dropdown = dropdown;
+    this.guideline = guideline;
+    this.locationAddressTextView = locationAddressTextView;
+    this.locationContentTextView = locationContentTextView;
+    this.locationInfoLayout = locationInfoLayout;
+    this.locationNameTextView = locationNameTextView;
+    this.locationNow = locationNow;
+    this.locationPhoneTextView = locationPhoneTextView;
+    this.mapView = mapView;
+    this.searchBar = searchBar;
+    this.searchButton = searchButton;
   }
 
   @Override
@@ -43,10 +101,82 @@ public final class ActivityRentBinding implements ViewBinding {
 
   @NonNull
   public static ActivityRentBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.dropdown;
+      Spinner dropdown = ViewBindings.findChildViewById(rootView, id);
+      if (dropdown == null) {
+        break missingId;
+      }
 
-    return new ActivityRentBinding((ConstraintLayout) rootView);
+      id = R.id.guideline;
+      Guideline guideline = ViewBindings.findChildViewById(rootView, id);
+      if (guideline == null) {
+        break missingId;
+      }
+
+      id = R.id.locationAddressTextView;
+      TextView locationAddressTextView = ViewBindings.findChildViewById(rootView, id);
+      if (locationAddressTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.locationContentTextView;
+      TextView locationContentTextView = ViewBindings.findChildViewById(rootView, id);
+      if (locationContentTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.locationInfoLayout;
+      LinearLayout locationInfoLayout = ViewBindings.findChildViewById(rootView, id);
+      if (locationInfoLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.locationNameTextView;
+      TextView locationNameTextView = ViewBindings.findChildViewById(rootView, id);
+      if (locationNameTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.locationNow;
+      Button locationNow = ViewBindings.findChildViewById(rootView, id);
+      if (locationNow == null) {
+        break missingId;
+      }
+
+      id = R.id.locationPhoneTextView;
+      TextView locationPhoneTextView = ViewBindings.findChildViewById(rootView, id);
+      if (locationPhoneTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.mapView;
+      MapView mapView = ViewBindings.findChildViewById(rootView, id);
+      if (mapView == null) {
+        break missingId;
+      }
+
+      id = R.id.searchBar;
+      AutoCompleteTextView searchBar = ViewBindings.findChildViewById(rootView, id);
+      if (searchBar == null) {
+        break missingId;
+      }
+
+      id = R.id.searchButton;
+      Button searchButton = ViewBindings.findChildViewById(rootView, id);
+      if (searchButton == null) {
+        break missingId;
+      }
+
+      return new ActivityRentBinding((ConstraintLayout) rootView, dropdown, guideline,
+          locationAddressTextView, locationContentTextView, locationInfoLayout,
+          locationNameTextView, locationNow, locationPhoneTextView, mapView, searchBar,
+          searchButton);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

@@ -1,18 +1,18 @@
 package com.example.heung
 
-import android.annotation.SuppressLint
 import android.app.TimePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.FirebaseFirestore
+import com.kakao.sdk.user.UserApiClient
 import java.text.SimpleDateFormat
 import java.util.*
 
 class CalWriteActivity : AppCompatActivity() {
-    private val firestore = FirebaseFirestore.getInstance()
     private lateinit var startTimeImageView: ImageView
     private lateinit var endTimeImageView: ImageView
     private lateinit var startTimeTextView: TextView
@@ -22,7 +22,6 @@ class CalWriteActivity : AppCompatActivity() {
     private var selectedStartTime: Calendar = Calendar.getInstance()
     private var selectedEndTime: Calendar = Calendar.getInstance()
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calwrite)
@@ -45,6 +44,7 @@ class CalWriteActivity : AppCompatActivity() {
         endTimeImageView.setOnClickListener {
             showTimePickerDialog(false)
         }
+
         var calSave = findViewById<Button>(R.id.cal_save)
         val calTitle = findViewById<EditText>(R.id.cal_title)
         val calLocation = findViewById<EditText>(R.id.cal_location)
@@ -60,35 +60,52 @@ class CalWriteActivity : AppCompatActivity() {
             val inputLocation = calLocation.text.toString()
             val inputMemo = calMemo.text.toString()
             val inputDate = selectedDate
+            val calId = UUID.randomUUID().toString()
             val collectionName = "Calendar"
-            val userId = "user_id"
 
-            // Firestore에 일정 데이터 추가
-            val calEvent = hashMapOf(
-                "cal_title" to inputTitle,
-                "cal_location" to inputLocation,
-                "cal_memo" to inputMemo,
-                "cal_date" to inputDate,
-                "user_id" to userId,
-                "cal_startDate" to selectedStartTime.timeInMillis,
-                "cal_endDate" to selectedEndTime.timeInMillis
-            )
+            UserApiClient.instance.me { user, error ->
+                if (error != null) {
+                    // 프로필 정보 가져오기 실패
+                } else if (user != null) {
+                    val userId = user.id.toString() // 사용자 ID
 
-            // 데이터베이스에 데이터 추가
-            firestore.collection(collectionName)
-                .add(calEvent)
-                .addOnSuccessListener {
-                    // 데이터 추가 성공
+                    // Firestore에 일정 데이터 추가
+                    val calEvent = hashMapOf(
+                        "cal_title" to inputTitle,
+                        "cal_location" to inputLocation,
+                        "cal_memo" to inputMemo,
+                        "cal_date" to inputDate,
+                        "cal_id" to calId,
+                        "user_id" to userId,
+                        "cal_startDate" to selectedStartTime.timeInMillis,
+                        "cal_endDate" to selectedEndTime.timeInMillis
+                    )
+
+                    // Firestore에 일정 데이터 저장
+                    val firestore = FirebaseFirestore.getInstance()
+                    firestore.collection(collectionName)
+                        .add(calEvent)
+                        .addOnSuccessListener {
+                            // 일정 저장 성공
+                            Toast.makeText(this, "일정이 저장되었습니다.", Toast.LENGTH_SHORT).show()
+
+                            // 메인 화면으로 이동
+                            val intent = Intent(this, CalActivity::class.java)
+                            startActivity(intent)
+                            finish() // 현재 액티비티 종료
+                        }
+                        .addOnFailureListener { exception ->
+                            // 일정 저장 실패
+                            Toast.makeText(this, "일정 저장에 실패했습니다.", Toast.LENGTH_SHORT).show()
+                        }
+                    // 게시글 저장 후 입력 필드 초기화
+                    calTitle.text.clear()
+                    calLocation.text.clear()
+                    calMemo.text.clear()
                 }
-                .addOnFailureListener { e ->
-                    // 데이터 추가 실패
-                }
-
-            // 게시글 저장 후 입력 필드 초기화
-            calTitle.text.clear()
-            calLocation.text.clear()
-            calMemo.text.clear()
+            }
         }
+
         // 뒤로 가기 버튼
         btnBack.setOnClickListener {
             calTitle.text.clear()
@@ -96,10 +113,10 @@ class CalWriteActivity : AppCompatActivity() {
             calMemo.text.clear()
             onBackPressed()
         }
+
         // 입력 필드의 텍스트 변경 감지
         calTitle.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 onTextChanged()
             }
@@ -109,7 +126,6 @@ class CalWriteActivity : AppCompatActivity() {
 
         calLocation.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 onTextChanged()
             }
@@ -119,7 +135,6 @@ class CalWriteActivity : AppCompatActivity() {
 
         calMemo.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 onTextChanged()
             }
@@ -132,7 +147,6 @@ class CalWriteActivity : AppCompatActivity() {
         val currentTime = if (isStartTime) selectedStartTime else selectedEndTime
         val currentHour = currentTime.get(Calendar.HOUR_OF_DAY)
         val currentMinute = currentTime.get(Calendar.MINUTE)
-
         val timePickerDialog = TimePickerDialog(
             this,
             TimePickerDialog.OnTimeSetListener { _: TimePicker, hourOfDay: Int, minute: Int ->

@@ -1,6 +1,5 @@
 package com.example.heung
 
-import android.annotation.SuppressLint
 import android.app.TimePickerDialog
 import android.content.Intent
 import android.os.Bundle
@@ -20,9 +19,7 @@ class CalEditActivity : AppCompatActivity() {
     private lateinit var endTimeImageView: ImageView
     private var selectedStartTime: Calendar = Calendar.getInstance()
     private var selectedEndTime: Calendar = Calendar.getInstance()
-    private val firestore = FirebaseFirestore.getInstance()
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calwrite)
@@ -66,7 +63,14 @@ class CalEditActivity : AppCompatActivity() {
             val updatedMemo = editCalMemo.text.toString()
 
             // 데이터 업데이트
-            updateCalendarEvent(calId, updatedTitle, updatedLocation, updatedStartTime, updatedEndTime, updatedMemo)
+            updateCalendarEvent(
+                calId,
+                updatedTitle,
+                updatedLocation,
+                updatedStartTime,
+                updatedEndTime,
+                updatedMemo
+            )
         }
     }
 
@@ -74,7 +78,6 @@ class CalEditActivity : AppCompatActivity() {
         val currentTime = if (isStartTime) selectedStartTime else selectedEndTime
         val currentHour = currentTime.get(Calendar.HOUR_OF_DAY)
         val currentMinute = currentTime.get(Calendar.MINUTE)
-
         val timePickerDialog = TimePickerDialog(
             this,
             TimePickerDialog.OnTimeSetListener { _: TimePicker, hourOfDay: Int, minute: Int ->
@@ -133,10 +136,8 @@ class CalEditActivity : AppCompatActivity() {
         memo: String
     ) {
         val collectionName = "Calendar"
-
         val collectionRef = FirebaseFirestore.getInstance().collection(collectionName)
         val query = collectionRef.whereEqualTo("cal_id", calId)
-
         query.get()
             .addOnSuccessListener { querySnapshot ->
                 for (documentSnapshot in querySnapshot.documents) {

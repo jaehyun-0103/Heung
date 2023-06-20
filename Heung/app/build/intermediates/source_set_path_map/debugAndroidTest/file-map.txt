@@ -1,0 +1,7 @@
+com.example.heung.test.app-annotation-experimental-1.3.0-0 C:\Users\rhfuv\.gradle\caches\transforms-3\8cfe1fc317fc262edc8e1d92ee61104a\transformed\annotation-experimental-1.3.0\res
+com.example.heung.test.app-core-1.5.0-1 C:\Users\rhfuv\.gradle\caches\transforms-3\c6ce3ecfacf6090b74460e8bf2db00d2\transformed\core-1.5.0\res
+com.example.heung.test.app-androidTest-2 C:\Users\rhfuv\Desktop\Heung\Heung\app\build\generated\res\resValues\androidTest\debug
+com.example.heung.test.app-androidTest-3 C:\Users\rhfuv\Desktop\Heung\Heung\app\build\generated\res\rs\androidTest\debug
+com.example.heung.test.app-mergeDebugAndroidTestResources-4 C:\Users\rhfuv\Desktop\Heung\Heung\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.heung.test.app-mergeDebugAndroidTestResources-5 C:\Users\rhfuv\Desktop\Heung\Heung\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.heung.test.app-merged_res-6 C:\Users\rhfuv\Desktop\Heung\Heung\app\build\intermediates\merged_res\debugAndroidTest

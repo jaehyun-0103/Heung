@@ -36,11 +36,23 @@
     <string name="startTime">시작 시간</string>
     <string name="endTime">끝나는 시간</string>
     <string name="commentCnt">댓글수</string>
-
-
+    <string name="logout">로그아웃</string>
+    <string name="google_maps_api_key">AIzaSyA31kkd5bVzb1DHgUL0YktIXMTXFhhi_4U</string>
     <string name="perfromName">소개글</string>
     <string name="kakao_app_key">6de2823164e42a1f96eabbc998a1feb8</string>
-    <!-- AndroidManifest.xml에서 사용 -->
     <string name="kakao_app_key2">kakao6de2823164e42a1f96eabbc998a1feb8</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_setting">Setting</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string-array name="items">
+        <item>전체</item>
+        <item>공연장</item>
+        <item>대여점</item>
+        <item>강의실</item>
+    </string-array>
 </resources>

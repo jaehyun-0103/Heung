@@ -11,7 +11,8 @@ import java.util.Locale
 
 class CalAdapter(private val calendar: MutableList<Calendar>) :
     RecyclerView.Adapter<CalAdapter.CalViewHolder>() {
-    private var onItemClickListener: ((position: Int) -> Unit)? = null // 아이템 클릭 이벤트를 위한 리스너
+
+    private var onItemClickListener: ((position: Int) -> Unit)? = null
 
     // 각 아이템 뷰에 대한 ViewHolder 생성
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CalAdapter.CalViewHolder {
@@ -29,7 +30,6 @@ class CalAdapter(private val calendar: MutableList<Calendar>) :
 
         holder.itemView.findViewById<TextView>(R.id.performStart).text = startDate
         holder.itemView.findViewById<TextView>(R.id.performEnd).text = endDate
-
         holder.itemView.setOnClickListener {
             onItemClickListener?.invoke(position)
         }
