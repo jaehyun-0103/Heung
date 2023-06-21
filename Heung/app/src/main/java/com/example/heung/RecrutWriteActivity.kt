@@ -3,22 +3,17 @@ package com.example.heung
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.NumberPicker
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatImageButton
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.Query
 import com.kakao.sdk.user.UserApiClient
 import data.Recruits
 import java.text.SimpleDateFormat
 import java.util.*
 
 class RecrutWriteActivity : AppCompatActivity() {
-
     private lateinit var titleEditText: EditText
     private lateinit var contentEditText: EditText
     private lateinit var uploadButton: AppCompatButton
@@ -33,10 +28,10 @@ class RecrutWriteActivity : AppCompatActivity() {
     private lateinit var classDate2EditText: EditText
     private lateinit var maxCapacityPicker: NumberPicker
     private lateinit var maxCapacityPickerClass: NumberPicker
+    private lateinit var recruitcontact: EditText
     private lateinit var firestore: FirebaseFirestore
     private var selectedFilter: String = ""
     private var selectedDate: String = ""
-    private var nextRecruitId: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,6 +53,7 @@ class RecrutWriteActivity : AppCompatActivity() {
         classDate2EditText = findViewById(R.id.recruit_filter_class_date2)
         maxCapacityPicker = findViewById(R.id.recruit_filter_busking_capacity)
         maxCapacityPickerClass = findViewById(R.id.recruit_filter_class_capacity)
+        recruitcontact = findViewById(R.id.recruit_contact)
 
         buskingFilterButton.setOnClickListener {
             selectFilter("버스킹")
@@ -85,8 +81,6 @@ class RecrutWriteActivity : AppCompatActivity() {
 
         maxCapacityPickerClass.minValue = 0
         maxCapacityPickerClass.maxValue = 100
-
-        getNextRecruitId()
     }
 
     private fun selectFilter(filter: String) {
@@ -108,7 +102,8 @@ class RecrutWriteActivity : AppCompatActivity() {
         val month = calendar.get(Calendar.MONTH)
         val day = calendar.get(Calendar.DAY_OF_MONTH)
 
-        val datePickerDialog = DatePickerDialog(this,
+        val datePickerDialog = DatePickerDialog(
+            this,
             DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
                 val selectedMonth = monthOfYear + 1
                 selectedDate = "$year-$selectedMonth-$dayOfMonth"
@@ -129,39 +124,27 @@ class RecrutWriteActivity : AppCompatActivity() {
         datePickerDialog.show()
     }
 
-    private fun getNextRecruitId() {
-        firestore.collection("Recruits")
-            .orderBy("recruit_id", Query.Direction.DESCENDING)
-            .limit(1)
-            .get()
-            .addOnSuccessListener { querySnapshot ->
-                if (!querySnapshot.isEmpty) {
-                    val lastRecruit = querySnapshot.documents[0].toObject(Recruits::class.java)
-                    nextRecruitId = if (lastRecruit != null) {
-                        (lastRecruit.recruit_id.toIntOrNull()?.plus(1) ?: 1).toString()
-                    } else {
-                        "1"
-                    }
-                } else {
-                    nextRecruitId = "1" // If no documents exist, set recruit_id to 1
-                }
-            }
-            .addOnFailureListener { e ->
-                Toast.makeText(this, "게시글 번호 가져오기 실패: $e", Toast.LENGTH_SHORT).show()
-            }
+    private fun generateNewPostId(): String {
+        val randomId = UUID.randomUUID().toString()
+        return randomId
     }
 
     private fun uploadRecruit() {
+        if (selectedFilter.isEmpty()) {
+            Toast.makeText(this, "필터를 선택해주세요.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
         val title = titleEditText.text.toString().trim()
         val content = contentEditText.text.toString().trim()
-
         if (title.isEmpty() || content.isEmpty()) {
             Toast.makeText(this, "제목과 내용을 입력해주세요.", Toast.LENGTH_SHORT).show()
             return
         }
 
-        if (selectedFilter.isEmpty()) {
-            Toast.makeText(this, "필터를 선택해주세요.", Toast.LENGTH_SHORT).show()
+        val contact = recruitcontact.text.toString().trim()
+        if (contact.isEmpty()) {
+            Toast.makeText(this, "연락처를 입력해주세요.", Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -170,14 +153,12 @@ class RecrutWriteActivity : AppCompatActivity() {
         } else {
             classDate2EditText.text.toString()
         }
-
         if (endDate.isEmpty()) {
             Toast.makeText(this, "모집 기간을 선택해주세요.", Toast.LENGTH_SHORT).show()
             return
         }
 
         val selectedCurrentDate = Calendar.getInstance().time
-
         val selectedEndDate = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).parse(endDate)
         if (selectedEndDate != null && selectedEndDate.before(selectedCurrentDate)) {
             Toast.makeText(this, "오늘 이전의 날짜는 선택할 수 없습니다.", Toast.LENGTH_SHORT).show()
@@ -185,10 +166,14 @@ class RecrutWriteActivity : AppCompatActivity() {
         }
 
         val recruitSession = buskingSessionEditText.text.toString()
-        val recruitClass = classTypeEditText.text.toString()
-
         if (selectedFilter == "버스킹" && recruitSession.isEmpty()) {
             Toast.makeText(this, "세션 타입을 입력해주세요.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val recruitClass = classTypeEditText.text.toString()
+        if (selectedFilter == "클래스" && recruitClass.isEmpty()) {
+            Toast.makeText(this, "클래스 종류 입력해주세요.", Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -197,6 +182,12 @@ class RecrutWriteActivity : AppCompatActivity() {
         } else {
             maxCapacityPickerClass.value.toString()
         }
+        if (maxCapacity == "0") {
+            Toast.makeText(this, "최대 수용 인원을 0으로 설정할 수 없습니다.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val newPostId = generateNewPostId()
 
         // 사용자 정보 가져오기
         UserApiClient.instance.me { user, error ->
@@ -212,24 +203,21 @@ class RecrutWriteActivity : AppCompatActivity() {
                     .get()
                     .addOnSuccessListener { querySnapshot ->
                         if (!querySnapshot.isEmpty) {
-                            val userNickname = querySnapshot.documents[0].getString("user_nickname")
-
-                            // 가져온 userId와 userNickname을 사용하여 Recruits 객체를 생성합니다.
                             val recruit = Recruits(
-                                recruit_id = nextRecruitId,
+                                recruit_id = newPostId,
                                 user_id = currentUserId,
                                 recruit_title = title,
                                 recruit_content = content,
                                 recruit_type = selectedFilter,
                                 recruit_endDate = endDate,
                                 recruit_date = SimpleDateFormat(
-                                    "yyyy-MM-dd",
-                                    Locale.getDefault()
+                                    "yyyy-MM-dd HH:mm", Locale.getDefault()
                                 ).format(selectedCurrentDate),
                                 recruit_session = recruitSession,
                                 recruit_class = recruitClass,
                                 recruit_curr = "0",
-                                recruit_max = maxCapacity
+                                recruit_max = maxCapacity,
+                                recruit_contact = contact
                             )
 
                             // Firestore에 모집글 업로드

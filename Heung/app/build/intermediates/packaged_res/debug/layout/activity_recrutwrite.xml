@@ -124,6 +124,40 @@
                     android:textSize="15sp" />
 
                 <LinearLayout
+                    android:id="@+id/Contact_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/contact"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/recruit_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/edittext_round"
+                        android:ems="10"
+                        android:gravity="top"
+                        android:hint="@string/email_phone"
+                        android:inputType="textMultiLine"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:id="@+id/recruit_filter_busking_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

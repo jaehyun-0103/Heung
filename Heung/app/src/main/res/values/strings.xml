@@ -28,8 +28,7 @@
     <string name="buskingR">버스킹</string>
     <string name="classR">클래스</string>
     <string name="filter">필터</string>
-    <string name="sessionType">세션 종류</string>
-    <string name="classType">클래스 종류</string>
+    <string name="type">종류</string>
     <string name="period">기간</string>
     <string name="number">수강인원</string>
     <string name="nicknameChange">닉네임 변경</string>
@@ -44,6 +43,12 @@
     <string name="more">더보기</string>
     <string name="regist">공연 정보 등록</string>
     <string name="location">현재 위치</string>
+    <string name="curr">현재 참여자 수</string>
+    <string name="maximum">최대 참여자 수</string>
+    <string name="sessionType">세션 타입</string>
+    <string name="classType">클래스 타입</string>
+    <string name="contact">연락처</string>
+    <string name="email_phone">이메일/전화번호</string>
 
     <string name="Main">메인</string>
     <string name="Recruit">모집</string>
@@ -80,4 +85,5 @@
         <item>대여점</item>
         <item>강의실</item>
     </string-array>
+
 </resources>

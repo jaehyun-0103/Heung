@@ -30,6 +30,7 @@
     <string name="filter">Filter</string>
     <string name="sessionType">Session Type</string>
     <string name="classType">Class Type</string>
+    <string name="type">Type</string>
     <string name="period">Period</string>
     <string name="nicknameChange">Change Nickname</string>
     <string name="withdrawal">Withdrawal</string>
@@ -80,4 +81,8 @@
     <string name="defaultmode">Default</string>
     <string name="ko">한국어</string>
     <string name="en">영어</string>
+    <string name="curr">Current</string>
+    <string name="maximum">Maximum</string>
+    <string name="contact">Contact</string>
+    <string name="email_phone">E-mail/Phone number</string>
 </resources>

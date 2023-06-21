@@ -6,49 +6,46 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.heung.R;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityRecrucontBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
-  public final RelativeLayout LinearLayoutAlready;
+  public final ConstraintLayout LinearLayoutAlready;
 
   @NonNull
-  public final Button btnReply;
-
-  @NonNull
-  public final TextInputLayout commentLayout;
+  public final Button complete;
 
   @NonNull
   public final LinearLayout editComment;
 
   @NonNull
-  public final TextInputEditText editReply;
+  public final LinearLayout linearLayout;
+
+  @NonNull
+  public final TextView recruit;
+
+  @NonNull
+  public final TextView recruitContact;
 
   @NonNull
   public final TextView recruitContentAuthor;
 
   @NonNull
   public final ImageButton recruitContentButtonBack;
-
-  @NonNull
-  public final TextView recruitContentClass;
 
   @NonNull
   public final TextView recruitContentContent;
@@ -69,18 +66,6 @@ public final class ActivityRecrucontBinding implements ViewBinding {
   public final TextView recruitContentMax;
 
   @NonNull
-  public final Button recruitContentParticipant;
-
-  @NonNull
-  public final ImageView recruitContentProfile;
-
-  @NonNull
-  public final RecyclerView recruitContentReplyRecyclerView;
-
-  @NonNull
-  public final TextView recruitContentSession;
-
-  @NonNull
   public final TextView recruitContentTitle;
 
   @NonNull
@@ -90,53 +75,51 @@ public final class ActivityRecrucontBinding implements ViewBinding {
   public final TextView recruitContentType;
 
   @NonNull
+  public final NumberPicker recruitCurr;
+
+  @NonNull
   public final Button recruitReplyDelete;
 
   @NonNull
-  public final Button recruitReplyModify;
+  public final TextView recruitType;
 
-  private ActivityRecrucontBinding(@NonNull RelativeLayout rootView,
-      @NonNull RelativeLayout LinearLayoutAlready, @NonNull Button btnReply,
-      @NonNull TextInputLayout commentLayout, @NonNull LinearLayout editComment,
-      @NonNull TextInputEditText editReply, @NonNull TextView recruitContentAuthor,
-      @NonNull ImageButton recruitContentButtonBack, @NonNull TextView recruitContentClass,
+  private ActivityRecrucontBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ConstraintLayout LinearLayoutAlready, @NonNull Button complete,
+      @NonNull LinearLayout editComment, @NonNull LinearLayout linearLayout,
+      @NonNull TextView recruit, @NonNull TextView recruitContact,
+      @NonNull TextView recruitContentAuthor, @NonNull ImageButton recruitContentButtonBack,
       @NonNull TextView recruitContentContent, @NonNull View recruitContentContentLine,
       @NonNull TextView recruitContentCurr, @NonNull TextView recruitContentDate,
       @NonNull TextView recruitContentEndDate, @NonNull TextView recruitContentMax,
-      @NonNull Button recruitContentParticipant, @NonNull ImageView recruitContentProfile,
-      @NonNull RecyclerView recruitContentReplyRecyclerView,
-      @NonNull TextView recruitContentSession, @NonNull TextView recruitContentTitle,
-      @NonNull View recruitContentTitleLine, @NonNull TextView recruitContentType,
-      @NonNull Button recruitReplyDelete, @NonNull Button recruitReplyModify) {
+      @NonNull TextView recruitContentTitle, @NonNull View recruitContentTitleLine,
+      @NonNull TextView recruitContentType, @NonNull NumberPicker recruitCurr,
+      @NonNull Button recruitReplyDelete, @NonNull TextView recruitType) {
     this.rootView = rootView;
     this.LinearLayoutAlready = LinearLayoutAlready;
-    this.btnReply = btnReply;
-    this.commentLayout = commentLayout;
+    this.complete = complete;
     this.editComment = editComment;
-    this.editReply = editReply;
+    this.linearLayout = linearLayout;
+    this.recruit = recruit;
+    this.recruitContact = recruitContact;
     this.recruitContentAuthor = recruitContentAuthor;
     this.recruitContentButtonBack = recruitContentButtonBack;
-    this.recruitContentClass = recruitContentClass;
     this.recruitContentContent = recruitContentContent;
     this.recruitContentContentLine = recruitContentContentLine;
     this.recruitContentCurr = recruitContentCurr;
     this.recruitContentDate = recruitContentDate;
     this.recruitContentEndDate = recruitContentEndDate;
     this.recruitContentMax = recruitContentMax;
-    this.recruitContentParticipant = recruitContentParticipant;
-    this.recruitContentProfile = recruitContentProfile;
-    this.recruitContentReplyRecyclerView = recruitContentReplyRecyclerView;
-    this.recruitContentSession = recruitContentSession;
     this.recruitContentTitle = recruitContentTitle;
     this.recruitContentTitleLine = recruitContentTitleLine;
     this.recruitContentType = recruitContentType;
+    this.recruitCurr = recruitCurr;
     this.recruitReplyDelete = recruitReplyDelete;
-    this.recruitReplyModify = recruitReplyModify;
+    this.recruitType = recruitType;
   }
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -161,17 +144,11 @@ public final class ActivityRecrucontBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      RelativeLayout LinearLayoutAlready = (RelativeLayout) rootView;
+      ConstraintLayout LinearLayoutAlready = (ConstraintLayout) rootView;
 
-      id = R.id.btn_reply;
-      Button btnReply = ViewBindings.findChildViewById(rootView, id);
-      if (btnReply == null) {
-        break missingId;
-      }
-
-      id = R.id.comment_layout;
-      TextInputLayout commentLayout = ViewBindings.findChildViewById(rootView, id);
-      if (commentLayout == null) {
+      id = R.id.complete;
+      Button complete = ViewBindings.findChildViewById(rootView, id);
+      if (complete == null) {
         break missingId;
       }
 
@@ -181,9 +158,21 @@ public final class ActivityRecrucontBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.edit_reply;
-      TextInputEditText editReply = ViewBindings.findChildViewById(rootView, id);
-      if (editReply == null) {
+      id = R.id.linearLayout;
+      LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit;
+      TextView recruit = ViewBindings.findChildViewById(rootView, id);
+      if (recruit == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_contact;
+      TextView recruitContact = ViewBindings.findChildViewById(rootView, id);
+      if (recruitContact == null) {
         break missingId;
       }
 
@@ -196,12 +185,6 @@ public final class ActivityRecrucontBinding implements ViewBinding {
       id = R.id.recruit_content_button_back;
       ImageButton recruitContentButtonBack = ViewBindings.findChildViewById(rootView, id);
       if (recruitContentButtonBack == null) {
-        break missingId;
-      }
-
-      id = R.id.recruit_content_class;
-      TextView recruitContentClass = ViewBindings.findChildViewById(rootView, id);
-      if (recruitContentClass == null) {
         break missingId;
       }
 
@@ -241,30 +224,6 @@ public final class ActivityRecrucontBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.recruit_content_participant;
-      Button recruitContentParticipant = ViewBindings.findChildViewById(rootView, id);
-      if (recruitContentParticipant == null) {
-        break missingId;
-      }
-
-      id = R.id.recruit_content_profile;
-      ImageView recruitContentProfile = ViewBindings.findChildViewById(rootView, id);
-      if (recruitContentProfile == null) {
-        break missingId;
-      }
-
-      id = R.id.recruit_content_replyRecyclerView;
-      RecyclerView recruitContentReplyRecyclerView = ViewBindings.findChildViewById(rootView, id);
-      if (recruitContentReplyRecyclerView == null) {
-        break missingId;
-      }
-
-      id = R.id.recruit_content_session;
-      TextView recruitContentSession = ViewBindings.findChildViewById(rootView, id);
-      if (recruitContentSession == null) {
-        break missingId;
-      }
-
       id = R.id.recruit_content_title;
       TextView recruitContentTitle = ViewBindings.findChildViewById(rootView, id);
       if (recruitContentTitle == null) {
@@ -283,25 +242,30 @@ public final class ActivityRecrucontBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recruit_curr;
+      NumberPicker recruitCurr = ViewBindings.findChildViewById(rootView, id);
+      if (recruitCurr == null) {
+        break missingId;
+      }
+
       id = R.id.recruit_reply_delete;
       Button recruitReplyDelete = ViewBindings.findChildViewById(rootView, id);
       if (recruitReplyDelete == null) {
         break missingId;
       }
 
-      id = R.id.recruit_reply_modify;
-      Button recruitReplyModify = ViewBindings.findChildViewById(rootView, id);
-      if (recruitReplyModify == null) {
+      id = R.id.recruit_type;
+      TextView recruitType = ViewBindings.findChildViewById(rootView, id);
+      if (recruitType == null) {
         break missingId;
       }
 
-      return new ActivityRecrucontBinding((RelativeLayout) rootView, LinearLayoutAlready, btnReply,
-          commentLayout, editComment, editReply, recruitContentAuthor, recruitContentButtonBack,
-          recruitContentClass, recruitContentContent, recruitContentContentLine, recruitContentCurr,
-          recruitContentDate, recruitContentEndDate, recruitContentMax, recruitContentParticipant,
-          recruitContentProfile, recruitContentReplyRecyclerView, recruitContentSession,
-          recruitContentTitle, recruitContentTitleLine, recruitContentType, recruitReplyDelete,
-          recruitReplyModify);
+      return new ActivityRecrucontBinding((ConstraintLayout) rootView, LinearLayoutAlready,
+          complete, editComment, linearLayout, recruit, recruitContact, recruitContentAuthor,
+          recruitContentButtonBack, recruitContentContent, recruitContentContentLine,
+          recruitContentCurr, recruitContentDate, recruitContentEndDate, recruitContentMax,
+          recruitContentTitle, recruitContentTitleLine, recruitContentType, recruitCurr,
+          recruitReplyDelete, recruitType);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

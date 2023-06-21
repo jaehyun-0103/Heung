@@ -24,7 +24,13 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final LinearLayout ContactInformation;
+
+  @NonNull
   public final ImageButton recruitBtnBack;
+
+  @NonNull
+  public final EditText recruitContact;
 
   @NonNull
   public final EditText recruitContent;
@@ -72,7 +78,8 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
   public final Button recruitUpload;
 
   private ActivityRecrutwriteBinding(@NonNull LinearLayout rootView,
-      @NonNull ImageButton recruitBtnBack, @NonNull EditText recruitContent,
+      @NonNull LinearLayout ContactInformation, @NonNull ImageButton recruitBtnBack,
+      @NonNull EditText recruitContact, @NonNull EditText recruitContent,
       @NonNull Button recruitFilterBusking, @NonNull NumberPicker recruitFilterBuskingCapacity,
       @NonNull EditText recruitFilterBuskingDate, @NonNull LinearLayout recruitFilterBuskingLayout,
       @NonNull EditText recruitFilterBuskingSession, @NonNull Button recruitFilterClass,
@@ -81,7 +88,9 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
       @NonNull View recruitLine, @NonNull TextView recruitPost, @NonNull EditText recruitTitle,
       @NonNull Button recruitUpload) {
     this.rootView = rootView;
+    this.ContactInformation = ContactInformation;
     this.recruitBtnBack = recruitBtnBack;
+    this.recruitContact = recruitContact;
     this.recruitContent = recruitContent;
     this.recruitFilterBusking = recruitFilterBusking;
     this.recruitFilterBuskingCapacity = recruitFilterBuskingCapacity;
@@ -126,9 +135,21 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.Contact_information;
+      LinearLayout ContactInformation = ViewBindings.findChildViewById(rootView, id);
+      if (ContactInformation == null) {
+        break missingId;
+      }
+
       id = R.id.recruit_btn_back;
       ImageButton recruitBtnBack = ViewBindings.findChildViewById(rootView, id);
       if (recruitBtnBack == null) {
+        break missingId;
+      }
+
+      id = R.id.recruit_contact;
+      EditText recruitContact = ViewBindings.findChildViewById(rootView, id);
+      if (recruitContact == null) {
         break missingId;
       }
 
@@ -222,11 +243,12 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityRecrutwriteBinding((LinearLayout) rootView, recruitBtnBack, recruitContent,
-          recruitFilterBusking, recruitFilterBuskingCapacity, recruitFilterBuskingDate,
-          recruitFilterBuskingLayout, recruitFilterBuskingSession, recruitFilterClass,
-          recruitFilterClassCapacity, recruitFilterClassDate2, recruitFilterClassLayout,
-          recruitFilterClassType, recruitLine, recruitPost, recruitTitle, recruitUpload);
+      return new ActivityRecrutwriteBinding((LinearLayout) rootView, ContactInformation,
+          recruitBtnBack, recruitContact, recruitContent, recruitFilterBusking,
+          recruitFilterBuskingCapacity, recruitFilterBuskingDate, recruitFilterBuskingLayout,
+          recruitFilterBuskingSession, recruitFilterClass, recruitFilterClassCapacity,
+          recruitFilterClassDate2, recruitFilterClassLayout, recruitFilterClassType, recruitLine,
+          recruitPost, recruitTitle, recruitUpload);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

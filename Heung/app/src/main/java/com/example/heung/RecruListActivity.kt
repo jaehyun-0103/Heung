@@ -126,10 +126,9 @@ class RecruListActivity : AppCompatActivity() {
 
     private fun loadRecruits() {
         firestore.collection("Recruits")
-            .orderBy("recruit_id", Query.Direction.DESCENDING)
+            .orderBy("recruit_date", Query.Direction.DESCENDING)
             .addSnapshotListener { querySnapshot, exception ->
                 if (exception != null) {
-                    // 에러 처리
                     return@addSnapshotListener
                 }
                 querySnapshot?.let {
@@ -150,22 +149,21 @@ class RecruListActivity : AppCompatActivity() {
     private fun filterByType(type: String) {
         firestore.collection("Recruits")
             .whereEqualTo("recruit_type", type)
-            .orderBy("recruit_id", Query.Direction.DESCENDING)
-            .addSnapshotListener { querySnapshot, exception ->
-                if (exception != null) {
-                    // 에러 처리
+            .orderBy("recruit_date", Query.Direction.DESCENDING)
+            .addSnapshotListener { recruitSnapshot, recruitException ->
+                if (recruitException != null) { // Error handling
                     return@addSnapshotListener
                 }
-                querySnapshot?.let {
+
+                recruitSnapshot?.let {
                     recruitList.clear()
-                    for (document in it.documents) {
+                    for (document in recruitSnapshot.documents) {
                         val recruit = document.toObject(Recruits::class.java)
                         recruit?.let {
-                            if (recruit.recruit_id.isNotEmpty()) {
-                                recruitList.add(recruit)
-                            }
+                            recruitList.add(recruit)
                         }
                     }
+
                     recruitListAdapter.notifyDataSetChanged()
                 }
             }

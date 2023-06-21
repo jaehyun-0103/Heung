@@ -2267,7 +2267,7 @@
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
     <string name="classR">클래스</string>
-    <string name="classType">클래스 종류</string>
+    <string name="classType">클래스 타입</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
     <string name="com_kakao_talk_chooser_text">Which version of KakaoTalk would you like to use?</string>
     <string name="comment">댓글</string>
@@ -2291,15 +2291,18 @@
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="complete">완료</string>
+    <string name="contact">연락처</string>
     <string name="content">내용</string>
     <string name="copy_toast_msg">Link copied to clipboard</string>
     <string name="create">생성</string>
+    <string name="curr">현재 참여자 수</string>
     <string name="darkmode">다크모드</string>
     <string name="date">날짜</string>
     <string name="default_web_client_id" translatable="false">684572523168-7o6cp3391eq340huf2khaq9geqbds047.apps.googleusercontent.com</string>
     <string name="defaultmode">기본값</string>
     <string name="delete">삭제</string>
     <string name="detail">공연 정보 세부사항</string>
+    <string name="email_phone">이메일/전화번호</string>
     <string name="en">English</string>
     <string name="endTime">끝나는 시간</string>
     <string description="Screen reader announcement for when a checkbox is on error. [CHAR LIMIT=NONE]" name="error_a11y_label">
@@ -2362,6 +2365,7 @@
     <string description="Suffix for time in 12-hour standard, after noon. [CHAR_LIMIT=2]" name="material_timepicker_pm">PM</string>
     <string description="Title for the dialog with a time picker. [CHAR_LIMIT=32]" name="material_timepicker_select_time">Select time</string>
     <string name="material_timepicker_text_input_mode_description">Switch to text input mode for the time input.</string>
+    <string name="maximum">최대 참여자 수</string>
     <string name="modify">수정</string>
     <string name="more">더보기</string>
     <string description="Content description for new notification (no number count) [CHAR_LIMIT=NONE]" name="mtrl_badge_numberless_content_description">New notification</string>
@@ -2471,13 +2475,14 @@
   </string>
     <string description="Content description for the X button to clear text [CHAR_LIMIT=NONE]" name="searchview_clear_text_content_description">Clear text</string>
     <string description="Content description for the navigation button to return to the previous screen [CHAR_LIMIT=NONE]" name="searchview_navigation_content_description">Back</string>
-    <string name="sessionType">세션 종류</string>
+    <string name="sessionType">세션 타입</string>
     <string description="Title of the side sheet&apos;s accessibility pane that is spoken by TalkBack when the side sheet appears on screen. [CHAR_LIMIT=NONE]" name="side_sheet_accessibility_pane_title">Side Sheet</string>
     <string name="side_sheet_behavior" translatable="false">com.google.android.material.sidesheet.SideSheetBehavior</string>
     <string name="start">시작</string>
     <string name="startTime">시작 시간</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title">제목</string>
+    <string name="type">종류</string>
     <string name="upload">등록</string>
     <string name="withdrawal">회원탈퇴</string>
     <string name="within">25자 이내로 작성</string>

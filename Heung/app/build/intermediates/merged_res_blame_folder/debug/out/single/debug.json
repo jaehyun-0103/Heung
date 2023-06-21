@@ -16,44 +16,36 @@
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\mipmap-hdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\layout_activity_postcont.xml.flat",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\activity_postcont.xml"
     },
     {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\drawable_map.xml.flat",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\drawable\\map.xml"
+        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\layout_activity_postwrite.xml.flat",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\activity_postwrite.xml"
     },
     {
-        "merged": "com.example.heung.app-merged_res-62:/layout_activity_postcont.xml.flat",
-        "source": "com.example.heung.app-main-64:/layout/activity_postcont.xml"
+        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\drawable_map.xml.flat",
+        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\drawable\\map.xml"
+    },
+    {
+        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\drawable_home.xml.flat",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\drawable\\home.xml"
     },
     {
-        "merged": "com.example.heung.app-merged_res-62:/layout_activity_setting.xml.flat",
-        "source": "com.example.heung.app-main-64:/layout/activity_setting.xml"
+        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\drawable_music_icon.xml.flat",
+        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\drawable\\music_icon.xml"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\mipmap-xxxhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\drawable_music_icon.xml.flat",
-        "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\drawable\\music_icon.xml"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\drawable-v24_ic_launcher_foreground.xml.flat",
@@ -86,6 +78,10 @@
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-62:/layout_activity_recrucont.xml.flat",
+        "source": "com.example.heung.app-main-64:/layout/activity_recrucont.xml"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\drawable_chat_icon.xml.flat",
@@ -126,6 +122,10 @@
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-62:/layout_activity_recrutwrite.xml.flat",
+        "source": "com.example.heung.app-main-64:/layout/activity_recrutwrite.xml"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\drawable_btn_kakao.png.flat",
@@ -254,10 +254,6 @@
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\mipmap-xxhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "com.example.heung.app-merged_res-62:/layout_item_reply.xml.flat",
-        "source": "com.example.heung.app-main-64:/layout/item_reply.xml"
     },
     {
         "merged": "C:\\Users\\rhfuv\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\layout_item_callist.xml.flat",
