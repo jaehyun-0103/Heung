@@ -27,7 +27,6 @@ class PostWriteActivity : AppCompatActivity() {
         // 초기 상태에서 버튼 비활성화
         postSave.isEnabled = false
 
-        generateNewPostId()
 
         // 저장 버튼 클릭 이벤트 처리
         postSave.setOnClickListener {

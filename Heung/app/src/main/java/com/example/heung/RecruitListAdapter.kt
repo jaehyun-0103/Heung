@@ -5,12 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.firestore.FirebaseFirestore
 import data.Recruits
+import data.Users
 
 
 class RecruitListAdapter(private val recruitList: MutableList<Recruits>) :
     RecyclerView.Adapter<RecruitListAdapter.RecruitViewHolder>() {
-
+    private lateinit var firestore: FirebaseFirestore
     // 아이템 클릭 리스너 인터페이스 정의
     interface OnItemClickListener {
         fun onItemClick(recruit: Recruits)
@@ -42,7 +44,6 @@ class RecruitListAdapter(private val recruitList: MutableList<Recruits>) :
     }
 
     inner class RecruitViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        // 아이템에 표시될 뷰 요소들 선언
         private val titleTextView: TextView = itemView.findViewById(R.id.recruit_item_title)
         private val dateTextView: TextView = itemView.findViewById(R.id.recruit_item_date)
         private val typeTextView: TextView = itemView.findViewById(R.id.recruit_item_type)
@@ -63,7 +64,24 @@ class RecruitListAdapter(private val recruitList: MutableList<Recruits>) :
             titleTextView.text = recruit.recruit_title
             dateTextView.text = recruit.recruit_date
             typeTextView.text = recruit.recruit_type
-            nicknameTextView.text = "닉네임"
+
+            firestore = FirebaseFirestore.getInstance()
+            val usersCollection = firestore.collection("Users")
+            usersCollection
+                .whereEqualTo("user_id", recruit.user_id)
+                .get()
+                .addOnSuccessListener { userQuerySnapshot ->
+                    if (!userQuerySnapshot.isEmpty) {
+                        val userDocumentSnapshot = userQuerySnapshot.documents[0]
+                        val user = userDocumentSnapshot.toObject(Users::class.java)
+                        if (user != null) {
+                            nicknameTextView.text = user.user_nickname
+                        }
+                    }
+                }
+                .addOnFailureListener { exception ->
+                    // 실패 처리
+                }
         }
     }
 }
