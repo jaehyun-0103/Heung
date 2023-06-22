@@ -32,6 +32,7 @@ class RentActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
     private lateinit var locationContentTextView: TextView
     private lateinit var stores: List<Store>
     private var markerList: MutableList<Marker> = mutableListOf()
+    private lateinit var spinnerCategory: Spinner
 
     private val autoCompleteOptions = arrayOf(
         "대야동", "신천동", "신현동", "은행동", "매화동",
@@ -54,6 +55,8 @@ class RentActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync(this)
 
+        spinnerCategory = findViewById(R.id.dropdown)
+
         initBottomNavigation()
 
         val searchBar: AutoCompleteTextView =
@@ -71,6 +74,7 @@ class RentActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
             if (district.isNotBlank()) {
                 getStoresByDistrictFromFirebase(district)
             }
+            spinnerCategory.setSelection(0)
         }
 
         val locationNowButton = findViewById<Button>(R.id.locationNow)
@@ -247,7 +251,6 @@ class RentActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
             }
     }
 
-
     private fun addMarkersToMap() {
         // 기존의 마커 제거
         for (marker in markerList) {
@@ -268,7 +271,6 @@ class RentActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
             }
         }
 
-        val spinnerCategory: Spinner = findViewById(R.id.dropdown)
         spinnerCategory.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -310,7 +312,7 @@ class RentActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                         markerList.clear()
 
                         for (store in stores) {
-                            if (store.content == "a") {
+                            if (store.content == "공연장") {
                                 val location =
                                     LatLng(store.location.latitude, store.location.longitude)
                                 val marker = googleMap.addMarker(
@@ -333,7 +335,7 @@ class RentActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                         markerList.clear()
 
                         for (store in stores) {
-                            if (store.content == "b") {
+                            if (store.content == "대여점") {
                                 val location =
                                     LatLng(store.location.latitude, store.location.longitude)
                                 val marker = googleMap.addMarker(
@@ -356,7 +358,7 @@ class RentActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                         markerList.clear()
 
                         for (store in stores) {
-                            if (store.content == "c") {
+                            if (store.content == "강의실") {
                                 val location =
                                     LatLng(store.location.latitude, store.location.longitude)
                                 val marker = googleMap.addMarker(

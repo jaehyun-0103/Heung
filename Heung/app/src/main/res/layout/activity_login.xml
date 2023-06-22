@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#212121"
+    android:background="@color/white"
     tools:context=".LoginActivity">
 
     <ImageView
@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.22"
-        app:tint="#000000" />
+        app:tint="@color/black" />
 
     <ImageButton
         android:id="@+id/kakao_login_button"

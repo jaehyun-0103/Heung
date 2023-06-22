@@ -4,7 +4,7 @@ package com.example.heung.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -33,7 +33,7 @@ public final class ActivityCalBinding implements ViewBinding {
   public final MaterialCalendarView calendarView;
 
   @NonNull
-  public final Button calwriteBtn;
+  public final ImageButton calwriteBtn;
 
   @NonNull
   public final View postLine;
@@ -43,7 +43,7 @@ public final class ActivityCalBinding implements ViewBinding {
 
   private ActivityCalBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView btnBack,
       @NonNull RecyclerView calData, @NonNull MaterialCalendarView calendarView,
-      @NonNull Button calwriteBtn, @NonNull View postLine, @NonNull TextView title) {
+      @NonNull ImageButton calwriteBtn, @NonNull View postLine, @NonNull TextView title) {
     this.rootView = rootView;
     this.btnBack = btnBack;
     this.calData = calData;
@@ -99,7 +99,7 @@ public final class ActivityCalBinding implements ViewBinding {
       }
 
       id = R.id.calwriteBtn;
-      Button calwriteBtn = ViewBindings.findChildViewById(rootView, id);
+      ImageButton calwriteBtn = ViewBindings.findChildViewById(rootView, id);
       if (calwriteBtn == null) {
         break missingId;
       }

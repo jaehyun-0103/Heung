@@ -50,9 +50,6 @@ public final class ActivityMainBinding implements ViewBinding {
   public final RecyclerView popularPostsRecyclerview;
 
   @NonNull
-  public final TextView post;
-
-  @NonNull
   public final View postLine;
 
   @NonNull
@@ -66,8 +63,7 @@ public final class ActivityMainBinding implements ViewBinding {
       @NonNull Button btnPostlist, @NonNull RecyclerView latestPostsRecyclerview,
       @NonNull ConstraintLayout layout, @NonNull ConstraintLayout layout2,
       @NonNull ConstraintLayout mainLayout, @NonNull RecyclerView popularPostsRecyclerview,
-      @NonNull TextView post, @NonNull View postLine, @NonNull TextView tvPopularPosts,
-      @NonNull TextView tvRecentPosts) {
+      @NonNull View postLine, @NonNull TextView tvPopularPosts, @NonNull TextView tvRecentPosts) {
     this.rootView = rootView;
     this.app = app;
     this.bottomNavigation = bottomNavigation;
@@ -78,7 +74,6 @@ public final class ActivityMainBinding implements ViewBinding {
     this.layout2 = layout2;
     this.mainLayout = mainLayout;
     this.popularPostsRecyclerview = popularPostsRecyclerview;
-    this.post = post;
     this.postLine = postLine;
     this.tvPopularPosts = tvPopularPosts;
     this.tvRecentPosts = tvRecentPosts;
@@ -162,12 +157,6 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.post;
-      TextView post = ViewBindings.findChildViewById(rootView, id);
-      if (post == null) {
-        break missingId;
-      }
-
       id = R.id.post_line;
       View postLine = ViewBindings.findChildViewById(rootView, id);
       if (postLine == null) {
@@ -188,7 +177,7 @@ public final class ActivityMainBinding implements ViewBinding {
 
       return new ActivityMainBinding((ConstraintLayout) rootView, app, binding_bottomNavigation,
           btnBack, btnPostlist, latestPostsRecyclerview, layout, layout2, mainLayout,
-          popularPostsRecyclerview, post, postLine, tvPopularPosts, tvRecentPosts);
+          popularPostsRecyclerview, postLine, tvPopularPosts, tvRecentPosts);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

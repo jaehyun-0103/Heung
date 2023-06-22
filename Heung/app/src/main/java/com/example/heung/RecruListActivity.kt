@@ -3,6 +3,7 @@ package com.example.heung
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -56,7 +57,7 @@ class RecruListActivity : AppCompatActivity() {
         }
 
         // 게시글 작성 버튼 클릭 이벤트 처리
-        val recruitCreateButton = findViewById<Button>(R.id.recruit_create)
+        val recruitCreateButton = findViewById<ImageButton>(R.id.recruit_create)
         recruitCreateButton.setOnClickListener {
             val intent = Intent(this, RecrutWriteActivity::class.java)
             startActivity(intent)

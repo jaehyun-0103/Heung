@@ -7,6 +7,7 @@ import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import com.example.heung.databinding.ActivityPostcontBindingImpl;
+import com.example.heung.databinding.ActivityRecrucontBindingImpl;
 import com.example.heung.databinding.ItemCallistBindingImpl;
 import com.example.heung.databinding.ItemPostcommentBindingImpl;
 import com.example.heung.databinding.ItemPostcontBindingImpl;
@@ -24,18 +25,21 @@ import java.util.List;
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYPOSTCONT = 1;
 
-  private static final int LAYOUT_ITEMCALLIST = 2;
+  private static final int LAYOUT_ACTIVITYRECRUCONT = 2;
 
-  private static final int LAYOUT_ITEMPOSTCOMMENT = 3;
+  private static final int LAYOUT_ITEMCALLIST = 3;
 
-  private static final int LAYOUT_ITEMPOSTCONT = 4;
+  private static final int LAYOUT_ITEMPOSTCOMMENT = 4;
 
-  private static final int LAYOUT_ITEMREPLY = 5;
+  private static final int LAYOUT_ITEMPOSTCONT = 5;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(5);
+  private static final int LAYOUT_ITEMREPLY = 6;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(6);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.heung.R.layout.activity_postcont, LAYOUT_ACTIVITYPOSTCONT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.heung.R.layout.activity_recrucont, LAYOUT_ACTIVITYRECRUCONT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.heung.R.layout.item_callist, LAYOUT_ITEMCALLIST);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.heung.R.layout.item_postcomment, LAYOUT_ITEMPOSTCOMMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.heung.R.layout.item_postcont, LAYOUT_ITEMPOSTCONT);
@@ -56,6 +60,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ActivityPostcontBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_postcont is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYRECRUCONT: {
+          if ("layout/activity_recrucont_0".equals(tag)) {
+            return new ActivityRecrucontBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_recrucont is invalid. Received: " + tag);
         }
         case  LAYOUT_ITEMCALLIST: {
           if ("layout/item_callist_0".equals(tag)) {
@@ -134,10 +144,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(5);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(6);
 
     static {
       sKeys.put("layout/activity_postcont_0", com.example.heung.R.layout.activity_postcont);
+      sKeys.put("layout/activity_recrucont_0", com.example.heung.R.layout.activity_recrucont);
       sKeys.put("layout/item_callist_0", com.example.heung.R.layout.item_callist);
       sKeys.put("layout/item_postcomment_0", com.example.heung.R.layout.item_postcomment);
       sKeys.put("layout/item_postcont_0", com.example.heung.R.layout.item_postcont);

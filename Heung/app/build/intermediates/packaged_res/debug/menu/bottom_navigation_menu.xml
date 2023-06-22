@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/nav_main"
-        android:title="@string/Main"
         android:icon="@drawable/home"
-        app:showAsAction="always"/>
+        app:showAsAction="always"
+        tools:ignore="HardcodedText,MenuTitle" />
 
     <item
         android:id="@+id/nav_recruit"
         android:icon="@drawable/recruit"
-        android:title="@string/Recruit"
-        app:showAsAction="always"/>
+        app:showAsAction="always"
+        tools:ignore="MenuTitle" />
 
     <item
         android:id="@+id/nav_map"
         android:icon="@drawable/map"
-        android:title="@string/Map"
-        app:showAsAction="always"/>
+        app:showAsAction="always"
+        tools:ignore="MenuTitle" />
 
     <item
         android:id="@+id/nav_calendar"
         android:icon="@drawable/calendar"
-        android:title="@string/Cal"
-        app:showAsAction="always"/>
+        app:showAsAction="always"
+        tools:ignore="MenuTitle" />
 
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/profile"
-        android:title="@string/Prof"
-        app:showAsAction="always"/>
+        app:showAsAction="always"
+        tools:ignore="MenuTitle" />
 </menu>

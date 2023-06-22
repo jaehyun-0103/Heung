@@ -36,7 +36,7 @@ public class ItemPostcontBindingImpl extends ItemPostcontBinding  {
     private ItemPostcontBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (android.widget.ImageView) bindings[2]
-            , (android.widget.Button) bindings[6]
+            , (android.widget.ImageButton) bindings[6]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[1]
             , (androidx.recyclerview.widget.RecyclerView) bindings[7]
             , (android.widget.TextView) bindings[3]

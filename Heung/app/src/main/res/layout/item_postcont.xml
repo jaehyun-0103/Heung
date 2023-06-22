@@ -65,19 +65,19 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_comment" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/btnReply"
-                android:layout_width="84dp"
-                android:layout_height="34dp"
-                android:layout_marginEnd="10dp"
+                android:layout_width="47dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/resource_file"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="bottom"
-                android:paddingStart="20dp"
-                android:textColor="@color/black"
-                android:textSize="11sp"
+                android:src="@drawable/chat"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

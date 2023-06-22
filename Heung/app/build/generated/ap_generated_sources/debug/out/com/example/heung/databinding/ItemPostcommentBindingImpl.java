@@ -14,11 +14,12 @@ public class ItemPostcommentBindingImpl extends ItemPostcommentBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.account_iv_profile, 1);
-        sViewsWithIds.put(R.id.tv_author, 2);
-        sViewsWithIds.put(R.id.imgSetting, 3);
+        sViewsWithIds.put(R.id.comment_details_layout, 1);
+        sViewsWithIds.put(R.id.account_iv_profile, 2);
+        sViewsWithIds.put(R.id.tv_author, 3);
         sViewsWithIds.put(R.id.tv_comment, 4);
         sViewsWithIds.put(R.id.tv_date, 5);
+        sViewsWithIds.put(R.id.imgSetting, 6);
     }
     // views
     // variables
@@ -27,14 +28,15 @@ public class ItemPostcommentBindingImpl extends ItemPostcommentBinding  {
     // Inverse Binding Event Handlers
 
     public ItemPostcommentBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
     }
     private ItemPostcommentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.ImageView) bindings[1]
+            , (android.widget.ImageView) bindings[2]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
-            , (android.widget.ImageView) bindings[3]
-            , (android.widget.TextView) bindings[2]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[1]
+            , (android.widget.ImageView) bindings[6]
+            , (android.widget.TextView) bindings[3]
             , (android.widget.TextView) bindings[4]
             , (android.widget.TextView) bindings[5]
             );

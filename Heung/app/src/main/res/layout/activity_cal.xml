@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/btn_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="46dp"
+        android:layout_height="52dp"
         android:layout_marginStart="8dp"
         android:padding="8dp"
         android:src="@drawable/music_icon"
@@ -32,22 +32,24 @@
         android:id="@+id/post_line"
         android:layout_width="0dp"
         android:layout_height="0.5dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="#808080"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_back" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
-    <Button
+    <ImageButton
         android:id="@+id/calwriteBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="62dp"
+        android:layout_height="51dp"
+        android:background="#FFFFFF"
+        android:src="@drawable/home"
         android:text="@string/write"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.prolificinteractive.materialcalendarview.MaterialCalendarView
         android:id="@+id/calendarView"
-        android:layout_width="427dp"
+        android:layout_width="match_parent"
         android:layout_height="432dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +60,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cal_data"
-        android:layout_width="419dp"
+        android:layout_width="match_parent"
         android:layout_height="180dp"
         android:layout_marginTop="8dp"
         android:layout_weight="0.6"

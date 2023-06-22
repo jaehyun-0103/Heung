@@ -24,6 +24,9 @@ public final class ItemPostlistBinding implements ViewBinding {
   public final ConstraintLayout ConstraintLayoutAlready;
 
   @NonNull
+  public final ImageView imageView2;
+
+  @NonNull
   public final ImageView imgComment;
 
   @NonNull
@@ -48,12 +51,13 @@ public final class ItemPostlistBinding implements ViewBinding {
   public final TextView postTitle;
 
   private ItemPostlistBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout ConstraintLayoutAlready, @NonNull ImageView imgComment,
-      @NonNull ImageView musicIcon, @NonNull TextView postComment, @NonNull TextView postDate,
-      @NonNull TextView postLikes, @NonNull View postLine, @NonNull TextView postNickname,
-      @NonNull TextView postTitle) {
+      @NonNull ConstraintLayout ConstraintLayoutAlready, @NonNull ImageView imageView2,
+      @NonNull ImageView imgComment, @NonNull ImageView musicIcon, @NonNull TextView postComment,
+      @NonNull TextView postDate, @NonNull TextView postLikes, @NonNull View postLine,
+      @NonNull TextView postNickname, @NonNull TextView postTitle) {
     this.rootView = rootView;
     this.ConstraintLayoutAlready = ConstraintLayoutAlready;
+    this.imageView2 = imageView2;
     this.imgComment = imgComment;
     this.musicIcon = musicIcon;
     this.postComment = postComment;
@@ -92,6 +96,12 @@ public final class ItemPostlistBinding implements ViewBinding {
     int id;
     missingId: {
       ConstraintLayout ConstraintLayoutAlready = (ConstraintLayout) rootView;
+
+      id = R.id.imageView2;
+      ImageView imageView2 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView2 == null) {
+        break missingId;
+      }
 
       id = R.id.img_comment;
       ImageView imgComment = ViewBindings.findChildViewById(rootView, id);
@@ -142,8 +152,8 @@ public final class ItemPostlistBinding implements ViewBinding {
       }
 
       return new ItemPostlistBinding((ConstraintLayout) rootView, ConstraintLayoutAlready,
-          imgComment, musicIcon, postComment, postDate, postLikes, postLine, postNickname,
-          postTitle);
+          imageView2, imgComment, musicIcon, postComment, postDate, postLikes, postLine,
+          postNickname, postTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

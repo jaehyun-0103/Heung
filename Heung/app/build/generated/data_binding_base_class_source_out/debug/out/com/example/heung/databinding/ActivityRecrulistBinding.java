@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -29,7 +30,7 @@ public final class ActivityRecrulistBinding implements ViewBinding {
   public final ImageView recruitBtnBack;
 
   @NonNull
-  public final Button recruitCreate;
+  public final ImageButton recruitCreate;
 
   @NonNull
   public final Button recruitFilterBusking;
@@ -47,7 +48,7 @@ public final class ActivityRecrulistBinding implements ViewBinding {
   public final Button recruitViewAll;
 
   private ActivityRecrulistBinding(@NonNull ConstraintLayout rootView, @NonNull View postLine,
-      @NonNull ImageView recruitBtnBack, @NonNull Button recruitCreate,
+      @NonNull ImageView recruitBtnBack, @NonNull ImageButton recruitCreate,
       @NonNull Button recruitFilterBusking, @NonNull Button recruitFilterClass,
       @NonNull RecyclerView recruitList, @NonNull TextView recruitTitle,
       @NonNull Button recruitViewAll) {
@@ -102,7 +103,7 @@ public final class ActivityRecrulistBinding implements ViewBinding {
       }
 
       id = R.id.recruit_create;
-      Button recruitCreate = ViewBindings.findChildViewById(rootView, id);
+      ImageButton recruitCreate = ViewBindings.findChildViewById(rootView, id);
       if (recruitCreate == null) {
         break missingId;
       }

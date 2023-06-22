@@ -71,14 +71,14 @@ class PostListActivity : AppCompatActivity() {
         }
 
         // 게시글 작성 버튼 클릭 이벤트 처리
-        val postCreate = findViewById<Button>(R.id.post_create)
+        val postCreate = findViewById<ImageButton>(R.id.post_create)
         postCreate.setOnClickListener {
             val intent = Intent(this, PostWriteActivity::class.java)
             startActivity(intent)
         }
 
         // 인기 게시글 보기 버튼 클릭 이벤트 처리
-        val postPopular = findViewById<Button>(R.id.post_popular)
+        val postPopular = findViewById<ImageButton>(R.id.post_popular)
         postPopular.setOnClickListener {
             showPopularPosts = !showPopularPosts // showPopularPosts 변수 값을 토글
             if (showPopularPosts) {

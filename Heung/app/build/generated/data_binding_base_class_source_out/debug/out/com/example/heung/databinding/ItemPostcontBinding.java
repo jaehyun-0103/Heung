@@ -4,7 +4,7 @@ package com.example.heung.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -22,7 +22,7 @@ public abstract class ItemPostcontBinding extends ViewDataBinding {
   public final ImageView accountIvProfile;
 
   @NonNull
-  public final Button btnReply;
+  public final ImageButton btnReply;
 
   @NonNull
   public final ConstraintLayout comment;
@@ -40,7 +40,7 @@ public abstract class ItemPostcontBinding extends ViewDataBinding {
   public final TextView tvDate;
 
   protected ItemPostcontBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      ImageView accountIvProfile, Button btnReply, ConstraintLayout comment,
+      ImageView accountIvProfile, ImageButton btnReply, ConstraintLayout comment,
       RecyclerView replyRecycler, TextView tvAuthor, TextView tvComment, TextView tvDate) {
     super(_bindingComponent, _root, _localFieldCount);
     this.accountIvProfile = accountIvProfile;

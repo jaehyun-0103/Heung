@@ -68,10 +68,10 @@ public abstract class ActivityPostcontBinding extends ViewDataBinding {
   public final TextView likeCnt;
 
   @NonNull
-  public final View postLine;
+  public final View postLine2;
 
   @NonNull
-  public final View postLine2;
+  public final View postLine3;
 
   @NonNull
   public final ImageButton setting;
@@ -96,7 +96,7 @@ public abstract class ActivityPostcontBinding extends ViewDataBinding {
       ConstraintLayout boardcontentConslayout, Button btnCtv, ImageView commentBtn,
       TextInputLayout commentLayout, TextInputEditText commentTextview, ConstraintLayout conslayout,
       ConstraintLayout contentConslayout, RecyclerView contentPhotoRecycler, ImageButton dirogagi,
-      LinearLayout edtComment, ImageView likeBtn, TextView likeCnt, View postLine, View postLine2,
+      LinearLayout edtComment, ImageView likeBtn, TextView likeCnt, View postLine2, View postLine3,
       ImageButton setting, TextView tvAuthor, TextView tvContent, TextView tvDate, TextView tvTitle,
       ConstraintLayout userinfoConslayout) {
     super(_bindingComponent, _root, _localFieldCount);
@@ -115,8 +115,8 @@ public abstract class ActivityPostcontBinding extends ViewDataBinding {
     this.edtComment = edtComment;
     this.likeBtn = likeBtn;
     this.likeCnt = likeCnt;
-    this.postLine = postLine;
     this.postLine2 = postLine2;
+    this.postLine3 = postLine3;
     this.setting = setting;
     this.tvAuthor = tvAuthor;
     this.tvContent = tvContent;

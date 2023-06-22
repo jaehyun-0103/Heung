@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -90,7 +91,7 @@ class CommentsAdapter(private val postList: MutableList<Comments>
 
     // 각 아이템을 위한 ViewHolder 클래스
     inner class CommentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val btnReply: Button = itemView.findViewById(R.id.btnReply)
+        val btnReply: ImageButton = itemView.findViewById(R.id.btnReply)
         init {
             btnReply.setOnClickListener {
                 val position = adapterPosition

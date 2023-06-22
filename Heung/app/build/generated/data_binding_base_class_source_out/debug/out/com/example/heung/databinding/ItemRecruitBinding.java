@@ -5,10 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.heung.R;
@@ -18,10 +18,10 @@ import java.lang.String;
 
 public final class ItemRecruitBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
-  public final LinearLayout LinearLayoutAlready;
+  public final ConstraintLayout ConstraintLayoutAlready;
 
   @NonNull
   public final ImageView musicIcon;
@@ -41,13 +41,13 @@ public final class ItemRecruitBinding implements ViewBinding {
   @NonNull
   public final TextView recruitItemType;
 
-  private ItemRecruitBinding(@NonNull LinearLayout rootView,
-      @NonNull LinearLayout LinearLayoutAlready, @NonNull ImageView musicIcon,
+  private ItemRecruitBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ConstraintLayout ConstraintLayoutAlready, @NonNull ImageView musicIcon,
       @NonNull View postLine, @NonNull TextView recruitItemDate,
       @NonNull TextView recruitItemNickname, @NonNull TextView recruitItemTitle,
       @NonNull TextView recruitItemType) {
     this.rootView = rootView;
-    this.LinearLayoutAlready = LinearLayoutAlready;
+    this.ConstraintLayoutAlready = ConstraintLayoutAlready;
     this.musicIcon = musicIcon;
     this.postLine = postLine;
     this.recruitItemDate = recruitItemDate;
@@ -58,7 +58,7 @@ public final class ItemRecruitBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -83,7 +83,7 @@ public final class ItemRecruitBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      LinearLayout LinearLayoutAlready = (LinearLayout) rootView;
+      ConstraintLayout ConstraintLayoutAlready = (ConstraintLayout) rootView;
 
       id = R.id.music_icon;
       ImageView musicIcon = ViewBindings.findChildViewById(rootView, id);
@@ -121,7 +121,7 @@ public final class ItemRecruitBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemRecruitBinding((LinearLayout) rootView, LinearLayoutAlready, musicIcon,
+      return new ItemRecruitBinding((ConstraintLayout) rootView, ConstraintLayoutAlready, musicIcon,
           postLine, recruitItemDate, recruitItemNickname, recruitItemTitle, recruitItemType);
     }
     String missingId = rootView.getResources().getResourceName(id);

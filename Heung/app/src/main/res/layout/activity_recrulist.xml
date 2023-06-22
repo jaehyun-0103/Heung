@@ -9,9 +9,10 @@
         android:id="@+id/recruit_btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:padding="8dp"
         android:src="@drawable/music_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/recruit_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,9 +20,9 @@
         android:id="@+id/recruit_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/recruit"
-        android:layout_marginStart="8dp"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/recruit_btn_back"
@@ -31,9 +32,11 @@
         android:id="@+id/post_line"
         android:layout_width="0dp"
         android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
         android:background="#808080"
-        app:layout_constraintBottom_toBottomOf="@+id/recruit_btn_back"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recruit_title" />
 
     <Button
         android:id="@+id/recruit_filter_busking"
@@ -41,6 +44,7 @@
         android:layout_height="wrap_content"
         android:text="@string/buskingR"
         android:textSize="12sp"
+        android:backgroundTint="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/recruit_view_all"
         app:layout_constraintWidth_default="spread" />
@@ -51,6 +55,7 @@
         android:layout_height="wrap_content"
         android:text="@string/classR"
         android:textSize="12sp"
+        android:backgroundTint="@color/black"
         app:layout_constraintStart_toEndOf="@+id/recruit_filter_busking"
         app:layout_constraintTop_toTopOf="@+id/recruit_view_all"
         app:layout_constraintWidth_default="spread" />
@@ -61,9 +66,9 @@
         android:layout_height="wrap_content"
         android:text="@string/all"
         android:textSize="12sp"
+        android:backgroundTint="@color/black"
         app:layout_constraintStart_toEndOf="@+id/recruit_filter_class"
         app:layout_constraintTop_toBottomOf="@+id/post_line" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recruit_list"
         android:layout_width="match_parent"
@@ -71,13 +76,14 @@
         app:layout_constraintTop_toBottomOf="@+id/recruit_filter_busking"
         tools:listitem="@layout/item_recruit" />
 
-    <Button
+    <ImageButton
         android:id="@+id/recruit_create"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/write"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/recruit_view_all"
+        android:layout_width="44dp"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:src="@drawable/write"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/post_line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

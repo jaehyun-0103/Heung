@@ -9,13 +9,14 @@
 
     <ImageView
         android:id="@+id/btn_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="46dp"
+        android:layout_height="52dp"
         android:layout_marginStart="8dp"
         android:padding="8dp"
         android:src="@drawable/music_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/app"
         android:layout_width="wrap_content"
@@ -32,40 +33,45 @@
         android:id="@+id/post_line"
         android:layout_width="0dp"
         android:layout_height="0.5dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="#808080"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_back" />
+        app:layout_constraintTop_toBottomOf="@+id/app" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="220dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/edittext_round"
         android:orientation="vertical"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/post_line">
+        app:layout_constraintTop_toBottomOf="@+id/layout2">
 
         <TextView
             android:id="@+id/tv_popular_posts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/popular"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="8dp"
+            android:text="인기 게시물"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/layout"
             app:layout_constraintTop_toTopOf="@+id/layout" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/popular_posts_recyclerview"
             android:layout_width="match_parent"
-            android:layout_height="178dp"
+            android:layout_height="160dp"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/layout"
             app:layout_constraintStart_toStartOf="@+id/layout"
@@ -77,56 +83,58 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="220dp"
+        android:layout_marginTop="25dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/edittext_round"
         android:orientation="vertical"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout">
+        app:layout_constraintTop_toBottomOf="@+id/post_line">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/latest_posts_recyclerview"
-            android:layout_width="354dp"
-            android:layout_height="212dp"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/layout2"
             app:layout_constraintStart_toStartOf="@+id/layout2"
             app:layout_constraintTop_toBottomOf="@id/tv_recent_posts"
+            app:layout_constraintVertical_bias="0.571"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
             android:id="@+id/tv_recent_posts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="8dp"
             android:text="최근 게시물"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/layout2"
             app:layout_constraintTop_toTopOf="@+id/layout2" />
 
         <Button
             android:id="@+id/btn_postlist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/more"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="84dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/white"
+            android:text="더보기>"
+            android:textColor="@color/black"
+            android:textSize="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/post"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
 
     <include
         android:id="@+id/bottom_navigation"
