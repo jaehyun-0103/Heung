@@ -5,9 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.heung.R;
@@ -17,7 +17,7 @@ import java.lang.String;
 
 public final class ItemSettingBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
   public final Button btnCancel;
@@ -28,17 +28,30 @@ public final class ItemSettingBinding implements ViewBinding {
   @NonNull
   public final Button btnEdit;
 
-  private ItemSettingBinding(@NonNull LinearLayout rootView, @NonNull Button btnCancel,
-      @NonNull Button btnDelete, @NonNull Button btnEdit) {
+  @NonNull
+  public final ConstraintLayout mainLayout;
+
+  @NonNull
+  public final View postLine;
+
+  @NonNull
+  public final View postLine2;
+
+  private ItemSettingBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnCancel,
+      @NonNull Button btnDelete, @NonNull Button btnEdit, @NonNull ConstraintLayout mainLayout,
+      @NonNull View postLine, @NonNull View postLine2) {
     this.rootView = rootView;
     this.btnCancel = btnCancel;
     this.btnDelete = btnDelete;
     this.btnEdit = btnEdit;
+    this.mainLayout = mainLayout;
+    this.postLine = postLine;
+    this.postLine2 = postLine2;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -81,7 +94,22 @@ public final class ItemSettingBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemSettingBinding((LinearLayout) rootView, btnCancel, btnDelete, btnEdit);
+      ConstraintLayout mainLayout = (ConstraintLayout) rootView;
+
+      id = R.id.post_line;
+      View postLine = ViewBindings.findChildViewById(rootView, id);
+      if (postLine == null) {
+        break missingId;
+      }
+
+      id = R.id.post_line2;
+      View postLine2 = ViewBindings.findChildViewById(rootView, id);
+      if (postLine2 == null) {
+        break missingId;
+      }
+
+      return new ItemSettingBinding((ConstraintLayout) rootView, btnCancel, btnDelete, btnEdit,
+          mainLayout, postLine, postLine2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

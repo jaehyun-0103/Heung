@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:src="@drawable/arrow_back"
+        android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,25 +24,27 @@
         android:text="@string/posting"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/post_create"
+        app:layout_constraintHorizontal_bias="0.588"
         app:layout_constraintStart_toEndOf="@+id/btn_back"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/post_create"
-        android:layout_width="100dp"
+        android:layout_width="44dp"
         android:layout_height="40dp"
-        android:text="@string/create"
-        android:textSize="12sp"
+        android:background="@color/white"
+        android:src="@drawable/write"
         app:layout_constraintBottom_toTopOf="@+id/post_Recycler"
         app:layout_constraintEnd_toStartOf="@+id/post_popular"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/post_popular"
-        android:layout_width="60dp"
+        android:layout_width="44dp"
         android:layout_height="40dp"
-        android:text="@string/popular"
-        android:textSize="12sp"
+        android:background="@color/white"
+        android:src="@drawable/pop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,9 +52,11 @@
         android:id="@+id/post_line"
         android:layout_width="0dp"
         android:layout_height="0.5dp"
+        android:layout_marginTop="6dp"
         android:background="#808080"
         app:layout_constraintBottom_toBottomOf="@+id/post_create"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/post_Recycler"

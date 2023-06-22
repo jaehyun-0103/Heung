@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -91,7 +92,7 @@ class CalActivity : AppCompatActivity() {
         // 달력에 점으로 날짜 표시
         decorateCalendar()
 
-        val calWriteBtn = findViewById<Button>(R.id.calwriteBtn)
+        val calWriteBtn = findViewById<ImageButton>(R.id.calwriteBtn)
         calendarView.setOnDateChangedListener { widget, date, selected ->
             val year = date.year
             val month = date.month + 1

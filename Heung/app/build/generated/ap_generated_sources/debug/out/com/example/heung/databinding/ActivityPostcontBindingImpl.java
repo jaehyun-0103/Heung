@@ -30,9 +30,9 @@ public class ActivityPostcontBindingImpl extends ActivityPostcontBinding  {
         sViewsWithIds.put(R.id.likeCnt, 14);
         sViewsWithIds.put(R.id.comment_btn, 15);
         sViewsWithIds.put(R.id.CommentCnt, 16);
-        sViewsWithIds.put(R.id.post_line, 17);
-        sViewsWithIds.put(R.id.content_conslayout, 18);
-        sViewsWithIds.put(R.id.content_photo_recycler, 19);
+        sViewsWithIds.put(R.id.content_conslayout, 17);
+        sViewsWithIds.put(R.id.content_photo_recycler, 18);
+        sViewsWithIds.put(R.id.post_line3, 19);
         sViewsWithIds.put(R.id.edt_comment, 20);
         sViewsWithIds.put(R.id.comment_layout, 21);
         sViewsWithIds.put(R.id.comment_textview, 22);
@@ -60,14 +60,14 @@ public class ActivityPostcontBindingImpl extends ActivityPostcontBinding  {
             , (com.google.android.material.textfield.TextInputLayout) bindings[21]
             , (com.google.android.material.textfield.TextInputEditText) bindings[22]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[1]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[18]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[19]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[17]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[18]
             , (android.widget.ImageButton) bindings[5]
             , (android.widget.LinearLayout) bindings[20]
             , (android.widget.ImageView) bindings[13]
             , (android.widget.TextView) bindings[14]
-            , (android.view.View) bindings[17]
             , (android.view.View) bindings[4]
+            , (android.view.View) bindings[19]
             , (android.widget.ImageButton) bindings[3]
             , (android.widget.TextView) bindings[8]
             , (android.widget.TextView) bindings[12]

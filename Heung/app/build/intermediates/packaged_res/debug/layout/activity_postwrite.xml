@@ -32,9 +32,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/write"
-                android:textSize="18sp"
                 android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:textSize="22sp"
                 app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+                app:layout_constraintEnd_toStartOf="@+id/post_save"
                 app:layout_constraintStart_toEndOf="@+id/btn_back"
                 app:layout_constraintTop_toTopOf="@+id/btn_back" />
 
@@ -46,14 +48,6 @@
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
-            <View
-                android:id="@+id/post_line"
-                android:layout_width="0dp"
-                android:layout_height="0.5dp"
-                android:background="#808080"
-                app:layout_constraintBottom_toBottomOf="@+id/btn_back"
-                app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -67,15 +61,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/title"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
                 <EditText
                     android:id="@+id/post_title"
                     android:layout_width="match_parent"
@@ -83,21 +68,20 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginRight="16dp"
-                    android:background="@drawable/edittext_round"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
-                    android:textSize="18sp" />
+                    android:textSize="22sp"
+                    android:hint="@string/title"
+                    android:background = "@null"/>
 
-                <TextView
+                <View
+                    android:id="@+id/post_line"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
+                    android:layout_height="0.5dp"
                     android:layout_marginTop="16dp"
-                    android:text="@string/write"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/zone_features"
-                    app:layout_constraintTop_toBottomOf="@+id/line3" />
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="#808080" />
 
                 <EditText
                     android:id="@+id/post_cont"
@@ -106,14 +90,14 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginRight="16dp"
-                    android:background="@drawable/edittext_round"
-                    android:ems="10"
+                    android:background="@null"
                     android:gravity="top"
                     android:inputType="textMultiLine"
                     android:minHeight="280dp"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
-                    android:textSize="15sp" />
+                    android:textSize="18sp"
+                    android:hint="내용을 입력해주세요."/>
 
             </LinearLayout>
 

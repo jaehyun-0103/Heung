@@ -147,14 +147,14 @@ class RecruContActivity : AppCompatActivity() {
                         dateTextView.text = recruit.recruit_date
                         typeTextView.text = recruit.recruit_type
                         if (recruit.recruit_session.isNotEmpty()) {
-                            recruitType.text = recruit.recruit_session + " 구함"
+                            recruitType.text = recruit.recruit_session
                         } else {
                             recruitType.text = recruit.recruit_class + " 수업"
                         }
                         contentTextView.text = recruit.recruit_content
-                        endDateTextView.text = recruit.recruit_endDate + "까지"
-                        maxParticipantsTextView.text = recruit.recruit_max + "명 구함"
-                        currentParticipantsTextView.text = recruit.recruit_curr + "명 참여"
+                        endDateTextView.text = recruit.recruit_endDate
+                        maxParticipantsTextView.text = recruit.recruit_max
+                        currentParticipantsTextView.text = recruit.recruit_curr + "/"
                         recruitcontact.text = recruit.recruit_contact
                     }
                 } else {

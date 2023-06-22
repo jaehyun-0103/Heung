@@ -4,7 +4,6 @@ package com.example.heung.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -29,20 +28,20 @@ public final class ActivityPostlistBinding implements ViewBinding {
   public final TextView post;
 
   @NonNull
-  public final Button postCreate;
+  public final ImageButton postCreate;
 
   @NonNull
   public final View postLine;
 
   @NonNull
-  public final Button postPopular;
+  public final ImageButton postPopular;
 
   @NonNull
   public final RecyclerView postRecycler;
 
   private ActivityPostlistBinding(@NonNull ConstraintLayout rootView, @NonNull ImageButton btnBack,
-      @NonNull TextView post, @NonNull Button postCreate, @NonNull View postLine,
-      @NonNull Button postPopular, @NonNull RecyclerView postRecycler) {
+      @NonNull TextView post, @NonNull ImageButton postCreate, @NonNull View postLine,
+      @NonNull ImageButton postPopular, @NonNull RecyclerView postRecycler) {
     this.rootView = rootView;
     this.btnBack = btnBack;
     this.post = post;
@@ -92,7 +91,7 @@ public final class ActivityPostlistBinding implements ViewBinding {
       }
 
       id = R.id.post_create;
-      Button postCreate = ViewBindings.findChildViewById(rootView, id);
+      ImageButton postCreate = ViewBindings.findChildViewById(rootView, id);
       if (postCreate == null) {
         break missingId;
       }
@@ -104,7 +103,7 @@ public final class ActivityPostlistBinding implements ViewBinding {
       }
 
       id = R.id.post_popular;
-      Button postPopular = ViewBindings.findChildViewById(rootView, id);
+      ImageButton postPopular = ViewBindings.findChildViewById(rootView, id);
       if (postPopular == null) {
         break missingId;
       }

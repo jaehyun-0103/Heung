@@ -23,6 +23,9 @@ public abstract class ItemPostcommentBinding extends ViewDataBinding {
   public final ConstraintLayout comment;
 
   @NonNull
+  public final ConstraintLayout commentDetailsLayout;
+
+  @NonNull
   public final ImageView imgSetting;
 
   @NonNull
@@ -35,11 +38,12 @@ public abstract class ItemPostcommentBinding extends ViewDataBinding {
   public final TextView tvDate;
 
   protected ItemPostcommentBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      ImageView accountIvProfile, ConstraintLayout comment, ImageView imgSetting, TextView tvAuthor,
-      TextView tvComment, TextView tvDate) {
+      ImageView accountIvProfile, ConstraintLayout comment, ConstraintLayout commentDetailsLayout,
+      ImageView imgSetting, TextView tvAuthor, TextView tvComment, TextView tvDate) {
     super(_bindingComponent, _root, _localFieldCount);
     this.accountIvProfile = accountIvProfile;
     this.comment = comment;
+    this.commentDetailsLayout = commentDetailsLayout;
     this.imgSetting = imgSetting;
     this.tvAuthor = tvAuthor;
     this.tvComment = tvComment;
