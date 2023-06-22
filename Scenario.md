@@ -24,8 +24,6 @@
 
 11. [SelfProfActivity](#프로필-페이지)
 
-12. [OtherProfActivity](#타인-프로필-페이지)
-
 ---
 
 # 메인 페이지
