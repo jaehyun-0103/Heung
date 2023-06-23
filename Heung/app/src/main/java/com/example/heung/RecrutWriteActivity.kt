@@ -7,6 +7,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatImageButton
+import androidx.appcompat.widget.AppCompatRadioButton
 import com.google.firebase.firestore.FirebaseFirestore
 import com.kakao.sdk.user.UserApiClient
 import data.Recruits
@@ -18,8 +19,8 @@ class RecrutWriteActivity : AppCompatActivity() {
     private lateinit var contentEditText: EditText
     private lateinit var uploadButton: AppCompatButton
     private lateinit var backButton: AppCompatImageButton
-    private lateinit var buskingFilterButton: AppCompatButton
-    private lateinit var classFilterButton: AppCompatButton
+    private lateinit var buskingFilterButton: AppCompatRadioButton
+    private lateinit var classFilterButton: AppCompatRadioButton
     private lateinit var buskingLayout: LinearLayout
     private lateinit var classLayout: LinearLayout
     private lateinit var buskingDateEditText: EditText
@@ -69,6 +70,7 @@ class RecrutWriteActivity : AppCompatActivity() {
 
         backButton.setOnClickListener {
             onBackPressed()
+            overridePendingTransition(R.transition.slide_down, 0)
         }
 
         buskingDateEditText.setOnClickListener { view ->

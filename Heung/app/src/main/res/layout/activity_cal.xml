@@ -42,7 +42,7 @@
         android:layout_width="62dp"
         android:layout_height="51dp"
         android:background="#FFFFFF"
-        android:src="@drawable/home"
+        android:src="@drawable/write"
         android:text="@string/write"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

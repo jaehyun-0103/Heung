@@ -60,6 +60,7 @@ class RecruContActivity : AppCompatActivity() {
         val backButton = findViewById<ImageButton>(R.id.recruit_content_button_back)
         backButton.setOnClickListener {
             onBackPressed()
+            overridePendingTransition(R.transition.slide_in_left, R.transition.slide_out_right)
         }
 
         // NumberPicker 설정

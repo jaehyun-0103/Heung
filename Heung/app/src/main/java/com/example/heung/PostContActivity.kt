@@ -66,6 +66,7 @@ class PostContActivity : AppCompatActivity() {
         val btnBack = findViewById<ImageButton>(R.id.dirogagi)
         btnBack.setOnClickListener {
             finish()
+            overridePendingTransition(R.transition.slide_in_left, R.transition.slide_out_right)
         }
 
         val btnSetting = findViewById<ImageButton>(R.id.setting)
