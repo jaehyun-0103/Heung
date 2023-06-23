@@ -51,12 +51,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
-        android:text="Heung에서 시흥시 주민들과 버스킹과 클래스를 결성하고,\n                      음악 커뮤니티까지 즐겨보세요."
+        android:text="@string/greeting"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo"
         android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

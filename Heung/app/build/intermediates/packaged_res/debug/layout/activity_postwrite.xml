@@ -93,7 +93,7 @@
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
                     android:textSize="16sp"
-                    android:hint="내용을 입력해주세요."
+                    android:hint="@string/Content_example"
                     android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
             </LinearLayout>

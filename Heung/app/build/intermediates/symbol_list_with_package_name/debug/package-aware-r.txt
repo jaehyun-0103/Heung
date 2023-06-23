@@ -3200,11 +3200,13 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable app_icon
 drawable arrow_back
 drawable arrow_icon
 drawable avd_hide_password
 drawable avd_show_password
 drawable baseline_create_24
+drawable baseline_gps_fixed_24
 drawable baseline_settings
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -4338,6 +4340,7 @@ string Cal
 string Cal_cont
 string Cal_title
 string Comment_example
+string Content_example
 string Date_example
 string Hello_example
 string Main
@@ -4381,6 +4384,7 @@ string abc_toolbar_collapse_description
 string all
 string androidx_startup
 string app_name
+string app_setting
 string appbar_scrolling_view_behavior
 string back
 string bottom_sheet_behavior
@@ -4421,12 +4425,14 @@ string common_signin_button_text
 string common_signin_button_text_long
 string complete
 string contact
+string contact2
 string content
 string copy_toast_msg
 string create
 string curr
 string darkmode
 string date
+string deadline
 string default_web_client_id
 string defaultmode
 string delete
@@ -4437,6 +4443,7 @@ string endTime
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
+string extra_setting
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string fallback_menu_item_copy_link
@@ -4449,6 +4456,7 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_maps_api_key
 string google_storage_bucket
+string greeting
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string intro
@@ -4456,6 +4464,7 @@ string item_view_role_description
 string kakao_app_key
 string kakao_app_key2
 string ko
+string lang_setting
 string like
 string location
 string logout
@@ -4562,8 +4571,10 @@ string nav_app_bar_open_drawer_description
 string next
 string nickname
 string nicknameChange
+string no_popular
 string notice
 string number
+string participate
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -4595,6 +4606,7 @@ string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
 string searchview_navigation_content_description
 string sessionType
+string setting
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string start

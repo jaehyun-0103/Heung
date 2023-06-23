@@ -12,13 +12,13 @@
     <string name="modify">Modify</string>
     <string name="delete">Delete</string>
     <string name="nickname">Nickname</string>
-    <string name="post">Post</string>
+    <string name="post">Posts</string>
     <string name="date">Date</string>
     <string name="content">Content</string>
     <string name="like">Like</string>
     <string name="comment">Comment</string>
     <string name="complete">Complete</string>
-    <string name="popular">Popular post</string>
+    <string name="popular">Popular posts</string>
     <string name="create">Create</string>
     <string name="posting">Board</string>
     <string name="back">Back</string>
@@ -42,12 +42,12 @@
     <string name="Date_example">2021.01.01(Sun)</string>
     <string name="Hello_example">ex) hello</string>
     <string name="Time_example">12:00 pm</string>
-    <string name="regist">Register Performance Information</string>
+    <string name="regist">Register Performance Info</string>
     <string name="Place_example">ex) In Oido</string>
     <string name="start">Start</string>
     <string name="more">More</string>
     <string name="Comment_example">Leave Comments</string>
-    <string name="all">View Full Posts</string>
+    <string name="all">Recent Posts</string>
     <string name="number">Number of Students</string>
     <string name="cancel">Cancel</string>
     <string name="Reply_example">Leave Replies</string>
@@ -56,7 +56,7 @@
     <string name="Recruit">Recruit</string>
     <string name="Map">Map</string>
     <string name="Cal">Cal</string>
-    <string name="Prof">Prof</string>
+    <string name="Prof">Profile</string>
 
     <string name="google_maps_api_key">AIzaSyA31kkd5bVzb1DHgUL0YktIXMTXFhhi_4U</string>
     <string name="kakao_app_key">6de2823164e42a1f96eabbc998a1feb8</string>
@@ -85,4 +85,14 @@
     <string name="maximum">Maximum</string>
     <string name="contact">Contact</string>
     <string name="email_phone">E-mail/Phone number</string>
+    <string name="Content_example">Enter the contents</string>
+    <string name="greeting">Form busking and classes with residents of Siheung City in Heung,\\n                      and enjoy the music community.</string>
+    <string name="setting">Setting</string>
+    <string name="lang_setting">Language Setting</string>
+    <string name="extra_setting">Extra Setting</string>
+    <string name="app_setting">App Setting</string>
+    <string name="deadline">"Deadline Date: "</string>
+    <string name="contact2">"Contact: "</string>
+    <string name="participate">"Number of participants: "</string>
+    <string name="no_popular">There are no popular posts.</string>
 </resources>

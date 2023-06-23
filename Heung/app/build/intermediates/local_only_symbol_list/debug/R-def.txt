@@ -15,9 +15,11 @@ dimen fab_margin
 dimen map_padding
 dimen nav_header_height
 dimen nav_header_vertical_spacing
+drawable app_icon
 drawable arrow_back
 drawable arrow_icon
 drawable baseline_create_24
+drawable baseline_gps_fixed_24
 drawable baseline_settings
 drawable calendar
 drawable chat
@@ -261,6 +263,7 @@ string Cal
 string Cal_cont
 string Cal_title
 string Comment_example
+string Content_example
 string Date_example
 string Hello_example
 string Main
@@ -276,6 +279,7 @@ string Write_intro
 string Write_location
 string all
 string app_name
+string app_setting
 string back
 string buskingR
 string cancel
@@ -285,11 +289,13 @@ string comment
 string commentCnt
 string complete
 string contact
+string contact2
 string content
 string create
 string curr
 string darkmode
 string date
+string deadline
 string default_web_client_id
 string defaultmode
 string delete
@@ -297,6 +303,7 @@ string detail
 string email_phone
 string en
 string endTime
+string extra_setting
 string filter
 string gcm_defaultSenderId
 string google_api_key
@@ -304,10 +311,12 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_maps_api_key
 string google_storage_bucket
+string greeting
 string intro
 string kakao_app_key
 string kakao_app_key2
 string ko
+string lang_setting
 string like
 string location
 string logout
@@ -316,8 +325,10 @@ string modify
 string more
 string nickname
 string nicknameChange
+string no_popular
 string notice
 string number
+string participate
 string performName
 string period
 string place
@@ -331,6 +342,7 @@ string recruitReq
 string regist
 string search
 string sessionType
+string setting
 string start
 string startTime
 string title

@@ -2,7 +2,6 @@ package com.example.heung
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +19,7 @@ class RecruListActivity : AppCompatActivity() {
     private lateinit var recruitList: MutableList<Recruits>
     private lateinit var buskingFilterButton: RadioButton
     private lateinit var classFilterButton: RadioButton
+    private lateinit var viewAllButton: RadioButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +41,12 @@ class RecruListActivity : AppCompatActivity() {
         buskingFilterButton = findViewById(R.id.recruit_filter_busking)
         classFilterButton = findViewById(R.id.recruit_filter_class)
 
+        // 전체글 보기 버튼 클릭 이벤트 처리
+        viewAllButton = findViewById(R.id.recruit_view_all)
+        viewAllButton.setOnClickListener {
+            loadRecruits()
+        }
+
         // 버스킹 필터 버튼 클릭 이벤트 처리
         buskingFilterButton.setOnClickListener {
             filterByType("버스킹")
@@ -51,11 +57,7 @@ class RecruListActivity : AppCompatActivity() {
             filterByType("클래스")
         }
 
-        // 전체글 보기 버튼 클릭 이벤트 처리
-        val viewAllButton = findViewById<RadioButton>(R.id.recruit_view_all)
-        viewAllButton.setOnClickListener {
-            loadRecruits()
-        }
+        viewAllButton.isChecked = true
 
         // 게시글 작성 버튼 클릭 이벤트 처리
         val recruitCreateButton = findViewById<ImageButton>(R.id.recruit_create)
@@ -64,6 +66,8 @@ class RecruListActivity : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(R.transition.slide_up, R.transition.fade_out)
         }
+
+
 
         // 게시글 클릭 이벤트 처리
         recruitListAdapter.setOnItemClickListener(object : RecruitListAdapter.OnItemClickListener {
@@ -156,24 +160,53 @@ class RecruListActivity : AppCompatActivity() {
 
     private fun filterByType(type: String) {
         firestore.collection("Recruits")
-            .whereEqualTo("recruit_type", type)
-            .orderBy("recruit_date", Query.Direction.DESCENDING)
             .addSnapshotListener { recruitSnapshot, recruitException ->
                 if (recruitException != null) { // Error handling
                     return@addSnapshotListener
                 }
 
+                val loadedRecruitList = mutableListOf<String>()
                 recruitSnapshot?.let {
-                    recruitList.clear()
-                    for (document in recruitSnapshot.documents) {
-                        val recruit = document.toObject(Recruits::class.java)
-                        recruit?.let {
-                            recruitList.add(recruit)
+                    loadedRecruitList.clear()
+                    for (document in it.documents) {
+                        val recruitType = document.getString("recruit_type")
+                        val recruitId = document.getString("recruit_id")
+
+                        if (recruitType == type && recruitId != null) {
+                            loadedRecruitList.add(recruitId)
                         }
                     }
+                }
+                if (loadedRecruitList.isNotEmpty()) {
+                    firestore.collection("Recruits")
+                        .whereIn("recruit_id", loadedRecruitList)
+                        .orderBy("recruit_date", Query.Direction.DESCENDING)
+                        .addSnapshotListener { recruitSnapshot, recruitException ->
+                            if (recruitException != null) { // Error handling
+                                return@addSnapshotListener
+                            }
 
-                    recruitListAdapter.notifyDataSetChanged()
+                            recruitSnapshot?.let {
+                                recruitList.clear()
+                                for (document in it.documents) {
+                                    val recruit = document.toObject(Recruits::class.java)
+                                    recruit?.let {
+                                        recruitList.add(recruit)
+                                    }
+                                }
+                                recruitListAdapter.notifyDataSetChanged()
+                            }
+
+                        }
+
+                } else {
+                    viewAllButton.isChecked = true
                 }
             }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewAllButton.isChecked = true
     }
 }

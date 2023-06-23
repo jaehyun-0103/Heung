@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-
         <ImageButton
             android:id="@+id/btn_back"
             android:layout_width="57dp"
@@ -31,12 +30,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="124dp"
             android:layout_marginTop="8dp"
-            android:text="설정"
+            android:text="@string/setting"
             android:textSize="23sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/btn_back"
             app:layout_constraintTop_toTopOf="parent"
             android:fontFamily="@font/spoqa_han_sans_neo_bold"/>
+
         <View
             android:id="@+id/post_line"
             android:layout_width="0dp"
@@ -46,9 +46,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/post" />
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     <TableLayout
         android:id="@+id/layout"
@@ -68,8 +66,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="앱 설정"
-            android:textSize="21dp"
+            android:text="@string/app_setting"
+            android:textSize="21sp"
             android:textStyle="bold"
             android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
 
@@ -82,7 +80,7 @@
             android:gravity="start|center_vertical"
             android:onClick="toggleDarkMode"
             android:paddingStart="0dp"
-            android:text="다크 모드"
+            android:text="@string/darkmode"
             android:textColor="@color/black"
             android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
@@ -99,9 +97,7 @@
             android:textColor="@color/black"
             android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
-
     </TableLayout>
-
 
     <TableLayout
         android:id="@+id/layout2"
@@ -121,7 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="언어 설정"
+            android:text="@string/lang_setting"
             android:textSize="21dp"
             android:textStyle="bold"
             android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
@@ -133,7 +129,7 @@
             android:backgroundTint="@color/white"
             android:gravity="start|center_vertical"
             android:paddingStart="0dp"
-            android:text="한국어"
+            android:text="@string/ko"
             android:textColor="@color/black"
             android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
@@ -144,7 +140,7 @@
             android:backgroundTint="@color/white"
             android:gravity="start|center_vertical"
             android:paddingStart="0dp"
-            android:text="English"
+            android:text="@string/en"
             android:textColor="@color/black"
             android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
@@ -168,7 +164,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="기타 설정"
+            android:text="@string/extra_setting"
             android:textStyle="bold"
             android:textSize="21dp"
             android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
@@ -197,6 +193,5 @@
             android:paddingStart="0dp"
             android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
     </TableLayout>
-
 
 </TableLayout>

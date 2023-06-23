@@ -39,8 +39,8 @@
         android:text="@string/date"
         android:textSize="11sp"
         app:layout_constraintBottom_toTopOf="@+id/post_line"
-        app:layout_constraintStart_toEndOf="@+id/post_comment"
-        app:layout_constraintTop_toTopOf="@+id/post_comment"
+        app:layout_constraintStart_toEndOf="@+id/post_nickname"
+        app:layout_constraintTop_toTopOf="@+id/post_nickname"
         android:fontFamily="@font/spoqa_han_sans_neo_light"/>
 
     <TextView
@@ -51,8 +51,8 @@
         android:text="@string/nickname"
         android:textSize="11sp"
         app:layout_constraintBottom_toTopOf="@+id/post_line"
-        app:layout_constraintStart_toEndOf="@+id/post_date"
-        app:layout_constraintTop_toTopOf="@+id/post_date"
+        app:layout_constraintStart_toEndOf="@+id/post_comment"
+        app:layout_constraintTop_toTopOf="@+id/post_comment"
         android:fontFamily="@font/spoqa_han_sans_neo_light"/>
 
     <TextView

@@ -117,7 +117,7 @@ class PostListActivity : AppCompatActivity() {
                     postListAdapter.notifyDataSetChanged()
 
                     val post = findViewById<TextView>(R.id.post)
-                    post.text = "게시글"
+                    post.text = resources.getString(R.string.post)
 
                     // 게시글 작성자의 닉네임 가져오기
                     loadPostAuthorsLikesAndComments()
@@ -129,6 +129,7 @@ class PostListActivity : AppCompatActivity() {
         super.onResume()
         loadPostAuthorsLikesAndComments()
     }
+
     // 게시글 작성자의 닉네임, 좋아요 수, 댓글 수 가져오기
     private fun loadPostAuthorsLikesAndComments() {
         val postIds = postList.map { it.post_id }
@@ -179,7 +180,7 @@ class PostListActivity : AppCompatActivity() {
                             .addOnSuccessListener { userDocumentSnapshot ->
                                 val user = userDocumentSnapshot.toObject(Users::class.java)
                                 val nickname = user?.user_nickname ?: "알 수 없는 사용자"
-                                nicknameTextView?.text = nickname
+                                nicknameTextView?.text = " | " + nickname
                             }
                     }
                 }
@@ -351,7 +352,7 @@ class PostListActivity : AppCompatActivity() {
                                 postListAdapter.notifyDataSetChanged()
 
                                 val post = findViewById<TextView>(R.id.post)
-                                post.text = "인기 게시글"
+                                post.text  = resources.getString(R.string.popular)
 
                                 // 게시글 작성자의 닉네임 가져오기
                                 loadPostAuthorsLikesAndComments()
@@ -360,7 +361,7 @@ class PostListActivity : AppCompatActivity() {
                 } else {
                     // 인기 게시글이 없을 경우 처리할 내용
                     val post = findViewById<TextView>(R.id.post)
-                    post.text = "인기 게시글이 없습니다."
+                    post.text = resources.getString(R.string.no_popular)
                     postList.clear()
                     postListAdapter.notifyDataSetChanged()
                 }

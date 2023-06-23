@@ -272,7 +272,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:enabled="true"
-                    android:hint="댓글을 입력해주세요"
+                    android:hint="@string/Comment_example"
                     android:inputType="text"
                     android:textSize="12sp"
                     android:fontFamily="@font/spoqa_han_sans_neo_regular"/>

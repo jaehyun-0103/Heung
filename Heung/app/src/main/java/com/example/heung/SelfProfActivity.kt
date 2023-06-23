@@ -268,6 +268,4 @@ class SelfProfActivity : AppCompatActivity() {
 
     }
 
-
-
 }

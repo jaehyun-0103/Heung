@@ -8,8 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -31,6 +30,7 @@
                 android:id="@+id/recruit_post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/spoqa_han_sans_neo_bold"
                 android:text="@string/recruit"
                 android:textSize="22sp"
                 android:textStyle="bold"
@@ -38,8 +38,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.42"
                 app:layout_constraintStart_toEndOf="@+id/recruit_btn_back"
-                app:layout_constraintTop_toTopOf="@+id/recruit_btn_back"
-                android:fontFamily="@font/spoqa_han_sans_neo_bold"/>
+                app:layout_constraintTop_toTopOf="@+id/recruit_btn_back" />
 
             <View
                 android:id="@+id/recruit_line"
@@ -59,37 +58,37 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
+
                 <RadioGroup
                     android:id="@+id/radioGroup"
-                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:id="@+id/recruit_filter_busking"
-                        android:layout_marginLeft="16dp"
-                        android:text="@string/buskingR"
-                        android:textSize="12sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
                         android:buttonTint="@color/black"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        android:text="@string/buskingR"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/recruit_filter_class"
-                        android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
+                        app:layout_constraintEnd_toStartOf="@+id/recruit_filter_class" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:id="@+id/recruit_filter_class"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/classR"
-                        android:layout_marginLeft="8dp"
-                        android:textSize="12sp"
+                        android:layout_marginStart="8dp"
                         android:buttonTint="@color/black"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                        android:text="@string/classR"
+                        android:textSize="12sp"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
+                        app:layout_constraintTop_toTopOf="parent" />
                 </RadioGroup>
 
                 <EditText
@@ -100,11 +99,11 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginRight="16dp"
                     android:background="@null"
+                    android:fontFamily="@font/spoqa_han_sans_neo_regular"
                     android:hint="@string/title"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
+                    android:textSize="18sp" />
 
                 <View
                     android:id="@+id/post_line"
@@ -123,14 +122,15 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginRight="16dp"
                     android:background="@null"
+                    android:fontFamily="@font/spoqa_han_sans_neo_regular"
                     android:gravity="top"
-                    android:hint="내용을 입력해주세요."
+                    android:hint="@string/Content_example"
                     android:inputType="textMultiLine"
                     android:minHeight="280dp"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
+                    android:textSize="16sp" />
+
                 <View
                     android:layout_width="wrap_content"
                     android:layout_height="0.5dp"
@@ -149,17 +149,17 @@
                         android:id="@+id/recruit_contact"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:gravity="top"
-                        android:hint="@string/email_phone"
-                        android:inputType="textMultiLine"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
+                        android:background="@null"
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"
+                        android:gravity="top"
+                        android:hint="@string/email_phone"
+                        android:inputType="textMultiLine"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -168,10 +168,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:visibility="gone"
-                    >
-
-
+                    android:visibility="gone">
 
                     <View
                         android:layout_width="wrap_content"
@@ -185,17 +182,17 @@
                         android:id="@+id/recruit_filter_busking_date"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:focusable="false"
-                        android:hint="@string/period"
-                        android:background="@null"
-                        android:onClick="showDatePickerDialog"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
+                        android:background="@null"
+                        android:focusable="false"
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"
+                        android:hint="@string/period"
+                        android:onClick="showDatePickerDialog"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
+                        android:textSize="16sp" />
 
                     <View
                         android:layout_width="wrap_content"
@@ -209,15 +206,15 @@
                         android:id="@+id/recruit_filter_busking_session"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/sessionType"
-                        android:background="@null"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
+                        android:background="@null"
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"
+                        android:hint="@string/sessionType"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
+                        android:textSize="16sp" />
 
                     <View
 
@@ -231,21 +228,20 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
                         android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"
                         android:text="@string/number"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
+                        android:textSize="16sp" />
 
                     <NumberPicker
                         android:id="@+id/recruit_filter_busking_capacity"
                         android:layout_width="230dp"
                         android:layout_height="87dp"
-                        android:layout_marginTop="16dp"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp"
-                        />
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp" />
 
                 </LinearLayout>
 
@@ -255,8 +251,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:visibility="gone"
-                    >
+                    android:visibility="gone">
 
                     <View
                         android:layout_width="wrap_content"
@@ -272,17 +267,17 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
 
-                        android:focusable="false"
-                        android:onClick="showDatePickerDialog"
-                        android:paddingStart="8dp"
-                        android:paddingEnd="8dp"
-                        android:background="@null"
-                        android:hint="@string/period"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
+                        android:background="@null"
+                        android:focusable="false"
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"
+                        android:hint="@string/period"
+                        android:onClick="showDatePickerDialog"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:textSize="16sp" />
 
                     <View
                         android:layout_width="wrap_content"
@@ -297,15 +292,15 @@
                         android:id="@+id/recruit_filter_class_type"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:paddingStart="8dp"
-                        android:paddingEnd="8dp"
-                        android:background="@null"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
+                        android:background="@null"
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"
                         android:hint="@string/classType"
-                        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:textSize="16sp" />
 
                     <View
                         android:layout_width="wrap_content"
@@ -318,21 +313,20 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
                         android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"
                         android:text="@string/number"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
+                        android:textSize="16sp" />
 
                     <NumberPicker
                         android:id="@+id/recruit_filter_class_capacity"
                         android:layout_width="230dp"
                         android:layout_height="87dp"
-                        android:layout_marginTop="16dp"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp"
-                        />
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp" />
 
                 </LinearLayout>
 
@@ -343,9 +337,9 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
                     android:backgroundTint="@color/black"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
                     android:text="@string/write"
-                    android:textSize="12sp"
-                    android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
+                    android:textSize="12sp" />
             </LinearLayout>
 
         </ScrollView>
