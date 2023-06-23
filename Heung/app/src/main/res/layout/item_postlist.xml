@@ -28,7 +28,8 @@
         android:text="@string/title"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/music_icon"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
     <TextView
         android:id="@+id/post_date"
@@ -39,7 +40,8 @@
         android:textSize="11sp"
         app:layout_constraintBottom_toTopOf="@+id/post_line"
         app:layout_constraintStart_toEndOf="@+id/post_comment"
-        app:layout_constraintTop_toTopOf="@+id/post_comment" />
+        app:layout_constraintTop_toTopOf="@+id/post_comment"
+        android:fontFamily="@font/spoqa_han_sans_neo_light"/>
 
     <TextView
         android:id="@+id/post_nickname"
@@ -50,7 +52,8 @@
         android:textSize="11sp"
         app:layout_constraintBottom_toTopOf="@+id/post_line"
         app:layout_constraintStart_toEndOf="@+id/post_date"
-        app:layout_constraintTop_toTopOf="@+id/post_date" />
+        app:layout_constraintTop_toTopOf="@+id/post_date"
+        android:fontFamily="@font/spoqa_han_sans_neo_light"/>
 
     <TextView
         android:id="@+id/post_likes"
@@ -62,7 +65,8 @@
         android:layout_marginBottom="3dp"
         app:layout_constraintBottom_toBottomOf="@+id/post_line"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        android:fontFamily="@font/spoqa_han_sans_neo_light"/>
 
     <TextView
         android:id="@+id/post_comment"
@@ -74,7 +78,8 @@
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_comment"
-        app:layout_constraintTop_toTopOf="@+id/img_comment" />
+        app:layout_constraintTop_toTopOf="@+id/img_comment"
+        android:fontFamily="@font/spoqa_han_sans_neo_light"/>
 
     <ImageView
         android:id="@+id/img_comment"

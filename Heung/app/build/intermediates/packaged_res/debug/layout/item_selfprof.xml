@@ -12,7 +12,8 @@
         android:text="@string/title"
         android:textColor="#444"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:fontFamily="@font/spoqa_han_sans_neo_bold"/>
 
     <TextView
         android:id="@+id/content"
@@ -21,7 +22,8 @@
         android:maxLines="1"
         android:text="@string/content"
         android:textColor="#444"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
     <View
         android:layout_width="match_parent"

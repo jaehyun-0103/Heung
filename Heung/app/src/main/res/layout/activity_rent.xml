@@ -20,7 +20,8 @@
         android:layout_height="wrap_content"
         android:entries="@array/items"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchBar" />
+        app:layout_constraintTop_toBottomOf="@+id/searchBar"
+        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
     <ImageButton
         android:id="@+id/locationNow"
@@ -51,28 +52,32 @@
             android:layout_height="wrap_content"
             android:padding="8dp"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
 
         <TextView
             android:id="@+id/locationAddressTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
         <TextView
             android:id="@+id/locationContentTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
         <TextView
             android:id="@+id/locationPhoneTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
     </LinearLayout>
 
     <AutoCompleteTextView
@@ -85,7 +90,8 @@
         app:layout_constraintEnd_toStartOf="@+id/searchButton"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
     <Button
         android:id="@+id/searchButton"
@@ -94,7 +100,8 @@
         android:text="@string/search"
         android:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"

@@ -3217,6 +3217,7 @@ drawable btn_radio_on_to_off_mtrl_animation
 drawable calendar
 drawable chat
 drawable chat_icon
+drawable circle_music
 drawable clear
 drawable comment
 drawable common_full_open_on_phone
@@ -3246,6 +3247,7 @@ drawable design_snackbar_background
 drawable edittext_round
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable hi
 drawable home
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
@@ -3359,6 +3361,11 @@ drawable thumb_up
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable write
+font spoqa_han_sans_neo_bold
+font spoqa_han_sans_neo_light
+font spoqa_han_sans_neo_medium
+font spoqa_han_sans_neo_regular
+font spoqa_han_sans_neo_thin
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3369,6 +3376,7 @@ id Contact_information
 id Date
 id FUNCTION
 id HeungTextView
+id Heungtext
 id META
 id NO_DEBUG
 id SHIFT
@@ -3450,6 +3458,7 @@ id animateToStart
 id antiClockwise
 id anticipate
 id app
+id appsetting
 id arc
 id asConfigured
 id async
@@ -3481,7 +3490,6 @@ id btnEdit
 id btnReply
 id btn_back
 id btn_ctv
-id btn_edit
 id btn_postlist
 id btn_quit
 id btn_reply
@@ -3607,6 +3615,7 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id etcsetting
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3671,9 +3680,11 @@ id jumpToEnd
 id jumpToStart
 id kakao_login_button
 id labeled
+id languagesetting
 id latest_posts_recyclerview
 id layout
 id layout2
+id layout3
 id left
 id leftToRight
 id legacy

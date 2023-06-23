@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.heung.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -25,10 +24,13 @@ public final class ActivitySelfprofBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final TextView app;
+
+  @NonNull
   public final BottomNavigationLayoutBinding bottomNavigation;
 
   @NonNull
-  public final FloatingActionButton btnEdit;
+  public final ImageView btnBack;
 
   @NonNull
   public final Button nickChange;
@@ -40,6 +42,9 @@ public final class ActivitySelfprofBinding implements ViewBinding {
   public final TextView post;
 
   @NonNull
+  public final View postLine;
+
+  @NonNull
   public final ImageView selfProfile;
 
   @NonNull
@@ -48,17 +53,19 @@ public final class ActivitySelfprofBinding implements ViewBinding {
   @NonNull
   public final ImageButton setting;
 
-  private ActivitySelfprofBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationLayoutBinding bottomNavigation,
-      @NonNull FloatingActionButton btnEdit, @NonNull Button nickChange, @NonNull TextView nickname,
-      @NonNull TextView post, @NonNull ImageView selfProfile, @NonNull RecyclerView selfRecycler,
+  private ActivitySelfprofBinding(@NonNull ConstraintLayout rootView, @NonNull TextView app,
+      @NonNull BottomNavigationLayoutBinding bottomNavigation, @NonNull ImageView btnBack,
+      @NonNull Button nickChange, @NonNull TextView nickname, @NonNull TextView post,
+      @NonNull View postLine, @NonNull ImageView selfProfile, @NonNull RecyclerView selfRecycler,
       @NonNull ImageButton setting) {
     this.rootView = rootView;
+    this.app = app;
     this.bottomNavigation = bottomNavigation;
-    this.btnEdit = btnEdit;
+    this.btnBack = btnBack;
     this.nickChange = nickChange;
     this.nickname = nickname;
     this.post = post;
+    this.postLine = postLine;
     this.selfProfile = selfProfile;
     this.selfRecycler = selfRecycler;
     this.setting = setting;
@@ -91,6 +98,12 @@ public final class ActivitySelfprofBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.app;
+      TextView app = ViewBindings.findChildViewById(rootView, id);
+      if (app == null) {
+        break missingId;
+      }
+
       id = R.id.bottom_navigation;
       View bottomNavigation = ViewBindings.findChildViewById(rootView, id);
       if (bottomNavigation == null) {
@@ -98,9 +111,9 @@ public final class ActivitySelfprofBinding implements ViewBinding {
       }
       BottomNavigationLayoutBinding binding_bottomNavigation = BottomNavigationLayoutBinding.bind(bottomNavigation);
 
-      id = R.id.btn_edit;
-      FloatingActionButton btnEdit = ViewBindings.findChildViewById(rootView, id);
-      if (btnEdit == null) {
+      id = R.id.btn_back;
+      ImageView btnBack = ViewBindings.findChildViewById(rootView, id);
+      if (btnBack == null) {
         break missingId;
       }
 
@@ -122,6 +135,12 @@ public final class ActivitySelfprofBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.post_line;
+      View postLine = ViewBindings.findChildViewById(rootView, id);
+      if (postLine == null) {
+        break missingId;
+      }
+
       id = R.id.self_profile;
       ImageView selfProfile = ViewBindings.findChildViewById(rootView, id);
       if (selfProfile == null) {
@@ -140,8 +159,8 @@ public final class ActivitySelfprofBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySelfprofBinding((ConstraintLayout) rootView, binding_bottomNavigation,
-          btnEdit, nickChange, nickname, post, selfProfile, selfRecycler, setting);
+      return new ActivitySelfprofBinding((ConstraintLayout) rootView, app, binding_bottomNavigation,
+          btnBack, nickChange, nickname, post, postLine, selfProfile, selfRecycler, setting);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

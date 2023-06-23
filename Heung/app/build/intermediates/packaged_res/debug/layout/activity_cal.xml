@@ -24,7 +24,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/notice"
         android:textSize="28sp"
-        android:textStyle="bold"
+        android:fontFamily="@font/spoqa_han_sans_neo_bold"
         app:layout_constraintStart_toEndOf="@+id/btn_back"
         app:layout_constraintTop_toTopOf="parent" />
 

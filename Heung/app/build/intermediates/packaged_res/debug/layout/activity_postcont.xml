@@ -28,7 +28,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/spoqa_han_sans_neo_bold"/>
 
             <ImageButton
                 android:id="@+id/setting"
@@ -92,7 +93,8 @@
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/account_iv_profile"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/spoqa_han_sans_neo_bold"/>
 
             <TextView
                 android:id="@+id/tv_date"
@@ -103,7 +105,8 @@
                 android:text="@string/date"
                 android:textSize="11sp"
                 app:layout_constraintStart_toEndOf="@+id/account_iv_profile"
-                app:layout_constraintTop_toBottomOf="@+id/tv_author" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_author"
+                android:fontFamily="@font/spoqa_han_sans_neo_light"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -131,7 +134,8 @@
                 app:layout_constraintBottom_toTopOf="@+id/tv_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/spoqa_han_sans_neo_bold"/>
 
             <TextView
                 android:id="@+id/tv_content"
@@ -145,7 +149,8 @@
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
 
             <ImageView
@@ -170,7 +175,8 @@
                 android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/like_btn"
-                app:layout_constraintTop_toBottomOf="@+id/tv_content" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_content"
+                android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
             <ImageView
                 android:id="@+id/comment_btn"
@@ -194,7 +200,8 @@
                 android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/comment_btn"
-                app:layout_constraintTop_toBottomOf="@+id/tv_content" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_content"
+                android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -267,7 +274,8 @@
                     android:enabled="true"
                     android:hint="댓글을 입력해주세요"
                     android:inputType="text"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -282,7 +290,8 @@
                 android:stateListAnimator="@null"
                 android:text="@string/complete"
                 android:textColor="@color/white"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
 
         </LinearLayout>
 

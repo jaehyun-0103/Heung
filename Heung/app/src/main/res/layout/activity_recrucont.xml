@@ -28,7 +28,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/spoqa_han_sans_neo_bold"/>
 
             <Button
                 android:id="@+id/recruit_reply_delete"
@@ -39,7 +40,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:text="삭제" />
+                android:text="삭제"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
 
             <View
                 android:id="@+id/post_line2"
@@ -92,7 +94,8 @@
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/account_iv_profile"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/spoqa_han_sans_neo_bold"/>
 
             <TextView
                 android:id="@+id/recruit_content_date"
@@ -103,7 +106,8 @@
                 android:text="@string/date"
                 android:textSize="11sp"
                 app:layout_constraintStart_toEndOf="@+id/account_iv_profile"
-                app:layout_constraintTop_toBottomOf="@+id/recruit_content_author" />
+                app:layout_constraintTop_toBottomOf="@+id/recruit_content_author"
+                android:fontFamily="@font/spoqa_han_sans_neo_light"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -131,7 +135,8 @@
                 app:layout_constraintBottom_toTopOf="@+id/recruit_content_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/spoqa_han_sans_neo_bold" />
 
             <TextView
                 android:id="@+id/recruit_content_content"
@@ -144,7 +149,8 @@
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recruit_content_title" />
+                app:layout_constraintTop_toBottomOf="@+id/recruit_content_title"
+                android:fontFamily="@font/spoqa_han_sans_neo_regular" />
 
             <TextView
                 android:id="@+id/recruit_content_type"
@@ -157,7 +163,8 @@
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recruit_content_content" />
+                app:layout_constraintTop_toBottomOf="@+id/recruit_content_content"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
 
             <TextView
                 android:id="@+id/recruit_content_endDate"
@@ -170,7 +177,8 @@
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
             <TextView
                 android:id="@+id/recruit_content_max"
@@ -179,7 +187,8 @@
                 android:text="@string/maximum"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@+id/recruit_content_curr"
-                app:layout_constraintStart_toEndOf="@+id/recruit_content_curr" />
+                app:layout_constraintStart_toEndOf="@+id/recruit_content_curr"
+                android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
 
             <TextView
@@ -190,7 +199,8 @@
                 android:text="@string/curr"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@+id/textView4"
-                app:layout_constraintStart_toEndOf="@+id/textView4" />
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
             <TextView
                 android:id="@+id/recruit_type"
@@ -204,7 +214,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recruit_content_type"
-                tools:layout_editor_absoluteY="194dp" />
+                tools:layout_editor_absoluteY="194dp"
+                android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
 
             <TextView
@@ -218,7 +229,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
             <View
                 android:id="@+id/post_line"
@@ -239,7 +251,8 @@
                 android:text="마감날짜: "
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recruit_type" />
+                app:layout_constraintTop_toBottomOf="@+id/recruit_type"
+                android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
             <TextView
                 android:id="@+id/textView2"
@@ -250,7 +263,8 @@
                 android:text="연락처: "
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recruit_content_curr" />
+                app:layout_constraintTop_toBottomOf="@+id/recruit_content_curr"
+                android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
             <TextView
                 android:id="@+id/textView4"
@@ -261,7 +275,8 @@
                 android:text="참여자 수:"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recruit_content_endDate" />
+                app:layout_constraintTop_toBottomOf="@+id/recruit_content_endDate"
+                android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -297,7 +312,8 @@
                 android:backgroundTint="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recruit_curr" />
+                app:layout_constraintTop_toBottomOf="@+id/recruit_curr"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </RelativeLayout>

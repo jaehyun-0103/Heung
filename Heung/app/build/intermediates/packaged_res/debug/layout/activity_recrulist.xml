@@ -26,7 +26,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/recruit_btn_back"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/spoqa_han_sans_neo_bold"/>
 
     <View
         android:id="@+id/post_line"
@@ -58,7 +59,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/recruit_view_all"
             app:layout_constraintWidth_default="spread"
-
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"
             />
 
         <RadioButton
@@ -72,7 +73,8 @@
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/recruit_filter_busking"
             app:layout_constraintTop_toTopOf="@+id/recruit_view_all"
-            app:layout_constraintWidth_default="spread" />
+            app:layout_constraintWidth_default="spread"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
         <RadioButton
             android:id="@+id/recruit_view_all"
@@ -84,6 +86,7 @@
             android:buttonTint="@color/black"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/recruit_filter_class"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"
             />
 
     </RadioGroup>

@@ -30,7 +30,8 @@
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/account_iv_profile"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
 
         <TextView
             android:id="@+id/performStart"
@@ -43,7 +44,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/performEnd"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
         <TextView
             android:id="@+id/performEnd"
@@ -57,7 +59,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/performStart"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

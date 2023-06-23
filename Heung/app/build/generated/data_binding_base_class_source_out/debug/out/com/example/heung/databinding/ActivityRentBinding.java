@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -44,7 +45,7 @@ public final class ActivityRentBinding implements ViewBinding {
   public final TextView locationNameTextView;
 
   @NonNull
-  public final Button locationNow;
+  public final ImageButton locationNow;
 
   @NonNull
   public final TextView locationPhoneTextView;
@@ -61,7 +62,7 @@ public final class ActivityRentBinding implements ViewBinding {
   private ActivityRentBinding(@NonNull ConstraintLayout rootView, @NonNull Spinner dropdown,
       @NonNull Guideline guideline, @NonNull TextView locationAddressTextView,
       @NonNull TextView locationContentTextView, @NonNull LinearLayout locationInfoLayout,
-      @NonNull TextView locationNameTextView, @NonNull Button locationNow,
+      @NonNull TextView locationNameTextView, @NonNull ImageButton locationNow,
       @NonNull TextView locationPhoneTextView, @NonNull MapView mapView,
       @NonNull AutoCompleteTextView searchBar, @NonNull Button searchButton) {
     this.rootView = rootView;
@@ -142,7 +143,7 @@ public final class ActivityRentBinding implements ViewBinding {
       }
 
       id = R.id.locationNow;
-      Button locationNow = ViewBindings.findChildViewById(rootView, id);
+      ImageButton locationNow = ViewBindings.findChildViewById(rootView, id);
       if (locationNow == null) {
         break missingId;
       }

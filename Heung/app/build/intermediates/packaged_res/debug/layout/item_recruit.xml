@@ -27,7 +27,8 @@
         android:text="@string/title"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/music_icon"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
     <TextView
         android:id="@+id/recruit_item_nickname"
@@ -39,7 +40,8 @@
         android:text="@string/nickname"
         android:textSize="11sp"
         app:layout_constraintBottom_toTopOf="@+id/post_line"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/spoqa_han_sans_neo_light"/>
 
     <TextView
         android:id="@+id/recruit_item_date"
@@ -49,7 +51,8 @@
         android:text="@string/date"
         android:textSize="11sp"
         app:layout_constraintBottom_toTopOf="@+id/post_line"
-        app:layout_constraintStart_toEndOf="@+id/recruit_item_nickname" />
+        app:layout_constraintStart_toEndOf="@+id/recruit_item_nickname"
+        android:fontFamily="@font/spoqa_han_sans_neo_light"/>
 
     <TextView
         android:id="@+id/recruit_item_type"
@@ -60,7 +63,8 @@
         android:text="@string/buskingR"
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/spoqa_han_sans_neo_light"/>
 
     <View
         android:id="@+id/post_line"

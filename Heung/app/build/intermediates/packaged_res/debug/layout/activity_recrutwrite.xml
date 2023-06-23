@@ -38,7 +38,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.42"
                 app:layout_constraintStart_toEndOf="@+id/recruit_btn_back"
-                app:layout_constraintTop_toTopOf="@+id/recruit_btn_back" />
+                app:layout_constraintTop_toTopOf="@+id/recruit_btn_back"
+                android:fontFamily="@font/spoqa_han_sans_neo_bold"/>
 
             <View
                 android:id="@+id/recruit_line"
@@ -75,7 +76,8 @@
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/recruit_filter_class" />
+                        app:layout_constraintEnd_toStartOf="@+id/recruit_filter_class"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:id="@+id/recruit_filter_class"
@@ -86,7 +88,8 @@
                         android:textSize="12sp"
                         android:buttonTint="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
                 </RadioGroup>
 
                 <EditText
@@ -100,7 +103,8 @@
                     android:hint="@string/title"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
                 <View
                     android:id="@+id/post_line"
@@ -125,7 +129,8 @@
                     android:minHeight="280dp"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
                 <View
                     android:layout_width="wrap_content"
                     android:layout_height="0.5dp"
@@ -134,29 +139,29 @@
                     android:layout_marginEnd="16dp"
                     android:background="#AAA8A8" />
 
-            <LinearLayout
-                android:id="@+id/Contact_information"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/recruit_contact"
+                <LinearLayout
+                    android:id="@+id/Contact_information"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:gravity="top"
-                    android:hint="@string/email_phone"
-                    android:inputType="textMultiLine"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginRight="16dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:textSize="16sp"
-                    />
+                    android:orientation="horizontal">
 
-            </LinearLayout>
+                    <EditText
+                        android:id="@+id/recruit_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:hint="@string/email_phone"
+                        android:inputType="textMultiLine"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/recruit_filter_busking_layout"
@@ -189,7 +194,8 @@
                         android:layout_marginRight="16dp"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
                     <View
                         android:layout_width="wrap_content"
@@ -210,7 +216,8 @@
                         android:layout_marginRight="16dp"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
                     <View
 
@@ -228,7 +235,8 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
                         android:text="@string/number"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
                     <NumberPicker
                         android:id="@+id/recruit_filter_busking_capacity"
@@ -237,7 +245,7 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
-                         />
+                        />
 
                 </LinearLayout>
 
@@ -274,7 +282,7 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
                         android:textSize="16sp"
-                        />
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
                     <View
                         android:layout_width="wrap_content"
@@ -296,7 +304,8 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
-                        android:hint="@string/classType"/>
+                        android:hint="@string/classType"
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
                     <View
                         android:layout_width="wrap_content"
@@ -313,7 +322,8 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
                         android:text="@string/number"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
                     <NumberPicker
                         android:id="@+id/recruit_filter_class_capacity"
@@ -334,7 +344,8 @@
                     android:layout_marginTop="16dp"
                     android:backgroundTint="@color/black"
                     android:text="@string/write"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
             </LinearLayout>
 
         </ScrollView>
