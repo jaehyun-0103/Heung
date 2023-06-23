@@ -77,7 +77,7 @@ class RentActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
             spinnerCategory.setSelection(0)
         }
 
-        val locationNowButton = findViewById<Button>(R.id.locationNow)
+        val locationNowButton = findViewById<ImageButton>(R.id.locationNow)
         locationNowButton.setOnClickListener {
             getCurrentLocation()
         }
@@ -157,6 +157,7 @@ class RentActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                     }
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@setOnNavigationItemSelectedListener true
                 }
@@ -166,6 +167,7 @@ class RentActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                     }
                     val intent = Intent(this, RecruListActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@setOnNavigationItemSelectedListener true
                 }
@@ -175,6 +177,7 @@ class RentActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                     }
                     val intent = Intent(this, RentActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@setOnNavigationItemSelectedListener true
                 }
@@ -184,6 +187,7 @@ class RentActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                     }
                     val intent = Intent(this, CalActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@setOnNavigationItemSelectedListener true
                 }
@@ -193,6 +197,7 @@ class RentActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                     }
                     val intent = Intent(this, SelfProfActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@setOnNavigationItemSelectedListener true
                 }

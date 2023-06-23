@@ -9,9 +9,11 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.NumberPicker;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatRadioButton;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.heung.R;
@@ -27,6 +29,12 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
   public final LinearLayout ContactInformation;
 
   @NonNull
+  public final View postLine;
+
+  @NonNull
+  public final RadioGroup radioGroup;
+
+  @NonNull
   public final ImageButton recruitBtnBack;
 
   @NonNull
@@ -36,7 +44,7 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
   public final EditText recruitContent;
 
   @NonNull
-  public final Button recruitFilterBusking;
+  public final AppCompatRadioButton recruitFilterBusking;
 
   @NonNull
   public final NumberPicker recruitFilterBuskingCapacity;
@@ -51,7 +59,7 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
   public final EditText recruitFilterBuskingSession;
 
   @NonNull
-  public final Button recruitFilterClass;
+  public final AppCompatRadioButton recruitFilterClass;
 
   @NonNull
   public final NumberPicker recruitFilterClassCapacity;
@@ -78,17 +86,22 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
   public final Button recruitUpload;
 
   private ActivityRecrutwriteBinding(@NonNull LinearLayout rootView,
-      @NonNull LinearLayout ContactInformation, @NonNull ImageButton recruitBtnBack,
+      @NonNull LinearLayout ContactInformation, @NonNull View postLine,
+      @NonNull RadioGroup radioGroup, @NonNull ImageButton recruitBtnBack,
       @NonNull EditText recruitContact, @NonNull EditText recruitContent,
-      @NonNull Button recruitFilterBusking, @NonNull NumberPicker recruitFilterBuskingCapacity,
+      @NonNull AppCompatRadioButton recruitFilterBusking,
+      @NonNull NumberPicker recruitFilterBuskingCapacity,
       @NonNull EditText recruitFilterBuskingDate, @NonNull LinearLayout recruitFilterBuskingLayout,
-      @NonNull EditText recruitFilterBuskingSession, @NonNull Button recruitFilterClass,
+      @NonNull EditText recruitFilterBuskingSession,
+      @NonNull AppCompatRadioButton recruitFilterClass,
       @NonNull NumberPicker recruitFilterClassCapacity, @NonNull EditText recruitFilterClassDate2,
       @NonNull LinearLayout recruitFilterClassLayout, @NonNull EditText recruitFilterClassType,
       @NonNull View recruitLine, @NonNull TextView recruitPost, @NonNull EditText recruitTitle,
       @NonNull Button recruitUpload) {
     this.rootView = rootView;
     this.ContactInformation = ContactInformation;
+    this.postLine = postLine;
+    this.radioGroup = radioGroup;
     this.recruitBtnBack = recruitBtnBack;
     this.recruitContact = recruitContact;
     this.recruitContent = recruitContent;
@@ -141,6 +154,18 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.post_line;
+      View postLine = ViewBindings.findChildViewById(rootView, id);
+      if (postLine == null) {
+        break missingId;
+      }
+
+      id = R.id.radioGroup;
+      RadioGroup radioGroup = ViewBindings.findChildViewById(rootView, id);
+      if (radioGroup == null) {
+        break missingId;
+      }
+
       id = R.id.recruit_btn_back;
       ImageButton recruitBtnBack = ViewBindings.findChildViewById(rootView, id);
       if (recruitBtnBack == null) {
@@ -160,7 +185,7 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
       }
 
       id = R.id.recruit_filter_busking;
-      Button recruitFilterBusking = ViewBindings.findChildViewById(rootView, id);
+      AppCompatRadioButton recruitFilterBusking = ViewBindings.findChildViewById(rootView, id);
       if (recruitFilterBusking == null) {
         break missingId;
       }
@@ -190,7 +215,7 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
       }
 
       id = R.id.recruit_filter_class;
-      Button recruitFilterClass = ViewBindings.findChildViewById(rootView, id);
+      AppCompatRadioButton recruitFilterClass = ViewBindings.findChildViewById(rootView, id);
       if (recruitFilterClass == null) {
         break missingId;
       }
@@ -243,8 +268,8 @@ public final class ActivityRecrutwriteBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityRecrutwriteBinding((LinearLayout) rootView, ContactInformation,
-          recruitBtnBack, recruitContact, recruitContent, recruitFilterBusking,
+      return new ActivityRecrutwriteBinding((LinearLayout) rootView, ContactInformation, postLine,
+          radioGroup, recruitBtnBack, recruitContact, recruitContent, recruitFilterBusking,
           recruitFilterBuskingCapacity, recruitFilterBuskingDate, recruitFilterBuskingLayout,
           recruitFilterBuskingSession, recruitFilterClass, recruitFilterClassCapacity,
           recruitFilterClassDate2, recruitFilterClassLayout, recruitFilterClassType, recruitLine,

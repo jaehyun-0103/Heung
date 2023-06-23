@@ -22,6 +22,7 @@ drawable baseline_settings
 drawable calendar
 drawable chat
 drawable chat_icon
+drawable clear
 drawable comment
 drawable edittext_round
 drawable home
@@ -113,7 +114,6 @@ id layout
 id layout2
 id likeCnt
 id like_btn
-id line3
 id locationAddressTextView
 id locationContentTextView
 id locationInfoLayout
@@ -152,6 +152,7 @@ id post_nickname
 id post_popular
 id post_save
 id post_title
+id radioGroup
 id recruit_btn_back
 id recruit_contact
 id recruit_content
@@ -215,7 +216,6 @@ id tv_schedule_add_time
 id tv_schedule_add_what
 id tv_title
 id userinfo_conslayout
-id zone_features
 layout activity_cal
 layout activity_caldetail
 layout activity_calwrite
@@ -332,5 +332,13 @@ style Theme.Heung
 style Theme.Heung.AppBarOverlay
 style Theme.Heung.NoActionBar
 style Theme.Heung.PopupOverlay
+transition fade_in
+transition fade_out
+transition slide_down
+transition slide_in_left
+transition slide_in_right
+transition slide_out_left
+transition slide_out_right
+transition slide_up
 xml backup_rules
 xml data_extraction_rules

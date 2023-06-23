@@ -32,6 +32,7 @@ class PostListActivity : AppCompatActivity() {
         val backButton = findViewById<ImageButton>(R.id.btn_back)
         backButton.setOnClickListener {
             onBackPressed()
+            overridePendingTransition(R.transition.slide_in_left, R.transition.slide_out_right)
         }
 
         recyclerViewPosts = findViewById(R.id.post_Recycler)
@@ -67,6 +68,7 @@ class PostListActivity : AppCompatActivity() {
                     intent.putExtra("postAuthor", nickname)
                     intent.putExtra("userId", clickedPost.user_id)
                     startActivity(intent)
+                    overridePendingTransition(R.transition.slide_in_right, R.transition.slide_out_left)
                 }
         }
 
@@ -75,6 +77,7 @@ class PostListActivity : AppCompatActivity() {
         postCreate.setOnClickListener {
             val intent = Intent(this, PostWriteActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(R.transition.slide_up, R.transition.fade_out)
         }
 
         // 인기 게시글 보기 버튼 클릭 이벤트 처리
@@ -87,6 +90,7 @@ class PostListActivity : AppCompatActivity() {
             } else {
                 // 전체 게시글 가져오기
                 loadPosts()
+
             }
         }
     }
@@ -121,7 +125,10 @@ class PostListActivity : AppCompatActivity() {
                 }
             }
     }
-
+    override fun onResume() {
+        super.onResume()
+        loadPostAuthorsLikesAndComments()
+    }
     // 게시글 작성자의 닉네임, 좋아요 수, 댓글 수 가져오기
     private fun loadPostAuthorsLikesAndComments() {
         val postIds = postList.map { it.post_id }

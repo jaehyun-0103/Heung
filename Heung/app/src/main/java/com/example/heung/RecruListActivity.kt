@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -17,8 +18,8 @@ class RecruListActivity : AppCompatActivity() {
     private lateinit var recruitListAdapter: RecruitListAdapter
     private lateinit var recyclerViewRecruits: RecyclerView
     private lateinit var recruitList: MutableList<Recruits>
-    private lateinit var buskingFilterButton: Button
-    private lateinit var classFilterButton: Button
+    private lateinit var buskingFilterButton: RadioButton
+    private lateinit var classFilterButton: RadioButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +52,7 @@ class RecruListActivity : AppCompatActivity() {
         }
 
         // 전체글 보기 버튼 클릭 이벤트 처리
-        val viewAllButton = findViewById<Button>(R.id.recruit_view_all)
+        val viewAllButton = findViewById<RadioButton>(R.id.recruit_view_all)
         viewAllButton.setOnClickListener {
             loadRecruits()
         }
@@ -61,6 +62,7 @@ class RecruListActivity : AppCompatActivity() {
         recruitCreateButton.setOnClickListener {
             val intent = Intent(this, RecrutWriteActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(R.transition.slide_up, R.transition.fade_out)
         }
 
         // 게시글 클릭 이벤트 처리
@@ -69,6 +71,7 @@ class RecruListActivity : AppCompatActivity() {
                 val intent = Intent(this@RecruListActivity, RecruContActivity::class.java)
                 intent.putExtra("recruit_id", recruit.recruit_id)
                 startActivity(intent)
+                overridePendingTransition(R.transition.slide_in_right, R.transition.slide_out_left)
             }
         })
 
@@ -83,6 +86,7 @@ class RecruListActivity : AppCompatActivity() {
                     val intent = Intent(this, MainActivity::class.java)
                     intent.putExtra("selectedItemId", R.id.nav_main)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     true
                 }
@@ -96,6 +100,7 @@ class RecruListActivity : AppCompatActivity() {
                     val intent = Intent(this, RentActivity::class.java)
                     intent.putExtra("selectedItemId", R.id.nav_recruit)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     true
                 }
@@ -106,6 +111,7 @@ class RecruListActivity : AppCompatActivity() {
                     val intent = Intent(this, CalActivity::class.java)
                     intent.putExtra("selectedItemId", R.id.nav_recruit)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     true
                 }
@@ -116,6 +122,7 @@ class RecruListActivity : AppCompatActivity() {
                     val intent = Intent(this, SelfProfActivity::class.java)
                     intent.putExtra("selectedItemId", R.id.nav_recruit)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     true
                 }

@@ -74,6 +74,7 @@ class PostWriteActivity : AppCompatActivity() {
             postTitle.text.clear()
             postCont.text.clear()
             onBackPressed()
+            overridePendingTransition(R.transition.slide_down, 0)
         }
         // 입력 필드의 텍스트 변경 감지
         postTitle.addTextChangedListener(object : TextWatcher {

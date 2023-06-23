@@ -35,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:background="#FFFFFF"
+                android:backgroundTint="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -237,6 +237,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginStart="10dp"
                 android:text="마감날짜: "
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recruit_type" />
 
@@ -247,6 +248,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="16dp"
                 android:text="연락처: "
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recruit_content_curr" />
 
@@ -257,6 +259,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="16dp"
                 android:text="참여자 수:"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recruit_content_endDate" />
 
@@ -291,6 +294,7 @@
                 android:layout_marginTop="33dp"
                 android:text="@string/complete"
                 android:textSize="12sp"
+                android:backgroundTint="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recruit_curr" />

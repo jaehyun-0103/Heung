@@ -16,8 +16,16 @@
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\item_callist.xml"
     },
     {
+        "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\transition_fade_out.xml.flat",
+        "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\transition\\fade_out.xml"
+    },
+    {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\layout_activity_recrutwrite.xml.flat",
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\activity_recrutwrite.xml"
+    },
+    {
+        "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\transition_slide_down.xml.flat",
+        "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\transition\\slide_down.xml"
     },
     {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\drawable_redprofile.png.flat",
@@ -42,6 +50,10 @@
     {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\drawable_profile.xml.flat",
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\drawable\\profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\transition_slide_in_left.xml.flat",
+        "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\transition\\slide_in_left.xml"
     },
     {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\layout_activity_main.xml.flat",
@@ -88,8 +100,20 @@
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\transition_slide_in_right.xml.flat",
+        "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\transition\\slide_in_right.xml"
+    },
+    {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\layout_item_reply.xml.flat",
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\item_reply.xml"
+    },
+    {
+        "merged": "com.example.heung.app-merged_res-62:/layout_activity_main.xml.flat",
+        "source": "com.example.heung.app-main-64:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\transition_fade_in.xml.flat",
+        "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\transition\\fade_in.xml"
     },
     {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\mipmap-xhdpi_ic_launcher.webp.flat",
@@ -160,6 +184,10 @@
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\item_postlist.xml"
     },
     {
+        "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\transition_slide_out_left.xml.flat",
+        "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\transition\\slide_out_left.xml"
+    },
+    {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\layout_activity_caldetail.xml.flat",
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\activity_caldetail.xml"
     },
@@ -172,12 +200,20 @@
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\drawable\\chat.xml"
     },
     {
+        "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\drawable_clear.xml.flat",
+        "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\drawable\\clear.xml"
+    },
+    {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\drawable_edittext_round.xml.flat",
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\drawable\\edittext_round.xml"
     },
     {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\drawable_kakao_login_medium_narrow.png.flat",
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\drawable\\kakao_login_medium_narrow.png"
+    },
+    {
+        "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\transition_slide_up.xml.flat",
+        "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\transition\\slide_up.xml"
     },
     {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\layout_item_setting.xml.flat",
@@ -202,6 +238,10 @@
     {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\layout_activity_setting.xml.flat",
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\activity_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\transition_slide_out_right.xml.flat",
+        "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\transition\\slide_out_right.xml"
     },
     {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\drawable_write.xml.flat",
@@ -230,10 +270,6 @@
     {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\drawable_ic_time_start_boxline.xml.flat",
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\drawable\\ic_time_start_boxline.xml"
-    },
-    {
-        "merged": "com.example.heung.app-merged_res-62:/layout_item_mainlist.xml.flat",
-        "source": "com.example.heung.app-main-64:/layout/item_mainlist.xml"
     },
     {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-merged_res-62:\\drawable_ic_time_end_boxline.xml.flat",

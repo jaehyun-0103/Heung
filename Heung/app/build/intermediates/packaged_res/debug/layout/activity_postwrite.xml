@@ -9,7 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -19,10 +20,10 @@
                 android:id="@+id/btn_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="4dp"
                 android:background="#FFFFFF"
                 android:padding="8dp"
-                android:src="@drawable/arrow_back"
+                android:src="@drawable/clear"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -31,23 +32,16 @@
                 android:id="@+id/post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/write"
-                android:textStyle="bold"
                 android:layout_marginStart="16dp"
+                android:text="@string/write"
                 android:textSize="22sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/btn_back"
-                app:layout_constraintEnd_toStartOf="@+id/post_save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.394"
                 app:layout_constraintStart_toEndOf="@+id/btn_back"
                 app:layout_constraintTop_toTopOf="@+id/btn_back" />
 
-            <Button
-                android:id="@+id/post_save"
-                android:layout_width="60dp"
-                android:layout_height="40dp"
-                android:text="@string/upload"
-                android:textSize="12sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -70,7 +64,7 @@
                     android:layout_marginRight="16dp"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
-                    android:textSize="22sp"
+                    android:textSize="18sp"
                     android:hint="@string/title"
                     android:background = "@null"/>
 
@@ -96,12 +90,24 @@
                     android:minHeight="280dp"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:hint="내용을 입력해주세요."/>
 
             </LinearLayout>
 
+
         </ScrollView>
+
+        <Button
+            android:id="@+id/post_save"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:text="@string/upload"
+            android:textSize="12sp"
+            tools:layout_editor_absoluteX="351dp"
+            tools:layout_editor_absoluteY="0dp" />
 
     </LinearLayout>
 

@@ -92,6 +92,7 @@ class CalWriteActivity : AppCompatActivity() {
                             // 메인 화면으로 이동
                             val intent = Intent(this, CalActivity::class.java)
                             startActivity(intent)
+                            overridePendingTransition(0, 0)
                             finish() // 현재 액티비티 종료
                         }
                         .addOnFailureListener { exception ->
@@ -112,6 +113,7 @@ class CalWriteActivity : AppCompatActivity() {
             calLocation.text.clear()
             calMemo.text.clear()
             onBackPressed()
+            overridePendingTransition(R.transition.slide_down, R.transition.fade_in)
         }
 
         // 입력 필드의 텍스트 변경 감지

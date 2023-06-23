@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity() {
                     intent.putExtra("postAuthor", nickname)
                     intent.putExtra("userId", clickedPost.user_id)
                     startActivity(intent)
+                    overridePendingTransition(R.transition.slide_in_right, R.transition.slide_out_left)
                 }
         }
         loadPopularPosts() // 인기 게시글 가져오기
@@ -73,6 +74,7 @@ class MainActivity : AppCompatActivity() {
         btnPostList.setOnClickListener {
             val intent = Intent(this, PostListActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(R.transition.slide_in_right, R.transition.slide_out_left)
         }
 
         // 하단바 설정
@@ -168,8 +170,10 @@ class MainActivity : AppCompatActivity() {
                     }
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@OnNavigationItemSelectedListener true
+
                 }
                 R.id.nav_recruit -> {
                     if (javaClass.name == RecruListActivity::class.java.name) {
@@ -177,6 +181,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     val intent = Intent(this, RecruListActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@OnNavigationItemSelectedListener true
                 }
@@ -186,6 +191,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     val intent = Intent(this, RentActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@OnNavigationItemSelectedListener true
                 }
@@ -195,6 +201,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     val intent = Intent(this, CalActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@OnNavigationItemSelectedListener true
                 }
@@ -204,6 +211,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     val intent = Intent(this, SelfProfActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@OnNavigationItemSelectedListener true
                 }

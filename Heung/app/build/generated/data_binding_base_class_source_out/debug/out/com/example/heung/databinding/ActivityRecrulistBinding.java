@@ -4,9 +4,10 @@ package com.example.heung.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,16 +28,19 @@ public final class ActivityRecrulistBinding implements ViewBinding {
   public final View postLine;
 
   @NonNull
+  public final RadioGroup radioGroup;
+
+  @NonNull
   public final ImageView recruitBtnBack;
 
   @NonNull
   public final ImageButton recruitCreate;
 
   @NonNull
-  public final Button recruitFilterBusking;
+  public final RadioButton recruitFilterBusking;
 
   @NonNull
-  public final Button recruitFilterClass;
+  public final RadioButton recruitFilterClass;
 
   @NonNull
   public final RecyclerView recruitList;
@@ -45,15 +49,16 @@ public final class ActivityRecrulistBinding implements ViewBinding {
   public final TextView recruitTitle;
 
   @NonNull
-  public final Button recruitViewAll;
+  public final RadioButton recruitViewAll;
 
   private ActivityRecrulistBinding(@NonNull ConstraintLayout rootView, @NonNull View postLine,
-      @NonNull ImageView recruitBtnBack, @NonNull ImageButton recruitCreate,
-      @NonNull Button recruitFilterBusking, @NonNull Button recruitFilterClass,
-      @NonNull RecyclerView recruitList, @NonNull TextView recruitTitle,
-      @NonNull Button recruitViewAll) {
+      @NonNull RadioGroup radioGroup, @NonNull ImageView recruitBtnBack,
+      @NonNull ImageButton recruitCreate, @NonNull RadioButton recruitFilterBusking,
+      @NonNull RadioButton recruitFilterClass, @NonNull RecyclerView recruitList,
+      @NonNull TextView recruitTitle, @NonNull RadioButton recruitViewAll) {
     this.rootView = rootView;
     this.postLine = postLine;
+    this.radioGroup = radioGroup;
     this.recruitBtnBack = recruitBtnBack;
     this.recruitCreate = recruitCreate;
     this.recruitFilterBusking = recruitFilterBusking;
@@ -96,6 +101,12 @@ public final class ActivityRecrulistBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.radioGroup;
+      RadioGroup radioGroup = ViewBindings.findChildViewById(rootView, id);
+      if (radioGroup == null) {
+        break missingId;
+      }
+
       id = R.id.recruit_btn_back;
       ImageView recruitBtnBack = ViewBindings.findChildViewById(rootView, id);
       if (recruitBtnBack == null) {
@@ -109,13 +120,13 @@ public final class ActivityRecrulistBinding implements ViewBinding {
       }
 
       id = R.id.recruit_filter_busking;
-      Button recruitFilterBusking = ViewBindings.findChildViewById(rootView, id);
+      RadioButton recruitFilterBusking = ViewBindings.findChildViewById(rootView, id);
       if (recruitFilterBusking == null) {
         break missingId;
       }
 
       id = R.id.recruit_filter_class;
-      Button recruitFilterClass = ViewBindings.findChildViewById(rootView, id);
+      RadioButton recruitFilterClass = ViewBindings.findChildViewById(rootView, id);
       if (recruitFilterClass == null) {
         break missingId;
       }
@@ -133,14 +144,14 @@ public final class ActivityRecrulistBinding implements ViewBinding {
       }
 
       id = R.id.recruit_view_all;
-      Button recruitViewAll = ViewBindings.findChildViewById(rootView, id);
+      RadioButton recruitViewAll = ViewBindings.findChildViewById(rootView, id);
       if (recruitViewAll == null) {
         break missingId;
       }
 
-      return new ActivityRecrulistBinding((ConstraintLayout) rootView, postLine, recruitBtnBack,
-          recruitCreate, recruitFilterBusking, recruitFilterClass, recruitList, recruitTitle,
-          recruitViewAll);
+      return new ActivityRecrulistBinding((ConstraintLayout) rootView, postLine, radioGroup,
+          recruitBtnBack, recruitCreate, recruitFilterBusking, recruitFilterClass, recruitList,
+          recruitTitle, recruitViewAll);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

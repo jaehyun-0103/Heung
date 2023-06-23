@@ -48,6 +48,7 @@ class CalActivity : AppCompatActivity() {
                         return@setOnNavigationItemSelectedListener true
                     }
                     startActivity(Intent(this, MainActivity::class.java))
+                    overridePendingTransition(0,0)
                     finish()
                     true
                 }
@@ -56,6 +57,7 @@ class CalActivity : AppCompatActivity() {
                         return@setOnNavigationItemSelectedListener true
                     }
                     startActivity(Intent(this, RecruListActivity::class.java))
+                    overridePendingTransition(0,0)
                     finish()
                     true
                 }
@@ -64,6 +66,7 @@ class CalActivity : AppCompatActivity() {
                         return@setOnNavigationItemSelectedListener true
                     }
                     startActivity(Intent(this, RentActivity::class.java))
+                    overridePendingTransition(0,0)
                     finish()
                     true
                 }
@@ -72,6 +75,7 @@ class CalActivity : AppCompatActivity() {
                         return@setOnNavigationItemSelectedListener true
                     }
                     startActivity(Intent(this, CalActivity::class.java))
+                    overridePendingTransition(0,0)
                     finish()
                     true
                 }
@@ -80,6 +84,7 @@ class CalActivity : AppCompatActivity() {
                         return@setOnNavigationItemSelectedListener true
                     }
                     startActivity(Intent(this, SelfProfActivity::class.java))
+                    overridePendingTransition(0,0)
                     finish()
                     true
                 }
@@ -103,6 +108,7 @@ class CalActivity : AppCompatActivity() {
                 val intent = Intent(this, CalWriteActivity::class.java)
                 intent.putExtra("selectedDate", selectedDate)
                 startActivity(intent)
+                overridePendingTransition(R.transition.slide_up, R.transition.fade_out)
             }
 
             firestore.collection("Calendar")
@@ -136,6 +142,7 @@ class CalActivity : AppCompatActivity() {
                 intent.putExtra("calMemo", clickedCal.cal_memo)
                 intent.putExtra("calId", clickedCal.cal_id)
                 startActivity(intent)
+                overridePendingTransition(R.transition.slide_in_right, R.transition.slide_out_left)
             }
         }
     }

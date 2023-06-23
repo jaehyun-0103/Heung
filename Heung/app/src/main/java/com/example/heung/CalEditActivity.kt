@@ -54,6 +54,7 @@ class CalEditActivity : AppCompatActivity() {
 
         btnBack.setOnClickListener {
             onBackPressed()
+            overridePendingTransition(R.transition.slide_down, R.transition.fade_in)
         }
 
         // 기존 데이터를 EditText에 표시
@@ -189,14 +190,15 @@ class CalEditActivity : AppCompatActivity() {
                     documentSnapshot.reference.update(
                         "cal_title", title,
                         "cal_location", location,
-                        "cal_start_time", startTime,
-                        "cal_end_time", endTime,
+                        "cal_startDate", startTime,
+                        "cal_endDate", endTime,
                         "cal_memo", memo
                     )
                         .addOnSuccessListener {
                             Toast.makeText(this, "수정 성공했습니다.", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this, CalActivity::class.java)
                             startActivity(intent)
+                            overridePendingTransition(R.transition.slide_down, 0)
                             finish()
                         }
                         .addOnFailureListener { e ->

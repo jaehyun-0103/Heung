@@ -52,6 +52,7 @@ class CalDetailActivity : AppCompatActivity() {
         val btnBack = findViewById<ImageButton>(R.id.diro)
         btnBack.setOnClickListener {
             onBackPressed()
+            overridePendingTransition(R.transition.slide_in_left, R.transition.slide_out_right)
         }
 
         // 수정 버튼 클릭 리스너 설정
@@ -77,6 +78,7 @@ class CalDetailActivity : AppCompatActivity() {
                     intent.putExtra("selectedDate", selectedDate)
                     intent.putExtra("calId", calId)
                     startActivity(intent)
+                    overridePendingTransition(R.transition.slide_up, R.transition.fade_out)
                 }
             }
         }
@@ -106,6 +108,7 @@ class CalDetailActivity : AppCompatActivity() {
                                             .show() // 메인 화면으로 이동
                                         val intent = Intent(this, CalActivity::class.java)
                                         startActivity(intent)
+                                        overridePendingTransition(R.transition.slide_in_left, R.transition.slide_out_right)
                                         finish() // 현재 액티비티 종료
                                     }
                                     .addOnFailureListener { e ->

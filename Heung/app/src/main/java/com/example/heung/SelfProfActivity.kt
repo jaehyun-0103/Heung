@@ -169,6 +169,7 @@ class SelfProfActivity : AppCompatActivity() {
                     }
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@setOnNavigationItemSelectedListener true
                 }
@@ -178,6 +179,7 @@ class SelfProfActivity : AppCompatActivity() {
                     }
                     val intent = Intent(this, RecruListActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@setOnNavigationItemSelectedListener true
                 }
@@ -187,6 +189,7 @@ class SelfProfActivity : AppCompatActivity() {
                     }
                     val intent = Intent(this, RentActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@setOnNavigationItemSelectedListener true
                 }
@@ -196,6 +199,7 @@ class SelfProfActivity : AppCompatActivity() {
                     }
                     val intent = Intent(this, CalActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@setOnNavigationItemSelectedListener true
                 }
@@ -205,6 +209,7 @@ class SelfProfActivity : AppCompatActivity() {
                     }
                     val intent = Intent(this, SelfProfActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@setOnNavigationItemSelectedListener true
                 }

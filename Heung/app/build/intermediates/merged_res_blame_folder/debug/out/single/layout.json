@@ -36,12 +36,12 @@
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\activity_postlist.xml"
     },
     {
-        "merged": "com.example.heung.app-mergeDebugResources-61:/layout/item_mainlist.xml",
-        "source": "com.example.heung.app-main-64:/layout/item_mainlist.xml"
-    },
-    {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-61:\\layout\\item_postlist.xml",
         "source": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-main-64:\\layout\\item_postlist.xml"
+    },
+    {
+        "merged": "com.example.heung.app-mergeDebugResources-61:/layout/activity_main.xml",
+        "source": "com.example.heung.app-main-64:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\RDH\\.gradle\\daemon\\7.5\\com.example.heung.app-mergeDebugResources-61:\\layout\\item_selfprof.xml",
