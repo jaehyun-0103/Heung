@@ -6,7 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
+import android.widget.TableLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -18,7 +19,10 @@ import java.lang.String;
 
 public final class ActivitySettingBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final TableLayout rootView;
+
+  @NonNull
+  public final TextView appsetting;
 
   @NonNull
   public final ImageButton btnBack;
@@ -39,24 +43,57 @@ public final class ActivitySettingBinding implements ViewBinding {
   public final Button defaultModeButton;
 
   @NonNull
+  public final TextView etcsetting;
+
+  @NonNull
+  public final TextView languagesetting;
+
+  @NonNull
+  public final TableLayout layout;
+
+  @NonNull
+  public final TableLayout layout2;
+
+  @NonNull
+  public final TableLayout layout3;
+
+  @NonNull
   public final Button logout;
 
-  private ActivitySettingBinding(@NonNull LinearLayout rootView, @NonNull ImageButton btnBack,
-      @NonNull Button btnQuit, @NonNull Button buttonEnglish, @NonNull Button buttonKorean,
-      @NonNull Button darkModeButton, @NonNull Button defaultModeButton, @NonNull Button logout) {
+  @NonNull
+  public final TextView post;
+
+  @NonNull
+  public final View postLine;
+
+  private ActivitySettingBinding(@NonNull TableLayout rootView, @NonNull TextView appsetting,
+      @NonNull ImageButton btnBack, @NonNull Button btnQuit, @NonNull Button buttonEnglish,
+      @NonNull Button buttonKorean, @NonNull Button darkModeButton,
+      @NonNull Button defaultModeButton, @NonNull TextView etcsetting,
+      @NonNull TextView languagesetting, @NonNull TableLayout layout, @NonNull TableLayout layout2,
+      @NonNull TableLayout layout3, @NonNull Button logout, @NonNull TextView post,
+      @NonNull View postLine) {
     this.rootView = rootView;
+    this.appsetting = appsetting;
     this.btnBack = btnBack;
     this.btnQuit = btnQuit;
     this.buttonEnglish = buttonEnglish;
     this.buttonKorean = buttonKorean;
     this.darkModeButton = darkModeButton;
     this.defaultModeButton = defaultModeButton;
+    this.etcsetting = etcsetting;
+    this.languagesetting = languagesetting;
+    this.layout = layout;
+    this.layout2 = layout2;
+    this.layout3 = layout3;
     this.logout = logout;
+    this.post = post;
+    this.postLine = postLine;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public TableLayout getRoot() {
     return rootView;
   }
 
@@ -81,6 +118,12 @@ public final class ActivitySettingBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.appsetting;
+      TextView appsetting = ViewBindings.findChildViewById(rootView, id);
+      if (appsetting == null) {
+        break missingId;
+      }
+
       id = R.id.btn_back;
       ImageButton btnBack = ViewBindings.findChildViewById(rootView, id);
       if (btnBack == null) {
@@ -117,14 +160,57 @@ public final class ActivitySettingBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.etcsetting;
+      TextView etcsetting = ViewBindings.findChildViewById(rootView, id);
+      if (etcsetting == null) {
+        break missingId;
+      }
+
+      id = R.id.languagesetting;
+      TextView languagesetting = ViewBindings.findChildViewById(rootView, id);
+      if (languagesetting == null) {
+        break missingId;
+      }
+
+      id = R.id.layout;
+      TableLayout layout = ViewBindings.findChildViewById(rootView, id);
+      if (layout == null) {
+        break missingId;
+      }
+
+      id = R.id.layout2;
+      TableLayout layout2 = ViewBindings.findChildViewById(rootView, id);
+      if (layout2 == null) {
+        break missingId;
+      }
+
+      id = R.id.layout3;
+      TableLayout layout3 = ViewBindings.findChildViewById(rootView, id);
+      if (layout3 == null) {
+        break missingId;
+      }
+
       id = R.id.logout;
       Button logout = ViewBindings.findChildViewById(rootView, id);
       if (logout == null) {
         break missingId;
       }
 
-      return new ActivitySettingBinding((LinearLayout) rootView, btnBack, btnQuit, buttonEnglish,
-          buttonKorean, darkModeButton, defaultModeButton, logout);
+      id = R.id.post;
+      TextView post = ViewBindings.findChildViewById(rootView, id);
+      if (post == null) {
+        break missingId;
+      }
+
+      id = R.id.post_line;
+      View postLine = ViewBindings.findChildViewById(rootView, id);
+      if (postLine == null) {
+        break missingId;
+      }
+
+      return new ActivitySettingBinding((TableLayout) rootView, appsetting, btnBack, btnQuit,
+          buttonEnglish, buttonKorean, darkModeButton, defaultModeButton, etcsetting,
+          languagesetting, layout, layout2, layout3, logout, post, postLine);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

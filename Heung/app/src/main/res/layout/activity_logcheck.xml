@@ -12,31 +12,47 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
         android:layout_weight="1"
-        android:text="@string/start"
+        android:text="시작하기"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
 
     <TextView
         android:id="@+id/HeungTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="144dp"
+        android:fontFamily="@font/spoqa_han_sans_neo_bold"
         android:text="@string/app_name"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/Heungtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:text="Heung에서 시흥시 주민들과 버스킹과 클래스를 결성하고,\n                      음악 커뮤니티까지 즐겨보세요."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeungTextView"
+        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="55dp"
-        android:layout_height="54dp"
+        android:layout_width="73dp"
+        android:layout_height="60dp"
         app:layout_constraintBottom_toTopOf="@+id/HeungTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75"
         app:srcCompat="@drawable/music_icon" />
 
 

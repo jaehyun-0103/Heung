@@ -18,7 +18,8 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
     <TextView
         android:id="@+id/tv_comment"
@@ -32,7 +33,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/post_title"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

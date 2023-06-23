@@ -39,7 +39,8 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/account_iv_profile"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
 
             <TextView
                 android:id="@+id/tv_comment"
@@ -51,7 +52,8 @@
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/account_iv_profile" />
+                app:layout_constraintTop_toBottomOf="@+id/account_iv_profile"
+                android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
             <TextView
                 android:id="@+id/tv_date"
@@ -63,7 +65,8 @@
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_comment" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_comment"
+                android:fontFamily="@font/spoqa_han_sans_neo_light"/>
 
             <ImageButton
                 android:id="@+id/btnReply"

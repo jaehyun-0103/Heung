@@ -7,26 +7,39 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import data.Posts
 
-class SelfProfAdapter(private val postsList: List<Posts>) :
-    RecyclerView.Adapter<SelfProfAdapter.ViewHolder>() {
+class SelfProfAdapter(private val postsList: MutableList<Posts>) :
+    RecyclerView.Adapter<SelfProfAdapter.PostViewHolder>() {
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val titleTextView: TextView = itemView.findViewById(R.id.title)
-        val contentTextView: TextView = itemView.findViewById(R.id.content)
-    }
+    private var onItemClickListener: ((position: Int) -> Unit)? = null
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_selfprof, parent, false)
-        return ViewHolder(view)
+        return PostViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
         val post = postsList[position]
-        holder.titleTextView.text = post.post_title
-        holder.contentTextView.text = post.post_content
+        holder.itemView.findViewById<TextView>(R.id.title).text = post.post_title
+        holder.itemView.setOnClickListener {
+            onItemClickListener?.invoke(position)
+        }
+        holder.itemView.findViewById<TextView>(R.id.content).text = post.post_content
+        holder.itemView.setOnClickListener {
+            onItemClickListener?.invoke(position)
+        }
     }
 
     override fun getItemCount(): Int {
         return postsList.size
     }
+
+    fun setOnItemClickListener(listener: (position: Int) -> Unit) {
+        onItemClickListener = listener
+    }
+    class PostViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+
+    }
+
 }

@@ -37,7 +37,8 @@
                 android:layout_height="match_parent"
                 android:hint="@string/Reply_example"
                 android:inputType="text"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -52,6 +53,7 @@
             android:stateListAnimator="@null"
             android:text="@string/complete"
             android:textColor="@color/white"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
     </LinearLayout>
 </layout>

@@ -25,15 +25,20 @@ public final class ActivityLogcheckBinding implements ViewBinding {
   public final TextView HeungTextView;
 
   @NonNull
+  public final TextView Heungtext;
+
+  @NonNull
   public final Button check;
 
   @NonNull
   public final ImageView imageView;
 
   private ActivityLogcheckBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView HeungTextView, @NonNull Button check, @NonNull ImageView imageView) {
+      @NonNull TextView HeungTextView, @NonNull TextView Heungtext, @NonNull Button check,
+      @NonNull ImageView imageView) {
     this.rootView = rootView;
     this.HeungTextView = HeungTextView;
+    this.Heungtext = Heungtext;
     this.check = check;
     this.imageView = imageView;
   }
@@ -71,6 +76,12 @@ public final class ActivityLogcheckBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.Heungtext;
+      TextView Heungtext = ViewBindings.findChildViewById(rootView, id);
+      if (Heungtext == null) {
+        break missingId;
+      }
+
       id = R.id.check;
       Button check = ViewBindings.findChildViewById(rootView, id);
       if (check == null) {
@@ -83,8 +94,8 @@ public final class ActivityLogcheckBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLogcheckBinding((ConstraintLayout) rootView, HeungTextView, check,
-          imageView);
+      return new ActivityLogcheckBinding((ConstraintLayout) rootView, HeungTextView, Heungtext,
+          check, imageView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

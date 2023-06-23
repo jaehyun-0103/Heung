@@ -40,7 +40,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.394"
                 app:layout_constraintStart_toEndOf="@+id/btn_back"
-                app:layout_constraintTop_toTopOf="@+id/btn_back" />
+                app:layout_constraintTop_toTopOf="@+id/btn_back"
+                android:fontFamily="@font/spoqa_han_sans_neo_bold"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -66,7 +67,8 @@
                     android:paddingEnd="8dp"
                     android:textSize="18sp"
                     android:hint="@string/title"
-                    android:background = "@null"/>
+                    android:background = "@null"
+                    android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
                 <View
                     android:id="@+id/post_line"
@@ -91,7 +93,8 @@
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
                     android:textSize="16sp"
-                    android:hint="내용을 입력해주세요."/>
+                    android:hint="내용을 입력해주세요."
+                    android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
             </LinearLayout>
 
@@ -107,7 +110,8 @@
             android:text="@string/upload"
             android:textSize="12sp"
             tools:layout_editor_absoluteX="351dp"
-            tools:layout_editor_absoluteY="0dp" />
+            tools:layout_editor_absoluteY="0dp"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium" />
 
     </LinearLayout>
 

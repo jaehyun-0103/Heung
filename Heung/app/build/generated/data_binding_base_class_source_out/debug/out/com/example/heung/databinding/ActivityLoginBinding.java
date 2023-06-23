@@ -22,6 +22,9 @@ public final class ActivityLoginBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final TextView Heungtext;
+
+  @NonNull
   public final ImageButton kakaoLoginButton;
 
   @NonNull
@@ -30,9 +33,10 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final TextView tvHashKey;
 
-  private ActivityLoginBinding(@NonNull ConstraintLayout rootView,
+  private ActivityLoginBinding(@NonNull ConstraintLayout rootView, @NonNull TextView Heungtext,
       @NonNull ImageButton kakaoLoginButton, @NonNull ImageView logo, @NonNull TextView tvHashKey) {
     this.rootView = rootView;
+    this.Heungtext = Heungtext;
     this.kakaoLoginButton = kakaoLoginButton;
     this.logo = logo;
     this.tvHashKey = tvHashKey;
@@ -65,6 +69,12 @@ public final class ActivityLoginBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.Heungtext;
+      TextView Heungtext = ViewBindings.findChildViewById(rootView, id);
+      if (Heungtext == null) {
+        break missingId;
+      }
+
       id = R.id.kakao_login_button;
       ImageButton kakaoLoginButton = ViewBindings.findChildViewById(rootView, id);
       if (kakaoLoginButton == null) {
@@ -83,8 +93,8 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLoginBinding((ConstraintLayout) rootView, kakaoLoginButton, logo,
-          tvHashKey);
+      return new ActivityLoginBinding((ConstraintLayout) rootView, Heungtext, kakaoLoginButton,
+          logo, tvHashKey);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

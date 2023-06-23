@@ -1,42 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="start"
     android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/btn_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:padding="8dp"
-        android:src="@drawable/arrow_back" />
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="57dp"
+            android:layout_height="38dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:padding="8dp"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="124dp"
+            android:layout_marginTop="8dp"
+            android:text="설정"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/btn_back"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/spoqa_han_sans_neo_bold"/>
+        <View
+            android:id="@+id/post_line"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="6dp"
+            android:background="#808080"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TableLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/edittext_round"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:id="@+id/appsetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="앱 설정"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
+
 
         <Button
             android:id="@+id/darkModeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:gravity="start|center_vertical"
             android:onClick="toggleDarkMode"
-            android:text="@string/darkmode" />
+            android:paddingStart="0dp"
+            android:text="다크 모드"
+            android:textColor="@color/black"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
+
 
         <Button
             android:id="@+id/defaultModeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:gravity="start|center_vertical"
             android:onClick="setDefaultMode"
-            android:text="@string/defaultmode" />
-    </LinearLayout>
+            android:paddingStart="0dp"
+            android:text="@string/defaultmode"
+            android:textColor="@color/black"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+
+    </TableLayout>
+
+
+    <TableLayout
+        android:id="@+id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="144dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/edittext_round"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:id="@+id/languagesetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="언어 설정"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
+
+        <Button
+            android:id="@+id/button_korean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:gravity="start|center_vertical"
+            android:paddingStart="0dp"
+            android:text="한국어"
+            android:textColor="@color/black"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
+
+        <Button
+            android:id="@+id/button_english"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:gravity="start|center_vertical"
+            android:paddingStart="0dp"
+            android:text="English"
+            android:textColor="@color/black"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/layout3"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/edittext_round"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:id="@+id/etcsetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="기타 설정"
+            android:textStyle="bold"
+            android:textSize="21dp"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
 
         <Button
             android:id="@+id/logout"
@@ -44,7 +179,11 @@
             android:layout_height="wrap_content"
             android:text="@string/logout"
             android:textSize="15sp"
-            android:textStyle="bold" />
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:gravity="start|center_vertical"
+            android:paddingStart="0dp"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
         <Button
             android:id="@+id/btn_quit"
@@ -52,26 +191,12 @@
             android:layout_height="wrap_content"
             android:text="@string/withdrawal"
             android:textSize="15sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:gravity="start|center_vertical"
+            android:paddingStart="0dp"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
+    </TableLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/button_korean"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ko" />
-
-        <Button
-            android:id="@+id/button_english"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/en" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</TableLayout>

@@ -18,7 +18,8 @@
             android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
         <View
             android:id="@+id/post_line"
@@ -39,7 +40,8 @@
             android:textColor="@color/black"
             android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/post_line" />
+            app:layout_constraintTop_toBottomOf="@+id/post_line"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
         <View
             android:id="@+id/post_line2"
@@ -61,7 +63,8 @@
             android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/post_line2" />
+            app:layout_constraintTop_toBottomOf="@+id/post_line2"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
