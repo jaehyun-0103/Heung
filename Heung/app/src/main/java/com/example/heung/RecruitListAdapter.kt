@@ -75,7 +75,7 @@ class RecruitListAdapter(private val recruitList: MutableList<Recruits>) :
                         val userDocumentSnapshot = userQuerySnapshot.documents[0]
                         val user = userDocumentSnapshot.toObject(Users::class.java)
                         if (user != null) {
-                            nicknameTextView.text = user.user_nickname
+                            nicknameTextView.text = user.user_nickname + " | "
                         }
                     }
                 }

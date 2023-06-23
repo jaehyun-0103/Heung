@@ -1,5 +1,5 @@
-com.example.heung.test.app-annotation-experimental-1.3.0-0 C:\Users\rhfuv\.gradle\caches\transforms-3\8cfe1fc317fc262edc8e1d92ee61104a\transformed\annotation-experimental-1.3.0\res
-com.example.heung.test.app-core-1.5.0-1 C:\Users\rhfuv\.gradle\caches\transforms-3\c6ce3ecfacf6090b74460e8bf2db00d2\transformed\core-1.5.0\res
+com.example.heung.test.app-jetified-annotation-experimental-1.3.0-0 C:\Users\rhfuv\.gradle\caches\transforms-3\316d6db6bae946d4f63a0955b9852e64\transformed\jetified-annotation-experimental-1.3.0\res
+com.example.heung.test.app-jetified-core-1.5.0-1 C:\Users\rhfuv\.gradle\caches\transforms-3\a5a22c03872e2704a5b947a63066cf9b\transformed\jetified-core-1.5.0\res
 com.example.heung.test.app-androidTest-2 C:\Users\rhfuv\Desktop\Heung\Heung\app\build\generated\res\resValues\androidTest\debug
 com.example.heung.test.app-androidTest-3 C:\Users\rhfuv\Desktop\Heung\Heung\app\build\generated\res\rs\androidTest\debug
 com.example.heung.test.app-mergeDebugAndroidTestResources-4 C:\Users\rhfuv\Desktop\Heung\Heung\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir

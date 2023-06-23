@@ -12,7 +12,7 @@
     <string name="delete">삭제</string>
     <string name="cancel">취소</string>
     <string name="nickname">닉네임</string>
-    <string name="post">게시물</string>
+    <string name="post">게시글</string>
     <string name="date">날짜</string>
     <string name="content">내용</string>
     <string name="like">좋아요</string>
@@ -30,17 +30,17 @@
     <string name="filter">필터</string>
     <string name="type">종류</string>
     <string name="period">기간</string>
-    <string name="number">수강인원</string>
+    <string name="number">모집인원</string>
     <string name="nicknameChange">닉네임 변경</string>
     <string name="withdrawal">회원탈퇴</string>
     <string name="performName">공연 이름</string>
     <string name="startTime">시작 시간</string>
-    <string name="all">전체글 보기</string>
-    <string name="start">시작</string>
+    <string name="all">최근 게시글</string>
+    <string name="start">시작하기</string>
     <string name="endTime">끝나는 시간</string>
     <string name="commentCnt">댓글수</string>
     <string name="logout">로그아웃</string>
-    <string name="more">더보기</string>
+    <string name="more">더보기></string>
     <string name="regist">공연 정보 등록</string>
     <string name="location">현재 위치</string>
     <string name="curr">현재 참여자 수</string>
@@ -49,6 +49,14 @@
     <string name="classType">클래스 타입</string>
     <string name="contact">연락처</string>
     <string name="email_phone">이메일/전화번호</string>
+    <string name="setting">세팅</string>
+    <string name="lang_setting">언어 설정</string>
+    <string name="extra_setting">기타 설정</string>
+    <string name="app_setting">앱 설정</string>
+    <string name="deadline">마감날짜: </string>
+    <string name="contact2">연락처: </string>
+    <string name="participate">참여자 수: </string>
+    <string name="no_popular">인기 게시글이 없습니다.</string>
 
     <string name="Main">메인</string>
     <string name="Recruit">모집</string>
@@ -71,6 +79,7 @@
     <string name="Place_example">ex) 오이도 빨간등대 앞</string>
     <string name="Comment_example">댓글을 입력해주세요</string>
     <string name="Reply_example">대댓글을 입력해주세요</string>
+    <string name="Content_example">내용을 입력해주세요</string>
     <string name="Search_example">검색할 행정동을 입력하세요</string>
     <string name="Write_location">장소 입력하기</string>
     <string name="Write_intro">소개글 입력하기</string>
@@ -78,6 +87,7 @@
     <string name="Time_plan">시간 추가하기</string>
     <string name="Cal_title">ex) 버스킹</string>
     <string name="Cal_cont">어떤 공연인가요?</string>
+    <string name="greeting">Heung에서 시흥시 주민들과 버스킹과 클래스를 결성하고,\n                      음악 커뮤니티까지 즐겨보세요.</string>
 
     <string-array name="items">
         <item>전체</item>

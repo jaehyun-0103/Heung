@@ -82,7 +82,6 @@
             android:id="@+id/imgSetting"
             android:layout_width="25dp"
             android:layout_height="25dp"
-
             android:clickable="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
