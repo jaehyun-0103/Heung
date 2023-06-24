@@ -84,6 +84,7 @@ class SelfProfActivity : AppCompatActivity() {
         settingButton.setOnClickListener {
             val intent = Intent(this, Setting::class.java)
             startActivity(intent)
+            overridePendingTransition(0,0)
         }
 
         //닉네임 userId식별자로 넣기(기본값)
@@ -192,6 +193,7 @@ class SelfProfActivity : AppCompatActivity() {
                     }
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@setOnNavigationItemSelectedListener true
                 }
@@ -201,6 +203,7 @@ class SelfProfActivity : AppCompatActivity() {
                     }
                     val intent = Intent(this, RecruListActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@setOnNavigationItemSelectedListener true
                 }
@@ -210,6 +213,7 @@ class SelfProfActivity : AppCompatActivity() {
                     }
                     val intent = Intent(this, RentActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@setOnNavigationItemSelectedListener true
                 }
@@ -219,6 +223,7 @@ class SelfProfActivity : AppCompatActivity() {
                     }
                     val intent = Intent(this, CalActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@setOnNavigationItemSelectedListener true
                 }
@@ -228,6 +233,7 @@ class SelfProfActivity : AppCompatActivity() {
                     }
                     val intent = Intent(this, SelfProfActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(0,0)
                     finish()
                     return@setOnNavigationItemSelectedListener true
                 }
@@ -236,7 +242,6 @@ class SelfProfActivity : AppCompatActivity() {
         }
         bottomNavigationView.menu.findItem(R.id.nav_profile)?.isChecked = true
     }
-
 
     private fun loadUserPosts() {
         val firestore = FirebaseFirestore.getInstance()

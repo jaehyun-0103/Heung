@@ -81,6 +81,7 @@
             android:onClick="toggleDarkMode"
             android:paddingStart="0dp"
             android:text="@string/darkmode"
+            style="?android:attr/borderlessButtonStyle"
             android:textColor="@color/black"
             android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
@@ -94,6 +95,7 @@
             android:onClick="setDefaultMode"
             android:paddingStart="0dp"
             android:text="@string/defaultmode"
+            style="?android:attr/borderlessButtonStyle"
             android:textColor="@color/black"
             android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
@@ -130,6 +132,7 @@
             android:gravity="start|center_vertical"
             android:paddingStart="0dp"
             android:text="@string/ko"
+            style="?android:attr/borderlessButtonStyle"
             android:textColor="@color/black"
             android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
@@ -141,6 +144,7 @@
             android:gravity="start|center_vertical"
             android:paddingStart="0dp"
             android:text="@string/en"
+            style="?android:attr/borderlessButtonStyle"
             android:textColor="@color/black"
             android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
@@ -179,6 +183,7 @@
             android:textColor="@color/black"
             android:gravity="start|center_vertical"
             android:paddingStart="0dp"
+            style="?android:attr/borderlessButtonStyle"
             android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
 
         <Button
@@ -191,6 +196,7 @@
             android:textColor="@color/black"
             android:gravity="start|center_vertical"
             android:paddingStart="0dp"
+            style="?android:attr/borderlessButtonStyle"
             android:fontFamily="@font/spoqa_han_sans_neo_regular"/>
     </TableLayout>
 
