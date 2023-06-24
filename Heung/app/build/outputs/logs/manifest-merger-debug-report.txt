@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-118:12
-INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-118:12
-INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-118:12
-INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-118:12
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-124:12
+INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-124:12
+INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-124:12
+INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-124:12
 MERGED from [androidx.databinding:databinding-adapters:7.4.2] C:\Users\rhfuv\.gradle\caches\transforms-3\f4c8be7ce288e460073d3ce578548d36\transformed\databinding-adapters-7.4.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-ktx:7.4.2] C:\Users\rhfuv\.gradle\caches\transforms-3\8753551474d33119c063e8d6cb2ec135\transformed\jetified-databinding-ktx-7.4.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-runtime:7.4.2] C:\Users\rhfuv\.gradle\caches\transforms-3\d96c0daeedf86f6a6a02c0ce886bd274\transformed\databinding-runtime-7.4.2\AndroidManifest.xml:2:1-7:12
@@ -114,22 +114,22 @@ MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\rhfuv\.gradle\caches\transfor
 MERGED from [com.android.volley:volley:1.2.1] C:\Users\rhfuv\.gradle\caches\transforms-3\dc16ae57a01096bdb3954969f0228280\transformed\jetified-volley-1.2.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.datatransport:transport-api:2.2.0] C:\Users\rhfuv\.gradle\caches\transforms-3\4e3fa9566dac28f8f31b31dc625a94e7\transformed\jetified-transport-api-2.2.0\AndroidManifest.xml:15:1-22:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\rhfuv\.gradle\caches\transforms-3\6bddae0a68096af202506983748c9f4b\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-118:12
-INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-118:12
-INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-118:12
+INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-124:12
+INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-124:12
+INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-124:12
 	package
 		INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-118:12
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-124:12
 		INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-118:12
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-124:12
 		INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-118:12
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:1-124:12
 		INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:2:11-69
@@ -222,7 +222,7 @@ ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:1
 	android:name
 		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:18:9-71
 application
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:21:5-116:19
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:21:5-122:19
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\rhfuv\.gradle\caches\transforms-3\d051c0e6200fe6ae5b4696be471df4c7\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\rhfuv\.gradle\caches\transforms-3\d051c0e6200fe6ae5b4696be471df4c7\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [com.kakao.sdk:v2-auth:2.10.0] C:\Users\rhfuv\.gradle\caches\transforms-3\40ada7d40ac8366913aa7971a522c634\transformed\jetified-v2-auth-2.10.0\AndroidManifest.xml:9:5-19:19
@@ -460,25 +460,27 @@ ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:1
 	android:name
 		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:103:13-45
 activity#com.example.heung.MainActivity
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:105:9-107:40
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:105:9-113:20
 	android:exported
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:107:13-37
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:107:13-36
 	android:name
 		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:106:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:108:13-112:29
 meta-data#com.google.android.maps.v2.API_KEY
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:109:9-111:71
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:115:9-117:71
 	android:value
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:111:13-68
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:117:13-68
 	android:name
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:110:13-62
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:116:13-62
 uses-library#org.apache.http.legacy
-ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:113:9-115:40
+ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:119:9-121:40
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\68e8cf177ed313199171fa473fe0a343\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:39:9-41:40
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\rhfuv\.gradle\caches\transforms-3\68e8cf177ed313199171fa473fe0a343\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:39:9-41:40
 	android:required
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:115:13-37
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:121:13-37
 	android:name
-		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:114:13-50
+		ADDED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml:120:13-50
 uses-sdk
 INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\rhfuv\Desktop\Heung\Heung\app\src\main\AndroidManifest.xml

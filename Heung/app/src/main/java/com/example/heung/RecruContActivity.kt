@@ -236,4 +236,5 @@ class RecruContActivity : AppCompatActivity() {
                 finish()
             }
     }
+
 }

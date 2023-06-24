@@ -27,6 +27,7 @@ class Setting : AppCompatActivity() {
         val backButton = findViewById<ImageButton>(R.id.btn_back)
         backButton.setOnClickListener {
             onBackPressed()
+            overridePendingTransition(0,0)
         }
 
         val koreanButton = findViewById<Button>(R.id.button_korean)
