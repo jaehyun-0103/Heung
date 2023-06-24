@@ -1,11 +1,64 @@
 # Heung
 
-## 팀명 : 흥신소
+### 팀명 : 흥신소
 
-## 앱 이름 : Heung
+### 앱 이름 : Heung
 
-## 팀원 : 조재현, 유세정, 유호선, 홍인택
+### 프로젝트 기간 : 2023.05.02 ~ 2023.06.24
 
-## [데이터베이스](https://github.com/jaehyun-0103/Heung/blob/main/Database.md)
+---
 
-## [시나리오](https://github.com/jaehyun-0103/Heung/blob/main/Scenario.md)
+## Role
+
+### 재현
+```
+총괄
+깃허브 관리
+데이터베이스 관리
+메인 페이지
+구글 지도 페이지
+게시글 목록 페이지
+게시글 작성 페이지
+모집글 내용 페이지
+모집글 목록 페이지
+```
+
+### 세정
+```
+카카오 로그인 api
+로그인 페이지
+설정 페이지
+개인 프로필 페이지
+디자인
+ppt
+```
+
+### 호선
+```
+캘린더 페이지
+메인 페이지
+게시글 내용 페이지
+댓글, 대댓글 기능
+디자인
+ppt
+```
+
+### 인택
+```
+아이디어 제공
+게시글 작성 페이지
+모집글 작성 페이지
+ppt
+발표
+```
+
+---
+
+## Software Design
+
+### [시나리오](https://github.com/jaehyun-0103/Heung/blob/main/Scenario.md)
+
+### [데이터베이스](https://github.com/jaehyun-0103/Heung/blob/main/Database.md)
+
+---
+
