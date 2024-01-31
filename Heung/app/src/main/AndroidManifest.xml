@@ -39,7 +39,7 @@
 
                 <data
                     android:host="oauth"
-                    android:scheme="kakao6de2823164e42a1f96eabbc998a1feb8" />
+                    android:scheme="" />
             </intent-filter>
         </activity>
         <activity
@@ -54,7 +54,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="6de2823164e42a1f96eabbc998a1feb8" />
+                <data android:scheme="" />
             </intent-filter>
         </activity>
         <activity
@@ -114,7 +114,7 @@
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyA31kkd5bVzb1DHgUL0YktIXMTXFhhi_4U" />
+            android:value="" />
 
         <uses-library
             android:name="org.apache.http.legacy"
