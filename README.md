@@ -24,6 +24,130 @@
 
 - 최종보고서 : ~2023.06.24
 
+---
+
+## Demo
+
+### 시작 화면
+<table>
+  <tr>
+    <td>
+      <p>&#8226; 로그인</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EC%A0%91%EC%86%8D%20%ED%99%94%EB%A9%B4.PNG" width="250" >
+    </td>
+    <td>
+      <p>&#8226; 메인 화면</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EB%A9%94%EC%9D%B8%20%ED%99%94%EB%A9%B4.PNG" width="250" >
+    </td>
+    <td>
+      <p>&#8226; 인기게시글 목록</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EC%9D%B8%EA%B8%B0%EA%B2%8C%EC%8B%9C%EA%B8%80%20%EB%AA%A9%EB%A1%9D.PNG" width="250" >
+    </td>
+  </tr>
+</table>
+
+### 게시글 1
+<table>
+  <tr>
+    <td>
+      <p>&#8226; 게시글 목록</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EA%B2%8C%EC%8B%9C%EA%B8%80%20%EB%AA%A9%EB%A1%9D.PNG" width="250" >
+    </td>
+    <td>
+      <p>&#8226; 게시글 작성</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EA%B2%8C%EC%8B%9C%EA%B8%80%20%EC%9E%91%EC%84%B1.PNG" width="250" >
+    </td>
+    <td>
+      <p>&#8226; 게시글 내용</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EA%B2%8C%EC%8B%9C%EA%B8%80%20%EB%82%B4%EC%9A%A9.PNG" width="250" >
+    </td>
+  </tr>
+</table>
+
+### 게시글 2
+<table>
+  <tr>
+    <td>
+      <p>&#8226; 게시글 댓글</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EA%B2%8C%EC%8B%9C%EA%B8%80%20%EB%8C%93%EA%B8%80.PNG" width="250" >
+    </td>
+    <td>
+      <p>&#8226; 게시글 대댓글</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EA%B2%8C%EC%8B%9C%EA%B8%80%20%EB%8C%80%EB%8C%93%EA%B8%80.PNG" width="250" >
+    </td>
+    <td>
+      <p>&#8226; 게시글 수정 및 삭제</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EA%B2%8C%EC%8B%9C%EA%B8%80%20%EC%88%98%EC%A0%95%20%EB%B0%8F%20%EC%82%AD%EC%A0%9C.PNG" width="250" >
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+      <p>&#8226; 개인 프로필</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EA%B0%9C%EC%9D%B8%20%ED%94%84%EB%A1%9C%ED%95%84.PNG" width="250" >
+    </td>
+    <td>
+      <p>&#8226; 닉네임 설정 및 변경</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EB%8B%89%EB%84%A4%EC%9E%84%20%EC%84%A4%EC%A0%95%20%EB%B0%8F%20%EB%B3%80%EA%B2%BD.PNG" width="250" >
+    </td>
+    <td>
+      <p>&#8226; 설정</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EC%84%A4%EC%A0%95.PNG" width="250" >
+    </td>
+  </tr>
+</table>
+
+### 모집글
+<table>
+  <tr>
+    <td>
+      <p>&#8226; 모집글 내용</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EB%AA%A8%EC%A7%91%EA%B8%80%20%EB%82%B4%EC%9A%A9.PNG" width="250" >
+    </td>
+    <td>
+      <p>&#8226; 모집글 목록</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EB%AA%A8%EC%A7%91%EA%B8%80%20%EB%AA%A9%EB%A1%9D.PNG" width="250" >
+    </td>
+    <td>
+      <p>&#8226; 모집글 작성</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EB%AA%A8%EC%A7%91%EA%B8%80%20%EC%9E%91%EC%84%B1.PNG" width="250" >
+    </td>
+  </tr>
+</table>
+
+### 일정
+<table>
+  <tr>
+    <td>
+      <p>&#8226; 일정 내용</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EC%9D%BC%EC%A0%95%20%EB%82%B4%EC%9A%A9.PNG" width="250" >
+    </td>
+    <td>
+      <p>&#8226; 일정 작성</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EC%9D%BC%EC%A0%95%20%EC%9E%91%EC%84%B1.PNG" width="250" >
+    </td>
+    <td>
+      <p>&#8226; 일정 정보</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EC%9D%BC%EC%A0%95%20%EC%A0%95%EB%B3%B4.PNG" width="250" >
+    </td>
+  </tr>
+</table>
+
+### 지도
+<table>
+  <tr>
+    <td>
+      <p>&#8226; 가게 지도 유형</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EC%A7%80%EB%8F%84%20%EA%B0%80%EA%B2%8C%20%EC%9C%A0%ED%98%95.PNG" width="250" >
+    </td>
+    <td>
+      <p>&#8226; 가게 지도 정보</p>
+      <img src="https://github.com/jaehyun-0103/Heung/blob/main/assets/%EC%A7%80%EB%8F%84%20%EA%B0%80%EA%B2%8C%20%EC%A0%95%EB%B3%B4.PNG" width="250" >
+    </td>
+  </tr>
+</table>
 
 ---
 
